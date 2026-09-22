@@ -96,3 +96,13 @@ the class of stable, obligate complexes. The crosslink version of this test is u
 - One organism, one model (AF3). Replication in a gamma-proteobacterium (*E. coli* or *Vibrio*)
   is the obvious next test.
 - AF3 Output Terms: non-commercial analysis only; cite Abramson et al. 2024 and Todor et al. 2026.
+
+## Prior-art check (2026-09-22)
+
+- The paper's peer-review file (supplement MOESM3, 3 reviewers) covers size bias, other ipTM
+  corrections, binding affinity and methods detail. It does **not** raise the pool-size section
+  confound (PH2) or benchmark dependence on PDB precedent (H1, XL, TIME).
+- Known in the literature: AF structure accuracy depends on training-set analogues, and one 2025
+  preprint reports an AF3 post-cutoff decline in drug-discovery settings. Not found: a
+  precedent-stratified evaluation of a genome-wide PPI *screen*, an in-cell XL-MS truth test of one,
+  or a time split in the screening setting. Re-check before posting anything.
