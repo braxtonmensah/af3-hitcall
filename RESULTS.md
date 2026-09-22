@@ -29,7 +29,7 @@ Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [
 | H2 | Per-protein null (robust row/column z) beats size correction | **Rejected**: AUPRC 0.111 -> 0.099, CI below 0 |
 | H3 | Interface PAE (pae_min) beats size-corrected ipTM | **Rejected**: +0.006, CI [-0.012, 0.023]; wins 3 of 5 |
 | XL | H1 gap survives an independent, non-PDB truth set | **Confirmed (model, not labels)**: 0.95 vs 0.57 |
-| BSU | Replicates in *B. subtilis* with AlphaFold-Multimer (PREREG_BSU) | **Replicates** under the registered rule: crosslinked pairs reach ipTM >= 0.5 at 53% with precedent vs 21% without, +0.32, CI [0.08, 0.55]. Under the corrected strict rule: +0.23, CI [-0.02, 0.47], same direction but borderline |
+| BSU | Replicates in *B. subtilis* with AlphaFold-Multimer (PREREG_BSU) | **Replicates** under the registered rule: crosslinked pairs reach ipTM >= 0.5 at 53% with precedent vs 21% without, +0.32, CI [0.08, 0.55]. Under the corrected strict rule: +0.23, CI [-0.02, 0.47], same direction but borderline. No-date sensitivity: 40% vs 12%, +0.28, CI [0.08, 0.47] |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
 **TIME in plain words.** STRING positives whose only solved complex appeared *after* AF3's

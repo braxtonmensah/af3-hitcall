@@ -52,6 +52,9 @@ def main(root):
         seen.add((job, k))
         M = np.array(js["chain_pair_iptm"], float)
         mem = members[job]
+        if M.shape[0] != len(mem):  # guard: result must match the designed pool
+            print(f"SKIP {job} sample {k}: {M.shape[0]} chains, expected {len(mem)}")
+            continue
         for a in range(len(mem)):
             for b in range(a + 1, len(mem)):
                 i, j = sorted((mem[a], mem[b]))

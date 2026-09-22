@@ -34,5 +34,23 @@
   "auroc_xl_vs_comp_prec": 0.4289628180039139,
   "auroc_xl_vs_comp_unprec": 0.6675267429984411,
   "verdict": "FAILS TO REPLICATE"
+ },
+ "any": {
+  "n_xl_prec": 172,
+  "n_xl_unprec": 60,
+  "recall_prec": 0.3953488372093023,
+  "recall_unprec": 0.11666666666666667,
+  "n_comp_prec": 53,
+  "n_comp_unprec": 567,
+  "comp_hit_rate_prec": 0.6037735849056604,
+  "comp_hit_rate_unprec": 0.07054673721340388,
+  "diff": 0.27868217054263567,
+  "diff_ci95": [
+   0.07810441468253972,
+   0.47006476522605545
+  ],
+  "auroc_xl_vs_comp_prec": 0.4085125054848618,
+  "auroc_xl_vs_comp_unprec": 0.6212522045855379,
+  "verdict": "REPLICATES"
  }
 }
