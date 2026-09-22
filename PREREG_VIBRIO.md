@@ -47,3 +47,22 @@ both directions.
 
 The prediction outcome is reported as is. No rescoring, and no changes to the pool design after
 seeing results.
+
+## Amendment 1 (2026-09-22, before any prediction was run)
+
+Running the precedent pipeline exposed a flaw in the H1 rule. A homomer split across several entities
+(6OJY, a *Geobacter* PilT4 hexamer with 5 entities) counts as a "co-complex" for any two paralogs
+(PilT and PilU both match all 5). The strict rule requires each protein to match an entity the
+other does not. Under that rule the *M. genitalium* H1 result is unchanged (3 of 2,633 positives
+reclassified; +0.143, CI [0.059, 0.239], `posthoc_strict.py`). The pilot uses the strict rule.
+
+Classes (strict, fixed now):
+
+- **Precedented**: PilP-PilQ (4AV2), PilB-PilC (3JC8), PilT-PilC (3JC8).
+- **Never-solved**: PilT-PilU, CBP-ChiS, DprA-ComM, PilM-PilN, PilN-PilO, PilO-PilP.
+
+Prediction 1 becomes: **at least 2 of 3 precedented positives are hits**, median bait rank <= 3.
+
+Prediction 2 is no longer descriptive-only. There are 6 never-solved positives, and the audit
+predicts **fewer hits among never-solved (share) than among precedented**. Reported with exact
+counts; n is too small for a CI to mean much.

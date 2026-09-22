@@ -37,3 +37,27 @@ def precedent_matrix(tag=""):
                     i, j = ix[ls[a]], ix[ls[b]]
                     P[i, j] = P[j, i] = True
     return P
+
+
+def precedent_matrix_strict(tag=""):
+    """Self-caught fix (2026-09-22): a homomer split into several entities (e.g. 6OJY, PilT4
+    hexamer, 5 entities) satisfied the original rule for any two paralogs. Strict rule: within one
+    entry, each protein must match at least one entity the other protein does not match."""
+    hits = _hits(tag)
+    by_entry = defaultdict(lambda: defaultdict(set))
+    for l, ents in hits.items():
+        for e in ents:
+            entry, ent = e.split("_")
+            by_entry[entry][l].add(ent)
+    n = len(LOCI)
+    ix = {l: i for i, l in enumerate(LOCI)}
+    P = np.zeros((n, n), bool)
+    for m in by_entry.values():
+        ls = list(m)
+        for a in range(len(ls)):
+            for b in range(a + 1, len(ls)):
+                ea, eb = m[ls[a]], m[ls[b]]
+                if (ea - eb) and (eb - ea):
+                    i, j = ix[ls[a]], ix[ls[b]]
+                    P[i, j] = P[j, i] = True
+    return P

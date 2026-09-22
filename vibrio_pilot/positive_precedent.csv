@@ -1,0 +1,10 @@
+pair,precedented_strict,entries,precedented,n_entries,examples,homologs_a,homologs_b
+PilT-PilU,False,,True,1,6OJY,46,46
+CBP-ChiS,False,,False,0,,27,367
+DprA-ComM,False,,False,0,,6,3
+PilM-PilN,False,,False,0,,0,0
+PilN-PilO,False,,False,0,,0,4
+PilO-PilP,False,,False,0,,4,5
+PilP-PilQ,True,4AV2,True,1,4AV2,5,18
+PilB-PilC,True,3JC8,True,1,3JC8,49,7
+PilT-PilC,True,3JC8,True,1,3JC8,46,7
