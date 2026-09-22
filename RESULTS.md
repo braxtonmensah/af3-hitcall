@@ -17,6 +17,7 @@ chance on interactions that have never been solved.** The published 0.81 average
 |---|---|---|
 | STRING experimental > 800 | **0.85** (n = 1,806) | **0.71** (n = 827) |
 | In-cell crosslinks (5% FDR) | **0.95** (n = 65) | **0.57** (n = 171) |
+| Human HuRI Y2H vs random (AF2/FoldDock, Burke 2023) | **0.92** (n = 1,782) | **0.64** (n = 53,804) |
 
 AUROC of size-corrected ipTM against all negatives. H1 is confirmed: the gap is +0.145, with a
 Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [0.27, 0.48].
@@ -31,6 +32,7 @@ Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [
 | XL | H1 gap survives an independent, non-PDB truth set | **Confirmed (model, not labels)**: 0.95 vs 0.57 |
 | BSU | Replicates in *B. subtilis* with AlphaFold-Multimer (PREREG_BSU) | **Replicates** under the registered rule: crosslinked pairs reach ipTM >= 0.5 at 53% with precedent vs 21% without, +0.32, CI [0.08, 0.55]. Under the corrected strict rule: +0.23, CI [-0.02, 0.47], same direction but borderline. No-date sensitivity: 40% vs 12%, +0.28, CI [0.08, 0.47] |
 | HH1 | Human interactome (AF2/FoldDock, HuRI Y2H), recall by precedent | **Replicates** (3rd organism, 3rd model): confident (pDockQ > 0.23) 75% with an Interactome3D model vs 10% without, +0.65, CI [0.60, 0.71]; at > 0.5: 61% vs 1.2% |
+| HH3 | Human, AUROC form vs 1,849 random pairs | **Replicates**: precedented 0.917 vs never-solved 0.636, +0.28, CI [0.27, 0.29] |
 | HH2 | Confident models: is a never-solved model as correct as a precedented one? (crosslinks) | **Inconclusive**: 66% vs 52% of crosslinks satisfied, +0.14, CI [-0.08, 0.30], n = 192/116. Low-confidence models: 37% vs 13%, precedent better |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
