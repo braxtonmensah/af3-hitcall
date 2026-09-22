@@ -1,0 +1,32 @@
+{
+ "pairs": {
+  "n_prec": 69,
+  "n_never": 66,
+  "auroc_prec": 0.484,
+  "auroc_never": 0.427
+ },
+ "pools_2k": {
+  "n_prec": 27,
+  "n_never": 13,
+  "auroc_prec": 0.658,
+  "auroc_never": 0.637
+ },
+ "pools_3k": {
+  "n_prec": 78,
+  "n_never": 20,
+  "auroc_prec": 0.732,
+  "auroc_never": 0.601
+ },
+ "pools_4k": {
+  "n_prec": 76,
+  "n_never": 31,
+  "auroc_prec": 0.904,
+  "auroc_never": 0.646
+ },
+ "pools_5k": {
+  "n_prec": 134,
+  "n_never": 29,
+  "auroc_prec": 0.918,
+  "auroc_never": 0.652
+ }
+}

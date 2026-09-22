@@ -52,6 +52,12 @@ the class of stable, obligate complexes. The crosslink version of this test is u
 - **Replicates.** A second pool per pair buys +0.016 AUROC overall (CI 0.003-0.031) and +0.010 for
   never-solved positives (CI spans 0). Extra compute does not rescue the weak class.
 
+- **Gap replicates in the paper's independent local runs** (MOESM8; each condition is its own
+  protein section, so this is suggestive, not matched). Precedented vs never-solved AUROC:
+  pairs 0.48 / 0.43, 3k 0.73 / 0.60, 4k 0.90 / 0.65, 5k 0.92 / 0.65. **Pooling's accuracy gain goes
+  almost entirely to precedented complexes.**
+- **Adjacency proxy** (never-solved pairs <= 2 genes apart, a crude obligate-partner proxy): 0.83
+  vs 0.71, the direction the stability reading predicts, but n = 23 and the CI spans 0.
 - **A bait's #1 hit** (post hoc, strict precedent rule). When the top-ranked partner forms a
   precedented complex (93 of 476 baits), 81% are STRING positives. When it is never-solved
   (383 baits), 10% are (29% among baits with any known partner). STRING is incomplete, so
