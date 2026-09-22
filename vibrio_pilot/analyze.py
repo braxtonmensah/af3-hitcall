@@ -22,6 +22,7 @@ idx = {l: k for k, l in enumerate(P.locus)}
 name = dict(zip(P.locus, P.name))
 L = P.length.to_numpy()
 n = len(P)
+PRECEDENTED = {"PilP-PilQ", "PilB-PilC", "PilT-PilC"}  # PREREG_VIBRIO Amendment 1 (strict rule)
 POS = [("PilT", "PilU"), ("CBP", "ChiS"), ("DprA", "ComM"), ("PilM", "PilN"), ("PilN", "PilO"),
        ("PilO", "PilP"), ("PilP", "PilQ"), ("PilB", "PilC"), ("PilT", "PilC")]
 
@@ -77,12 +78,14 @@ def main(root):
             v[x] = -np.inf
             return int((v > S[x, y]).sum() + 1)
 
-        rows.append(dict(pair=f"{a}-{b}", S=s, p=p, hit=p < 0.01, rank_a=rank(i, j), rank_b=rank(j, i),
+        rows.append(dict(pair=f"{a}-{b}", cls="precedented" if f"{a}-{b}" in PRECEDENTED else "never-solved", S=s, p=p, hit=p < 0.01, rank_a=rank(i, j), rank_b=rank(j, i),
                          mean_rank=(rank(i, j) + rank(j, i)) / 2))
     R = pd.DataFrame(rows)
     sysm = (P.kind == "system").to_numpy()
     sd = S[iu][(sysm[iu[0]] & dec[iu[1]]) | (dec[iu[0]] & sysm[iu[1]])]
     print(R.to_string(index=False))
+    for c, g in R.groupby("cls"):
+        print(f"{c}: hits {int(g.hit.sum())}/{len(g)}, median bait rank {g.mean_rank.median()}")
     print(f"decoy-decoy null n={len(null)}, 99th pct S={thr:.3f}; system-decoy pairs over threshold: "
           f"{(sd > thr).sum()}/{np.isfinite(sd).sum()}")
     R.to_csv(os.path.join(HERE, "pilot_results.csv"), index=False)

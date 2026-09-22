@@ -17,7 +17,7 @@ ax = {a: k for k, a in enumerate(accs)}
 n = len(accs)
 
 
-def prec_for(tag):
+def prec_for(tag, strict=False):
     hits = json.load(open(os.path.join(D, "data", f"bsu_hits_{tag}.json")))
     ent = defaultdict(lambda: defaultdict(set))
     for a, es in hits.items():
@@ -29,7 +29,8 @@ def prec_for(tag):
         ls = list(m)
         for x in range(len(ls)):
             for y in range(x + 1, len(ls)):
-                if len(m[ls[x]] | m[ls[y]]) >= 2:
+                ea, eb = m[ls[x]], m[ls[y]]
+                if ((ea - eb) and (eb - ea)) if strict else len(ea | eb) >= 2:
                     pairs.add(frozenset((ls[x], ls[y])))
     return np.array([frozenset((a, b)) in pairs for a, b in zip(ev5["uniprot 1"], ev5["uniprot 2"])])
 
@@ -41,8 +42,9 @@ comp = ev5["co-Frac MS"].astype(bool).to_numpy() & ~xl
 iptm = ev5.iptm.to_numpy()
 hit = iptm >= 0.5
 out = {}
-for tag in ["pre", "any"]:
-    P = prec_for(tag)
+for tag, strict in [("pre", False), ("any", False), ("pre", True)]:
+    P = prec_for(tag, strict)
+    tag = tag + ("_strict" if strict else "")
     pp, pu = xl & P, xl & ~P
     rec = {"n_xl_prec": int(pp.sum()), "n_xl_unprec": int(pu.sum()),
            "recall_prec": float(hit[pp].mean()), "recall_unprec": float(hit[pu].mean()),

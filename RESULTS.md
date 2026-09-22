@@ -52,6 +52,15 @@ the class of stable, obligate complexes. The crosslink version of this test is u
 - **Replicates.** A second pool per pair buys +0.016 AUROC overall (CI 0.003-0.031) and +0.010 for
   never-solved positives (CI spans 0). Extra compute does not rescue the weak class.
 
+- **A bait's #1 hit** (post hoc, strict precedent rule). When the top-ranked partner forms a
+  precedented complex (93 of 476 baits), 81% are STRING positives. When it is never-solved
+  (383 baits), 10% are (29% among baits with any known partner). STRING is incomplete, so
+  these are lower bounds, but for most baits the top hit is in the weak class.
+- **Self-caught definition flaw.** The original precedent rule let a homomer split across several
+  entities (e.g. 6OJY, a PilT4 hexamer with 5 entities) count as a co-complex for any two paralogs.
+  The strict rule (each protein must match an entity the other does not) reclassifies 133 pairs,
+  3 of them positives; H1 is unchanged (+0.143, 98.3% CI [0.059, 0.239]).
+
 ## Descriptive
 
 - **D1, bait-level FDR 10%** (conservative pooled null): 71 hits over 45 baits; 32% are STRING
