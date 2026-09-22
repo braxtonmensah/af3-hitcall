@@ -11,7 +11,8 @@ There are 85 jobs: 24 competence/chitin proteins plus 60 random decoys, 4,000-aa
 3. Next day: `afserver_batch02.json`; day after: `afserver_batch03.json` (25 jobs).
 4. Download every finished job (each is a `fold_vc_pilot_XXX.zip`) into one folder, e.g.
    `C:\Users\bmens\NQ_local\af3-hitcall\vibrio\results\`.
-5. Run: `python analyze.py C:SERSBMENSNQ_LOCALF3-HITCALLIBRIOESULTS` (PUT THE 10 `FOLD_VC_TFOS_*` ZIPS IN THE SAME FOLDER; IT WRITES `PILOT_RESULTS.CSV` AND `TFOS_RESULTS.JSON`)
+5. Run: `python analyze.py C:\Users\bmens\NQ_local\af3-hitcall\vibrio\results` (put the 10 `fold_vc_tfos_*` zips in the same folder; it writes `pilot_results.csv` and `tfos_results.json`)
+ESULTS` (PUT THE 10 `FOLD_VC_TFOS_*` ZIPS IN THE SAME FOLDER; IT WRITES `PILOT_RESULTS.CSV` AND `TFOS_RESULTS.JSON`)
 
 AF Server output is non-commercial (AlphaFold Server Output Terms). That is fine for academic work.
 
