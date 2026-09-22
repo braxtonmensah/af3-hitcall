@@ -15,7 +15,8 @@ OUT = r"C:\Users\bmens\NQ_local\af3-hitcall\data"
 URL = "https://search.rcsb.org/rcsbsearch/v2/query"
 CUTOFF = "2021-09-30"
 IDENT = float(sys.argv[1]) if len(sys.argv) > 1 else 0.25
-TAG = "" if IDENT == 0.25 else f"_id{IDENT:g}"
+AFTER = len(sys.argv) > 2 and sys.argv[2] == "post"
+TAG = ("" if IDENT == 0.25 else f"_id{IDENT:g}") + ("_post" if AFTER else "")
 
 
 def search(seq):
@@ -26,7 +27,8 @@ def search(seq):
                 "sequence_type": "protein", "value": seq}},
             {"type": "terminal", "service": "text", "parameters": {
                 "attribute": "rcsb_accession_info.initial_release_date",
-                "operator": "less_or_equal", "value": CUTOFF}}]},
+                "operator": "greater_or_equal" if AFTER else "less_or_equal",
+                "value": "2021-10-01" if AFTER else CUTOFF}}]},
         "return_type": "polymer_entity",
         "request_options": {"return_all_hits": True},
     }
