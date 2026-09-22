@@ -1,0 +1,20 @@
+{
+ "n_proteins_visible": 307,
+ "n_pairs": 46971,
+ "n_xl_pos": 236,
+ "n_pos_precedented": 65,
+ "n_pos_unprecedented": 171,
+ "auroc_all": 0.6727873350100549,
+ "auroc_precedented": 0.9465042671033899,
+ "auroc_unprecedented": 0.5687428871383194,
+ "n_xl_pos_string_negative": 165,
+ "auroc_xl_pos_string_negative": 0.571901015072086,
+ "auroc_xl_pos_string_negative_unprecedented": 0.5506420194087956,
+ "n_xl_pos_string_negative_unprecedented": 157,
+ "diff": 0.3777613799650704,
+ "diff_ci95": [
+  0.2688149856415401,
+  0.4778211947999113
+ ],
+ "verdict": "(a) MODEL: gap persists on independent truth"
+}
