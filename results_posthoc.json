@@ -1,0 +1,120 @@
+{
+ "PH1_primary": {
+  "co_complex": {
+   "n": 1806,
+   "auroc": 0.8515495009951753,
+   "auprc_vs_base": null
+  },
+  "both_known_not_together": {
+   "n": 462,
+   "auroc": 0.6554417164807775,
+   "auprc_vs_base": null
+  },
+  "not_both_known": {
+   "n": 365,
+   "auroc": 0.7723029794523649,
+   "auprc_vs_base": null
+  },
+  "co_minus_bothknown": 0.1961077845143978,
+  "co_minus_bothknown_ci95": [
+   0.12154392561614694,
+   0.2699731194260704
+  ],
+  "bothknown_minus_notknown": -0.11686126297158739,
+  "bothknown_minus_notknown_ci95": [
+   -0.2337641471388135,
+   0.027915040790230047
+  ],
+  "neg_coComplex_vs_neg_bothknown_auroc": 0.6829628365759907
+ },
+ "PH1_id0": {
+  "co_complex": {
+   "n": 1853,
+   "auroc": 0.8474450906686711,
+   "auprc_vs_base": null
+  },
+  "both_known_not_together": {
+   "n": 424,
+   "auroc": 0.6523158520333124,
+   "auprc_vs_base": null
+  },
+  "not_both_known": {
+   "n": 356,
+   "auroc": 0.7744533287650198,
+   "auprc_vs_base": null
+  },
+  "co_minus_bothknown": 0.1951292386353587,
+  "co_minus_bothknown_ci95": [
+   0.11818372064664752,
+   0.27381623839132446
+  ],
+  "bothknown_minus_notknown": -0.12213747673170738,
+  "bothknown_minus_notknown_ci95": [
+   -0.24499159515890523,
+   0.03683627741464857
+  ],
+  "neg_coComplex_vs_neg_bothknown_auroc": 0.6790176392033876
+ },
+ "PH2": {
+  "pairs": {
+   "auroc_condition": 0.4561581920903955,
+   "auroc_genomewide_same_pairs": 0.7862615609960243,
+   "delta": -0.3301033689056288,
+   "delta_ci95": [
+    -0.5021725862334686,
+    -0.10953393270569622
+   ],
+   "pos": 135
+  },
+  "pools_2k": {
+   "auroc_condition": 0.6510169491525424,
+   "auroc_genomewide_same_pairs": 0.7900649717514124,
+   "delta": -0.13904802259887006,
+   "delta_ci95": [
+    -0.25528332185958325,
+    0.02912574531195218
+   ],
+   "pos": 40
+  },
+  "pools_3k": {
+   "auroc_condition": 0.7048387021398896,
+   "auroc_genomewide_same_pairs": 0.8147025698303136,
+   "delta": -0.109863867690424,
+   "delta_ci95": [
+    -0.19315388855521481,
+    -0.033682312920910035
+   ],
+   "pos": 98
+  },
+  "pools_4k": {
+   "auroc_condition": 0.8288698837244213,
+   "auroc_genomewide_same_pairs": 0.8171136549819218,
+   "delta": 0.011756228742499486,
+   "delta_ci95": [
+    -0.043251257501456065,
+    0.0623579671048117
+   ],
+   "pos": 107
+  },
+  "pools_5k": {
+   "auroc_condition": 0.8705788148186177,
+   "auroc_genomewide_same_pairs": 0.860001625724089,
+   "delta": 0.01057718909452865,
+   "delta_ci95": [
+    -0.02569625160614521,
+    0.05568991228854128
+   ],
+   "pos": 163
+  },
+  "delta5k_minus_delta4k": -0.0011790396479708365,
+  "delta5k_minus_delta4k_ci95": [
+   -0.06254610903589732,
+   0.07380385612356707
+  ],
+  "delta4k_minus_delta3k": 0.12162009643292349,
+  "delta4k_minus_delta3k_ci95": [
+   0.02441922407479431,
+   0.22105724068969293
+  ]
+ }
+}

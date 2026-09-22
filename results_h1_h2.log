@@ -1,0 +1,68 @@
+reproduction {'S0_auroc_800': 0.8061538394650661, 'S0_auroc_999': 0.8767138523080565, 'S0_auprc_800': 0.11138976879051628, 'base_rate_800': 0.0232905793896506}
+H1 primary (id>=0.25) {
+ "n_pos_precedented": 1806,
+ "n_pos_unprecedented": 827,
+ "n_neg_precedented": 1215,
+ "auroc_prec_negall": 0.8515495009951753,
+ "auroc_unprec_negall": 0.7070189365347429,
+ "diff_negall": 0.14453056446043244,
+ "auroc_prec_negzero": 0.8536242601835725,
+ "auroc_unprec_negzero": 0.7097540892131292,
+ "diff_negzero": 0.1438701709704433,
+ "auroc_negprec_vs_negunprec": 0.6976759421114327,
+ "diff_ci": [
+  0.06591823952928362,
+  0.24196201340022877
+ ],
+ "verdict": "CONFIRMED"
+}
+H1 sensitivity (E only) {
+ "n_pos_precedented": 1853,
+ "n_pos_unprecedented": 780,
+ "n_neg_precedented": 1414,
+ "auroc_prec_negall": 0.8474450906686711,
+ "auroc_unprec_negall": 0.7080606491057327,
+ "diff_negall": 0.1393844415629384,
+ "auroc_prec_negzero": 0.8495344217698253,
+ "auroc_unprec_negzero": 0.7108009770914148,
+ "diff_negzero": 0.13873344467841053,
+ "auroc_negprec_vs_negunprec": 0.6928163422983531,
+ "diff_ci": [
+  0.0540230041376535,
+  0.23800660146337663
+ ],
+ "verdict": "CONFIRMED"
+}
+H2 {
+ "auprc_S0": 0.11138976879051628,
+ "auprc_S2": 0.09869796154249008,
+ "auroc_S0": 0.8061538394650661,
+ "auroc_S2": 0.7825608284027418,
+ "auprc999_S0": 0.09445228991363747,
+ "auprc999_S2": 0.08472588867138645,
+ "auprc_diff": -0.012691807248026196,
+ "auprc_diff_ci": [
+  -0.02038530909672884,
+  -0.005174761982211251
+ ],
+ "n_baits": 212,
+ "recall5_S0": 0.2474429655705563,
+ "recall5_S2": 0.2453853567329536,
+ "recall5_diff_ci": [
+  -0.018172357843937992,
+  0.014142570802095678
+ ],
+ "prec5_S0": 0.3056603773584906,
+ "prec5_S2": 0.30660377358490565,
+ "prec5_diff_ci": [
+  -0.007869496855345865,
+  0.010377358490566034
+ ],
+ "mrr_S0": 0.5994812083125873,
+ "mrr_S2": 0.5828449613224767,
+ "mrr_diff_ci": [
+  -0.041161101882385476,
+  0.006811717870768772
+ ],
+ "verdict": "REJECTED"
+}
