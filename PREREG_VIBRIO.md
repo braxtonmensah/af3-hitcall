@@ -66,3 +66,18 @@ Prediction 1 becomes: **at least 2 of 3 precedented positives are hits**, median
 Prediction 2 is no longer descriptive-only. There are 6 never-solved positives, and the audit
 predicts **fewer hits among never-solved (share) than among precedented**. Reported with exact
 counts; n is too small for a CI to mean much.
+
+## Amendment 2 (2026-09-22, before any extension job was run): TfoS extension
+
+The Jev literature table (descriptive) surfaced a confirmed direct interaction missing from the pilot:
+ChiS-TfoS ("ChiS directly interacts with TfoS", Hullinger...Dalia, PLoS Genet 2025). TfoS is
+identified as VC_2080 (AraC/XylS family, 1,121 aa), the locus named next to *tfoS* in PMC12282291.
+The strict precedent search finds **no co-complex precedent**, so this is a never-solved positive.
+
+Design (`vibrio_pilot/design_ext_tfos.py`): 10 extra AF Server jobs (`afserver_tfos.json`). TfoS is in
+every pool with all 84 pilot proteins as partners, each exactly once, capped at 4,000 aa.
+
+Pre-specified readout, scored like the main pilot: S(ChiS-TfoS), its empirical p against the main pilot's
+decoy-decoy null, and ChiS's rank among TfoS's 84 partners. **Hit** = p < 0.01. Prediction from the
+audit: never-solved, so recovery is uncertain. Reported whatever the outcome, alongside the main
+pilot's never-solved class. The main pilot's predictions are unchanged.
