@@ -42,7 +42,11 @@ comp = ev5["co-Frac MS"].astype(bool).to_numpy() & ~xl
 iptm = ev5.iptm.to_numpy()
 hit = iptm >= 0.5
 out = {}
-for tag, strict in [("pre", False), ("any", False), ("pre", True)]:
+for tag, strict in [("pre", False), ("pre", True), ("any", False)]:
+    f = os.path.join(D, "data", f"bsu_hits_{tag}.json")
+    if not os.path.exists(f) or len(json.load(open(f))) < len(accs):
+        print(tag, "search incomplete, skipped")
+        continue
     P = prec_for(tag, strict)
     tag = tag + ("_strict" if strict else "")
     pp, pu = xl & P, xl & ~P
