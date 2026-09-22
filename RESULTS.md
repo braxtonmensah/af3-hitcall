@@ -29,6 +29,7 @@ Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [
 | H2 | Per-protein null (robust row/column z) beats size correction | **Rejected**: AUPRC 0.111 -> 0.099, CI below 0 |
 | H3 | Interface PAE (pae_min) beats size-corrected ipTM | **Rejected**: +0.006, CI [-0.012, 0.023]; wins 3 of 5 |
 | XL | H1 gap survives an independent, non-PDB truth set | **Confirmed (model, not labels)**: 0.95 vs 0.57 |
+| BSU | Replicates in *B. subtilis* with AlphaFold-Multimer (PREREG_BSU) | **Replicates** under the registered rule: crosslinked pairs reach ipTM >= 0.5 at 53% with precedent vs 21% without, +0.32, CI [0.08, 0.55]. Under the corrected strict rule: +0.23, CI [-0.02, 0.47], same direction but borderline |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
 **TIME in plain words.** STRING positives whose only solved complex appeared *after* AF3's
@@ -93,8 +94,9 @@ the class of stable, obligate complexes. The crosslink version of this test is u
 - Precedent is co-occurrence in a PDB entry, not verified contact.
 - STRING and crosslinks are both incomplete, and crosslinks include transient proximity.
 - *M. pneumoniae* to *M. genitalium* mapping uses orthologs (398 loci, reciprocal best hit).
-- One organism, one model (AF3). Replication in a gamma-proteobacterium (*E. coli* or *Vibrio*)
-  is the obvious next test.
+- Two organisms (*M. genitalium* with AF3, *B. subtilis* with AF-Multimer), both Firmicutes/
+  Mollicutes. A gamma-proteobacterium (*Vibrio*) is the obvious next test; it is pre-registered in
+  `PREREG_VIBRIO.md` and needs GPU time.
 - AF3 Output Terms: non-commercial analysis only; cite Abramson et al. 2024 and Todor et al. 2026.
 
 ## Prior-art check (2026-09-22)
