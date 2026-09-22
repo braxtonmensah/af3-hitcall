@@ -12,7 +12,7 @@ import pandas as pd
 from remotezip import RemoteZip
 
 B = r"C:\Users\bmens\NQ_local\af3-hitcall\burke"
-OUT = os.path.join(B, "interfaces.jsonl")
+OUT = os.path.join(B, sys.argv[2] if len(sys.argv) > 2 else "interfaces.jsonl")
 ZIPS = {"HuRI": "https://archive.bioinfo.se/huintaf2/HuRI.zip", "humap": "https://archive.bioinfo.se/huintaf2/humap.zip"}
 AA = {"ALA": "A", "ARG": "R", "ASN": "N", "ASP": "D", "CYS": "C", "GLN": "Q", "GLU": "E", "GLY": "G", "HIS": "H", "ILE": "I",
       "LEU": "L", "LYS": "K", "MET": "M", "PHE": "F", "PRO": "P", "SER": "S", "THR": "T", "TRP": "W", "TYR": "Y", "VAL": "V",
@@ -53,11 +53,16 @@ def parse(pdb_bytes):
         return None
     a, b = out[ids[0]], out[ids[1]]
     D = np.sqrt(((a["xyz"][:, None, :] - b["xyz"][None, :, :]) ** 2).sum(-1))
+
+    def cn(x):  # contact number: same-chain CB/CA within 10 A (monomer burial)
+        dd = np.sqrt(((x[:, None, :] - x[None, :, :]) ** 2).sum(-1))
+        return ((dd < 10).sum(1) - 1).astype(int).tolist()
+
     ia, ib = (D < 8).any(1), (D < 8).any(0)
     res = {}
     for ch, c, m in [(ids[0], a, ia), (ids[1], b, ib)]:
         res[ch] = {"seq": c["seq"], "start": c["nums"][0], "plddt": c["plddt"],
-                   "iface": [int(k) for k in np.flatnonzero(m)]}  # 0-based index into seq
+                   "iface": [int(k) for k in np.flatnonzero(m)], "cn": cn(c["xyz"])}  # 0-based index into seq
     return res
 
 
