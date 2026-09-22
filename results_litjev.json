@@ -1,0 +1,41 @@
+{
+ "n": {
+  "confident": 350,
+  "low": 350,
+  "prec_ref": 150
+ },
+ "co_mention_rate": {
+  "confident": 0.6971428571428572,
+  "low": 0.6085714285714285,
+  "prec_ref": 0.74
+ },
+ "lit_direct_rate_all": {
+  "confident": 0.005714285714285714,
+  "low": 0.002857142857142857,
+  "prec_ref": 0.013333333333333334
+ },
+ "lit_direct_rate_comentioned": {
+  "confident": 0.00819672131147541,
+  "low": 0.004694835680751174,
+  "prec_ref": 0.018018018018018018
+ },
+ "L1_comentioned_conf_minus_low": {
+  "diff": 0.0035018856307242364,
+  "ci95": [
+   -0.009986146386515817,
+   0.019895328253675057
+  ],
+  "verdict": "NO SIGNAL"
+ },
+ "L2_all_conf_minus_low": {
+  "diff": 0.002857142857142857,
+  "ci95": [
+   -0.005714285714285715,
+   0.011428571428571429
+  ],
+  "verdict": "NO SIGNAL"
+ },
+ "evidence_types_confident_direct": {
+  "biochemical_or_structural": 2
+ }
+}

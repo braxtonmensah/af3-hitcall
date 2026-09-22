@@ -1,0 +1,65 @@
+{
+ "counts_[P_iface,P_else,B_iface,B_else]": {
+  "novel": [
+   532,
+   3477,
+   447,
+   4936
+  ],
+  "precedented": [
+   347,
+   1111,
+   223,
+   933
+  ],
+  "control": [
+   5,
+   630,
+   10,
+   781
+  ]
+ },
+ "OR": {
+  "novel": 1.689190285514621,
+  "precedented": 1.305816454173925,
+  "control": 0.6492579585363091
+ },
+ "OR_ci95": {
+  "novel": [
+   1.3197288111334256,
+   2.164487072519627
+  ],
+  "precedented": [
+   0.9263728916485132,
+   1.8323199790507807
+  ],
+  "control": [
+   0.13560048212085737,
+   1.7706915670430228
+  ]
+ },
+ "novel/control": {
+  "ratio": 2.6017244198634724,
+  "ci95": [
+   0.9893219101740084,
+   11.8273523113754
+  ]
+ },
+ "precedented/control": {
+  "ratio": 2.0112444322096033,
+  "ci95": [
+   0.6822940043125463,
+   10.624733339389744
+  ]
+ },
+ "precedented/novel": {
+  "ratio": 0.7730428391471011,
+  "ci95": [
+   0.5094270029318831,
+   1.171976027161679
+  ]
+ },
+ "T2_positive_control_passes": false,
+ "T1_novel_interfaces_carry_disease_signal": "not interpreted (T2 failed)",
+ "T3": "not interpreted"
+}
