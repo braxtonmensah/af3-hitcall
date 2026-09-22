@@ -1,0 +1,2210 @@
+[
+ {
+  "pair": "PilT-PilU",
+  "n_abstracts": 6,
+  "direct": 0.88,
+  "evidence": "genetic",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-CBP",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "PilT-ChiS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilT-DprA",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "PilT-ComM",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "PilT-PilA",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilB",
+  "n_abstracts": 6,
+  "direct": 0.17,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilC",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilD",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "42100695",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilP",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "42453102",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilO",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilT-PilN",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39770721",
+  "year": "2024"
+ },
+ {
+  "pair": "PilT-PilM",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilT-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilT-TfoS",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "PilT-FimT",
+  "n_abstracts": 6,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilW",
+  "n_abstracts": 6,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-PilV",
+  "n_abstracts": 6,
+  "direct": 0.12,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilT-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "31525185",
+  "year": "2019"
+ },
+ {
+  "pair": "PilU-CBP",
+  "n_abstracts": 2,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "PilU-ChiS",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "PilU-DprA",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "PilU-ComM",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40802478",
+  "year": "2025"
+ },
+ {
+  "pair": "PilU-PilA",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-PilB",
+  "n_abstracts": 6,
+  "direct": 0.36,
+  "evidence": "genetic",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-PilC",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-PilD",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-PilQ",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-PilP",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "35612326",
+  "year": "2022"
+ },
+ {
+  "pair": "PilU-PilO",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilU-PilN",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "35612326",
+  "year": "2022"
+ },
+ {
+  "pair": "PilU-PilM",
+  "n_abstracts": 6,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilU-ComEA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-QstR",
+  "n_abstracts": 4,
+  "direct": 0.21,
+  "evidence": "genetic",
+  "id": "24127573",
+  "year": "2013"
+ },
+ {
+  "pair": "PilU-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-FimT",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-PilW",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilU-PilV",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilU-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "31525185",
+  "year": "2019"
+ },
+ {
+  "pair": "CBP-ChiS",
+  "n_abstracts": 6,
+  "direct": 0.88,
+  "evidence": "biochemical_or_structural",
+  "id": "41343673",
+  "year": "2025"
+ },
+ {
+  "pair": "CBP-DprA",
+  "n_abstracts": 3,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "24473132",
+  "year": "2014"
+ },
+ {
+  "pair": "CBP-ComM",
+  "n_abstracts": 3,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "CBP-PilA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "CBP-PilB",
+  "n_abstracts": 6,
+  "direct": 0.13,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "CBP-PilC",
+  "n_abstracts": 4,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "37040409",
+  "year": "2023"
+ },
+ {
+  "pair": "CBP-PilD",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "30767847",
+  "year": "2019"
+ },
+ {
+  "pair": "CBP-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "CBP-PilP",
+  "n_abstracts": 1,
+  "direct": 0.16,
+  "evidence": "none",
+  "id": "40657929",
+  "year": "2025"
+ },
+ {
+  "pair": "CBP-PilO",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "33148128",
+  "year": "2020"
+ },
+ {
+  "pair": "CBP-PilN",
+  "n_abstracts": 1,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "28802272",
+  "year": "2017"
+ },
+ {
+  "pair": "CBP-PilM",
+  "n_abstracts": 4,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "23803158",
+  "year": "2013"
+ },
+ {
+  "pair": "CBP-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "CBP-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "CBP-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.7,
+  "evidence": "biochemical_or_structural",
+  "id": "39965000",
+  "year": "2025"
+ },
+ {
+  "pair": "CBP-QstR",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "32651201",
+  "year": "2020"
+ },
+ {
+  "pair": "CBP-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.86,
+  "evidence": "biochemical_or_structural",
+  "id": "39965000",
+  "year": "2025"
+ },
+ {
+  "pair": "CBP-FimT",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "CBP-PilW",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "CBP-PilV",
+  "n_abstracts": 1,
+  "direct": 0.01,
+  "evidence": "none",
+  "id": "18426883",
+  "year": "2008"
+ },
+ {
+  "pair": "CBP-HapR",
+  "n_abstracts": 6,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "32651201",
+  "year": "2020"
+ },
+ {
+  "pair": "ChiS-DprA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-ComM",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32860313",
+  "year": "2020"
+ },
+ {
+  "pair": "ChiS-PilA",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "ChiS-PilB",
+  "n_abstracts": 4,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "ChiS-PilC",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilD",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilQ",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilP",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilO",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilN",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilM",
+  "n_abstracts": 2,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "22737089",
+  "year": "2012"
+ },
+ {
+  "pair": "ChiS-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "ChiS-ComEC",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.7,
+  "evidence": "biochemical_or_structural",
+  "id": "39965000",
+  "year": "2025"
+ },
+ {
+  "pair": "ChiS-QstR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33712424",
+  "year": "2021"
+ },
+ {
+  "pair": "ChiS-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.96,
+  "evidence": "biochemical_or_structural",
+  "id": "PPR918488",
+  "year": "2024"
+ },
+ {
+  "pair": "ChiS-FimT",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "31658256",
+  "year": "2019"
+ },
+ {
+  "pair": "ChiS-PilW",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-PilV",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ChiS-HapR",
+  "n_abstracts": 6,
+  "direct": 0.14,
+  "evidence": "none",
+  "id": "32651201",
+  "year": "2020"
+ },
+ {
+  "pair": "DprA-ComM",
+  "n_abstracts": 6,
+  "direct": 0.95,
+  "evidence": "biochemical_or_structural",
+  "id": "40215278",
+  "year": "2025"
+ },
+ {
+  "pair": "DprA-PilA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "DprA-PilB",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "DprA-PilC",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "DprA-PilD",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "DprA-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "DprA-PilP",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "DprA-PilO",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "DprA-PilN",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "DprA-PilM",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "DprA-ComEA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "DprA-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "DprA-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "40215278",
+  "year": "2025"
+ },
+ {
+  "pair": "DprA-QstR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "genetic",
+  "id": "31848285",
+  "year": "2019"
+ },
+ {
+  "pair": "DprA-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "DprA-FimT",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "DprA-PilW",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "DprA-PilV",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "DprA-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "30102403",
+  "year": "2018"
+ },
+ {
+  "pair": "ComM-PilA",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-PilB",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ComM-PilC",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-PilD",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "ComM-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "39670763",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-PilP",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "ComM-PilO",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "ComM-PilN",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "ComM-PilM",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "31323028",
+  "year": "2019"
+ },
+ {
+  "pair": "ComM-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "39670763",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "39670763",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.21,
+  "evidence": "biochemical_or_structural",
+  "id": "40215278",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ComM-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ComM-FimT",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-PilW",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35126321",
+  "year": "2021"
+ },
+ {
+  "pair": "ComM-PilV",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "ComM-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "30102403",
+  "year": "2018"
+ },
+ {
+  "pair": "PilA-PilB",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilA-PilC",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilA-PilD",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40572111",
+  "year": "2025"
+ },
+ {
+  "pair": "PilA-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.08,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilP",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "42453102",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilO",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41879311",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilN",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41879311",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilM",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41961802",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-QstR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "genetic",
+  "id": "31848285",
+  "year": "2019"
+ },
+ {
+  "pair": "PilA-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "PilA-FimT",
+  "n_abstracts": 6,
+  "direct": 0.17,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilW",
+  "n_abstracts": 6,
+  "direct": 0.16,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-PilV",
+  "n_abstracts": 6,
+  "direct": 0.17,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilA-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "PilB-PilC",
+  "n_abstracts": 6,
+  "direct": 0.19,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-PilD",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40572111",
+  "year": "2025"
+ },
+ {
+  "pair": "PilB-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42187720",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-PilP",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "35612326",
+  "year": "2022"
+ },
+ {
+  "pair": "PilB-PilO",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilB-PilN",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilB-PilM",
+  "n_abstracts": 6,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilB-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.1,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-QstR",
+  "n_abstracts": 6,
+  "direct": 0.14,
+  "evidence": "none",
+  "id": "24127573",
+  "year": "2013"
+ },
+ {
+  "pair": "PilB-TfoS",
+  "n_abstracts": 3,
+  "direct": 0.08,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "PilB-FimT",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-PilW",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-PilV",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilB-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "PilC-PilD",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39722734",
+  "year": "2024"
+ },
+ {
+  "pair": "PilC-PilQ",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-PilP",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39477930",
+  "year": "2024"
+ },
+ {
+  "pair": "PilC-PilO",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41961802",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-PilN",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "35612326",
+  "year": "2022"
+ },
+ {
+  "pair": "PilC-PilM",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "39508682",
+  "year": "2024"
+ },
+ {
+  "pair": "PilC-ComEA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilC-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "42258723",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilC-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilC-FimT",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-PilW",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-PilV",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "PilC-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "PilD-PilQ",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilD-PilP",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilD-PilO",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "36947586",
+  "year": "2023"
+ },
+ {
+  "pair": "PilD-PilN",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "36947586",
+  "year": "2023"
+ },
+ {
+  "pair": "PilD-PilM",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "36947586",
+  "year": "2023"
+ },
+ {
+  "pair": "PilD-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "40802478",
+  "year": "2025"
+ },
+ {
+  "pair": "PilD-ComEC",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilD-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "none",
+  "id": "24558639",
+  "year": "2014"
+ },
+ {
+  "pair": "PilD-QstR",
+  "n_abstracts": 2,
+  "direct": 0.09,
+  "evidence": "none",
+  "id": "24127573",
+  "year": "2013"
+ },
+ {
+  "pair": "PilD-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilD-FimT",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "40444634",
+  "year": "2025"
+ },
+ {
+  "pair": "PilD-PilW",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41961802",
+  "year": "2026"
+ },
+ {
+  "pair": "PilD-PilV",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41290585",
+  "year": "2025"
+ },
+ {
+  "pair": "PilD-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "19231189",
+  "year": "2009"
+ },
+ {
+  "pair": "PilQ-PilP",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "41961802",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-PilO",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilQ-PilN",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41917195",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-PilM",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilQ-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42106916",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42106916",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-QstR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "31182799",
+  "year": "2019"
+ },
+ {
+  "pair": "PilQ-TfoS",
+  "n_abstracts": 2,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "PilQ-FimT",
+  "n_abstracts": 6,
+  "direct": 0.12,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-PilW",
+  "n_abstracts": 6,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-PilV",
+  "n_abstracts": 6,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "PilQ-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "PilP-PilO",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "IND609153310",
+  "year": "2025"
+ },
+ {
+  "pair": "PilP-PilN",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilP-PilM",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "38236729",
+  "year": "2024"
+ },
+ {
+  "pair": "PilP-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33033258",
+  "year": "2020"
+ },
+ {
+  "pair": "PilP-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "36695594",
+  "year": "2023"
+ },
+ {
+  "pair": "PilP-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "24558639",
+  "year": "2014"
+ },
+ {
+  "pair": "PilP-QstR",
+  "n_abstracts": 2,
+  "direct": 0.13,
+  "evidence": "genetic",
+  "id": "24127573",
+  "year": "2013"
+ },
+ {
+  "pair": "PilP-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilP-FimT",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "34542714",
+  "year": "2021"
+ },
+ {
+  "pair": "PilP-PilW",
+  "n_abstracts": 6,
+  "direct": 0.08,
+  "evidence": "none",
+  "id": "32020694",
+  "year": "2020"
+ },
+ {
+  "pair": "PilP-PilV",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39477930",
+  "year": "2024"
+ },
+ {
+  "pair": "PilP-HapR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-PilN",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-PilM",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "38236729",
+  "year": "2024"
+ },
+ {
+  "pair": "PilO-ComEA",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32625182",
+  "year": "2020"
+ },
+ {
+  "pair": "PilO-TfoX",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilO-FimT",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "36780566",
+  "year": "2023"
+ },
+ {
+  "pair": "PilO-PilW",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41917195",
+  "year": "2026"
+ },
+ {
+  "pair": "PilO-PilV",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39477930",
+  "year": "2024"
+ },
+ {
+  "pair": "PilO-HapR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilN-PilM",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "38236729",
+  "year": "2024"
+ },
+ {
+  "pair": "PilN-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32625182",
+  "year": "2020"
+ },
+ {
+  "pair": "PilN-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32625182",
+  "year": "2020"
+ },
+ {
+  "pair": "PilN-TfoX",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilN-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilN-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilN-FimT",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "34542714",
+  "year": "2021"
+ },
+ {
+  "pair": "PilN-PilW",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39477930",
+  "year": "2024"
+ },
+ {
+  "pair": "PilN-PilV",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "39477930",
+  "year": "2024"
+ },
+ {
+  "pair": "PilN-HapR",
+  "n_abstracts": 3,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "19767434",
+  "year": "2009"
+ },
+ {
+  "pair": "PilM-ComEA",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32625182",
+  "year": "2020"
+ },
+ {
+  "pair": "PilM-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "32625182",
+  "year": "2020"
+ },
+ {
+  "pair": "PilM-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "31525185",
+  "year": "2019"
+ },
+ {
+  "pair": "PilM-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilM-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilM-FimT",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "36780566",
+  "year": "2023"
+ },
+ {
+  "pair": "PilM-PilW",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "41917195",
+  "year": "2026"
+ },
+ {
+  "pair": "PilM-PilV",
+  "n_abstracts": 6,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "38294234",
+  "year": "2024"
+ },
+ {
+  "pair": "PilM-HapR",
+  "n_abstracts": 5,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "23382174",
+  "year": "2013"
+ },
+ {
+  "pair": "ComEA-ComEC",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "none",
+  "id": "42106916",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEA-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "39670763",
+  "year": "2025"
+ },
+ {
+  "pair": "ComEA-QstR",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ComEA-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "ComEA-FimT",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "ComEA-PilW",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEA-PilV",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEA-HapR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "33397700",
+  "year": "2021"
+ },
+ {
+  "pair": "ComEC-TfoX",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42106916",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEC-QstR",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "genetic",
+  "id": "31848285",
+  "year": "2019"
+ },
+ {
+  "pair": "ComEC-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.08,
+  "evidence": "none",
+  "id": "28461445",
+  "year": "2017"
+ },
+ {
+  "pair": "ComEC-FimT",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEC-PilW",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEC-PilV",
+  "n_abstracts": 6,
+  "direct": 0.05,
+  "evidence": "none",
+  "id": "42233349",
+  "year": "2026"
+ },
+ {
+  "pair": "ComEC-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "31658256",
+  "year": "2019"
+ },
+ {
+  "pair": "TfoX-QstR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "35761009",
+  "year": "2022"
+ },
+ {
+  "pair": "TfoX-TfoS",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "TfoX-FimT",
+  "n_abstracts": 6,
+  "direct": 0.12,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "TfoX-PilW",
+  "n_abstracts": 6,
+  "direct": 0.13,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "TfoX-PilV",
+  "n_abstracts": 5,
+  "direct": 0.11,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "TfoX-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "41615159",
+  "year": "2026"
+ },
+ {
+  "pair": "QstR-TfoS",
+  "n_abstracts": 6,
+  "direct": 0.06,
+  "evidence": "genetic",
+  "id": "33712424",
+  "year": "2021"
+ },
+ {
+  "pair": "QstR-FimT",
+  "n_abstracts": 2,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "QstR-PilW",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "QstR-PilV",
+  "n_abstracts": 1,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "40630188",
+  "year": "2025"
+ },
+ {
+  "pair": "QstR-HapR",
+  "n_abstracts": 6,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "35604123",
+  "year": "2022"
+ },
+ {
+  "pair": "TfoS-FimT",
+  "n_abstracts": 1,
+  "direct": 0.03,
+  "evidence": "none",
+  "id": "31658256",
+  "year": "2019"
+ },
+ {
+  "pair": "TfoS-PilW",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "TfoS-PilV",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "TfoS-HapR",
+  "n_abstracts": 6,
+  "direct": 0.07,
+  "evidence": "genetic",
+  "id": "33712424",
+  "year": "2021"
+ },
+ {
+  "pair": "FimT-PilW",
+  "n_abstracts": 6,
+  "direct": 0.15,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "FimT-PilV",
+  "n_abstracts": 6,
+  "direct": 0.15,
+  "evidence": "none",
+  "id": "42241457",
+  "year": "2026"
+ },
+ {
+  "pair": "FimT-HapR",
+  "n_abstracts": 2,
+  "direct": 0.04,
+  "evidence": "none",
+  "id": "31658256",
+  "year": "2019"
+ },
+ {
+  "pair": "PilW-PilV",
+  "n_abstracts": 0,
+  "direct": 0,
+  "evidence": "none",
+  "id": "",
+  "year": ""
+ },
+ {
+  "pair": "PilW-HapR",
+  "n_abstracts": 1,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "24068933",
+  "year": "2013"
+ },
+ {
+  "pair": "PilV-HapR",
+  "n_abstracts": 1,
+  "direct": 0.02,
+  "evidence": "none",
+  "id": "35819797",
+  "year": "2022"
+ }
+]

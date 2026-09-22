@@ -1,0 +1,47 @@
+PilN-HapR: 3 abstracts, best direct=0.03 (none) PMID 19767434
+PilM-ComEA: 6 abstracts, best direct=0.03 (none) PMID 32625182
+PilM-ComEC: 6 abstracts, best direct=0.03 (none) PMID 32625182
+PilM-TfoX: 6 abstracts, best direct=0.05 (none) PMID 31525185
+PilM-FimT: 6 abstracts, best direct=0.02 (none) PMID 36780566
+PilM-PilW: 6 abstracts, best direct=0.02 (none) PMID 41917195
+PilM-PilV: 6 abstracts, best direct=0.02 (none) PMID 38294234
+PilM-HapR: 5 abstracts, best direct=0.07 (none) PMID 23382174
+ComEA-ComEC: 6 abstracts, best direct=0.07 (none) PMID 42106916
+ComEA-TfoX: 6 abstracts, best direct=0.05 (none) PMID 39670763
+ComEA-TfoS: 6 abstracts, best direct=0.04 (none) PMID 33397700
+ComEA-PilW: 6 abstracts, best direct=0.05 (none) PMID 42233349
+ComEA-PilV: 6 abstracts, best direct=0.05 (none) PMID 42233349
+ComEA-HapR: 6 abstracts, best direct=0.05 (none) PMID 33397700
+ComEC-TfoX: 6 abstracts, best direct=0.04 (none) PMID 42106916
+ComEC-QstR: 6 abstracts, best direct=0.05 (genetic) PMID 31848285
+ComEC-TfoS: 6 abstracts, best direct=0.08 (none) PMID 28461445
+ComEC-FimT: 6 abstracts, best direct=0.04 (none) PMID 42233349
+ComEC-PilW: 6 abstracts, best direct=0.04 (none) PMID 42233349
+ComEC-PilV: 6 abstracts, best direct=0.05 (none) PMID 42233349
+ComEC-HapR: 6 abstracts, best direct=0.04 (none) PMID 31658256
+TfoX-QstR: 6 abstracts, best direct=0.04 (none) PMID 35761009
+TfoX-FimT: 6 abstracts, best direct=0.12 (none) PMID 42241457
+TfoX-PilW: 6 abstracts, best direct=0.13 (none) PMID 42241457
+TfoX-PilV: 5 abstracts, best direct=0.11 (none) PMID 42241457
+TfoX-HapR: 6 abstracts, best direct=0.04 (none) PMID 41615159
+QstR-TfoS: 6 abstracts, best direct=0.06 (genetic) PMID 33712424
+QstR-FimT: 2 abstracts, best direct=0.04 (none) PMID 40630188
+QstR-PilV: 1 abstracts, best direct=0.04 (none) PMID 40630188
+QstR-HapR: 6 abstracts, best direct=0.04 (none) PMID 35604123
+TfoS-FimT: 1 abstracts, best direct=0.03 (none) PMID 31658256
+TfoS-HapR: 6 abstracts, best direct=0.07 (genetic) PMID 33712424
+FimT-PilW: 6 abstracts, best direct=0.15 (none) PMID 42241457
+FimT-PilV: 6 abstracts, best direct=0.15 (none) PMID 42241457
+FimT-HapR: 2 abstracts, best direct=0.04 (none) PMID 31658256
+PilW-HapR: 1 abstracts, best direct=0.02 (none) PMID 24068933
+PilV-HapR: 1 abstracts, best direct=0.02 (none) PMID 35819797
+
+pairs 276, with abstracts 214, direct>=0.8: 5
+PilT-PilU 0.88 genetic PMID42258723
+CBP-ChiS 0.88 biochemical_or_structural PMID41343673
+CBP-TfoS 0.86 biochemical_or_structural PMID39965000
+ChiS-TfoS 0.96 biochemical_or_structural PMIDPPR918488
+DprA-ComM 0.95 biochemical_or_structural PMID40215278
+Jev spend: $0.4253
+
+[exited with code 0]

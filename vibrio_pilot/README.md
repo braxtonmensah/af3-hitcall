@@ -31,3 +31,21 @@ pattern or adjust the regex.
   CBP-ChiS, DprA-ComM) survive an unbiased pooled screen with decoys. The audit predicts the
   never-solved class does worse.
 - The false-positive burden on system proteins against random decoys.
+
+## Literature evidence table (descriptive, Jev, 2026-09-22)
+
+`lit_evidence.mts` searched Europe PMC for every pair of 24 competence/regulatory names (+ Vibrio),
+214 of 276 pairs had abstracts, and Jev judged each abstract for a direct interaction (cost $0.43).
+Five pairs scored >= 0.8:
+
+| Pair | Jev | Check by hand |
+|---|---|---|
+| PilT-PilU | 0.88 | correct (Teipen...Dalia 2026) |
+| CBP-ChiS | 0.88 | correct (Anderson & Dalia 2025) |
+| DprA-ComM | 0.95 | correct (Dalia 2025) |
+| ChiS-TfoS | 0.96 | **correct: "ChiS directly interacts with TfoS"** (Hullinger...Dalia 2025). Not in the pilot, because TfoS is absent from the 24 proteins |
+| CBP-TfoS | 0.86 | **wrong**: same abstract, which reports ChiS-TfoS, not CBP-TfoS |
+
+It independently recovered all three pre-registered never-solved positives, 4 of 5 calls are correct,
+and it found one confirmed interaction the pilot misses. The T4P alignment pairs (PilM-N-O-P-Q) have no
+*Vibrio*-specific direct evidence in abstracts, as expected (their evidence is from other species).
