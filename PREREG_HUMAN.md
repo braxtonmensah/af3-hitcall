@@ -47,3 +47,13 @@ itself carries the correctness signal.
 Why HH2 matters: H1-TIME said AF recognises stable complexes. The practical question for a lab is
 whether a *confident* hit without precedent can be trusted structurally. HH2 answers that with
 evidence that doesn't come from the PDB.
+
+## Amendment 1 (2026-09-22, after HH1/HH2, before this test was computed)
+
+The archive has `random.csv`: pDockQ for 1,849 random human pairs (the paper's Fig. 1a negatives).
+That allows H1 in its original AUROC form. **HH3**: AUROC(pDockQ; precedented HuRI positives vs
+random) minus AUROC(pDockQ; never-solved HuRI positives vs random). Bootstrap over pairs, 2,000
+reps, 95% CI. The random pairs share few proteins, so node resampling is not meaningful for
+negatives; positives and negatives are resampled independently.
+
+- **Replicates** if the difference >= 0.10 and the CI lower bound > 0.
