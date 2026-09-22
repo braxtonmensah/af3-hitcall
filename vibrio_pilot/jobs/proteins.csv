@@ -1,0 +1,85 @@
+locus,name,role,kind,accession,length
+VC_0462,PilT,retraction ATPase,system,Q9KUQ3,345
+VC_0463,PilU,retraction ATPase,system,Q9KUQ2,368
+VC_0620,CBP,chitin-binding SBP,system,Q9KUA3,556
+VC_0622,ChiS,chitin sensor HK,system,Q9KUA1,1177
+VC_0048,DprA,recombination mediator,system,Q9KVU1,371
+VC_0032,ComM,helicase,system,Q9KVV6,507
+VC_2423,PilA,major pilin,system,Q9KPE5,167
+VC_2424,PilB,extension ATPase,system,Q9KPE4,562
+VC_2425,PilC,platform,system,Q9X4G9,408
+VC_2426,PilD,prepilin peptidase,system,H9L4S3,291
+VC_2630,PilQ,secretin,system,Q9KNV0,578
+VC_2631,PilP,alignment,system,Q9KNU9,172
+VC_2632,PilO,alignment,system,Q9KNU8,199
+VC_2633,PilN,alignment,system,Q9KNU7,196
+VC_2634,PilM,alignment,system,Q9KNU6,338
+VC_0857,VC0857,minor pilin,system,Q9KTP4,147
+VC_0858,VC0858,minor pilin,system,Q9KTP3,184
+VC_0859,VC0859,minor pilin,system,Q9KTP2,200
+VC_0860,VC0860,minor pilin,system,Q9KTP1,413
+VC_0861,VC0861,minor pilin,system,Q9KTP0,137
+VC_1917,ComEA,DNA receptor,system,Q9KQT1,103
+VC_1879,ComEC,DNA channel,system,Q9KQW8,752
+VC_1153,TfoX,regulator,system,Q9KSV3,202
+VC_0396,QstR,regulator,system,Q9KUW3,214
+VC_0695,VC_0695,Phospho-2-dehydro-3-deoxyheptonate aldolase (EC 2.5.1.54),decoy,Q9KU34,357
+VC_1406,VC_1406,Methyl-accepting chemotaxis protein,decoy,Q9KS54,438
+VC_0339,VC_0339,Phosphatidylserine decarboxylase proenzyme (EC 4.1.1.65) [Cl,decoy,Q9KV19,285
+VC_1773,VC_1773,Kelch domain-containing protein VC_1773,decoy,Q9KR70,356
+VC_2755,VC_2755,Protoporphyrinogen IX dehydrogenase [quinone] (EC 1.3.5.3) (,decoy,Q9KNI4,174
+VC_2511,VC_2511,Aspartate carbamoyltransferase regulatory chain,decoy,Q9KP65,155
+VC_A0601,VC_A0601,"ABC transporter, permease protein",decoy,Q9KLZ0,592
+VC_0875,VC_0875,Proline--tRNA ligase (EC 6.1.1.15) (Prolyl-tRNA synthetase) ,decoy,Q9KTM7,571
+VC_2208,VC_2208,Flagellar protein FlgT,decoy,Q9KPZ9,377
+VC_0957,VC_0957,Zinc ribbon-containing protein,decoy,Q9KTE5,156
+VC_2597,VC_2597,Small ribosomal subunit protein uS10 (30S ribosomal protein ,decoy,Q9KNY3,103
+VC_A0737,VC_A0737,Autoinducer 2-binding periplasmic protein LuxP,decoy,Q9KLK6,364
+VC_0176,VC_0176,"Transcriptional regulator, putative",decoy,Q9KVH0,102
+VC_A0077,VC_A0077,Sulfate permease family protein,decoy,Q9KN88,553
+VC_0887,VC_0887,YqcC-like domain-containing protein,decoy,Q9KTL5,103
+VC_A0604,VC_A0604,2-aminoethylphosphonate--pyruvate transaminase (EC 2.6.1.37),decoy,Q9KLY7,367
+VC_1143,VC_1143,ATP-dependent Clp protease adapter protein ClpS,decoy,Q9KSW3,106
+VC_1845,VC_1845,Holliday junction branch migration complex subunit RuvB (EC ,decoy,Q9KR02,334
+VC_0403,VC_0403,MSHA biogenesis protein MshM,decoy,H9L4Q2,281
+VC_0823,VC_0823,ATLF-like domain-containing protein,decoy,Q9KTR7,312
+VC_0482,VC_0482,HTH-type transcriptional regulator ArgP,decoy,Q9KUN3,298
+VC_1402,VC_1402,Chemotaxis protein CheW,decoy,Q9KS58,520
+VC_A0516,VC_A0516,PTS system fructose-specific EIIB'BC component [Includes: PT,decoy,Q9KM72,580
+VC_1658,VC_1658,Serine transporter,decoy,Q9KRI3,417
+VC_0321,VC_0321,Elongation factor Tu-A (EF-Tu-A) (EC 3.6.5.3),decoy,Q9KV37,394
+VC_0336,VC_0336,"2,3-bisphosphoglycerate-independent phosphoglycerate mutase ",decoy,Q9KV22,510
+VC_A0812,VC_A0812,Leucine aminopeptidase-related protein,decoy,Q9KLD4,476
+VC_1414,VC_1414,Metal-dependent carboxypeptidase (EC 3.4.17.19),decoy,Q9KS46,524
+VC_0736,VC_0736,Isocitrate lyase (EC 4.1.3.1),decoy,Q9KTZ4,437
+VC_1820,VC_1820,"PTS system, fructose-specific IIA component",decoy,Q9KR27,146
+VC_A0242,VC_A0242,"Hexulose-6-phosphate synthase SgbH, putative",decoy,Q9KMS8,215
+VC_0112,VC_0112,Cytochrome c4,decoy,Q9KVM9,223
+VC_1984,VC_1984,Ribonuclease D (RNase D) (EC 3.1.13.5),decoy,Q9KQL4,381
+VC_A0545,VC_A0545,"5`-nucleotidase, putative",decoy,Q9KM44,580
+VC_2556,VC_2556,Uncharacterized protein,decoy,Q9KP23,121
+VC_0766,VC_0766,Exodeoxyribonuclease 7 large subunit (EC 3.1.11.6) (Exodeoxy,decoy,Q9KTW4,446
+VC_0049,VC_0049,Protein Smg homolog,decoy,Q9KVU0,158
+VC_A0085,VC_A0085,MFS transporter,decoy,Q9KN80,400
+VC_0666,VC_0666,DUF1127 domain-containing protein,decoy,Q9KU58,104
+VC_0360,VC_0360,Small ribosomal subunit protein uS7 (30S ribosomal protein S,decoy,Q9KUZ8,156
+VC_1619,VC_1619,Uncharacterized protein,decoy,Q9KRL7,182
+VC_2657,VC_2657,Succinate dehydrogenase iron-sulfur subunit (EC 1.3.5.1),decoy,Q9KNS4,252
+VC_0194,VC_0194,Glutathione hydrolase proenzyme (EC 2.3.2.2) (EC 3.4.19.13) ,decoy,Q9KVF2,588
+VC_1639,VC_1639,histidine kinase (EC 2.7.13.3),decoy,Q9KRK1,462
+VC_2459,VC_2459,DNA repair protein RecO (Recombination protein O),decoy,Q9KPB4,241
+VC_0806,VC_0806,Amine oxidase domain-containing protein,decoy,Q9KTT2,538
+VC_0137,VC_0137,Cyclic di-GMP phosphodiesterase CdgJ (EC 3.1.4.52),decoy,Q9KVK6,432
+VC_1038,VC_1038,Uridine kinase (EC 2.7.1.48) (Cytidine monophosphokinase) (U,decoy,Q9KT67,213
+VC_2248,VC_2248,Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acylt,decoy,Q9KPW4,262
+VC_1208,VC_1208,Putative double-stranded DNA mimic protein VC_1208,decoy,Q9KSP8,106
+VC_2285,VC_2285,diguanylate cyclase (EC 2.7.7.65),decoy,Q9KPS7,505
+VC_A0284,VC_A0284,Uropathogenic specific protein,decoy,Q9KMP0,176
+VC_A0928,VC_A0928,Lipoprotein,decoy,Q9KL21,169
+VC_0870,VC_0870,IS1004 transposase,decoy,Q7DCS6,145
+VC_1615,VC_1615,YgjP-like metallopeptidase domain-containing protein,decoy,Q9KRM1,170
+VC_A0590,VC_A0590,Oligopeptide transport system permease protein YejB,decoy,Q9KLZ9,360
+VC_A0245,VC_A0245,Ascorbate-specific PTS system EIIA component (Ascorbate-spec,decoy,Q9KMS5,168
+VC_1409,VC_1409,"Multidrug resistance protein, putative",decoy,Q9KS51,484
+VC_1419,VC_1419,Immunity protein TsiV1,decoy,Q9KS42,247
+VC_A0642,VC_A0642,"Transcriptional regulator, ArsR family",decoy,Q9KLU9,105

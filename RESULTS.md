@@ -64,9 +64,12 @@ the class of stable, obligate complexes. The crosslink version of this test is u
 1. Trust hits that resemble a stable complex: they are the ones the method finds.
 2. Expect a hit list for never-solved interactions to be about 1 in 5 real at a 10% nominal FDR,
    and treat a *negative* result as uninformative for transient interactions.
-3. Pool at about 4,000 aa. That is as good as 5,000 aa on matched pairs, and 4k-token jobs fit
-   on smaller GPUs. (The token capacity per GPU still needs checking against AF3's docs before
-   planning.)
+3. Pool at about 4,000 aa. On matched pairs that is as good as 5,000 aa (post hoc; confirm
+   prospectively). This matters at IU. AF3's docs give a maximum of 4,352 tokens on an A100 40 GB,
+   5,120 on 80 GB, and 1,280 on a V100 (with unified memory). Big Red 200's GPU nodes are
+   4x A100 40 GB, so 5k pools do not fit there but 4k pools do. Quartz's V100s are limited to about
+   1k-aa pools, and the matched-pairs data show small pools lose most of the benefit (2k pools:
+   -0.14 AUROC vs the genome-wide screen on the same pairs).
 4. Averaging the 5 samples is the right aggregate. Do not pick the best sample, and do not expect
    a second replicate to fix novel interactions.
 
