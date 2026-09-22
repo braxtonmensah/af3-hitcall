@@ -107,3 +107,11 @@ experiment (pairs, 2k, 3k, 4k, 5k aa pools; ~4,500 pairs each).
 The data is AlphaFold3 Server Output / AF3 Output. Non-commercial analysis only, cite
 Abramson et al. 2024 and Todor et al. 2026, and no training of structure-prediction models on it.
 A scoring rule fitted here is a benchmark statistic, not a structure predictor.
+
+## Amendment 1 (2026-09-22, before any score was joined to STRING)
+
+The RCSB search at identity >= 0.25 misses clear homologs: MG_001 (DnaN) has no hit at 0.25, but
+4TR6 at 22.8% identity, E = 2e-18. AF3's template search has no identity floor. **H1 is re-run
+with a sensitivity definition: E <= 1e-3, no identity floor.** The primary definition, test and
+thresholds are unchanged, and the sensitivity result is reported next to it. It is not used to
+rescue or replace the primary result.
