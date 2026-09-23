@@ -1,0 +1,40 @@
+models 200
+models 400
+models 600
+models 800
+models 1000
+models 1106
+models 1106
+models with 2 chains: 1106
+mapped heterodimer models: 1102
+{'n_models': 1106, 'n_mapped': 1102, 'excluded_earlier_cocomplex': 619, 'eligible': 483, 'newly_solved': 87, 'Y3_frac_newly_solved': 0.18012422360248448}
+{
+ "n_models": 1106,
+ "n_mapped": 1102,
+ "excluded_earlier_cocomplex": 619,
+ "eligible": 483,
+ "newly_solved": 87,
+ "Y3_frac_newly_solved": 0.18012422360248448,
+ "Y1": {
+  "n": 84,
+  "frac_correct": 0.8928571428571429,
+  "ci95": [
+   0.8214285714285714,
+   0.9523809523809523
+  ],
+  "median_f1": 0.8450207312476442,
+  "verdict": "REPLICATES"
+ },
+ "Y2_null": {
+  "mean_frac_correct": 0.011423809523809522,
+  "p99": 0.03571428571428571,
+  "Y1_exceeds_p99": true
+ },
+ "release_years": {
+  "2022": 20,
+  "2023": 31,
+  "2024": 5,
+  "2025": 9,
+  "2026": 19
+ }
+}

@@ -36,6 +36,13 @@ could have seen them.
 | F1c: only proteins with pre-2022 structures | 3.6% | 1.6% | OR 2.3 [1.005, 4.9] (just passes) |
 | F2: the frozen model's interface matches the new structure (residue F1 >= 0.5) | **81%** of 146 (median F1 0.82) | **1.8%** of 110 | +0.79 [0.72, 0.86] |
 
+**Replicated in yeast with a different pipeline (PREREG_FUTURE_YEAST).** Humphreys et al. 2021
+(RoseTTAFold + AF2, ModelArchive ma-bak-cepc, all 1,106 models): 619 had a co-complex before 2022
+(excluded), 87 of the remaining 483 were first solved 2022-2026, and **75 of 84 with direct contact
+had the right interface (89%, CI [0.82, 0.95], median F1 0.85)** vs 1.1% for a shifted-interface
+null (99th percentile 3.6%). Circularity strata: no in-silico start recorded 89% (n = 72), <= 3 A
+88% (n = 24). Two organisms, two AI pipelines, the same answer.
+
 **Circularity check (post hoc, `posthoc_future_circularity.py`).** New structures can be built
 from AlphaFold models, so F2 could be the model agreeing with itself. Entries recording no in-silico
 starting model: 81% (n = 116), the same as entries that record one (80%, n = 30). Resolution <= 3.0 A:
@@ -78,6 +85,7 @@ confidence-stratified predictions against structures solved afterwards.
 | FUTURE | Did frozen 2021 human predictions anticipate 2022-26 structures? (PREREG_FUTURE) | **Yes**: see the section above. F1 OR 2.8, F1b 8.8, F2 81% vs 2% correct interfaces |
 | COOP | Are AF's misses cooperative (non-autonomous) interfaces? (PREREG_COOP) | **Partial** (registered rule: both arms needed). **Arm H passes** (human, real 2022-26 structures of AF2 hits vs misses): misses have 27% of their interface also touching a third chain vs 11% for hits (+0.16, CI [0.06, 0.31]), come from larger assemblies (10.5 vs 6 entities, CI [0.5, 7]) and have far smaller pair contacts (30 vs 85 residue pairs, CI [-70, -38]). **Arm P fails** (M. genitalium pools): a shared STRING partner in the pool does not lift a never-solved pair's score (-0.004, CI [-0.015, 0.002]). Reading: the misses are small, non-autonomous contacts inside big assemblies; pooled AF3 does not recover them just by having a complex partner in the pool |
 | COMPOSE | Can misses be recovered by composing A-C and B-C models on a shared partner C? (PREREG_COMPOSE) | **Not shown, and the method failed its sanity arm**: 1 of 13 misses rescued (p = 0.5); on hits, composition was right 9 of 24 times vs 17 of 24 for AF's pairwise models, with clashes in 31-55% of composites and C superposition RMSDs up to 30 A. Rigid single-partner composition is too crude to test the concept; uninformative, not evidence against non-autonomy |
+| FUTURE-Y | Yeast replication (Humphreys 2021, RoseTTAFold+AF2) | **Replicates**: 89% correct interfaces [0.82, 0.95], n = 84, null 1% |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
 **TIME in plain words.** STRING positives whose only solved complex appeared *after* AF3's
