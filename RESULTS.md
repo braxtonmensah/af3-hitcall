@@ -40,6 +40,7 @@ Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [
 | CLINVAR2 | Same question, surface-matched (interface vs other surface residues; PREREG_CLINVAR2) | **Positive control failed again**: precedented OR 1.31, CI [0.93, 1.83] (right direction now, v1 was 0.70, but the CI includes 1). Stopped per prereg. Novel OR 1.69 [1.32, 2.16] is reported but **not interpreted**: after two attempts and a failed control it cannot be claimed. Control group had 15 interface variants, too few to mean anything. 13,359/13,359 wild-types matched. The disease-variant route is closed |
 | LITJEV | Literature truth via Jev: are confident never-solved human models more often reported as direct binders? (PREREG_LITJEV) | **No signal, and the instrument is insensitive**: L1 (co-mentioned pairs) +0.004, CI [-0.010, 0.020]; L2 (all) +0.003, CI [-0.006, 0.011]. Only 5 of 850 pairs got a direct-binding label, and even the precedented reference reached just 1.8% of co-mentioned pairs, so this says nothing either way. Co-mention itself: 70% confident vs 61% low vs 74% precedented (descriptive; confounded by how well-studied the proteins are) |
 | CONTEXT | Is pooled AF3 a competition assay? Same pair folded with vs without a strong third-party binder in the pool (natural experiment, 6,016 pairs; PREREG_CONTEXT) | **No context effect**: positives +0.008, CI [-0.005, 0.024]; never-solved +0.001 [-0.029, 0.031]; competitor defined from other pools -0.005 [-0.025, 0.014]. A clean-pool score does not rescue never-solved pairs (AUROC -0.001, CI [-0.005, 0.002]). Pair predictions are context-independent, so pool composition is not a source of false negatives |
+| STRUCT | Is the never-solved deficit a readout artefact? Structure-level scores from the raw AF3 outputs (289 pools streamed from the 101 GB Zenodo archive; 22,875 pairs, 155 never-solved and 394 precedented positives; PREREG_STRUCT) | **No rescue by any score.** Never-solved AUROC: ipTM (S0) 0.727; trunk contact probability 0.655 (diff -0.07, 98.75% CI [-0.16, 0.04]); interface reproducibility over the 5 diffusion samples 0.705 (-0.02 [-0.13, 0.09]). ipSAE and LIS are **degenerate in pooled models** (inter-chain PAE is almost never under 10-12 A, so they are 0 for 99.7% of pairs), and the registered size correction then ranked the tied zeros by length (LIS 0.28): a design flaw, reported, not interpreted. ipTM remains the best readout; the information for never-solved pairs is not hiding elsewhere in the output |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
 **TIME in plain words.** STRING positives whose only solved complex appeared *after* AF3's
@@ -109,7 +110,13 @@ the class of stable, obligate complexes. The crosslink version of this test is u
   `PREREG_VIBRIO.md` and needs GPU time.
 - AF3 Output Terms: non-commercial analysis only; cite Abramson et al. 2024 and Todor et al. 2026.
 
-## Prior-art check (2026-09-22)
+## Prior-art check (2026-09-22, updated 2026-09-23)
+
+- Interface-restricted scores exist: ipSAE (Dunbrack 2025), LIS (Kim et al. 2024), and a PAE-derived
+  contact-probability score, Pinc (Badonyi 2026, Protein Science). None was evaluated split by
+  structural precedent in a genome-wide screen. Our STRUCT test shows the PAE-cutoff scores collapse
+  to zero in 13-protein pools.
+
 
 - The paper's peer-review file (supplement MOESM3, 3 reviewers) covers size bias, other ipTM
   corrections, binding affinity and methods detail. It does **not** raise the pool-size section
