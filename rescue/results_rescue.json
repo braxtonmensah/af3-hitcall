@@ -1,0 +1,25 @@
+{
+ "n_pairs_complete": 10,
+ "correct": {
+  "bridge": 6,
+  "ctrl": 4,
+  "pair": 3
+ },
+ "mean_iptm_ab": {
+  "bridge": 0.38439999999999996,
+  "ctrl": 0.2868,
+  "pair": 0.286
+ },
+ "R1_bridge_vs_pair": {
+  "bridge_only": 3,
+  "pair_only": 0,
+  "p": 0.125,
+  "verdict": "NOT SHOWN"
+ },
+ "R2_bridge_vs_ctrl": {
+  "bridge_only": 2,
+  "ctrl_only": 0,
+  "p": 0.25,
+  "verdict": "NOT SHOWN"
+ }
+}
