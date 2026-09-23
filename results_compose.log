@@ -1,0 +1,164 @@
+{'uid': 'O00203_Q92572', 'group': 'low', 'entry': '9c5b', 'C': 'Q9Y2T2', 'qmin': 0.06507915, 'status': 'ok', 'rmsd_C': 3.1276845281618493, 'clash': True, 'n_comp': 293, 'f1_comp': 0.03745318352059925, 'f1_pair': 0.0}
+{'uid': 'O00203_Q9Y2T2', 'group': 'confident', 'entry': '9c59', 'C': 'Q92572', 'qmin': 0.06507915, 'status': 'ok', 'rmsd_C': 0.509190063428409, 'clash': False, 'n_comp': 49, 'f1_comp': 0.13953488372093023, 'f1_pair': 0.8768768768768769}
+{'uid': 'O00399_Q9BTE1', 'group': 'confident', 'entry': '9b7j', 'C': 'Q9UJW0', 'qmin': 0.32811815, 'status': 'ok', 'rmsd_C': 1.7461206365679884, 'clash': False, 'n_comp': 42, 'f1_comp': 0.6590909090909091, 'f1_pair': 0.8421052631578947}
+{'uid': 'O00399_Q9NZ32', 'group': 'low', 'entry': '9b85', 'C': 'Q9UJW0', 'qmin': 0.32811815, 'status': 'ok', 'rmsd_C': 2.411451744827785, 'clash': False, 'n_comp': 14, 'f1_comp': 0.7428571428571429, 'f1_pair': 0.0}
+{'uid': 'O00399_Q9UJW0', 'group': 'confident', 'entry': '9b85', 'C': 'Q9BTE1', 'qmin': 0.52388695, 'status': 'ok', 'rmsd_C': 0.346753927391453, 'clash': False, 'n_comp': 19, 'f1_comp': 0.782608695652174, 'f1_pair': 0.88}
+{'uid': 'O14617_Q92572', 'group': 'confident', 'entry': '9c5c', 'C': 'Q9Y2T2', 'qmin': 0.06507915, 'status': 'ok', 'rmsd_C': 1.1232836480856923, 'clash': True, 'n_comp': 100, 'f1_comp': 0.192090395480226, 'f1_pair': nan}
+{'uid': 'O43257_Q9GZN1', 'group': 'confident', 'entry': '8x1c', 'C': 'O95619', 'qmin': 0.03288537, 'status': 'ok', 'rmsd_C': 0.8360305659395674, 'clash': False, 'n_comp': 39, 'f1_comp': 0.0, 'f1_pair': 0.8918918918918919}
+{'uid': 'O43292_Q969N2', 'group': 'confident', 'entry': '7w72', 'C': 'Q96S52', 'qmin': 0.03978435, 'status': 'ok', 'rmsd_C': 1.373922721068361, 'clash': False, 'n_comp': 53, 'f1_comp': 0.375, 'f1_pair': 0.9037037037037037}
+{'uid': 'O60826_Q567U6', 'group': 'confident', 'entry': '8p0v', 'C': 'Q8TCE6', 'qmin': 0.31903373, 'status': 'ok', 'rmsd_C': 0.2941630880904114, 'clash': True, 'n_comp': 178, 'f1_comp': 0.32495164410058025, 'f1_pair': 0.9336870026525199}
+{'uid': 'O60826_Q7Z3J2', 'group': 'confident', 'entry': '8p0x', 'C': 'Q9UBQ0', 'qmin': 0.03138293, 'status': 'ok', 'rmsd_C': 0.4102443010317238, 'clash': True, 'n_comp': 343, 'f1_comp': 0.06097560975609756, 'f1_pair': 0.47058823529411764}
+{'uid': 'O60826_Q7Z4G1', 'group': 'low', 'entry': '8f2u', 'C': 'Q9GZQ3', 'qmin': 0.29002513, 'status': 'ok', 'rmsd_C': 2.844235449980944, 'clash': False, 'n_comp': 54, 'f1_comp': 0.0898876404494382, 'f1_pair': 0.0}
+{'uid': 'O60826_Q86VX2', 'group': 'low', 'entry': '8f2u', 'C': 'Q9UBI1', 'qmin': 0.10191357, 'status': 'ok', 'rmsd_C': 5.095914420812501, 'clash': False, 'n_comp': 91, 'f1_comp': 0.3018867924528302, 'f1_pair': 0.0}
+{'uid': 'O60826_Q86X83', 'group': 'low', 'entry': '8f2u', 'C': 'Q567U6', 'qmin': 0.43709792, 'status': 'ok', 'rmsd_C': 40.716364363357954, 'clash': False, 'n_comp': 70, 'f1_comp': 0.2597402597402597, 'f1_pair': 0.2}
+{'uid': 'O60826_Q8TCE6', 'group': 'confident', 'entry': '8p0v', 'C': 'Q567U6', 'qmin': 0.31903373, 'status': 'ok', 'rmsd_C': 43.24207225982756, 'clash': False, 'n_comp': 9, 'f1_comp': 0.0, 'f1_pair': 0.8823529411764706}
+{'uid': 'O60826_Q9GZQ3', 'group': 'confident', 'entry': '8p0w', 'C': 'Q9UBI1', 'qmin': 0.23457639, 'status': 'ok', 'rmsd_C': 2.2187542118689367, 'clash': False, 'n_comp': 105, 'f1_comp': 0.12612612612612611, 'f1_pair': 0.935064935064935}
+{'uid': 'O60826_Q9H0A8', 'group': 'low', 'entry': '8f2u', 'C': 'Q9GZQ3', 'qmin': 0.21725665, 'status': 'ok', 'rmsd_C': 1.9404111031600286, 'clash': True, 'n_comp': 114, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'O60826_Q9P000', 'group': 'low', 'entry': '8p0w', 'C': 'Q9UBI1', 'qmin': 0.22391997, 'status': 'ok', 'rmsd_C': 4.7219778551221765, 'clash': True, 'n_comp': 260, 'f1_comp': 0.07228915662650602, 'f1_pair': 0.0}
+{'uid': 'O60826_Q9UBI1', 'group': 'confident', 'entry': '8p0w', 'C': 'Q9GZQ3', 'qmin': 0.23457639, 'status': 'ok', 'rmsd_C': 2.513173015016685, 'clash': True, 'n_comp': 202, 'f1_comp': 0.45185185185185184, 'f1_pair': 0.7142857142857143}
+{'uid': 'O60826_Q9Y6G5', 'group': 'low', 'entry': '8p0w', 'C': 'Q9UBI1', 'qmin': 0.24294248, 'status': 'ok', 'rmsd_C': 3.8831940167552035, 'clash': True, 'n_comp': 163, 'f1_comp': 0.015384615384615385, 'f1_pair': 0.0}
+{'uid': 'O75683_Q99848', 'group': 'low', 'entry': '8fks', 'C': 'Q02878', 'qmin': 0.03299606, 'status': 'ok', 'rmsd_C': 5.632264807509545, 'clash': True, 'n_comp': 184, 'f1_comp': 0.038461538461538464, 'f1_pair': 0.0}
+{'uid': 'O75935_Q13561', 'group': 'confident', 'entry': '9b7j', 'C': 'Q14203', 'qmin': 0.35492699, 'status': 'ok', 'rmsd_C': 33.33040253441759, 'clash': True, 'n_comp': 81, 'f1_comp': 0.25210084033613445, 'f1_pair': nan}
+{'uid': 'O75947_P25705', 'group': 'low', 'entry': '8h9s', 'C': 'P06576', 'qmin': 0.05661779, 'status': 'ok', 'rmsd_C': 0.32304162937304276, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.23529411764705882}
+{'uid': 'O75964_P24539', 'group': 'low', 'entry': '8h9m', 'C': 'P56385', 'qmin': 0.03881871, 'status': 'ok', 'rmsd_C': 1.1403520279221593, 'clash': False, 'n_comp': 54, 'f1_comp': 0.6190476190476191, 'f1_pair': 0.8108108108108109}
+{'uid': 'O75964_P56385', 'group': 'confident', 'entry': '8h9u', 'C': 'P24539', 'qmin': 0.03881871, 'status': 'ok', 'rmsd_C': 1.964101759232146, 'clash': False, 'n_comp': 41, 'f1_comp': 0.5436893203883495, 'f1_pair': 0.9421487603305785}
+{'uid': 'O76021_P62424', 'group': 'low', 'entry': '8ine', 'C': 'Q02878', 'qmin': 0.03239575, 'status': 'ok', 'rmsd_C': 4.98276405950916, 'clash': True, 'n_comp': 221, 'f1_comp': 0.04484304932735426, 'f1_pair': 0.0}
+{'uid': 'O94874_Q96JB5', 'group': 'confident', 'entry': '8ohd', 'C': 'Q96HY6', 'qmin': 0.46259472, 'status': 'ok', 'rmsd_C': 23.38075337227367, 'clash': True, 'n_comp': 243, 'f1_comp': 0.02214022140221402, 'f1_pair': 0.8794326241134752}
+{'uid': 'O95163_Q9H9T3', 'group': 'confident', 'entry': '8ptx', 'C': 'Q6IA86', 'qmin': 0.1746307, 'status': 'ok', 'rmsd_C': 0.6956670596412593, 'clash': True, 'n_comp': 646, 'f1_comp': 0.23631123919308358, 'f1_pair': 0.8623853211009175}
+{'uid': 'O95229_Q96IY1', 'group': 'low', 'entry': '8ppr', 'C': 'Q9H081', 'qmin': 0.05709335, 'status': 'ok', 'rmsd_C': 7.3435758815736545, 'clash': False, 'n_comp': 16, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'O95456_P25786', 'group': 'low', 'entry': '8tm6', 'C': 'P28074', 'qmin': 0.04052099, 'status': 'ok', 'rmsd_C': 0.22389267577896493, 'clash': True, 'n_comp': 301, 'f1_comp': 0.18658892128279883, 'f1_pair': 0.061855670103092786}
+{'uid': 'O95478_Q13823', 'group': 'low', 'entry': '8rl2', 'C': 'Q9BZE4', 'qmin': 0.03324676, 'status': 'ok', 'rmsd_C': 11.748134979605835, 'clash': True, 'n_comp': 369, 'f1_comp': 0.25820568927789933, 'f1_pair': 0.0}
+{'uid': 'O95478_Q99848', 'group': 'low', 'entry': '8fkx', 'C': 'P61313', 'qmin': 0.07099135, 'status': 'ok', 'rmsd_C': 4.067418360727651, 'clash': False, 'n_comp': 67, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'O95478_Q9BZE4', 'group': 'low', 'entry': '8fl3', 'C': 'Q13823', 'qmin': 0.03499853, 'status': 'ok', 'rmsd_C': 6.338041417875412, 'clash': True, 'n_comp': 116, 'f1_comp': 0.06493506493506493, 'f1_pair': 0.0}
+{'uid': 'O95619_Q9NPF5', 'group': 'confident', 'entry': '9y3d', 'C': 'Q15906', 'qmin': 0.03522371, 'status': 'ok', 'rmsd_C': 20.971960288544356, 'clash': True, 'n_comp': 202, 'f1_comp': 0.41064638783269963, 'f1_pair': 0.9591836734693877}
+{'uid': 'P06576_P18859', 'group': 'low', 'entry': '8ki3', 'C': 'O75947', 'qmin': 0.05661779, 'status': 'ok', 'rmsd_C': 1.7415363081640947, 'clash': False, 'n_comp': 18, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'P06576_P36542', 'group': 'confident', 'entry': '8h9v', 'C': 'P25705', 'qmin': 0.15787435, 'status': 'ok', 'rmsd_C': 0.28031947071084296, 'clash': False, 'n_comp': 10, 'f1_comp': 0.15, 'f1_pair': 0.6268656716417911}
+{'uid': 'P06576_P48047', 'group': 'low', 'entry': '8h9e', 'C': 'P25705', 'qmin': 0.13895973, 'status': 'ok', 'rmsd_C': 0.24681107607728106, 'clash': False, 'n_comp': 16, 'f1_comp': 0.17391304347826086, 'f1_pair': 0.0}
+{'uid': 'P17980_Q16401', 'group': 'low', 'entry': '9pro', 'C': 'P62195', 'qmin': 0.05427753, 'status': 'ok', 'rmsd_C': 6.057085492174168, 'clash': False, 'n_comp': 71, 'f1_comp': 0.021052631578947368, 'f1_pair': 0.0}
+{'uid': 'P18859_P48047', 'group': 'low', 'entry': '8h9u', 'C': 'O75947', 'qmin': 0.03442343, 'status': 'ok', 'rmsd_C': 1.9608496520978478, 'clash': False, 'n_comp': 2, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'P24539_P48047', 'group': 'confident', 'entry': '8ki3', 'C': 'O75947', 'qmin': 0.03442343, 'status': 'ok', 'rmsd_C': 2.214008720871068, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.8461538461538461}
+{'uid': 'P24539_P56385', 'group': 'low', 'entry': '8h9j', 'C': 'O75964', 'qmin': 0.07055349, 'status': 'ok', 'rmsd_C': 2.2176215678903293, 'clash': False, 'n_comp': 6, 'f1_comp': 0.3, 'f1_pair': 0.4}
+{'uid': 'P25789_Q9Y244', 'group': 'low', 'entry': '8tm5', 'C': 'Q99436', 'qmin': 0.03496501, 'status': 'ok', 'rmsd_C': 3.2298150518669604, 'clash': True, 'n_comp': 213, 'f1_comp': 0.23214285714285715, 'f1_pair': 0.0}
+{'uid': 'P28066_Q9Y244', 'group': 'low', 'entry': '8yix', 'C': 'Q99436', 'qmin': 0.25489971, 'status': 'ok', 'rmsd_C': 2.662855483997394, 'clash': False, 'n_comp': 77, 'f1_comp': 0.11363636363636363, 'f1_pair': 0.0}
+{'uid': 'P30049_P36542', 'group': 'confident', 'entry': '8h9f', 'C': 'P24539', 'qmin': 0.0313218, 'status': 'ok', 'rmsd_C': 6.031118545731345, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.9380530973451328}
+{'uid': 'P40429_Q99848', 'group': 'confident', 'entry': '8fkq', 'C': 'Q9Y3U8', 'qmin': 0.03518252, 'status': 'ok', 'rmsd_C': 1.9864819639374234, 'clash': False, 'n_comp': 106, 'f1_comp': 0.16091954022988506, 'f1_pair': 0.509090909090909}
+{'uid': 'P49720_Q9Y244', 'group': 'low', 'entry': '8tm4', 'C': 'Q99436', 'qmin': 0.25489971, 'status': 'ok', 'rmsd_C': 7.381601780896271, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'P49755_Q15363', 'group': 'confident', 'entry': '21gl', 'C': 'Q9BVK6', 'qmin': 0.5032318, 'status': 'ok', 'rmsd_C': 1.763015749495483, 'clash': True, 'n_comp': 139, 'f1_comp': 0.5964912280701754, 'f1_pair': 0.7142857142857143}
+{'uid': 'P49755_Q9Y3A6', 'group': 'confident', 'entry': '21gm', 'C': 'Q15363', 'qmin': 0.42171598, 'status': 'ok', 'rmsd_C': 20.6513802220384, 'clash': False, 'n_comp': 101, 'f1_comp': 0.6375, 'f1_pair': 0.22950819672131148}
+{'uid': 'P50990_Q9H2J4', 'group': 'low', 'entry': '7nvm', 'C': 'P50991', 'qmin': 0.04954716, 'status': 'ok', 'rmsd_C': 2.064712770137145, 'clash': False, 'n_comp': 77, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'P61163_Q14203', 'group': 'low', 'entry': '9b7j', 'C': 'Q13561', 'qmin': 0.15556976, 'status': 'ok', 'rmsd_C': 30.32339489193782, 'clash': True, 'n_comp': 291, 'f1_comp': 0.02564102564102564, 'f1_pair': 0.0}
+{'uid': 'P61163_Q9NZ32', 'group': 'confident', 'entry': '9b7j', 'C': 'Q9UJW0', 'qmin': 0.29682267, 'status': 'ok', 'rmsd_C': 3.3153742341435875, 'clash': False, 'n_comp': 17, 'f1_comp': 0.2033898305084746, 'f1_pair': 0.7391304347826086}
+{'uid': 'P62424_Q8IY81', 'group': 'low', 'entry': '8fks', 'C': 'Q02878', 'qmin': 0.03343, 'status': 'ok', 'rmsd_C': 4.079364901621527, 'clash': True, 'n_comp': 289, 'f1_comp': 0.19047619047619047, 'f1_pair': 0.0}
+{'uid': 'P62424_Q9BYG3', 'group': 'low', 'entry': '8fkr', 'C': 'Q8IY81', 'qmin': 0.03192442, 'status': 'ok', 'rmsd_C': 29.930840187057147, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'P63151_Q96E09', 'group': 'low', 'entry': '8so0', 'C': 'P30153', 'qmin': 0.09100768, 'status': 'ok', 'rmsd_C': 2.4222530437940795, 'clash': True, 'n_comp': 147, 'f1_comp': 0.203125, 'f1_pair': 0.3888888888888889}
+{'uid': 'Q13352_Q71F23', 'group': 'low', 'entry': '9tax', 'C': 'Q6IPU0', 'qmin': 0.16775228, 'status': 'ok', 'rmsd_C': 6.133132152370869, 'clash': False, 'n_comp': 121, 'f1_comp': 0.6153846153846154, 'f1_pair': 0.0}
+{'uid': 'Q13352_Q7L2Z9', 'group': 'low', 'entry': '9tax', 'C': 'Q71F23', 'qmin': 0.03584899, 'status': 'ok', 'rmsd_C': 2.064158812553889, 'clash': False, 'n_comp': 37, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q14457_Q6ZNE5', 'group': 'confident', 'entry': '9tz3', 'C': 'Q96F24', 'qmin': 0.03191706, 'status': 'ok', 'rmsd_C': 9.640825817829834, 'clash': False, 'n_comp': 94, 'f1_comp': 0.2746478873239437, 'f1_pair': 0.9377777777777778}
+{'uid': 'Q14457_Q96F24', 'group': 'low', 'entry': '9rx7', 'C': 'Q6ZNE5', 'qmin': 0.03572153, 'status': 'ok', 'rmsd_C': 5.834641404626787, 'clash': False, 'n_comp': 11, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q15024_Q8TF46', 'group': 'low', 'entry': '9g8m', 'C': 'Q96B26', 'qmin': 0.11203931, 'status': 'ok', 'rmsd_C': 0.3913854525978649, 'clash': True, 'n_comp': 154, 'f1_comp': 0.24731182795698925, 'f1_pair': 0.6875}
+{'uid': 'Q15050_Q8TDN6', 'group': 'low', 'entry': '8fkx', 'C': 'Q99848', 'qmin': 0.23083069, 'status': 'ok', 'rmsd_C': 30.77016486920897, 'clash': False, 'n_comp': 18, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q15050_Q99848', 'group': 'confident', 'entry': '8fkv', 'C': 'Q8IY81', 'qmin': 0.04191873, 'status': 'ok', 'rmsd_C': 35.606458940600554, 'clash': True, 'n_comp': 207, 'f1_comp': 0.26666666666666666, 'f1_pair': 0.6746987951807228}
+{'uid': 'Q15363_Q9BVK6', 'group': 'confident', 'entry': '21gm', 'C': 'P49755', 'qmin': 0.5032318, 'status': 'ok', 'rmsd_C': 1.304467951018781, 'clash': False, 'n_comp': 84, 'f1_comp': 0.7034482758620689, 'f1_pair': 0.8}
+{'uid': 'Q15363_Q9Y3A6', 'group': 'confident', 'entry': '21gl', 'C': 'P49755', 'qmin': 0.63798367, 'status': 'ok', 'rmsd_C': 1.901688356141134, 'clash': True, 'n_comp': 394, 'f1_comp': 0.15424164524421594, 'f1_pair': 0.20408163265306123}
+{'uid': 'Q15906_Q9NPF5', 'group': 'low', 'entry': '8xvg', 'C': 'Q9Y230', 'qmin': 0.03168999, 'status': 'ok', 'rmsd_C': 0.6564654733983523, 'clash': True, 'n_comp': 229, 'f1_comp': 0.14035087719298245, 'f1_pair': 0.0}
+{'uid': 'Q15906_Q9Y230', 'group': 'low', 'entry': '9y3e', 'C': 'Q9NPF5', 'qmin': 0.03287541, 'status': 'ok', 'rmsd_C': 8.471200033610964, 'clash': True, 'n_comp': 205, 'f1_comp': 0.12931034482758622, 'f1_pair': 0.0}
+{'uid': 'Q15906_Q9Y265', 'group': 'low', 'entry': '8x1c', 'C': 'Q9NPF5', 'qmin': 0.04384545, 'status': 'ok', 'rmsd_C': 9.001786061455167, 'clash': True, 'n_comp': 229, 'f1_comp': 0.1556420233463035, 'f1_pair': 0.0}
+{'uid': 'Q567U6_Q86VX2', 'group': 'low', 'entry': '8p0w', 'C': 'Q86X83', 'qmin': 0.43709792, 'status': 'ok', 'rmsd_C': 5.322442942899932, 'clash': False, 'n_comp': 10, 'f1_comp': 0.12121212121212122, 'f1_pair': 0.0}
+{'uid': 'Q567U6_Q86X83', 'group': 'confident', 'entry': '8f2u', 'C': 'O60826', 'qmin': 0.03811612, 'status': 'ok', 'rmsd_C': 35.71258528555924, 'clash': False, 'n_comp': 64, 'f1_comp': 0.06521739130434782, 'f1_pair': 0.7529411764705882}
+{'uid': 'Q567U6_Q8TCE6', 'group': 'confident', 'entry': '8p0v', 'C': 'O60826', 'qmin': 0.55439913, 'status': 'ok', 'rmsd_C': 41.06297039054761, 'clash': True, 'n_comp': 293, 'f1_comp': 0.017316017316017316, 'f1_pair': 0.5555555555555556}
+{'uid': 'Q567U6_Q9UBI1', 'group': 'low', 'entry': '8p0w', 'C': 'Q86X83', 'qmin': 0.43709792, 'status': 'ok', 'rmsd_C': 2.733099878092646, 'clash': False, 'n_comp': 57, 'f1_comp': 0.17391304347826086, 'f1_pair': 0.0}
+{'uid': 'Q68CZ6_Q9H6D7', 'group': 'confident', 'entry': '7sqk', 'C': 'O94927', 'qmin': 0.63534601, 'status': 'ok', 'rmsd_C': 22.362356788897976, 'clash': True, 'n_comp': 170, 'f1_comp': 0.37209302325581395, 'f1_pair': nan}
+{'uid': 'Q6IA86_Q9H9T3', 'group': 'confident', 'entry': '8ptx', 'C': 'O95163', 'qmin': 0.1746307, 'status': 'ok', 'rmsd_C': 3.604085227013575, 'clash': True, 'n_comp': 547, 'f1_comp': 0.14840989399293286, 'f1_pair': 0.7572815533980582}
+{'uid': 'Q6IPU0_Q7L2Z9', 'group': 'low', 'entry': '7pb8', 'C': 'Q71F23', 'qmin': 0.6309693, 'status': 'ok', 'rmsd_C': 12.707256667467952, 'clash': True, 'n_comp': 135, 'f1_comp': 0.4093567251461988, 'f1_pair': 0.0}
+{'uid': 'Q6IPU0_Q9BU64', 'group': 'confident', 'entry': '9tax', 'C': 'Q13352', 'qmin': 0.16775228, 'status': 'ok', 'rmsd_C': 0.41908402864905714, 'clash': True, 'n_comp': 181, 'f1_comp': 0.33480176211453744, 'f1_pair': nan}
+{'uid': 'Q6NZ67_Q96RT7', 'group': 'low', 'entry': '9qvm', 'C': 'Q08AG7', 'qmin': 0.03249535, 'status': 'ok', 'rmsd_C': 0.46171719832819713, 'clash': True, 'n_comp': 170, 'f1_comp': 0.07894736842105263, 'f1_pair': 0.0}
+{'uid': 'Q6NZ67_Q9BSJ2', 'group': 'confident', 'entry': '9qvm', 'C': 'Q96CW5', 'qmin': 0.17441013, 'status': 'ok', 'rmsd_C': 3.123263549093454, 'clash': True, 'n_comp': 132, 'f1_comp': 0.010416666666666666, 'f1_pair': 0.9215686274509803}
+{'uid': 'Q6P582_Q96RT7', 'group': 'low', 'entry': '8rx1', 'C': 'Q08AG7', 'qmin': 0.0315511, 'status': 'ok', 'rmsd_C': 0.7043909263117029, 'clash': True, 'n_comp': 189, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q6P9B9_Q96N11', 'group': 'confident', 'entry': '8rc4', 'C': 'Q96HW7', 'qmin': 0.03399711, 'status': 'ok', 'rmsd_C': 1.3877867849111505, 'clash': True, 'n_comp': 428, 'f1_comp': 0.11182795698924732, 'f1_pair': 0.8245614035087719}
+{'uid': 'Q71F23_Q7L2Z9', 'group': 'confident', 'entry': '9tax', 'C': 'Q13352', 'qmin': 0.0347078, 'status': 'ok', 'rmsd_C': 5.99138638570289, 'clash': True, 'n_comp': 176, 'f1_comp': 0.3462897526501767, 'f1_pair': 0.8}
+{'uid': 'Q7Z4G1_Q9H0A8', 'group': 'confident', 'entry': '8p0w', 'C': 'Q9GZQ3', 'qmin': 0.21725665, 'status': 'ok', 'rmsd_C': 1.7618133637850497, 'clash': False, 'n_comp': 54, 'f1_comp': 0.1927710843373494, 'f1_pair': 0.9473684210526315}
+{'uid': 'Q86VS8_Q8N612', 'group': 'low', 'entry': '8qat', 'C': 'Q9H8T0', 'qmin': 0.49838392, 'status': 'ok', 'rmsd_C': 0.9135205986026879, 'clash': True, 'n_comp': 279, 'f1_comp': 0.08108108108108109, 'f1_pair': 0.041666666666666664}
+{'uid': 'Q86VS8_Q9H8T0', 'group': 'confident', 'entry': '8qat', 'C': 'Q8N612', 'qmin': 0.03737375, 'status': 'ok', 'rmsd_C': 0.5942466851689108, 'clash': True, 'n_comp': 149, 'f1_comp': 0.14814814814814814, 'f1_pair': 0.8089887640449438}
+{'uid': 'Q86X83_Q9H0A8', 'group': 'confident', 'entry': '8f2u', 'C': 'Q86VX2', 'qmin': 0.17078305, 'status': 'ok', 'rmsd_C': 7.923072896598192, 'clash': False, 'n_comp': 59, 'f1_comp': 0.02564102564102564, 'f1_pair': 0.1651376146788991}
+{'uid': 'Q86X83_Q9UBI1', 'group': 'confident', 'entry': '8p0w', 'C': 'Q86VX2', 'qmin': 0.10191357, 'status': 'ok', 'rmsd_C': 7.751734400158695, 'clash': False, 'n_comp': 104, 'f1_comp': 0.46511627906976744, 'f1_pair': 0.96}
+{'uid': 'Q86XP3_Q9BWJ5', 'group': 'low', 'entry': '7evn', 'C': 'Q15393', 'qmin': 0.13690377, 'status': 'ok', 'rmsd_C': 0.9847861066569118, 'clash': True, 'n_comp': 145, 'f1_comp': 0.112, 'f1_pair': 0.15384615384615385}
+{'uid': 'Q8IY18_Q8WV22', 'group': 'confident', 'entry': '9lwj', 'C': 'Q96MF7', 'qmin': 0.19407632, 'status': 'ok', 'rmsd_C': 11.309021323732777, 'clash': False, 'n_comp': 74, 'f1_comp': 0.0, 'f1_pair': 0.9491525423728814}
+{'uid': 'Q8IY18_Q96MF7', 'group': 'confident', 'entry': '9lwj', 'C': 'Q8WV22', 'qmin': 0.19407632, 'status': 'ok', 'rmsd_C': 0.8783079704774572, 'clash': False, 'n_comp': 21, 'f1_comp': 0.025974025974025976, 'f1_pair': 0.8}
+{'uid': 'Q8IZL8_Q9NXF1', 'group': 'low', 'entry': '9dum', 'C': 'Q9BV38', 'qmin': 0.03561776, 'status': 'ok', 'rmsd_C': 21.726041262007236, 'clash': True, 'n_comp': 791, 'f1_comp': 0.024883359253499222, 'f1_pair': 0.1724137931034483}
+{'uid': 'Q8N612_Q9H8T0', 'group': 'confident', 'entry': '8qat', 'C': 'Q86VS8', 'qmin': 0.03737375, 'status': 'ok', 'rmsd_C': 36.9722639773982, 'clash': True, 'n_comp': 325, 'f1_comp': 0.18562874251497005, 'f1_pair': 0.8409090909090909}
+{'uid': 'Q8N668_Q9P000', 'group': 'confident', 'entry': '8p0w', 'C': 'Q9UBI1', 'qmin': 0.22391997, 'status': 'ok', 'rmsd_C': 5.853993923905198, 'clash': False, 'n_comp': 106, 'f1_comp': 0.1323529411764706, 'f1_pair': 0.25}
+{'uid': 'Q8TAQ2_Q9NPI1', 'group': 'low', 'entry': '7vdv', 'C': 'Q96GM5', 'qmin': 0.08898707, 'status': 'ok', 'rmsd_C': 2.812218252416042, 'clash': True, 'n_comp': 392, 'f1_comp': 0.0, 'f1_pair': 0.12121212121212122}
+{'uid': 'Q8TDN6_Q99848', 'group': 'confident', 'entry': '8fkt', 'C': 'P46087', 'qmin': 0.03460231, 'status': 'ok', 'rmsd_C': 13.003479939100304, 'clash': True, 'n_comp': 201, 'f1_comp': 0.3017543859649123, 'f1_pair': 0.9407114624505929}
+{'uid': 'Q8TF46_Q9NQT5', 'group': 'low', 'entry': '9g8m', 'C': 'Q15024', 'qmin': 0.09418125, 'status': 'ok', 'rmsd_C': 0.46107265126301333, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q8WUD4_Q99459', 'group': 'low', 'entry': '9s2e', 'C': 'Q9BZJ0', 'qmin': 0.38524387, 'status': 'ok', 'rmsd_C': 5.771062076498561, 'clash': False, 'n_comp': 29, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q8WUD4_Q9BZJ0', 'group': 'confident', 'entry': '9fmd', 'C': 'Q9HCS7', 'qmin': 0.07394308, 'status': 'ok', 'rmsd_C': 8.739207932342469, 'clash': False, 'n_comp': 20, 'f1_comp': 0.0, 'f1_pair': 0.8450704225352113}
+{'uid': 'Q8WUD4_Q9HCS7', 'group': 'confident', 'entry': '8ro2', 'C': 'Q9BZJ0', 'qmin': 0.07394308, 'status': 'ok', 'rmsd_C': 2.3869944740602103, 'clash': False, 'n_comp': 21, 'f1_comp': 0.0, 'f1_pair': 0.7790697674418605}
+{'uid': 'Q92643_Q969N2', 'group': 'confident', 'entry': '7w72', 'C': 'Q96S52', 'qmin': 0.61308228, 'status': 'ok', 'rmsd_C': 1.1841467879583742, 'clash': True, 'n_comp': 226, 'f1_comp': 0.5372168284789643, 'f1_pair': 0.9166666666666666}
+{'uid': 'Q92643_Q96S52', 'group': 'confident', 'entry': '7w72', 'C': 'Q969N2', 'qmin': 0.61308228, 'status': 'ok', 'rmsd_C': 3.038085774938057, 'clash': False, 'n_comp': 169, 'f1_comp': 0.7601476014760148, 'f1_pair': 0.8368200836820083}
+{'uid': 'Q969G3_Q9NPI1', 'group': 'low', 'entry': '7vdv', 'C': 'Q96GM5', 'qmin': 0.08898707, 'status': 'ok', 'rmsd_C': 10.99083196745244, 'clash': True, 'n_comp': 135, 'f1_comp': 0.17391304347826086, 'f1_pair': 0.0}
+{'uid': 'Q969N2_Q96S52', 'group': 'confident', 'entry': '8imx', 'C': 'Q92643', 'qmin': 0.6911097, 'status': 'ok', 'rmsd_C': 0.3419922471137781, 'clash': False, 'n_comp': 123, 'f1_comp': 0.5869565217391305, 'f1_pair': 0.868421052631579}
+{'uid': 'Q96GM5_Q9NPI1', 'group': 'low', 'entry': '7y8r', 'C': 'Q8TAQ2', 'qmin': 0.06513298, 'status': 'ok', 'rmsd_C': 21.49152275467117, 'clash': True, 'n_comp': 371, 'f1_comp': 0.1507537688442211, 'f1_pair': 0.0}
+{'uid': 'Q96HY6_Q96JB5', 'group': 'confident', 'entry': '9gy4', 'C': 'O94874', 'qmin': 0.61979716, 'status': 'ok', 'rmsd_C': 26.18476667554479, 'clash': False, 'n_comp': 15, 'f1_comp': 0.0, 'f1_pair': 0.5098039215686274}
+{'uid': 'Q96MF7_Q96SB8', 'group': 'low', 'entry': '9lwj', 'C': 'Q96MG7', 'qmin': 0.04054477, 'status': 'ok', 'rmsd_C': 0.38635577472627197, 'clash': True, 'n_comp': 119, 'f1_comp': 0.0, 'f1_pair': 0.0}
+{'uid': 'Q96S44_Q9NPF4', 'group': 'confident', 'entry': '9fl9', 'C': 'Q9BXV9', 'qmin': 0.03595267, 'status': 'ok', 'rmsd_C': 0.29986987106535057, 'clash': True, 'n_comp': 420, 'f1_comp': 0.09586056644880174, 'f1_pair': 0.6355140186915887}
+{'uid': 'Q99436_Q9Y244', 'group': 'confident', 'entry': '8yix', 'C': 'P49720', 'qmin': 0.0339611, 'status': 'ok', 'rmsd_C': 0.3938010893669216, 'clash': False, 'n_comp': 38, 'f1_comp': 0.5714285714285714, 'f1_pair': 0.8296296296296296}
+{'uid': 'Q99832_Q9H2J4', 'group': 'low', 'entry': '7nvm', 'C': 'P50991', 'qmin': 0.04954716, 'status': 'ok', 'rmsd_C': 0.529820840713006, 'clash': True, 'n_comp': 116, 'f1_comp': 0.08, 'f1_pair': 0.0}
+{'uid': 'Q9BTE1_Q9UJW0', 'group': 'confident', 'entry': '9b85', 'C': 'O00399', 'qmin': 0.32811815, 'status': 'ok', 'rmsd_C': 0.23122737623818632, 'clash': False, 'n_comp': 49, 'f1_comp': 0.7272727272727273, 'f1_pair': 0.8372093023255814}
+{'uid': 'Q9BV38_Q9NXF1', 'group': 'low', 'entry': '8fl2', 'C': 'Q8IZL8', 'qmin': 0.05118999, 'status': 'ok', 'rmsd_C': 12.189920139909038, 'clash': True, 'n_comp': 394, 'f1_comp': 0.1411764705882353, 'f1_pair': 0.0}
+{'uid': 'Q9GZQ3_Q9UBI1', 'group': 'confident', 'entry': '8f2u', 'C': 'O60826', 'qmin': 0.28810215, 'status': 'ok', 'rmsd_C': 31.63299728439568, 'clash': False, 'n_comp': 0, 'f1_comp': 0.0, 'f1_pair': 0.22727272727272727}
+{'uid': 'Q9H0A8_Q9UBI1', 'group': 'low', 'entry': '8f2r', 'C': 'Q86X83', 'qmin': 0.44765996, 'status': 'ok', 'rmsd_C': 5.783144110953899, 'clash': True, 'n_comp': 175, 'f1_comp': 0.011111111111111112, 'f1_pair': 0.0}
+{'uid': 'Q9NX08_Q9UBI1', 'group': 'confident', 'entry': '8f2r', 'C': 'Q9Y6G5', 'qmin': 0.24294248, 'status': 'ok', 'rmsd_C': 4.3496276659920365, 'clash': False, 'n_comp': 48, 'f1_comp': 0.0, 'f1_pair': 0.16541353383458646}
+{'uid': 'Q9NXF1_Q9Y4W2', 'group': 'confident', 'entry': '8fl3', 'C': 'Q8IZL8', 'qmin': 0.03911222, 'status': 'ok', 'rmsd_C': 9.880154399661945, 'clash': True, 'n_comp': 835, 'f1_comp': 0.16666666666666666, 'f1_pair': 0.9047619047619048}
+{'uid': 'Q9P000_Q9Y6G5', 'group': 'confident', 'entry': '8p0w', 'C': 'Q9NX08', 'qmin': 0.66182469, 'status': 'ok', 'rmsd_C': 15.62841573602633, 'clash': True, 'n_comp': 86, 'f1_comp': 0.06315789473684211, 'f1_pair': 0.04918032786885246}
+{'uid': 'Q9UBI1_Q9Y6G5', 'group': 'confident', 'entry': '8f2u', 'C': 'Q9NX08', 'qmin': 0.53080189, 'status': 'ok', 'rmsd_C': 12.529930038653216, 'clash': True, 'n_comp': 90, 'f1_comp': 0.2905982905982906, 'f1_pair': 0.9056603773584906}
+{
+ "status_counts": {
+  "confident|fetch error 'Q13561-O75935.pdb;O75935-Q13561.pdb'": 1,
+  "confident|fetch error 'Q6IPU0-Q9BU64.pdb;ENSG00000138092-ENSG00000188312.pdb'": 2,
+  "confident|fetch error 'Q9BV38-Q9Y4W2.pdb;Q9Y4W2-Q9BV38.pdb'": 1,
+  "confident|fetch error 'Q9H6D7-Q68CZ6.pdb;Q68CZ6-Q9H6D7.pdb'": 4,
+  "confident|no exact-seq mapping": 7,
+  "confident|ok": 58,
+  "low|fetch error 'P20618-Q99436.pdb;Q99436-P20618.pdb'": 1,
+  "low|fetch error 'P35998-P62195.pdb;P62195-P35998.pdb'": 1,
+  "low|fetch error 'P62191-P62195.pdb;P62195-P62191.pdb'": 2,
+  "low|fetch error 'P62195-P62333.pdb;P62333-P62195.pdb;ENSG00000087191-ENSG00000100519.pdb'": 1,
+  "low|fetch error 'Q9Y265-Q9Y230.pdb;ENSG00000175792-ENSG00000183207.pdb'": 4,
+  "low|no exact-seq mapping": 2,
+  "low|ok": 55
+ },
+ "K1_misses_confidentC": {
+  "n": 13,
+  "composition_correct": 1,
+  "pairwise_correct": 0,
+  "median_f1_comp": 0.0898876404494382,
+  "median_f1_pair": 0.0,
+  "discordant_comp_only": 1,
+  "discordant_pair_only": 0,
+  "one_sided_p": 0.5,
+  "clash_frac": 0.3076923076923077
+ },
+ "K2_misses_anyC": {
+  "n": 55,
+  "composition_correct": 3,
+  "pairwise_correct": 2,
+  "median_f1_comp": 0.07894736842105263,
+  "median_f1_pair": 0.0,
+  "discordant_comp_only": 2,
+  "discordant_pair_only": 1,
+  "one_sided_p": 0.5,
+  "clash_frac": 0.5454545454545454
+ },
+ "K3_hits_confidentC": {
+  "n": 24,
+  "composition_correct": 9,
+  "pairwise_correct": 17,
+  "median_f1_comp": 0.30777496734943544,
+  "median_f1_pair": 0.8184100418410042,
+  "discordant_comp_only": 1,
+  "discordant_pair_only": 9,
+  "one_sided_p": 0.9990234375,
+  "clash_frac": 0.4583333333333333
+ },
+ "K1_verdict": "NOT SHOWN"
+}
