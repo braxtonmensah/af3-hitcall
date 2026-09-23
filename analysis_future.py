@@ -188,7 +188,7 @@ for r in p[p.newly_direct].itertuples():
     rows.append(dict(uid=r.uid, group=r.group, f1=f1, status="ok", entry=b["entry"], n_pred=len(Pp), n_exp=len(E)))
 R = pd.DataFrame(rows)
 R.to_csv(os.path.join(F, "f2_pairs.csv"), index=False)
-res["F2_status_counts"] = R.groupby(["group", "status"]).size().to_dict()
+res["F2_status_counts"] = {f"{g}|{s}": int(v) for (g, s), v in R.groupby(["group", "status"]).size().items()}
 ok = R[R.status == "ok"]
 g = {k: ok[ok.group == k].f1.to_numpy() for k in ("confident", "low")}
 res["F2"] = {k: {"n": len(v), "median_f1": float(np.median(v)) if len(v) else None,

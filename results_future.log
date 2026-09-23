@@ -1,0 +1,81 @@
+{
+ "n": {
+  "low": 39817,
+  "confident": 6621
+ },
+ "excluded_missed_precedent": 3301,
+ "release_years_newly_solved": {
+  "2022": 93,
+  "2023": 212,
+  "2024": 141,
+  "2025": 72,
+  "2026": 57
+ },
+ "F1_newly_solved": {
+  "OR": 2.839436617217059,
+  "ci95": [
+   1.9205688956331104,
+   4.31960882778117
+  ],
+  "rate_confident": 0.02748829481951367,
+  "rate_low": 0.009870155963533165,
+  "n_events_conf": 182,
+  "n_events_low": 393,
+  "verdict": "ANTICIPATED"
+ },
+ "F1b_newly_solved_direct": {
+  "OR": 8.833336883587176,
+  "ci95": [
+   5.837548951899937,
+   14.099328622745498
+  ],
+  "rate_confident": 0.024769672254946383,
+  "rate_low": 0.0028630986764447345,
+  "n_events_conf": 164,
+  "n_events_low": 114,
+  "verdict": "ANTICIPATED"
+ },
+ "F1c_tractable_only": {
+  "OR": 2.264784521779406,
+  "ci95": [
+   1.0053429930018598,
+   4.853716652132982
+  ],
+  "rate_confident": 0.035576923076923075,
+  "rate_low": 0.016158536585365854,
+  "n_events_conf": 37,
+  "n_events_low": 106,
+  "verdict": "ANTICIPATED"
+ },
+ "F2_status_counts": {
+  "confident|no exact-seq mapping": 4,
+  "confident|no model": 14,
+  "confident|ok": 146,
+  "low|no model": 4,
+  "low|ok": 110
+ },
+ "F2": {
+  "confident": {
+   "n": 146,
+   "median_f1": 0.824401913875598,
+   "frac_correct_f1_ge_0.5": 0.8082191780821918
+  },
+  "low": {
+   "n": 110,
+   "median_f1": 0.0,
+   "frac_correct_f1_ge_0.5": 0.01818181818181818
+  },
+  "diff_correct_conf_minus_low": {
+   "diff": 0.7900373599003736,
+   "ci95": [
+    0.7214912826899129,
+    0.8561674968866749
+   ],
+   "verdict": "MODELS RIGHT"
+  },
+  "ci95_conf_correct": [
+   0.7397260273972602,
+   0.8698630136986302
+  ]
+ }
+}
