@@ -1,0 +1,135 @@
+{
+ "all": {
+  "confident": {
+   "n": 146,
+   "frac_correct": 0.8082191780821918,
+   "ci95": [
+    0.7465753424657534,
+    0.8698630136986302
+   ]
+  },
+  "low": {
+   "n": 110,
+   "frac_correct": 0.01818181818181818,
+   "ci95": [
+    0.0,
+    0.045454545454545456
+   ]
+  }
+ },
+ "no_insilico_start_recorded": {
+  "confident": {
+   "n": 116,
+   "frac_correct": 0.8103448275862069,
+   "ci95": [
+    0.7413793103448276,
+    0.8793103448275862
+   ]
+  },
+  "low": {
+   "n": 92,
+   "frac_correct": 0.021739130434782608,
+   "ci95": [
+    0.0,
+    0.05434782608695652
+   ]
+  }
+ },
+ "insilico_start_recorded": {
+  "confident": {
+   "n": 30,
+   "frac_correct": 0.8,
+   "ci95": [
+    0.6333333333333333,
+    0.9333333333333333
+   ]
+  },
+  "low": {
+   "n": 18,
+   "frac_correct": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "resolution_le_3A": {
+  "confident": {
+   "n": 54,
+   "frac_correct": 0.7962962962962963,
+   "ci95": [
+    0.6851851851851852,
+    0.9074074074074074
+   ]
+  },
+  "low": {
+   "n": 50,
+   "frac_correct": 0.02,
+   "ci95": [
+    0.0,
+    0.06
+   ]
+  }
+ },
+ "xray_only": {
+  "confident": {
+   "n": 19,
+   "frac_correct": 0.5263157894736842,
+   "ci95": [
+    0.3157894736842105,
+    0.7368421052631579
+   ]
+  },
+  "low": {
+   "n": 15,
+   "frac_correct": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "deposited_before_AF_multimer_2021-10-04": {
+  "confident": {
+   "n": 3,
+   "frac_correct": 0.3333333333333333,
+   "ci95": [
+    0.0,
+    1.0
+   ]
+  },
+  "low": {
+   "n": 11,
+   "frac_correct": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "strictest_pre_multimer_and_no_insilico": {
+  "confident": {
+   "n": 3,
+   "frac_correct": 0.3333333333333333,
+   "ci95": [
+    0.0,
+    1.0
+   ]
+  },
+  "low": {
+   "n": 10,
+   "frac_correct": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "method_counts": {
+  "('confident', 'ELECTRON MICROSCOPY')": 126,
+  "('confident', 'SOLUTION NMR')": 1,
+  "('confident', 'X-RAY DIFFRACTION')": 19,
+  "('low', 'ELECTRON MICROSCOPY')": 95,
+  "('low', 'X-RAY DIFFRACTION')": 15
+ }
+}

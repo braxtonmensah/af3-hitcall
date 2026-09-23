@@ -22,6 +22,40 @@ chance on interactions that have never been solved.** The published 0.81 average
 AUROC of size-corrected ipTM against all negatives. H1 is confirmed: the gap is +0.145, with a
 Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [0.27, 0.48].
 
+## The future PDB as truth (PREREG_FUTURE, 2026-09-23): the new result
+
+Burke et al. froze AF2/FoldDock models and pDockQ for about 65,000 human pairs by the end of 2021.
+Among never-solved pairs (no Interactome3D precedent; 3,301 pairs with a pre-2022 co-complex that
+Interactome3D missed were excluded), 575 got their first PDB co-complex in 2022-2026. No model
+could have seen them.
+
+| Test (pre-registered) | Confident (pDockQ > 0.23, n = 6,621) | Low (< 0.10, n = 39,817) | Result |
+|---|---|---|---|
+| F1: solved after 2022 | 2.7% | 1.0% | OR **2.8** [1.9, 4.3] |
+| F1b: solved, chains in direct contact | 2.5% | 0.29% | OR **8.8** [5.8, 14.1] |
+| F1c: only proteins with pre-2022 structures | 3.6% | 1.6% | OR 2.3 [1.005, 4.9] (just passes) |
+| F2: the frozen model's interface matches the new structure (residue F1 >= 0.5) | **81%** of 146 (median F1 0.82) | **1.8%** of 110 | +0.79 [0.72, 0.86] |
+
+**Circularity check (post hoc, `posthoc_future_circularity.py`).** New structures can be built
+from AlphaFold models, so F2 could be the model agreeing with itself. Entries recording no in-silico
+starting model: 81% (n = 116), the same as entries that record one (80%, n = 30). Resolution <= 3.0 A:
+80% (n = 54). X-ray only: 53% [0.32, 0.74] (n = 19), still far above low-confidence models (0 of 15).
+Structures deposited before AF-Multimer existed: 3 confident pairs, too few to read. Recording of
+starting models is incomplete, and 126 of 146 confident cases are cryo-EM, so some circularity cannot
+be excluded; the X-ray subset is the most conservative estimate (about half).
+
+**What it means.** Confident never-solved models also reach the PDB more often (F1). F1 has a caveat:
+public AF predictions may steer which complexes labs choose to solve, so this is anticipation, not proof
+of cause. Taken with the AUROC results, the screen's weakness on never-solved interactions is
+**recall, not precision**. Most true never-solved interactions get low scores (AUROC 0.64 to 0.71). When
+the model is confident about an unprecedented complex and that complex is later solved, the predicted
+interface is right about 80% of the time (about half in the most conservative subset). For a lab: a
+confident never-solved hit is worth a bench experiment; a low score says nothing.
+
+Prior-art check (2026-09-23): benchmarks of AF3 on 2022-2024 PDB entries exist, and Burke et al.
+validated some models orthogonally. Not found: a test of a genome-scale screen's frozen,
+confidence-stratified predictions against structures solved afterwards.
+
 ## What was tested
 
 | # | Hypothesis | Verdict |
@@ -41,6 +75,7 @@ Bonferroni 98.3% CI of [0.066, 0.242]. On crosslinks the gap is +0.378, 95% CI [
 | LITJEV | Literature truth via Jev: are confident never-solved human models more often reported as direct binders? (PREREG_LITJEV) | **No signal, and the instrument is insensitive**: L1 (co-mentioned pairs) +0.004, CI [-0.010, 0.020]; L2 (all) +0.003, CI [-0.006, 0.011]. Only 5 of 850 pairs got a direct-binding label, and even the precedented reference reached just 1.8% of co-mentioned pairs, so this says nothing either way. Co-mention itself: 70% confident vs 61% low vs 74% precedented (descriptive; confounded by how well-studied the proteins are) |
 | CONTEXT | Is pooled AF3 a competition assay? Same pair folded with vs without a strong third-party binder in the pool (natural experiment, 6,016 pairs; PREREG_CONTEXT) | **No context effect**: positives +0.008, CI [-0.005, 0.024]; never-solved +0.001 [-0.029, 0.031]; competitor defined from other pools -0.005 [-0.025, 0.014]. A clean-pool score does not rescue never-solved pairs (AUROC -0.001, CI [-0.005, 0.002]). Pair predictions are context-independent, so pool composition is not a source of false negatives |
 | STRUCT | Is the never-solved deficit a readout artefact? Structure-level scores from the raw AF3 outputs (289 pools streamed from the 101 GB Zenodo archive; 22,875 pairs, 155 never-solved and 394 precedented positives; PREREG_STRUCT) | **No rescue by any score.** Never-solved AUROC: ipTM (S0) 0.727; trunk contact probability 0.655 (diff -0.07, 98.75% CI [-0.16, 0.04]); interface reproducibility over the 5 diffusion samples 0.705 (-0.02 [-0.13, 0.09]). ipSAE and LIS are **degenerate in pooled models** (inter-chain PAE is almost never under 10-12 A, so they are 0 for 99.7% of pairs), and the registered size correction then ranked the tied zeros by length (LIS 0.28): a design flaw, reported, not interpreted. ipTM remains the best readout; the information for never-solved pairs is not hiding elsewhere in the output |
+| FUTURE | Did frozen 2021 human predictions anticipate 2022-26 structures? (PREREG_FUTURE) | **Yes**: see the section above. F1 OR 2.8, F1b 8.8, F2 81% vs 2% correct interfaces |
 | TIME | Memorisation or stability? | **Stability, at the margin**: f = 0.81, CI [0.302, 1.15] vs a 0.30 bar |
 
 **TIME in plain words.** STRING positives whose only solved complex appeared *after* AF3's
