@@ -1,0 +1,233 @@
+proteins to search: 480
+ident 0.25 0 / 480
+ident 0.25 50 / 480
+ident 0.25 100 / 480
+ident 0.25 150 / 480
+ident 0.25 200 / 480
+ident 0.25 250 / 480
+ident 0.25 300 / 480
+ident 0.25 350 / 480
+ident 0.25 400 / 480
+ident 0.25 450 / 480
+ident 0.0 0 / 480
+ident 0.0 50 / 480
+ident 0.0 100 / 480
+ident 0.0 150 / 480
+ident 0.0 200 / 480
+ident 0.0 250 / 480
+ident 0.0 300 / 480
+ident 0.0 350 / 480
+ident 0.0 400 / 480
+ident 0.0 450 / 480
+{
+ "V1": {
+  "human|confident|id0.25|homolog_precedented": {
+   "n": 32,
+   "correct": 0.8125,
+   "ci95_pair": [
+    0.65625,
+    0.9375
+   ],
+   "ci95_entry": [
+    0.6785714285714286,
+    0.9355342741935481
+   ],
+   "n_entries": 27
+  },
+  "human|confident|id0.25|no_homolog_precedent": {
+   "n": 114,
+   "correct": 0.8070175438596491,
+   "ci95_pair": [
+    0.7280701754385965,
+    0.8771929824561403
+   ],
+   "ci95_entry": [
+    0.7407407407407407,
+    0.8793183269476372
+   ],
+   "n_entries": 81
+  },
+  "human|confident|id0|homolog_precedented": {
+   "n": 33,
+   "correct": 0.8181818181818182,
+   "ci95_pair": [
+    0.696969696969697,
+    0.9393939393939394
+   ],
+   "ci95_entry": [
+    0.6774193548387096,
+    0.9393939393939394
+   ],
+   "n_entries": 29
+  },
+  "human|confident|id0|no_homolog_precedent": {
+   "n": 113,
+   "correct": 0.8053097345132744,
+   "ci95_pair": [
+    0.7256637168141593,
+    0.8761061946902655
+   ],
+   "ci95_entry": [
+    0.7419354838709677,
+    0.8712871287128713
+   ],
+   "n_entries": 81
+  },
+  "human|low|id0.25|homolog_precedented": {
+   "n": 33,
+   "correct": 0.06060606060606061,
+   "ci95_pair": [
+    0.0,
+    0.15151515151515152
+   ],
+   "ci95_entry": [
+    0.0,
+    0.15151515151515152
+   ],
+   "n_entries": 28
+  },
+  "human|low|id0.25|no_homolog_precedent": {
+   "n": 77,
+   "correct": 0.0,
+   "ci95_pair": [
+    0.0,
+    0.0
+   ],
+   "ci95_entry": [
+    0.0,
+    0.0
+   ],
+   "n_entries": 61
+  },
+  "human|low|id0|homolog_precedented": {
+   "n": 33,
+   "correct": 0.06060606060606061,
+   "ci95_pair": [
+    0.0,
+    0.15151515151515152
+   ],
+   "ci95_entry": [
+    0.0,
+    0.15151515151515152
+   ],
+   "n_entries": 28
+  },
+  "human|low|id0|no_homolog_precedent": {
+   "n": 77,
+   "correct": 0.0,
+   "ci95_pair": [
+    0.0,
+    0.0
+   ],
+   "ci95_entry": [
+    0.0,
+    0.0
+   ],
+   "n_entries": 61
+  },
+  "yeast|confident|id0.25|homolog_precedented": {
+   "n": 23,
+   "correct": 0.8260869565217391,
+   "ci95_pair": [
+    0.6521739130434783,
+    0.9565217391304348
+   ],
+   "ci95_entry": [
+    0.6521195652173915,
+    1.0
+   ],
+   "n_entries": 18
+  },
+  "yeast|confident|id0.25|no_homolog_precedent": {
+   "n": 61,
+   "correct": 0.9180327868852459,
+   "ci95_pair": [
+    0.8360655737704918,
+    0.9836065573770492
+   ],
+   "ci95_entry": [
+    0.8596422697368421,
+    0.9814814814814815
+   ],
+   "n_entries": 46
+  },
+  "yeast|confident|id0|homolog_precedented": {
+   "n": 25,
+   "correct": 0.84,
+   "ci95_pair": [
+    0.68,
+    0.96
+   ],
+   "ci95_entry": [
+    0.6773956356736243,
+    1.0
+   ],
+   "n_entries": 20
+  },
+  "yeast|confident|id0|no_homolog_precedent": {
+   "n": 59,
+   "correct": 0.9152542372881356,
+   "ci95_pair": [
+    0.8470338983050855,
+    0.9830508474576272
+   ],
+   "ci95_entry": [
+    0.8529411764705882,
+    0.9803921568627451
+   ],
+   "n_entries": 44
+  }
+ },
+ "V3": {
+  "human|confident|all": {
+   "n": 146,
+   "correct": 0.8082191780821918,
+   "ci95_pair": [
+    0.7465753424657534,
+    0.8698630136986302
+   ],
+   "ci95_entry": [
+    0.7463768115942029,
+    0.8674718742519748
+   ],
+   "n_entries": 107
+  },
+  "human|low|all": {
+   "n": 110,
+   "correct": 0.01818181818181818,
+   "ci95_pair": [
+    0.0,
+    0.045454545454545456
+   ],
+   "ci95_entry": [
+    0.0,
+    0.04716981132075472
+   ],
+   "n_entries": 87
+  },
+  "yeast|confident|all": {
+   "n": 84,
+   "correct": 0.8928571428571429,
+   "ci95_pair": [
+    0.8214285714285714,
+    0.9523809523809523
+   ],
+   "ci95_entry": [
+    0.8243206118206119,
+    0.9540229885057471
+   ],
+   "n_entries": 61
+  }
+ },
+ "V1_rule_human": {
+  "key": "human|confident|id0.25|no_homolog_precedent",
+  "ci_lower": 0.7280701754385965,
+  "verdict": "SURVIVES"
+ },
+ "V2_human_confident": {
+  "observed_correct": 0.8082191780821918,
+  "null_mean": 0.020704109589041095,
+  "null_p99": 0.041164383561645326,
+  "passes": true
+ }
+}
