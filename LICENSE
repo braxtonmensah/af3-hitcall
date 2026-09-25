@@ -1,0 +1,75 @@
+This repository is deliberately NOT under a single licence, because it does not all belong to
+the same rights holder. Read the three sections below before reusing anything.
+
+================================================================================
+1. CODE AND WRITTEN ANALYSIS  —  MIT Licence
+================================================================================
+
+Applies to: all .py files, all .md files, all .sh and .slurm files, and the
+results .json/.csv files produced by this repository's own analysis code.
+
+Copyright (c) 2026 Braxton Mensah
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+================================================================================
+2. ALPHAFOLD SERVER MODELS  —  NON-COMMERCIAL, NOT MIT
+================================================================================
+
+Applies to these files and anything derived from them:
+
+    new_biology/rnasej_mg_2x2_AF3_model_0.cif
+    new_biology/rnasej_mpn_2x2_AF3_model_0.cif
+    new_biology/rnasej_mg_2x2_summary_confidences_0.json
+    new_biology/rnasej_mpn_2x2_summary_confidences_0.json
+    new_biology/rnaseJ_MG139_MG423_heterotetramer_CA.pdb
+    rnasej/afserver_rnasej.json
+
+These are AlphaFold Server output. They are redistributed here under the
+AlphaFold Server Output Terms of Use, which permit use and publication for
+scientific research and expressly FORBID commercial use. The MIT grant in
+section 1 does NOT extend to them and could not, because those rights were never
+held and so cannot be passed on.
+
+The terms additionally forbid using this output in connection with any automated
+system that predicts the binding or interaction of a protein with ligands or
+peptides. That prohibition is the entire reason the virtual screen in
+`cleanroom/` was built on Boltz-2 (MIT licensed) from public sequences instead,
+with no AlphaFold output anywhere in its inputs. See `cleanroom/provenance.json`.
+
+If you want to build something commercial on this work, use the clean-room path
+and do not touch these six files.
+
+================================================================================
+3. UPSTREAM DATA  —  keeps its original licence
+================================================================================
+
+None of the following is ours to relicense; each is redistributed or referenced
+under its own terms, and the original sources are authoritative:
+
+  - Todor et al. 2026 pooled screen            Zenodo 15499631
+  - O'Reilly et al. 2020 in-cell crosslinks    PRIDE PXD017711 / PXD017695, CC0
+  - Humphreys et al. 2021 yeast predictions    ModelArchive ma-bak-cepc
+  - Burke et al. 2023 human predictions        as published
+  - Lluch-Senar et al. 2015 essentiality/SEC   as published
+  - RCSB PDB, SIFTS                            as published
+  - UniProt sequences and MSAs                 CC BY 4.0
+  - ChEMBL approved-drug structures            CC BY-SA 3.0
+
+`cleanroom/msa/*.a3m` are built from public sequence databases and inherit those
+databases' terms.

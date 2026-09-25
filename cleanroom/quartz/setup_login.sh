@@ -14,15 +14,53 @@ export BOLTZ_CACHE="$BASE/boltz_cache"
 mkdir -p "$BASE" "$BOLTZ_CACHE" "$BASE/logs"
 cd "$BASE"
 
-echo "== modules"
-module load python 2>/dev/null || true
+echo "== selecting a usable python"
+# Quartz defaults to 3.13, and boltz's dependency tree has no 3.13 wheels: biopython, dm-tree and
+# gemmi all fall back to compiling from source and fail (PyEval_CallObject was removed in 3.13).
+# Walk the available python modules newest-first and take the first one in 3.10-3.12.
+# Do NOT module purge here: these are python/gpu/* modules and purging strips the prerequisites they
+# need, so every load then fails silently and it looks like no usable python exists.
+# 3.11 first: it is the version this project's stack is known to work on.
+PICKED=""
+for m in python/gpu/3.11.5 python/gpu/3.12.5 python/gpu/3.10.10 \
+         $(module -t avail python 2>&1 | grep -E '^python/' | sed 's/:$//' | sort -Vr); do
+  module load "$m" >/dev/null 2>&1 || { echo "  $m: load failed"; continue; }
+  v=$(python3 -c 'import sys;print("%d.%d"%sys.version_info[:2])' 2>/dev/null)
+  case "$v" in
+    3.10|3.11|3.12) PICKED="$m"; echo "  using $m (python $v)"; break ;;
+    "") echo "  $m: loaded but no working python3" ;;
+    *)  echo "  $m: python $v, not usable" ;;
+  esac
+  module unload "$m" >/dev/null 2>&1 || true
+done
+if [ -z "$PICKED" ]; then
+  echo "FATAL: could not load a python 3.10-3.12 module. Diagnostics:"
+  echo "  --- module avail python ---"
+  module -t avail python 2>&1 | sed 's/^/    /'
+  echo "  --- currently loaded ---"
+  module -t list 2>&1 | sed 's/^/    /'
+  echo "  --- python3 right now ---"
+  command -v python3 && python3 -V
+  echo "Boltz cannot install on 3.13: biopython, dm-tree and gemmi have no 3.13 wheels."
+  exit 1
+fi
 python3 -V
 
 echo "== venv"
+# a venv built against 3.13 earlier in this script's history is unusable; rebuild it
+if [ -d venv ] && ! venv/bin/python -c 'import sys;assert sys.version_info[:2]<(3,13)' 2>/dev/null; then
+  echo "  discarding venv built against an unusable python"
+  rm -rf venv
+fi
 [ -d venv ] || python3 -m venv venv
 source venv/bin/activate
 pip install -q --upgrade pip
-pip install -q boltz
+# prefer wheels; if something still wants to compile, say so loudly rather than burning 20 minutes
+pip install --only-binary=:all: boltz 2>&1 | tail -5 || {
+  echo "  wheel-only install failed, retrying allowing source builds"
+  pip install boltz 2>&1 | tail -15
+}
+command -v boltz >/dev/null || { echo "FATAL: boltz did not install"; exit 1; }
 echo "boltz: $(command -v boltz)"
 
 echo "== pre-downloading model weights and CCD into $BOLTZ_CACHE"
