@@ -56,3 +56,41 @@ x 4 jobs on an 80 GB card).
 
 You very likely own this work (no IU funds, lab or compute were used). Keep it that way if the
 commercial option matters: personal storage, personal or rented compute, no faculty-sponsored runs.
+
+
+---
+
+## Creative search, 2026-09-25: what the AMR funding ecosystem actually pays for
+
+I checked the categories outside conventional grants: DeSci/BioDAOs, European antibacterial incubators,
+and AMR-specific accelerators. No new mechanism delivers $300k in 30 days. But the search produced one
+structural insight that changes strategy.
+
+**The AMR money is gated on having a compound, not a target.**
+
+| Programme | Money | What it needs | Us |
+|---|---|---|---|
+| **PACE** (Pathways to Antimicrobial Clinical Efficacy) | **up to £1M** | Hit-to-Lead or Lead Optimisation. Academia and SMEs **worldwide**, no UK partner needed | Need a compound |
+| **CARB-X** Novel Chemistry | large | "novel chemistry scaffolds with activity against validated bacterial targets" | Need a chemistry plan |
+| **ENABLE-2** | free platform access, non-dilutive, keep your IP | Compounds with MIC <= 32 ug/mL, **European institutions only**, Gram-negatives/S. aureus/E. faecium | **Not eligible**: US-based, no compounds, wrong organism |
+| **BARDA BAA** | varies, rolling to 2028, worldwide | nonclinical efficacy in animal models | Far beyond |
+| **INCATE** Stage I / II | **EUR 10k** / up to **EUR 250k** | early-stage ventures worldwide, rolling | Stage I plausibly eligible now |
+| **MicroDAO** (AMR-focused DeSci) | unclear, early | decentralised grants, "faster funding decisions", welcomes work overlooked by institutions | Worth an enquiry |
+
+**The implication.** We have a validated target and no compound, which is the one thing almost nobody
+funds. Converting the target into even a weak compound moves us from "no eligible programmes" to
+"eligible for PACE (£1M) and CARB-X".
+
+**And that conversion is cheap, roughly $1-3k, not a grant:**
+1. Boltz-2 virtual screen against the interface (MIT licence permits this; AlphaFold Server's terms
+   explicitly forbid it). GPU cost ~$30-100.
+2. Buy the top 10-20 predicted binders from a catalogue supplier. Typically $50-150 each.
+3. One MIC assay panel against *M. pneumoniae* at a CRO. Hundreds to low thousands.
+   Caveat: Mycoplasma is slow and fastidious to culture, so get a written quote first, and note
+   *M. genitalium* is harder than *M. pneumoniae*.
+
+If any compound shows activity, PACE and CARB-X open, and both are an order of magnitude above SBIR.
+If none does, that is a real answer too and it cost ~$2k instead of a year.
+
+**This is the highest-leverage spend available on this project.** It is not fast money, but it is the
+step that converts an unfundable asset into a fundable one.
