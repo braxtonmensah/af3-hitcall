@@ -1,0 +1,642 @@
+[
+ {
+  "name": "TAF5L_TADA1_P",
+  "pair": "TAF5L-TADA1",
+  "arm": "P",
+  "chains": [
+   "TAF5L",
+   "TADA1"
+  ],
+  "tokens": 924
+ },
+ {
+  "name": "TAF5L_TADA1_BR",
+  "pair": "TAF5L-TADA1",
+  "arm": "BR",
+  "chains": [
+   "TAF5L",
+   "TADA1",
+   "SUPT20H"
+  ],
+  "tokens": 1703
+ },
+ {
+  "name": "TAF5L_TADA1_CT",
+  "pair": "TAF5L-TADA1",
+  "arm": "CT",
+  "chains": [
+   "TAF5L",
+   "TADA1",
+   "PI4KB"
+  ],
+  "tokens": 1740
+ },
+ {
+  "name": "SUPT20H_TADA2B_P",
+  "pair": "SUPT20H-TADA2B",
+  "arm": "P",
+  "chains": [
+   "SUPT20H",
+   "TADA2B"
+  ],
+  "tokens": 1199
+ },
+ {
+  "name": "SUPT20H_TADA2B_BR",
+  "pair": "SUPT20H-TADA2B",
+  "arm": "BR",
+  "chains": [
+   "SUPT20H",
+   "TADA2B",
+   "TAF5L"
+  ],
+  "tokens": 1788
+ },
+ {
+  "name": "SUPT20H_TADA2B_CT",
+  "pair": "SUPT20H-TADA2B",
+  "arm": "CT",
+  "chains": [
+   "SUPT20H",
+   "TADA2B",
+   "NFE2L3"
+  ],
+  "tokens": 1893
+ },
+ {
+  "name": "TAF6L_TADA2B_P",
+  "pair": "TAF6L-TADA2B",
+  "arm": "P",
+  "chains": [
+   "TAF6L",
+   "TADA2B"
+  ],
+  "tokens": 1042
+ },
+ {
+  "name": "TAF6L_TADA2B_BR",
+  "pair": "TAF6L-TADA2B",
+  "arm": "BR",
+  "chains": [
+   "TAF6L",
+   "TADA2B",
+   "TADA1"
+  ],
+  "tokens": 1377
+ },
+ {
+  "name": "TAF6L_TADA2B_CT",
+  "pair": "TAF6L-TADA2B",
+  "arm": "CT",
+  "chains": [
+   "TAF6L",
+   "TADA2B",
+   "OLA1"
+  ],
+  "tokens": 1438
+ },
+ {
+  "name": "TAF6L_TADA1_P",
+  "pair": "TAF6L-TADA1",
+  "arm": "P",
+  "chains": [
+   "TAF6L",
+   "TADA1"
+  ],
+  "tokens": 957
+ },
+ {
+  "name": "TAF6L_TADA1_BR",
+  "pair": "TAF6L-TADA1",
+  "arm": "BR",
+  "chains": [
+   "TAF6L",
+   "TADA1",
+   "TADA2B"
+  ],
+  "tokens": 1377
+ },
+ {
+  "name": "TAF6L_TADA1_CT",
+  "pair": "TAF6L-TADA1",
+  "arm": "CT",
+  "chains": [
+   "TAF6L",
+   "TADA1",
+   "OLA1"
+  ],
+  "tokens": 1353
+ },
+ {
+  "name": "PARD3_PARD6B_P",
+  "pair": "PARD3-PARD6B",
+  "arm": "P",
+  "chains": [
+   "PARD3",
+   "PARD6B"
+  ],
+  "tokens": 1728
+ },
+ {
+  "name": "PARD3_PARD6B_BR",
+  "pair": "PARD3-PARD6B",
+  "arm": "BR",
+  "chains": [
+   "PARD3",
+   "PARD6B",
+   "PRKCI"
+  ],
+  "tokens": 2324
+ },
+ {
+  "name": "PARD3_PARD6B_CT",
+  "pair": "PARD3-PARD6B",
+  "arm": "CT",
+  "chains": [
+   "PARD3",
+   "PARD6B",
+   "GOLGA8M"
+  ],
+  "tokens": 2360
+ },
+ {
+  "name": "MRPL20_MRPL47_P",
+  "pair": "MRPL20-MRPL47",
+  "arm": "P",
+  "chains": [
+   "MRPL20",
+   "MRPL47"
+  ],
+  "tokens": 399
+ },
+ {
+  "name": "MRPL20_MRPL47_BR",
+  "pair": "MRPL20-MRPL47",
+  "arm": "BR",
+  "chains": [
+   "MRPL20",
+   "MRPL47",
+   "MRPL23"
+  ],
+  "tokens": 552
+ },
+ {
+  "name": "MRPL20_MRPL47_CT",
+  "pair": "MRPL20-MRPL47",
+  "arm": "CT",
+  "chains": [
+   "MRPL20",
+   "MRPL47",
+   "ENSA"
+  ],
+  "tokens": 520
+ },
+ {
+  "name": "TADA2B_SUPT7L_P",
+  "pair": "TADA2B-SUPT7L",
+  "arm": "P",
+  "chains": [
+   "TADA2B",
+   "SUPT7L"
+  ],
+  "tokens": 834
+ },
+ {
+  "name": "TADA2B_SUPT7L_BR",
+  "pair": "TADA2B-SUPT7L",
+  "arm": "BR",
+  "chains": [
+   "TADA2B",
+   "SUPT7L",
+   "TADA1"
+  ],
+  "tokens": 1169
+ },
+ {
+  "name": "TADA2B_SUPT7L_CT",
+  "pair": "TADA2B-SUPT7L",
+  "arm": "CT",
+  "chains": [
+   "TADA2B",
+   "SUPT7L",
+   "PGP"
+  ],
+  "tokens": 1155
+ },
+ {
+  "name": "MRPL46_MRPL47_P",
+  "pair": "MRPL46-MRPL47",
+  "arm": "P",
+  "chains": [
+   "MRPL46",
+   "MRPL47"
+  ],
+  "tokens": 529
+ },
+ {
+  "name": "MRPL46_MRPL47_BR",
+  "pair": "MRPL46-MRPL47",
+  "arm": "BR",
+  "chains": [
+   "MRPL46",
+   "MRPL47",
+   "MRPL23"
+  ],
+  "tokens": 682
+ },
+ {
+  "name": "MRPL46_MRPL47_CT",
+  "pair": "MRPL46-MRPL47",
+  "arm": "CT",
+  "chains": [
+   "MRPL46",
+   "MRPL47",
+   "COMMD8"
+  ],
+  "tokens": 712
+ },
+ {
+  "name": "MRPL13_MRPL2_P",
+  "pair": "MRPL13-MRPL2",
+  "arm": "P",
+  "chains": [
+   "MRPL13",
+   "MRPL2"
+  ],
+  "tokens": 483
+ },
+ {
+  "name": "MRPL13_MRPL2_BR",
+  "pair": "MRPL13-MRPL2",
+  "arm": "BR",
+  "chains": [
+   "MRPL13",
+   "MRPL2",
+   "MRPS6"
+  ],
+  "tokens": 608
+ },
+ {
+  "name": "MRPL13_MRPL2_CT",
+  "pair": "MRPL13-MRPL2",
+  "arm": "CT",
+  "chains": [
+   "MRPL13",
+   "MRPL2",
+   "SNAPIN"
+  ],
+  "tokens": 619
+ },
+ {
+  "name": "MRPL13_MRPL47_P",
+  "pair": "MRPL13-MRPL47",
+  "arm": "P",
+  "chains": [
+   "MRPL13",
+   "MRPL47"
+  ],
+  "tokens": 428
+ },
+ {
+  "name": "MRPL13_MRPL47_BR",
+  "pair": "MRPL13-MRPL47",
+  "arm": "BR",
+  "chains": [
+   "MRPL13",
+   "MRPL47",
+   "LARS2"
+  ],
+  "tokens": 1331
+ },
+ {
+  "name": "MRPL13_MRPL47_CT",
+  "pair": "MRPL13-MRPL47",
+  "arm": "CT",
+  "chains": [
+   "MRPL13",
+   "MRPL47",
+   "LEMD3"
+  ],
+  "tokens": 1339
+ },
+ {
+  "name": "TADA3_SUPT20H_P",
+  "pair": "TADA3-SUPT20H",
+  "arm": "P",
+  "chains": [
+   "TADA3",
+   "SUPT20H"
+  ],
+  "tokens": 1211
+ },
+ {
+  "name": "TADA3_SUPT20H_BR",
+  "pair": "TADA3-SUPT20H",
+  "arm": "BR",
+  "chains": [
+   "TADA3",
+   "SUPT20H",
+   "TADA2B"
+  ],
+  "tokens": 1631
+ },
+ {
+  "name": "TADA3_SUPT20H_CT",
+  "pair": "TADA3-SUPT20H",
+  "arm": "CT",
+  "chains": [
+   "TADA3",
+   "SUPT20H",
+   "RXRA"
+  ],
+  "tokens": 1673
+ },
+ {
+  "name": "MRPL37_MRPL14_P",
+  "pair": "MRPL37-MRPL14",
+  "arm": "P",
+  "chains": [
+   "MRPL37",
+   "MRPL14"
+  ],
+  "tokens": 568
+ },
+ {
+  "name": "MRPL37_MRPL14_BR",
+  "pair": "MRPL37-MRPL14",
+  "arm": "BR",
+  "chains": [
+   "MRPL37",
+   "MRPL14",
+   "MRPL18"
+  ],
+  "tokens": 748
+ },
+ {
+  "name": "MRPL37_MRPL14_CT",
+  "pair": "MRPL37-MRPL14",
+  "arm": "CT",
+  "chains": [
+   "MRPL37",
+   "MRPL14",
+   "KRTCAP2"
+  ],
+  "tokens": 704
+ },
+ {
+  "name": "MRPS18C_MRPS9_P",
+  "pair": "MRPS18C-MRPS9",
+  "arm": "P",
+  "chains": [
+   "MRPS18C",
+   "MRPS9"
+  ],
+  "tokens": 538
+ },
+ {
+  "name": "MRPS18C_MRPS9_BR",
+  "pair": "MRPS18C-MRPS9",
+  "arm": "BR",
+  "chains": [
+   "MRPS18C",
+   "MRPS9",
+   "MRPL15"
+  ],
+  "tokens": 834
+ },
+ {
+  "name": "MRPS18C_MRPS9_CT",
+  "pair": "MRPS18C-MRPS9",
+  "arm": "CT",
+  "chains": [
+   "MRPS18C",
+   "MRPS9",
+   "IRF2"
+  ],
+  "tokens": 887
+ },
+ {
+  "name": "MRPL13_MRPL37_P",
+  "pair": "MRPL13-MRPL37",
+  "arm": "P",
+  "chains": [
+   "MRPL13",
+   "MRPL37"
+  ],
+  "tokens": 601
+ },
+ {
+  "name": "MRPL13_MRPL37_BR",
+  "pair": "MRPL13-MRPL37",
+  "arm": "BR",
+  "chains": [
+   "MRPL13",
+   "MRPL37",
+   "MRPL18"
+  ],
+  "tokens": 781
+ },
+ {
+  "name": "MRPL13_MRPL37_CT",
+  "pair": "MRPL13-MRPL37",
+  "arm": "CT",
+  "chains": [
+   "MRPL13",
+   "MRPL37",
+   "WASHC3"
+  ],
+  "tokens": 795
+ },
+ {
+  "name": "MRPL20_MRPL19_P",
+  "pair": "MRPL20-MRPL19",
+  "arm": "P",
+  "chains": [
+   "MRPL20",
+   "MRPL19"
+  ],
+  "tokens": 441
+ },
+ {
+  "name": "MRPL20_MRPL19_BR",
+  "pair": "MRPL20-MRPL19",
+  "arm": "BR",
+  "chains": [
+   "MRPL20",
+   "MRPL19",
+   "MRPL32"
+  ],
+  "tokens": 629
+ },
+ {
+  "name": "MRPL20_MRPL19_CT",
+  "pair": "MRPL20-MRPL19",
+  "arm": "CT",
+  "chains": [
+   "MRPL20",
+   "MRPL19",
+   "HIKESHI"
+  ],
+  "tokens": 638
+ },
+ {
+  "name": "ACAD9_ECSIT_P",
+  "pair": "ACAD9-ECSIT",
+  "arm": "P",
+  "chains": [
+   "ACAD9",
+   "ECSIT"
+  ],
+  "tokens": 1052
+ },
+ {
+  "name": "ACAD9_ECSIT_BR",
+  "pair": "ACAD9-ECSIT",
+  "arm": "BR",
+  "chains": [
+   "ACAD9",
+   "ECSIT",
+   "FOXRED1"
+  ],
+  "tokens": 1538
+ },
+ {
+  "name": "ACAD9_ECSIT_CT",
+  "pair": "ACAD9-ECSIT",
+  "arm": "CT",
+  "chains": [
+   "ACAD9",
+   "ECSIT",
+   "MITF"
+  ],
+  "tokens": 1578
+ },
+ {
+  "name": "SEPHS1_QRICH1_P",
+  "pair": "SEPHS1-QRICH1",
+  "arm": "P",
+  "chains": [
+   "SEPHS1",
+   "QRICH1"
+  ],
+  "tokens": 1168
+ },
+ {
+  "name": "SEPHS1_QRICH1_BR",
+  "pair": "SEPHS1-QRICH1",
+  "arm": "BR",
+  "chains": [
+   "SEPHS1",
+   "QRICH1",
+   "MDM2"
+  ],
+  "tokens": 1659
+ },
+ {
+  "name": "SEPHS1_QRICH1_CT",
+  "pair": "SEPHS1-QRICH1",
+  "arm": "CT",
+  "chains": [
+   "SEPHS1",
+   "QRICH1",
+   "CERS2"
+  ],
+  "tokens": 1548
+ },
+ {
+  "name": "MRPL2_MRPL47_P",
+  "pair": "MRPL2-MRPL47",
+  "arm": "P",
+  "chains": [
+   "MRPL2",
+   "MRPL47"
+  ],
+  "tokens": 555
+ },
+ {
+  "name": "MRPL2_MRPL47_BR",
+  "pair": "MRPL2-MRPL47",
+  "arm": "BR",
+  "chains": [
+   "MRPL2",
+   "MRPL47",
+   "MRPS6"
+  ],
+  "tokens": 680
+ },
+ {
+  "name": "MRPL2_MRPL47_CT",
+  "pair": "MRPL2-MRPL47",
+  "arm": "CT",
+  "chains": [
+   "MRPL2",
+   "MRPL47",
+   "MAP1LC3B2"
+  ],
+  "tokens": 680
+ },
+ {
+  "name": "WASHC5_WASHC3_P",
+  "pair": "WASHC5-WASHC3",
+  "arm": "P",
+  "chains": [
+   "WASHC5",
+   "WASHC3"
+  ],
+  "tokens": 1353
+ },
+ {
+  "name": "WASHC5_WASHC3_BR",
+  "pair": "WASHC5-WASHC3",
+  "arm": "BR",
+  "chains": [
+   "WASHC5",
+   "WASHC3",
+   "WASHC4"
+  ],
+  "tokens": 2526
+ },
+ {
+  "name": "WASHC5_WASHC3_CT",
+  "pair": "WASHC5-WASHC3",
+  "arm": "CT",
+  "chains": [
+   "WASHC5",
+   "WASHC3",
+   "ZMYM3"
+  ],
+  "tokens": 2723
+ },
+ {
+  "name": "MRPL47_MRPL40_P",
+  "pair": "MRPL47-MRPL40",
+  "arm": "P",
+  "chains": [
+   "MRPL47",
+   "MRPL40"
+  ],
+  "tokens": 456
+ },
+ {
+  "name": "MRPL47_MRPL40_BR",
+  "pair": "MRPL47-MRPL40",
+  "arm": "BR",
+  "chains": [
+   "MRPL47",
+   "MRPL40",
+   "MRPL20"
+  ],
+  "tokens": 605
+ },
+ {
+  "name": "MRPL47_MRPL40_CT",
+  "pair": "MRPL47-MRPL40",
+  "arm": "CT",
+  "chains": [
+   "MRPL47",
+   "MRPL40",
+   "MAP1LC3B2"
+  ],
+  "tokens": 581
+ }
+]
