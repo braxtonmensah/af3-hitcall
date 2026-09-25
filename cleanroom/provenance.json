@@ -1,0 +1,57 @@
+{
+ "accessions": {
+  "rnasej_mpn": "P75497",
+  "partner_mpn": "P75174",
+  "rnasej_mg": "P47385",
+  "partner_mg": "P47662",
+  "decoy_ptsi_mpn": "P75168"
+ },
+ "jobs": {
+  "cr_rnasej_mpn_2x2": [
+   [
+    "rnasej_mpn",
+    2
+   ],
+   [
+    "partner_mpn",
+    2
+   ]
+  ],
+  "cr_rnasej_mg_2x2": [
+   [
+    "rnasej_mg",
+    2
+   ],
+   [
+    "partner_mg",
+    2
+   ]
+  ],
+  "cr_rnasej_mpn_1x1": [
+   [
+    "rnasej_mpn",
+    1
+   ],
+   [
+    "partner_mpn",
+    1
+   ]
+  ],
+  "cr_rnasej_mpn_decoy_2x2": [
+   [
+    "rnasej_mpn",
+    2
+   ],
+   [
+    "decoy_ptsi_mpn",
+    2
+   ]
+  ]
+ },
+ "licences": {
+  "boltz2": "MIT",
+  "crosslinks": "CC0",
+  "sequences": "CC-BY 4.0",
+  "alphafold_server_output": "NOT USED (non-commercial)"
+ }
+}
