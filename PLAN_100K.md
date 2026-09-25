@@ -1,3 +1,7 @@
+> **SUPERSEDED 2026-09-25 by [../MONEY.md](../MONEY.md).** Kept for history. This file disagrees with the
+> others that were current at the same time (on odds, on prices, or on what entity to form),
+> which is why they were collapsed into one. Do not act from this file.
+
 # The $100k plan, from this science (2026-09-25)
 
 Not a guarantee. A stacked portfolio where one hit clears $100k and the expected value is ~$60k.
