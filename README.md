@@ -10,6 +10,11 @@ of 146 confident human cases and 89% of 84 confident yeast cases, against 2% for
 cases. This is conditional on later structure solving; it does not estimate the chance that an
 arbitrary unsolved pair interacts in cells.
 
+**Read that as a range, not a number.** Most of the 2022-2026 entries are cryo-EM, and cryo-EM models
+are sometimes built starting from AlphaFold, which would let a model agree with itself. On the
+X-ray-only subset the rate is **53% (n = 19, CI [0.32, 0.74])**. The defensible claim is **53% to
+81%**, and that spread is the honest measure of how much circularity cannot be excluded.
+
 Applying the method to *Mycoplasma pneumoniae* produced a **2:2 RNase J : MPN621 assembly
 hypothesis** consistent with published crosslinks and co-elution. The interaction and MPN621 paralog
 assignment were previously reported; the proposed stoichiometry has not been directly measured here.
@@ -51,6 +56,20 @@ Survived five pre-registered attacks:
 | Entry-level cluster bootstrap | CIs unchanged |
 | Independent metric (Fnat from raw coordinates, separate code) | 80% human, 87-90% yeast |
 | Threshold grid (6/8/10 A x F1 0.3/0.5/0.7) | 57% to 88%; 81% at the registered setting |
+
+## Two claims this repository retracted about itself
+
+Both came from tests that were pre-registered specifically to attack earlier results, and both are
+reported here rather than quietly dropped.
+
+| Retracted | Why |
+|---|---|
+| "The stoichiometry rule recovered RNA polymerase beta/beta-prime blind" | PDB assembly records label that pair 1:1 in 367 of 370 assemblies. HIGHER_CAL's pre-registration required its removal. Verified recoveries are RpoA-RpoB and three pyruvate dehydrogenase pairs |
+| "MG354 may be the missing omega subunit" | OMEGA found no omega-family fold in either search direction. MG354 binds RNA polymerase; it does not look like omega. Its structure is already solved (PDB 1TM9); it is uncharacterized in function, not structure |
+
+The stoichiometry rule now ships with measured error rates instead of a list of successes:
+**sensitivity 75%, false-positive rate 12%, precision 64% against a 22% base rate** (n = 54 pairs
+with a solved homologous co-complex).
 
 **Conservative bound:** the X-ray-only subset gives 53% (n = 19). Stated up front because most recent
 depositions are cryo-EM and some are built with AlphaFold assistance.
@@ -106,8 +125,9 @@ missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-cataly
 
 | Path | Contents |
 |---|---|
+| `STATE.md` | **read first**: current status, what is claimable, what was retracted |
 | `PREPRINT_DRAFT.md` | the full write-up |
-| `PREREG_*.md` | the 21 pre-registrations, committed before data were joined |
+| `PREREG_*.md` | the 26 pre-registrations, committed before data were joined |
 | `RESULTS.md` | every test and its numbers |
 | `POSTHOC.md` | analyses that were not pre-registered, labelled |
 | `analysis_*.py`, `verify_*.py` | the analysis code; these are the authoritative record |
