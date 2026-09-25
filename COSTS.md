@@ -20,13 +20,26 @@ once the protein MSA is cached. Call it 4-8 hours on a 4090 including setup.
 
 **Total GPU to do everything: under $10.**
 
-### The free option, and why it is not free
+### The free option, and the decision that was actually taken
 
-Quartz (IU) has 4x V100 nodes free to undergraduates and would run the screen fine.
-**But using IU compute triggers IU policy UA-24**, which claims patentable IP created with significant
-use of university resources. For a $2-5 saving you would hand IU any claim arising from a hit.
-**Recommendation: pay the $10 on RunPod.** Use Quartz only if you decide the academic route (Biswas,
-faculty sponsor) is the plan and IU involvement is fine.
+**Superseded on 2026-09-25. Read `IP_RECORD.md`, which is the contemporaneous record and governs.**
+
+This section used to say "do not use Quartz, pay the $10 on RunPod". The screen was subsequently
+moved onto Quartz. The reasoning, recorded before the run, is that UA-24's definition of "University
+Resources" explicitly excludes "resources routinely made available for general educational, research,
+and administrative purposes", and Quartz is free to every student, self-service, needs no sponsor and
+no allocation. Big Red 200 stays off limits because it requires both.
+
+**What is genuinely unresolved, stated plainly.** UA-24's exclusion has no bright-line test, so this
+is a reading, not a ruling. Two things keep the exposure small today: nothing here is patentable as
+it stands (a natural complex and its coordinates are not patentable subject matter, *Myriad* 2013),
+and the screen uses Boltz-2 (MIT) rather than AlphaFold Server output. The question only becomes live
+if the screen yields a method-of-use candidate. **The open item is a written confirmation from IU's
+Innovation and Commercialization Office, which costs nothing.** Get that before any compound work, not
+after.
+
+**If you want the question to disappear entirely**, the RunPod path still exists and still costs about
+$10. That buys certainty rather than compute.
 
 ## 2. Compounds
 

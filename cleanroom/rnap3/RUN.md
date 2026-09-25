@@ -22,10 +22,13 @@ The pod create was attempted and returned HTTP 402, account balance too low. Add
   the scientific question and not fine for building a commercial asset later.
 - 2,817 residues is within the server's limit.
 
-## Path C: Quartz, free, but IU owns the result
+## Path C: Quartz, free, with the UA-24 reading recorded in IP_RECORD.md
 
 Needs the RT Project click at `projects.rt.iu.edu` (PI `lamhuber`, "HPC for Students"), still
-outstanding. IU policy UA-24 would attach to anything patentable. Not recommended here.
+outstanding. This is the path the virtual screen took, relying on UA-24's exclusion for resources
+routinely made available to all students; the reasoning and its open question are in `IP_RECORD.md`
+and `COSTS.md`. For RNAP3 specifically the IP question barely arises, because the output is a
+structure of a natural complex and is not patentable subject matter either way.
 
 ## What the answer looks like
 
