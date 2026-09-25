@@ -1,0 +1,4 @@
+# These are executed on Linux (Quartz login/compute nodes, rented pods). CRLF breaks the shebang
+# with "bad interpreter: /bin/bash^M", so keep them LF in the working copy on Windows too.
+*.sh        text eol=lf
+*.slurm     text eol=lf
