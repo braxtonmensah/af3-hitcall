@@ -1,0 +1,52 @@
+{
+ "decoy": [
+  "P75168",
+  "Phosphoenolpyruvate-protein phosphotransferase (EC 2.7.3.9) (Phosphotransferase system, enzyme I)"
+ ],
+ "links_mpn": [
+  [
+   120,
+   502,
+   [
+    "DSSO",
+    "DSS"
+   ]
+  ],
+  [
+   120,
+   546,
+   [
+    "DSSO",
+    "DSS"
+   ]
+  ],
+  [
+   257,
+   224,
+   [
+    "DSSO"
+   ]
+  ],
+  [
+   225,
+   224,
+   [
+    "DSSO"
+   ]
+  ],
+  [
+   409,
+   322,
+   [
+    "DSS"
+   ]
+  ],
+  [
+   228,
+   224,
+   [
+    "DSS"
+   ]
+  ]
+ ]
+}
