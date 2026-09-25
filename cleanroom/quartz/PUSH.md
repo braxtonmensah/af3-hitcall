@@ -28,8 +28,20 @@ partition, including `debug`. Groups already include `iu-entlmt-app-rt-quartz-us
 entitlement is there; what is missing is a Slurm account.
 
 **Fix, and it is a click not a form:** at `projects.rt.iu.edu`, log in, search PI **`lamhuber`**,
-find **"HPC for Students"**, click **Request Access**. That project exists for students not working
-with a faculty member. Creating a *new* project would require naming a PI; joining this one does not.
+find **"HPC and AI for Students"** (the exact title; earlier notes said "HPC for Students"), click
+**Request Access**. Laura Huber runs five projects and only this one is the student project, so check
+the title before clicking. Creating a *new* project would require naming a PI; joining this one does not.
+
+**Requested 2026-09-25, awaiting Laura Huber's approval.** The button now reads "Sent!".
+
+**There is a second step after approval.** The RT Projects home page says "Users must be added to an
+allocation in order to gain access to its resource", and `/allocation/` is still empty. Being added to
+the project may not by itself create the Slurm association. After the approval email arrives, check:
+
+    sacctmgr -n show assoc user=$USER format=account%30
+
+If that is still empty while the project shows up under My Projects, the missing piece is the compute
+allocation, which is requested from inside the project page and may also need the PI to approve.
 
 Then:
 
