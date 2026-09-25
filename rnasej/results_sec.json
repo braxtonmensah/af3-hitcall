@@ -1,0 +1,50 @@
+{
+ "n_fractions": 25,
+ "mass_range_kDa": [
+  5.481273092839274,
+  1542.774025415947
+ ],
+ "n_proteins": 437,
+ "peak_mass_kDa": {
+  "MPN280": 297.7747684571801,
+  "MPN621": 297.7747684571801
+ },
+ "monomer_mass_kDa": {
+  "MPN280": 64.0,
+  "MPN621": 63.0
+ },
+ "predicted_heterodimer_kDa": 127.0,
+ "predicted_heterotetramer_kDa": 254.0,
+ "control1_peak_distribution": {
+  "1542.774025415947": 164,
+  "964.2372653326004": 51,
+  "57.474271195239346": 34,
+  "35.92154986491969": 24,
+  "28.39853019669054": 23,
+  "116.31911322681312": 23,
+  "297.7747684571801": 22,
+  "91.95850017178272": 17
+ },
+ "control1_frac_proteins_peaking_at_our_peak": 0.05045871559633028,
+ "control2_corr_MPN280_vs_MPN621": 0.9470827144782471,
+ "control2_corr_percentile": 97.6510067114094,
+ "control2_corr_distribution": {
+  "median": 0.541642103678512,
+  "p90": 0.8508326993451726,
+  "p99": 0.9533570368251794,
+  "max": 0.9644505284972024,
+  "n_compared": 298
+ },
+ "control2_top5_partners_by_corr": {
+  "MPN262": 0.964,
+  "MPN493": 0.957,
+  "MPN272": 0.956,
+  "MPN487": 0.953,
+  "MPN275": 0.95
+ },
+ "control3_peak_over_monomer_ratio": {
+  "MPN280": 4.65,
+  "MPN621": 4.73
+ },
+ "verdict": "co-elute far above monomer mass, near the 2:2 prediction"
+}
