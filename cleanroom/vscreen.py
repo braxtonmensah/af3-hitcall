@@ -43,6 +43,7 @@ ODIR = os.path.join(HERE, "vscreen_out")
 TARGET_ACC = "P75497"          # RNase J, the interface-bearing subunit
 OFFTARGET_ACC = "Q9UKF6"       # human CPSF73, the selectivity control
 IFACE_JSON = os.path.join(HERE, "..", "rnasej", "results_interface.json")
+MSA_DIR = os.path.join(HERE, "msa")   # precomputed by fetch_msa.py so runs need no internet
 CHEMBL = "https://www.ebi.ac.uk/chembl/api/data/molecule"
 TAB = "\t"
 
@@ -104,8 +105,13 @@ def write_jobs(limit, decoys, offtarget):
         chosen = lib[:limit]
         tag = "off_" if offtarget else ""
     for smi, cid in chosen:
+        msa = os.path.join(MSA_DIR, acc + ".a3m")
         y = ["version: 1", "sequences:",
-             "  - protein:", "      id: A", "      sequence: " + prot,
+             "  - protein:", "      id: A", "      sequence: " + prot]
+        if os.path.exists(msa):
+            # same protein for every ligand: one precomputed MSA, no MSA-server calls at run time
+            y += ["      msa: " + msa.replace("\\", "/")]
+        y += [
              "  - ligand:", "      id: L", "      smiles: '" + smi + "'",
              "properties:", "  - affinity:", "      binder: L"]
         if pocket:

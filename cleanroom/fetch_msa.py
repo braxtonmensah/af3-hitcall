@@ -15,7 +15,8 @@ import requests
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "msa")
 API = "https://api.colabfold.com"
-ACC = "P75497"  # M. pneumoniae RNase J
+import sys
+ACC = sys.argv[1] if len(sys.argv) > 1 else "P75497"  # default: M. pneumoniae RNase J
 
 
 def seq(acc):
