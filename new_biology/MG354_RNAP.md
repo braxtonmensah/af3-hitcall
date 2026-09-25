@@ -1,5 +1,7 @@
 # MG354 is an RNA polymerase-associated protein in *Mycoplasma*
 
+> **Status 2026-09-25:** crosslink evidence stands; the omega hypothesis lost its fold argument (OMEGA, below); the three-chain test (RNAP3) is pre-registered and not yet run.
+
 Found 2026-09-25 by the pre-registered HIGHER test (`PREREG_HIGHER.md`, committed `edd50fd` before any
 distance was computed). Full numbers in `results_higher.json`.
 
@@ -60,16 +62,30 @@ of the field's two search strategies, homology and synteny, were blind to it. In
 beta and beta-prime is a third, independent way to look, and it is the one that found something.
 
 Consistent with omega: the size (137 aa), the binding partners (beta and beta-prime), and being
-otherwise functionless in annotation. Not yet shown: the fold, the binding site, and whether it
-occupies the omega position rather than being a separate regulator.
+otherwise functionless in annotation. Not yet shown: the binding site, and whether it occupies the
+omega position rather than being a separate regulator.
+
+**Update, OMEGA readout (PREREG_OMEGA, 2026-09-25): the fold does not look like omega.** The
+structure search came back with no omega-family hit in either direction. MG354's model is confident
+(mean pLDDT 91.2), its only confident structural matches are its own orthologs, and *E. coli* omega
+searched against Swiss-Prot models finds 635 hits and no Mollicutes protein at all. Under the
+registered rule that is *inconclusive* (the "weakened" branch needs a confident unrelated family, and
+there is none), but in plain terms the fold argument for omega is gone. What remains is the crosslink
+evidence that MG354 binds RNA polymerase, which the fold search does not touch. The better-supported
+reading is now **an RNA polymerase-associated protein of unknown function**, not a missing omega.
+
+**Prior art we had missed.** MG354's structure is not unknown: PDB **1TM9** is an NMR structure of
+*M. genitalium* MG354 from the Berkeley Structural Genomics Center (Foldseek E = 5e-9, 69% identity to
+the *M. pneumoniae* ortholog). Its function is uncharacterized; its fold is not. Any write-up should
+cite 1TM9 and say "uncharacterized function", never "unknown structure".
 
 ## What would settle it, in order of cost
 
 1. **A dedicated structure prediction of MG354 with RpoB and RpoC together**, then check whether all
    five crosslinks fall within reach. This is the direct analogue of what TETRA did for RNase J and
    needs GPU time, not a lab.
-2. **Fold comparison** of the predicted MG354 monomer against solved omega subunits. If it carries the
-   omega fold despite no sequence similarity, that is close to decisive.
+2. ~~Fold comparison against solved omega subunits.~~ **Done (OMEGA): no omega-like fold found.**
+   The NMR structure 1TM9 already exists and can be used directly in any docking or modelling step.
 3. **Pull-down of tagged RpoC**, testing whether MG354 co-purifies. A lab experiment, days not months.
 
 ## Honest limits

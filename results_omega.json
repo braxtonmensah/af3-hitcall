@@ -1,0 +1,316 @@
+{
+ "Q_mean_plddt": 91.2,
+ "Q_passes": true,
+ "O1_n_hits": {
+  "afdb-swissprot": 7,
+  "pdb100": 19
+ },
+ "O1_top10": {
+  "afdb-swissprot": [
+   {
+    "db": "afdb-swissprot",
+    "rank": 1,
+    "target": "AF-P75248-F1-model_v6 Uncharacterized protein MG354 homolog",
+    "eval": 3.9e-20,
+    "prob": 1,
+    "seqId": 100,
+    "taxName": "Mycoplasmoides pneumoniae M129",
+    "qcov": 1.0
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 2,
+    "target": "AF-P47596-F1-model_v6 Uncharacterized protein MG354",
+    "eval": 2.383e-14,
+    "prob": 1,
+    "seqId": 68.6,
+    "taxName": "Mycoplasmoides genitalium G37",
+    "qcov": 1.0
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 3,
+    "target": "AF-Q5RFB6-F1-model_v6 Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1",
+    "eval": 3.777,
+    "prob": 0.106,
+    "seqId": 6.5,
+    "taxName": "Pongo abelii",
+    "qcov": 0.99
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 4,
+    "target": "AF-Q4R4T0-F1-model_v6 Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1",
+    "eval": 3.974,
+    "prob": 0.098,
+    "seqId": 6.5,
+    "taxName": "Macaca fascicularis",
+    "qcov": 0.99
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 5,
+    "target": "AF-E2RQ08-F1-model_v6 Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1",
+    "eval": 4.399,
+    "prob": 0.098,
+    "seqId": 9.4,
+    "taxName": "Canis lupus familiaris",
+    "qcov": 0.99
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 6,
+    "target": "AF-B7GGM5-F1-model_v6 UPF0358 protein Aflv_1873",
+    "eval": 8.098,
+    "prob": 0.057,
+    "seqId": 11.7,
+    "taxName": "Anoxybacillus flavithermus WK1",
+    "qcov": 0.64
+   },
+   {
+    "db": "afdb-swissprot",
+    "rank": 7,
+    "target": "AF-Q4L7S0-F1-model_v6 Accessory gene regulator protein B",
+    "eval": 8.521,
+    "prob": 0.051,
+    "seqId": 12.3,
+    "taxName": "Staphylococcus haemolyticus JCSC1435",
+    "qcov": 0.8
+   }
+  ],
+  "pdb100": [
+   {
+    "db": "pdb100",
+    "rank": 1,
+    "target": "1tm9-assembly1.cif.gz_A NMR Structure of gene target number gi3844938 from Mycoplasma genitalium: Berkeley Str",
+    "eval": 4.638e-09,
+    "prob": 1,
+    "seqId": 68.6,
+    "taxName": "Mycoplasmoides genitalium",
+    "qcov": 1.0
+   },
+   {
+    "db": "pdb100",
+    "rank": 2,
+    "target": "3wfr-assembly4.cif.gz_H tRNA processing enzyme complex 2",
+    "eval": 1.718,
+    "prob": 0.116,
+    "seqId": 16.2,
+    "taxName": "synthetic construct",
+    "qcov": 0.83
+   },
+   {
+    "db": "pdb100",
+    "rank": 3,
+    "target": "4txp-assembly3.cif.gz_C Crystal structure of LIP5 N-terminal domain",
+    "eval": 4.077,
+    "prob": 0.098,
+    "seqId": 11.2,
+    "taxName": "Homo sapiens",
+    "qcov": 0.85
+   },
+   {
+    "db": "pdb100",
+    "rank": 4,
+    "target": "3kph-assembly1.cif.gz_B Crystal structure of Mycoplasma arthritidis-derived mitogen",
+    "eval": 3.005,
+    "prob": 0.09,
+    "seqId": 15.6,
+    "taxName": "Metamycoplasma arthritidis",
+    "qcov": 0.68
+   },
+   {
+    "db": "pdb100",
+    "rank": 5,
+    "target": "4ms2-assembly1.cif.gz_C Structural basis of Ca2+ selectivity of a voltage-gated calcium channel",
+    "eval": 4.749,
+    "prob": 0.076,
+    "seqId": 15,
+    "taxName": "Aliarcobacter butzleri RM4018",
+    "qcov": 0.65
+   },
+   {
+    "db": "pdb100",
+    "rank": 6,
+    "target": "2h7o-assembly1.cif.gz_A Crystal structure of the Rho-GTPase binding domain of YpkA",
+    "eval": 5.821,
+    "prob": 0.076,
+    "seqId": 12.9,
+    "taxName": "Yersinia pseudotuberculosis",
+    "qcov": 0.99
+   },
+   {
+    "db": "pdb100",
+    "rank": 7,
+    "target": "6i3h-assembly1.cif.gz_A Crystal structure of influenza A virus M1 N-terminal domain (G18A mutation)",
+    "eval": 4.514,
+    "prob": 0.063,
+    "seqId": 11.9,
+    "taxName": "Influenza A virus",
+    "qcov": 0.97
+   },
+   {
+    "db": "pdb100",
+    "rank": 8,
+    "target": "8diy-assembly1.cif.gz_A Crystal structure of NavAb L101S as a basis for the human Nav1.7 Inherited Erythromela",
+    "eval": 6.444,
+    "prob": 0.063,
+    "seqId": 14,
+    "taxName": "Aliarcobacter butzleri RM4018",
+    "qcov": 0.6
+   },
+   {
+    "db": "pdb100",
+    "rank": 9,
+    "target": "5kmf-assembly1.cif.gz_D Structure of CavAb in complex with nimodipine",
+    "eval": 6.78,
+    "prob": 0.057,
+    "seqId": 15.8,
+    "taxName": "Aliarcobacter butzleri RM4018",
+    "qcov": 0.65
+   },
+   {
+    "db": "pdb100",
+    "rank": 10,
+    "target": "2h7v-assembly2.cif.gz_D Co-crystal structure of YpkA-Rac1",
+    "eval": 6.124,
+    "prob": 0.057,
+    "seqId": 12.3,
+    "taxName": "Yersinia pseudotuberculosis",
+    "qcov": 0.97
+   }
+  ]
+ },
+ "O1_best_omega_hit": null,
+ "O1_chlamydial_hits": [],
+ "O1_verdict": "NO OMEGA-FAMILY HIT",
+ "O2_n_hits": 635,
+ "O2_top10": [
+  {
+   "db": "afdb-swissprot",
+   "rank": 1,
+   "target": "AF-B5BI24-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Salmonella enterica subsp. enterica serovar Paratyphi A str. AKU_12601",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 2,
+   "target": "AF-B2TTX9-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Shigella boydii CDC 3083-94",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 3,
+   "target": "AF-B7MFL0-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli S88",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 4,
+   "target": "AF-Q1R4U2-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli UTI89",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 5,
+   "target": "AF-P0A800-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli K-12",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 6,
+   "target": "AF-Q329K7-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Shigella dysenteriae Sd197",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 7,
+   "target": "AF-B5YWE9-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli O157:H7 str. EC4115",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 8,
+   "target": "AF-A1AHI0-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli APEC O1",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 9,
+   "target": "AF-B6I3M8-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli SE11",
+   "qcov": 1.0
+  },
+  {
+   "db": "afdb-swissprot",
+   "rank": 10,
+   "target": "AF-C4ZXP1-F1-model_v6 DNA-directed RNA polymerase subunit omega",
+   "eval": 5.199e-14,
+   "prob": 1,
+   "seqId": 100,
+   "taxName": "Escherichia coli BW2952",
+   "qcov": 1.0
+  }
+ ],
+ "O2_mollicutes_hits": [],
+ "O2_verdict": "NO MOLLICUTES HIT",
+ "O1_confident_hits_excluding_self": [
+  {
+   "db": "afdb-swissprot",
+   "rank": 2,
+   "target": "AF-P47596-F1-model_v6 Uncharacterized protein MG354",
+   "eval": 2.383e-14,
+   "prob": 1,
+   "seqId": 68.6,
+   "taxName": "Mycoplasmoides genitalium G37",
+   "qcov": 1.0
+  },
+  {
+   "db": "pdb100",
+   "rank": 1,
+   "target": "1tm9-assembly1.cif.gz_A NMR Structure of gene target number gi3844938 from Mycoplasma genitalium: Berkeley Str",
+   "eval": 4.638e-09,
+   "prob": 1,
+   "seqId": 68.6,
+   "taxName": "Mycoplasmoides genitalium",
+   "qcov": 1.0
+  }
+ ],
+ "O1_confident_unrelated_hits": [],
+ "verdict": "INCONCLUSIVE"
+}
