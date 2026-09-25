@@ -40,15 +40,60 @@ P47385)**. The two form a J1/J2-type heterodimer, and two heterodimers assemble 
 
 Model: `rnaseJ_MG139_MG423_heterotetramer_CA.pdb` (MG139 = chains A, C; MG423 = chains B, D; CA only).
 
+## Interface map and target assessment (post hoc, `rnasej/interface_map.py`, 2026-09-25)
+
+**Architecture is a dimer of heterodimers.** All-atom contacts (<= 5 A) in the M. pneumoniae AF3 model:
+RNase J(A)-partner(C) 178 contacts and B-D 178, but A-D only 9 and B-C only 7. The two heterodimers are
+joined by a RNase J : RNase J interface (60 contacts) and a partner : partner interface (64).
+The main interface buries 65 RNase J residues and 66 partner residues.
+
+**MG423/MPN_621 is a catalytically dead pseudo-nuclease (measured here).** Against *B. subtilis* RNase J1
+(Q45493), whose catalytic/Zn-ligand residues are H76, D78, H79, H368:
+
+| Protein | Identity to BsJ1 | Catalytic residues kept |
+|---|---|---|
+| RNase J, MPN_280 (P75497) | 39.9% | **4/4** (H83, D85, H86, H377) |
+| MG423 homolog, MPN_621 (P75174) | 25.1% | **0/4** (V71, E73, N74, N365) |
+| Human CPSF73 (Q9UKF6) | 25.2% | 3/4 at aligned positions |
+
+So the partner keeps the fold and loses the chemistry: consistent with a structural/regulatory subunit
+rather than a second nuclease.
+
+**Human off-target.** The nearest human relative is CPSF73 (CPSF3), itself a drug target. RNase J is 25%
+identical to it overall, and the 65 interface residues are only **24.6% identical** to CPSF73 (16.9% to
+CPSF100). Read-out for a drug-discovery programme: the **interface** is much less human-like than the
+active site, so an interface-directed agent is the selective option, while an active-site nuclease
+inhibitor would risk CPSF73 cross-reactivity.
+
+Interface residue lists: `rnasej/results_interface.json`.
+
 ## What is new and what is not
 
-- **Known:** RNase J forms dimers and tetramers (for example 3ZQ4). *B. subtilis* RNase J1 and J2 form a
-  heterocomplex (Mathy et al. 2010; integrative crosslink + deep-learning model, Stahl et al. 2024,
-  *Nat. Commun.*, PDB-IHM 9A5V).
-- **New here:** that *Mycoplasma* has a J1/J2-type RNase J heterocomplex at all, that its J2-type subunit
-  is the uncharacterized MG423, and in-cell evidence for a heterotetrameric (J1:J2)x2 assembly. Not in
-  Todor et al. 2026 (checked text and supplements), not in the literature (Europe PMC), no solved
-  homologous heterocomplex in the current PDB.
+**Corrected 2026-09-25 after a deeper prior-art check. Two earlier claims were too strong:**
+
+- **The interaction itself is already in published data.** RNase J (P75497) - P75174 is listed in
+  O'Reilly et al. 2020's own PPI table at 5% PPI FDR (fdr = 0.0), i.e. their published dataset already
+  contains this interaction; their paper does not discuss it. We did not discover the interaction, we
+  noticed it in their supplement and asked what its architecture is.
+- **MG423 being an RNase J paralog that may be inactive is published.** Chilamakuri et al. 2011,
+  *Comparative and Functional Genomics* 2011:878973, one sentence: "It has been documented that presence
+  of paralogs in Mycoplasma genitalium (MG139 and MG423) and Mycoplasma pneumoniae (MPN280 and MPN261)
+  along with other bacteria could be as inactive forms." No structure, no interaction data, no complex.
+  (That sentence also has a locus error: MPN_261 is DNA topoisomerase 1; the real MG423 ortholog is
+  **MPN_621**.)
+- **Closest methodological prior art:** *B. subtilis* RNase J1-J2 is a known heterocomplex (Mathy et al.
+  2010) and was modelled from crosslinks + deep learning in 2024 (Stahl et al., *Nat. Commun.*, PDB-IHM
+  9A5V). Our approach is the same idea applied to a different organism and an uncharacterized subunit.
+
+**What is new here, stated narrowly:**
+1. The **architecture**: a 2:2 dimer-of-heterodimers, with the far crosslinks explained only by the
+   tetramer (the heterodimer leaves them at 51-63 A).
+2. A **crosslink-validated 3D model** of it (6/6 links, two independent crosslinkers, 5/5 AF3 samples).
+3. **Measured loss of all four catalytic residues** in MPN_621/MG423, making the "inactive paralog"
+   suggestion concrete.
+4. **MG423 stabilizes RNase J self-association** (RNase J : RNase J ipTM 0.50 alone vs 0.81 with MG423).
+5. An **interface map** with human-selectivity numbers.
+Not in Todor et al. 2026 (text and supplements checked), no homologous heterocomplex in the current PDB.
 
 ## Retracted during checking
 
