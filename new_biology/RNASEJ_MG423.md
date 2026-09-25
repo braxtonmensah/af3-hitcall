@@ -1,6 +1,22 @@
 # New biology hypothesis: Mycoplasma RNase J is an (RNase J1 : MG423)x2 heterotetramer
 
-Status: **computational, supported by two independent in-cell datasets; not yet tested at the bench.**
+Status: **computationally solved (PREREG_AFJ, all 4 pre-registered outcomes passed); supported by two independent
+in-cell crosslink datasets; not yet tested at the bench.**
+
+## Dedicated AlphaFold 3 runs (AlphaFold Server, 2026-09-25)
+
+| Job | ipTM | Crosslinks within 30 A |
+|---|---|---|
+| *M. pneumoniae* RNase J (P75497) x2 + MG423 homolog (P75174) x2 | **0.83-0.84** (RNase J : partner 0.81-0.82) | **6/6 in 5/5 samples** (14-23 A) |
+| *M. genitalium* MG139 x2 + MG423 x2 | 0.82 | 6/6 in 5/5 samples |
+| Heterodimer only (P75497 + P75174) | 0.81 | 3 near links yes, 3 far links no (51-63 A), as predicted |
+| Decoy: RNase J x2 + PtsI (P75168, length-matched) x2 | 0.31 overall; RNase J : decoy **0.12-0.17** | n/a |
+
+AF3 received no crosslink information. It builds a confident heterotetramer that satisfies every in-cell
+crosslink, and it does not pair RNase J confidently with an unrelated protein. The RNase J : RNase J
+interface scores ipTM ~0.50 without MG423 and ~0.81 with it, suggesting MG423 stabilizes the assembly.
+Models: `rnasej_mpn_2x2_AF3_model_0.cif`, `rnasej_mg_2x2_AF3_model_0.cif`. AF Server may use PDB templates up
+to 2021-09-30 (e.g. B. subtilis RNase J1, 3ZQ4); the crosslinks were never an input.
 Every step was pre-registered (PREREG_XLVAL, PREREG_XLDSS, PREREG_TETRA); post hoc steps are marked.
 
 ## Claim
