@@ -1,0 +1,17 @@
+{
+  "model": "C:\\Users\\bmens\\OneDrive - Indiana University\\NQ_Project\\af3-hitcall\\new_biology\\rnasej_mpn_2x2_AF3_model_0.cif",
+  "observed_distances_angstrom": [
+    22.56,
+    17.02,
+    16.22,
+    14.43,
+    19.07,
+    14.58
+  ],
+  "observed_all_within_30": true,
+  "observed_mean_distance": 17.31,
+  "degree_preserving_simple_graph_rewirings": 48,
+  "rewirings_all_within_30": 4,
+  "rewirings_mean_at_most_observed": 1,
+  "note": "Exact reassignment of observed partner lysine sites to observed RNase J lysine sites; hotspot multiplicities fixed, duplicate edges excluded, equivalent graphs collapsed. Rewiring is exploratory and not a sampling model for XL-MS."
+}

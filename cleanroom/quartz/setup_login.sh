@@ -40,6 +40,23 @@ mkdir -p .warm_out
 boltz predict .warm.yaml --out_dir .warm_out --accelerator cpu --diffusion_samples 1 \
     --sampling_steps 10 --cache "$BOLTZ_CACHE" 2>&1 | tail -15 || true
 
+echo "== pointing the job YAMLs at this account's MSA directory"
+# The YAMLs ship with a placeholder MSA path. Rewrite it from $HOME rather than guessing IU's home
+# convention, so this is correct whatever the account's real path turns out to be.
+if [ -d "$BASE/yaml" ]; then
+  n=$(ls "$BASE/yaml"/*.yaml 2>/dev/null | wc -l)
+  sed -i "s|msa: \".*/msa/|msa: \"$BASE/msa/|" "$BASE/yaml"/*.yaml
+  echo "  rewrote $n job files -> $BASE/msa/"
+  grep -h 'msa:' "$BASE/yaml"/*.yaml | sort -u | sed 's/^/  /'
+  missing=0
+  for a in $(grep -h 'msa:' "$BASE/yaml"/*.yaml | sed 's/.*msa: "//;s/"$//' | sort -u); do
+    [ -f "$a" ] || { echo "  MISSING: $a"; missing=1; }
+  done
+  [ "$missing" -eq 1 ] && { echo "FATAL: an MSA referenced by the jobs is not on disk."; exit 1; }
+else
+  echo "  WARNING: $BASE/yaml not found. Push the jobs before submitting (see PUSH.md)."
+fi
+
 echo "== cache contents"
 du -sh "$BOLTZ_CACHE" 2>/dev/null
 find "$BOLTZ_CACHE" -maxdepth 1 -printf '  %f\n' 2>/dev/null | head -20

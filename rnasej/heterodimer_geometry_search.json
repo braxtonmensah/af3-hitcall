@@ -1,0 +1,144 @@
+{
+  "source_model": "C:\\Users\\bmens\\OneDrive - Indiana University\\NQ_Project\\af3-hitcall\\new_biology\\rnasej_mpn_2x2_AF3_model_0.cif",
+  "initial_feasible": 36,
+  "random_starts": 40,
+  "refined": [
+    {
+      "seed": 24,
+      "optimizer_success": true,
+      "score": 353.605,
+      "link_distances_angstrom": [
+        29.32,
+        24.82,
+        27.0,
+        17.05,
+        27.99,
+        20.15
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 23,
+      "ca_pairs_under_3p5_angstrom": 48,
+      "ca_contacts_under_8_angstrom": 672
+    },
+    {
+      "seed": 3,
+      "optimizer_success": true,
+      "score": 340.552,
+      "link_distances_angstrom": [
+        29.0,
+        25.25,
+        24.64,
+        17.57,
+        29.05,
+        22.47
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 22,
+      "ca_pairs_under_3p5_angstrom": 46,
+      "ca_contacts_under_8_angstrom": 660
+    },
+    {
+      "seed": 4,
+      "optimizer_success": true,
+      "score": 252.67,
+      "link_distances_angstrom": [
+        28.84,
+        22.81,
+        28.61,
+        17.13,
+        24.63,
+        18.89
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 20,
+      "ca_pairs_under_3p5_angstrom": 52,
+      "ca_contacts_under_8_angstrom": 752
+    },
+    {
+      "seed": 31,
+      "optimizer_success": true,
+      "score": 396.931,
+      "link_distances_angstrom": [
+        28.23,
+        25.56,
+        27.02,
+        13.45,
+        24.73,
+        18.25
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 31,
+      "ca_pairs_under_3p5_angstrom": 65,
+      "ca_contacts_under_8_angstrom": 686
+    },
+    {
+      "seed": 20,
+      "optimizer_success": true,
+      "score": 151.75,
+      "link_distances_angstrom": [
+        29.1,
+        24.02,
+        23.9,
+        16.34,
+        29.13,
+        20.75
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 15,
+      "ca_pairs_under_3p5_angstrom": 32,
+      "ca_contacts_under_8_angstrom": 460
+    },
+    {
+      "seed": 34,
+      "optimizer_success": true,
+      "score": 430.599,
+      "link_distances_angstrom": [
+        29.1,
+        23.42,
+        25.17,
+        17.21,
+        29.29,
+        21.14
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 35,
+      "ca_pairs_under_3p5_angstrom": 61,
+      "ca_contacts_under_8_angstrom": 727
+    },
+    {
+      "seed": 22,
+      "optimizer_success": true,
+      "score": 151.75,
+      "link_distances_angstrom": [
+        29.1,
+        24.02,
+        23.9,
+        16.34,
+        29.13,
+        20.75
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 15,
+      "ca_pairs_under_3p5_angstrom": 32,
+      "ca_contacts_under_8_angstrom": 460
+    },
+    {
+      "seed": 9,
+      "optimizer_success": true,
+      "score": 521.695,
+      "link_distances_angstrom": [
+        27.02,
+        21.75,
+        29.19,
+        20.16,
+        28.6,
+        21.86
+      ],
+      "all_links_within_30": true,
+      "ca_pairs_under_3_angstrom": 41,
+      "ca_pairs_under_3p5_angstrom": 76,
+      "ca_contacts_under_8_angstrom": 1042
+    }
+  ],
+  "scope": "Rigid monomer search on one AF3 model, no side-chain packing or binding-energy evaluation; a failed search cannot prove no 1:1 structure exists."
+}

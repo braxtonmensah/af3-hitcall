@@ -5,3 +5,6 @@ __pycache__/
 cleanroom/vscreen_yaml/
 cleanroom/vscreen_out/
 cleanroom/library_approved.smi
+
+# regenerable transfer bundle, see cleanroom/quartz/PUSH.md
+cleanroom/af3screen_bundle.tar.gz
