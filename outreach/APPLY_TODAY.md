@@ -17,45 +17,52 @@ $1B valuation cap that converts at your next priced round. At that cap the dilut
 0.001%, so it is close to free money, but it is an investment and not a grant. You can also take part
 with no investment and no equity at all. Nothing obliges you to accept the money to join the cohort.
 
-### What to write
+### The framing problem, read this before writing anything
+
+**Z Fellows funds builders, not papers.** They are betting you will build something. A submission that
+reads "I did a rigorous study and wrote it up" is a category error there, however good the study is.
+
+So invert it. **The method is the product; the paper is the proof it works.** Same facts, different
+ask. Labs are drowning in AI-predicted interactions with no way to decide which deserve an experiment,
+and you built the thing that decides, then validated it prospectively. The registry of 6,010 confident
+never-solved pairs is the first output of that tool, not a byproduct of a paper.
 
 **What are you working on?**
 
-> I audit AI protein-structure predictions to work out which ones are worth doing an experiment on.
+> Deciding which AI-predicted protein interactions are worth a wet-lab experiment.
 >
-> AlphaFold and similar models now predict protein interactions for entire genomes, tens of thousands
-> of predictions at a time. Nobody knows which to trust, so most go untested. I measured it properly
-> instead of guessing: I took confident predictions published in 2021, before the answers existed, and
-> scored them against protein structures that were solved between 2022 and 2026.
+> AlphaFold and its successors now predict interactions for entire genomes, tens of thousands at a
+> time. An experiment to test one costs weeks and real money, and the confidence scores come with no
+> interpretation, so almost all of them go untested. There is no triage layer. I built one.
 >
-> Confident predictions about complexes that had never been solved before had the right interface 81%
-> of the time in human (n=146) and 89% in yeast (n=84), against 2% for low-confidence predictions. The
-> result held after I removed everything with a similar known structure, against a shuffled control,
-> under a second independently written scoring method, and across a grid of thresholds. I
-> pre-registered all 21 hypotheses in version control before joining the data, and I report the 8 that
-> came back negative.
+> Then I did the thing nobody had done: I measured whether it works, prospectively. I took confident
+> predictions published in 2021, before the answers existed, and scored them against structures solved
+> between 2022 and 2026. Confident predictions of complexes never solved before had the right
+> interface 81% of the time in human (n=146) and 89% in yeast (n=84), against 2% for low-confidence
+> ones. It held after removing everything with a similar known structure, against a shuffled control,
+> under a second independently written scorer, and across a grid of thresholds.
 >
-> Then I used it to find something. In Mycoplasma pneumoniae, the essential enzyme RNase J pairs with
-> MPN621, a protein nobody has characterised, as a 2:2 four-part complex. Five independent published
-> lines agree, including in-cell crosslinks from two different chemistries and mass-spec that puts both
-> proteins at the same 298 kDa peak. MPN621 has lost all four of RNase J's catalytic residues, so it
-> looks like a dead enzyme that holds the complex together. Both subunits are essential, which makes
-> the interface an antibacterial target, and it is only 24.6% identical to the closest human protein.
+> The first output is a ranked registry of 6,010 confident, never-solved human complexes with the
+> evidence attached. I used it myself to find one: an essential 2:2 RNase J complex in Mycoplasma
+> pneumoniae whose partner subunit has lost all four catalytic residues, supported by five independent
+> published lines including in-cell crosslinks from two chemistries. Both subunits are essential and
+> the interface is only 24.6% identical to the closest human protein, so it is an antibacterial target.
 
 **Why you?**
 
 > I did all of it as an economics sophomore with no lab, no faculty sponsor, no funding and no
-> institutional compute. Public data and a laptop. The reason to believe any of it is that I wrote down
-> what I expected before I looked, and the repository's commit history proves the order. When checks
-> failed, I recorded the retraction rather than quietly dropping the claim.
+> institutional compute. Public data and a laptop. I pre-registered all 21 hypotheses in version
+> control before joining the data, `git log` proves the order, and I report the 8 that came back
+> negative. When a check failed I recorded the retraction instead of quietly dropping the claim. That
+> discipline is the product's moat: anyone can generate predictions, almost nobody can tell you which
+> to trust and show their work.
 
 **What would you do with the money and the week?**
 
-> Re-run the whole pipeline on Boltz-2, which is MIT licensed, so the results are free for anyone
-> including companies to build on. AlphaFold Server output is non-commercial and explicitly forbids
-> use in ligand-binding prediction, which is why I built a clean-room version from public sequences.
-> Then extend it to every organism with public in-cell crosslinking data and publish a ranked list of
-> confident, never-solved complexes with the evidence attached.
+> Turn the pipeline into something other people can run. Re-implement it on Boltz-2, which is MIT
+> licensed, so the output is free for anyone including companies to build on. Extend the registry to
+> every organism with public in-cell crosslinking data. Then take it to the labs and biotechs that
+> are currently guessing, and find out what they would pay for a ranked, evidence-backed shortlist.
 
 **Links:** repository, preprint. *Both need to be public first. This is the bottleneck.*
 
