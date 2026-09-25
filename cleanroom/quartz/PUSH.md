@@ -1,9 +1,85 @@
 # Running the screen on Quartz
 
-Account `bsmensah` requested 2026-09-25, provisioning takes up to 24 hours. Quartz is reachable now
-(`quartz.uits.iu.edu` answers), so the only wait is provisioning.
+**Status 2026-09-25: everything is staged and validated on Quartz. One blocker left, and it is a
+web click, not a command.** See "The one blocker" below.
 
-## Why you have to run these and not Claude
+## Facts about the account, corrected 2026-09-25
+
+Verified by logging in, not assumed:
+
+| | Value |
+|---|---|
+| SSH login user | **`bmensah`** (every earlier doc said `bsmensah`, which is the *group*) |
+| Home | `/N/u/bsmensah/Quartz` = `/geode3/home/u015/bsmensah/Quartz` (same place, two mounts) |
+| Login node | `h1.quartz.uits.iu.edu` |
+| GPU partitions | `h100-single` (50 nodes), `h100-multi` (12), `h100-debug` (2), `v100` (24) |
+| Slurm association | **none.** `sacctmgr show assoc user=bmensah` returns nothing |
+
+The old "no association" diagnosis was run against the wrong username. It was re-checked with the
+right one and the blocker is real either way.
+
+## The one blocker
+
+    sbatch: error: You must include an RT Project with the -A flag to this command.
+                   Please see https://kb.iu.edu/d/bihc
+
+`AccountingStorageEnforce = associations,limits,qos`, so no association means no job on any
+partition, including `debug`. Groups already include `iu-entlmt-app-rt-quartz-users`, so the Quartz
+entitlement is there; what is missing is a Slurm account.
+
+**Fix, and it is a click not a form:** at `projects.rt.iu.edu`, log in, search PI **`lamhuber`**,
+find **"HPC for Students"**, click **Request Access**. That project exists for students not working
+with a faculty member. Creating a *new* project would require naming a PI; joining this one does not.
+
+Then:
+
+    sacctmgr -n show assoc user=$USER format=account%30      # get the account name
+    cd ~/af3screen && sbatch -A <account> --array=0-7 quartz/screen.slurm
+
+Add `#SBATCH --account=<account>` to `quartz/screen.slurm` so it is not needed on the command line.
+
+## What is already done (verified, not assumed)
+
+| Piece | State |
+|---|---|
+| Bundle | pushed and unpacked at `~/af3screen` |
+| venv | boltz **2.2.1**, torch **2.14.0+cu130** |
+| Model weights | **12 GB cached** in `boltz_cache/` (`boltz2_conf.ckpt`, `boltz2_aff.ckpt`) |
+| Jobs | **650 validated**: 300 screen, 50 decoy, 300 off-target |
+| MSAs | `P75497.a3m` (target), `Q9UKF6.a3m` (human CPSF73) |
+| MSA paths | resolve on Quartz; no CR corruption |
+| Runs so far | none, `logs/` is empty |
+
+`scp` and `ssh` both ride the WSL master socket, so Claude can transfer files and run commands for
+12 hours after one `ssh quartz` login. The old note that scp needs its own Duo prompt predates that.
+
+## Two bugs found and fixed on 2026-09-25
+
+**1. `validate_jobs.py` could not run on Quartz, and `--prune` would have emptied the run
+directory.** `YDIR` was hardcoded to `vscreen_yaml`, but the bundle ships the jobs as `yaml/`; and
+the MSA check required the hardcoded RunPod prefix `/workspace/screen/msa/`, so all 350 jobs failed
+as "not pod-side" on Quartz. **Never run `--prune` without reading the unpruned report first.** Now
+the directory is auto-detected (or set `YAML_DIR`), and the MSA check resolves the path instead of
+matching one host's layout.
+
+**2. The selectivity arm did not exist.** The CPSF73 MSA was staged and `vscreen.py --offtarget`
+existed, but zero off-target jobs had ever been generated, so `--rank`'s selectivity check would
+have printed nothing. 300 off-target jobs now exist, over the same 300 compounds.
+
+**Generate them with `MSYS_NO_PATHCONV=1`.** Without it, Git Bash rewrites the `--msa-prefix`
+argument from `/N/u/...` to `N:/u/...` and every job gets an MSA path that cannot resolve on Linux:
+
+    MSYS_NO_PATHCONV=1 py -3.11 vscreen.py --write --offtarget --limit 300       --msa-prefix "/N/u/bsmensah/Quartz/af3screen/msa"
+
+## A methodological asymmetry to state, not to hide
+
+Target jobs carry a `pocket` constraint steering the ligand to the PPI interface. **Off-target
+(CPSF73) jobs carry no pocket constraint**, because CPSF73 is the monomeric human relative and has no
+corresponding interface to constrain to. So the two arms are not scored under identical conditions:
+the target is restricted to one site while the off-target search is free to find its best site
+anywhere. Read the selectivity column as indicative, and say so in anything published from it.
+
+## Why the original runbook said Claude could not do this
 
 Quartz offers these SSH auth methods today:
 

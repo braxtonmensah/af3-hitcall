@@ -4,7 +4,7 @@ Every failure caught here is a job that would otherwise crash mid-run on a rente
   - the YAML parses and has the fields Boltz-2 needs (protein, ligand, affinity property)
   - the SMILES is parseable by RDKit and sane in size (Boltz-2's affinity head was trained on
     drug-like ligands; a 200-heavy-atom peptide is not a screening hit, it is a crash risk)
-  - the MSA path is the pod-side path, identical across jobs, and the file exists locally
+  - the MSA path resolves to a readable file (here or in msa/) and is identical across jobs
   - pocket contacts are 1-based positions inside the protein sequence
   - job ids are unique, so no result silently overwrites another
 
@@ -23,10 +23,15 @@ from rdkit import Chem, RDLogger
 RDLogger.DisableLog("rdApp.*")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-YDIR = os.path.join(HERE, "vscreen_yaml")
-RDIR = os.path.join(HERE, "vscreen_yaml_rejected")
+# The job directory is "vscreen_yaml" in the repo but the Quartz bundle ships it as "yaml"
+# (see cleanroom/quartz/PUSH.md, "Rebuilding the bundle"). Accept either, or an explicit override,
+# so the validator can be run in the place where the compute is actually spent.
+YDIR = next((d for d in (os.environ.get("YAML_DIR"), os.path.join(HERE, "vscreen_yaml"),
+                         os.path.join(HERE, "yaml")) if d and os.path.isdir(d)),
+            os.path.join(HERE, "vscreen_yaml"))
+RDIR = YDIR.rstrip("/\\") + "_rejected"
 MSA_DIR = os.path.join(HERE, "msa")
-POD_MSA_PREFIX = "/workspace/screen/msa/"
+POD_MSA_PREFIX = os.environ.get("POD_MSA_PREFIX", "")  # set it only when jobs must target a remote layout
 # Boltz-2 affinity rejects ligands above 128 atoms counting heavy atoms AND hydrogens
 # (docs/prediction.md). This is the bound that actually fails jobs at run time.
 MAX_TOTAL_ATOMS = 128
@@ -74,10 +79,22 @@ def check(path):
                 bad.append("multi-component SMILES (salt/mixture)")
     if not d["msa"]:
         bad.append("no MSA (job would need the MSA server, i.e. internet)")
-    elif not d["msa"].startswith(POD_MSA_PREFIX):
+    # What actually kills a job is an MSA the compute node cannot read, not a path that fails to
+    # match one particular host's layout. The old check hardcoded the RunPod prefix, so every job
+    # failed when validated on Quartz and --prune would have emptied the run directory. Resolve the
+    # path instead: absolute and readable from here, or present in the local msa/ directory.
+    elif not os.path.isfile(d["msa"]):
+        # Do NOT fall back to checking the basename against msa/. That masks exactly the failure this
+        # is here to catch: a path that is subtly wrong (MSYS rewriting /N/u/... to N:/u/..., a stray
+        # CR, the wrong home) but whose filename happens to exist locally. Run this on the machine
+        # that will run the jobs and the resolve test is the whole test.
+        if os.path.isfile(os.path.join(MSA_DIR, os.path.basename(d["msa"]))):
+            bad.append("MSA path does not resolve, though msa/%s exists: %s"
+                       % (os.path.basename(d["msa"]), d["msa"]))
+        else:
+            bad.append("MSA file missing: " + d["msa"])
+    elif POD_MSA_PREFIX and not d["msa"].startswith(POD_MSA_PREFIX):
         bad.append("MSA path is not pod-side: " + d["msa"])
-    elif not os.path.exists(os.path.join(MSA_DIR, os.path.basename(d["msa"]))):
-        bad.append("MSA file missing locally: " + os.path.basename(d["msa"]))
     if d["sequence"]:
         out_of_range = [c for c in d["contacts"] if c < 1 or c > len(d["sequence"])]
         if out_of_range:
