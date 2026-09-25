@@ -94,3 +94,58 @@ sample-size-weighted difference with bootstrap CI.
   samples even though they are independent in technology. The overlap is reported.
 - DEMETER2 is from 2018-2020 and its gene set is smaller, so some pairs testable in CODEP will be
   untestable here. Counts are reported at every step.
+
+
+---
+
+# OUTCOME, recorded 2026-09-25: CODEP DOES NOT REPLICATE IN RNAi
+
+**R0 gate PASSES. R1 fails to replicate. R2 is moot because neither half holds.**
+
+| Test | DEMETER2 RNAi | CODEP CRISPR |
+|---|---|---|
+| Gate (known complexes vs low-confidence) | **+0.0486, CI [0.0287, 0.0703]** | +0.1034, CI [0.0784, 0.1301] |
+| Primary (confident never-solved vs low-confidence) | **-0.0042, CI [-0.0129, 0.0047]** | +0.0203, CI [0.0098, 0.0317] |
+| CORUM half | -0.0021, CI [-0.0309, 0.0279], does not hold | +0.0585, holds |
+| non-CORUM half | -0.0009, CI [-0.0072, 0.0055], does not hold | +0.0047, does not hold |
+
+699 cell lines, 17,309 genes, T = 2,708, L = 16,289, P = 849. No threshold was changed: the 300-line
+minimum was met, so the registered deviation clause was not used.
+
+## This is not an underpowering excuse, and that was checked
+
+The obvious defence is that RNAi is noisier. The gates measure exactly that: RNAi's instrument reads
+**0.47x** the CRISPR instrument (+0.0486 against +0.1034). A true CRISPR effect of +0.0203 therefore
+scales to an expected RNAi effect of about **+0.0095**. The observed RNAi interval's **upper** bound is
+**+0.0047**, which is below that expectation. So the scaled-down effect is excluded by the data, and
+the point estimate is negative rather than small-and-positive. Low power does not account for this.
+
+## What this means, stated as the pre-registration requires
+
+**The claim that confident never-solved AlphaFold predictions are functionally coupled is not
+established.** It was seen in CRISPR and not in RNAi, with a sensitive instrument in both. Per the
+consequence written above, CODEP is reported as **not replicated** in `RESULTS.md`, `STATE.md` and the
+preprint, beside the original result, with no attempt to explain it away.
+
+What survives is only this: **known complexes are detectably co-dependent in both technologies.** That
+is a property of the instruments, not a finding about AlphaFold, and it licenses nothing about the
+registry.
+
+**The CORUM-confinement finding is also unsupported.** It was post hoc in CODEP and it did not
+reproduce here in either direction, so it should not be cited either.
+
+## Candidate explanations, all speculative and none load-bearing
+
+Offered only so the next person does not have to re-derive them, and none of them rescues the result:
+a CRISPR-specific artifact (copy-number effects, guide off-target behaviour, or the Chronos model)
+could produce correlated gene effect between the kind of well-modelled, well-studied genes that score
+high pDockQ; DEMETER2's panel and gene set differ; RNAi knockdown is partial and measures a different
+kind of perturbation. **None of these was tested. The honest position is that the effect did not
+replicate and the reason is unknown.**
+
+## BRIDGE is not settled by this
+
+`PREREG_BRIDGE` does not depend on D1. It rests on a different claim, that the *local* neighbourhood
+of a pair with independent physical support contains its missing subunit, and it has its own gate and
+control arm. This result lowers the prior on co-dependency carrying structural information at all, and
+that should be said when BRIDGE is run, but BRIDGE tests it directly rather than assuming it.
