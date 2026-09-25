@@ -65,3 +65,10 @@ the alpha subunits, a different stoichiometry, or that the association is wrong.
 A satisfied crosslink set is consistent with binding, not proof of it. It says the in-cell distance
 restraints and the predicted structure agree. Only an experiment settles whether MG354 is bound in
 the cell, and a pull-down of tagged RNA polymerase remains the right one.
+
+## Amendment 1 (2026-09-25, before any prediction was run)
+
+The control set is **20** distinct RpoB-RpoC links, not 23. The number in the table above was written
+from a quick count of the printed rows before de-duplication across the two crosslinkers. The set is
+derived in code and stored in `cleanroom/rnap3/links.json`; the scorer reads it from there. No rule
+changes: the control threshold stays at 0.70 and gates interpretation exactly as registered.
