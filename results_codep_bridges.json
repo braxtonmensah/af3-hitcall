@@ -1,0 +1,682 @@
+[
+ {
+  "g1": "TAF5L",
+  "g2": "TADA1",
+  "id1": "O75529",
+  "id2": "Q96BN2",
+  "r_pair": 0.83,
+  "pDockQ": 0.047,
+  "bridge": "SUPT20H",
+  "bridge_min_r": 0.808,
+  "r_bridge_g1": 0.818,
+  "r_bridge_g2": 0.808,
+  "alts": [
+   "TADA2B",
+   "TAF6L",
+   "SUPT7L"
+  ]
+ },
+ {
+  "g1": "SUPT20H",
+  "g2": "TADA2B",
+  "id1": "Q8NEM7",
+  "id2": "Q86TJ2",
+  "r_pair": 0.825,
+  "pDockQ": 0.072,
+  "bridge": "TAF5L",
+  "bridge_min_r": 0.818,
+  "r_bridge_g1": 0.818,
+  "r_bridge_g2": 0.833,
+  "alts": [
+   "TADA1",
+   "TAF6L",
+   "SGF29"
+  ]
+ },
+ {
+  "g1": "TAF6L",
+  "g2": "TADA2B",
+  "id1": "Q9Y6J9",
+  "id2": "Q86TJ2",
+  "r_pair": 0.769,
+  "pDockQ": 0.035,
+  "bridge": "TADA1",
+  "bridge_min_r": 0.761,
+  "r_bridge_g1": 0.761,
+  "r_bridge_g2": 0.792,
+  "alts": [
+   "SUPT20H",
+   "TAF5L",
+   "SUPT7L"
+  ]
+ },
+ {
+  "g1": "TAF6L",
+  "g2": "TADA1",
+  "id1": "Q9Y6J9",
+  "id2": "Q96BN2",
+  "r_pair": 0.761,
+  "pDockQ": 0.062,
+  "bridge": "TADA2B",
+  "bridge_min_r": 0.769,
+  "r_bridge_g1": 0.769,
+  "r_bridge_g2": 0.792,
+  "alts": [
+   "SUPT20H",
+   "TAF5L",
+   "SUPT7L"
+  ]
+ },
+ {
+  "g1": "PARD3",
+  "g2": "PARD6B",
+  "id1": "Q8TEW0",
+  "id2": "Q9BYG5",
+  "r_pair": 0.711,
+  "pDockQ": 0.035,
+  "bridge": "PRKCI",
+  "bridge_min_r": 0.626,
+  "r_bridge_g1": 0.626,
+  "r_bridge_g2": 0.662,
+  "alts": [
+   "TP53BP2",
+   "PAX8",
+   "CRB3"
+  ]
+ },
+ {
+  "g1": "MRPL20",
+  "g2": "MRPL47",
+  "id1": "Q9BYC9",
+  "id2": "Q9HD33",
+  "r_pair": 0.657,
+  "pDockQ": 0.031,
+  "bridge": "MRPL23",
+  "bridge_min_r": 0.676,
+  "r_bridge_g1": 0.685,
+  "r_bridge_g2": 0.676,
+  "alts": [
+   "LARS2",
+   "HSD17B10",
+   "MRPS24"
+  ]
+ },
+ {
+  "g1": "TADA2B",
+  "g2": "SUPT7L",
+  "id1": "Q86TJ2",
+  "id2": "O94864",
+  "r_pair": 0.638,
+  "pDockQ": 0.052,
+  "bridge": "TADA1",
+  "bridge_min_r": 0.727,
+  "r_bridge_g1": 0.792,
+  "r_bridge_g2": 0.727,
+  "alts": [
+   "TAF6L",
+   "TAF5L",
+   "SUPT20H"
+  ]
+ },
+ {
+  "g1": "MRPL46",
+  "g2": "MRPL47",
+  "id1": "Q9H2W6",
+  "id2": "Q9HD33",
+  "r_pair": 0.636,
+  "pDockQ": 0.054,
+  "bridge": "MRPL23",
+  "bridge_min_r": 0.676,
+  "r_bridge_g1": 0.705,
+  "r_bridge_g2": 0.676,
+  "alts": [
+   "LARS2",
+   "HSD17B10",
+   "MRPS24"
+  ]
+ },
+ {
+  "g1": "MRPL13",
+  "g2": "MRPL2",
+  "id1": "Q9BYD1",
+  "id2": "Q5T653",
+  "r_pair": 0.631,
+  "pDockQ": 0.031,
+  "bridge": "MRPS6",
+  "bridge_min_r": 0.68,
+  "r_bridge_g1": 0.698,
+  "r_bridge_g2": 0.68,
+  "alts": [
+   "LARS2",
+   "MRPS24",
+   "MRPL14"
+  ]
+ },
+ {
+  "g1": "MRPL13",
+  "g2": "MRPL47",
+  "id1": "Q9BYD1",
+  "id2": "Q9HD33",
+  "r_pair": 0.616,
+  "pDockQ": 0.031,
+  "bridge": "LARS2",
+  "bridge_min_r": 0.675,
+  "r_bridge_g1": 0.697,
+  "r_bridge_g2": 0.675,
+  "alts": [
+   "HSD17B10",
+   "MRPS24",
+   "MRPS6"
+  ]
+ },
+ {
+  "g1": "TADA3",
+  "g2": "SUPT20H",
+  "id1": "O75528",
+  "id2": "Q8NEM7",
+  "r_pair": 0.599,
+  "pDockQ": 0.092,
+  "bridge": "TADA2B",
+  "bridge_min_r": 0.663,
+  "r_bridge_g1": 0.663,
+  "r_bridge_g2": 0.825,
+  "alts": [
+   "SGF29",
+   "TAF5L",
+   "TADA1"
+  ]
+ },
+ {
+  "g1": "MRPL37",
+  "g2": "MRPL14",
+  "id1": "Q9BZE1",
+  "id2": "Q6P1L8",
+  "r_pair": 0.599,
+  "pDockQ": 0.031,
+  "bridge": "MRPL18",
+  "bridge_min_r": 0.606,
+  "r_bridge_g1": 0.606,
+  "r_bridge_g2": 0.649,
+  "alts": [
+   "MRPL23",
+   "MRPL21",
+   "MRPL15"
+  ]
+ },
+ {
+  "g1": "MRPS18C",
+  "g2": "MRPS9",
+  "id1": "Q9Y3D5",
+  "id2": "P82933",
+  "r_pair": 0.593,
+  "pDockQ": 0.031,
+  "bridge": "MRPL15",
+  "bridge_min_r": 0.652,
+  "r_bridge_g1": 0.712,
+  "r_bridge_g2": 0.652,
+  "alts": [
+   "MARS2",
+   "MRPS24",
+   "HSD17B10"
+  ]
+ },
+ {
+  "g1": "MRPL13",
+  "g2": "MRPL37",
+  "id1": "Q9BYD1",
+  "id2": "Q9BZE1",
+  "r_pair": 0.592,
+  "pDockQ": 0.031,
+  "bridge": "MRPL18",
+  "bridge_min_r": 0.606,
+  "r_bridge_g1": 0.694,
+  "r_bridge_g2": 0.606,
+  "alts": [
+   "MRPL23",
+   "MRPL21",
+   "MRPL15"
+  ]
+ },
+ {
+  "g1": "MRPL20",
+  "g2": "MRPL19",
+  "id1": "Q9BYC9",
+  "id2": "P49406",
+  "r_pair": 0.582,
+  "pDockQ": 0.031,
+  "bridge": "MRPL32",
+  "bridge_min_r": 0.602,
+  "r_bridge_g1": 0.644,
+  "r_bridge_g2": 0.602,
+  "alts": [
+   "MRPL15",
+   "MRPL18",
+   "MRPL39"
+  ]
+ },
+ {
+  "g1": "ACAD9",
+  "g2": "ECSIT",
+  "id1": "Q9H845",
+  "id2": "Q9BQ95",
+  "r_pair": 0.572,
+  "pDockQ": 0.051,
+  "bridge": "FOXRED1",
+  "bridge_min_r": 0.607,
+  "r_bridge_g1": 0.607,
+  "r_bridge_g2": 0.616,
+  "alts": [
+   "NDUFB8",
+   "NDUFS2",
+   "NDUFA10"
+  ]
+ },
+ {
+  "g1": "SEPHS1",
+  "g2": "QRICH1",
+  "id1": "P49903",
+  "id2": "Q2TAL8",
+  "r_pair": 0.572,
+  "pDockQ": 0.048,
+  "bridge": "MDM2",
+  "bridge_min_r": 0.22,
+  "r_bridge_g1": 0.22,
+  "r_bridge_g2": 0.245,
+  "alts": [
+   "OGA",
+   "PPM1D",
+   "DDX31"
+  ]
+ },
+ {
+  "g1": "MRPL2",
+  "g2": "MRPL47",
+  "id1": "Q5T653",
+  "id2": "Q9HD33",
+  "r_pair": 0.568,
+  "pDockQ": 0.033,
+  "bridge": "MRPS6",
+  "bridge_min_r": 0.659,
+  "r_bridge_g1": 0.68,
+  "r_bridge_g2": 0.659,
+  "alts": [
+   "LARS2",
+   "MRPS24",
+   "MTG2"
+  ]
+ },
+ {
+  "g1": "WASHC5",
+  "g2": "WASHC3",
+  "id1": "Q12768",
+  "id2": "Q9Y3C0",
+  "r_pair": 0.562,
+  "pDockQ": 0.038,
+  "bridge": "WASHC4",
+  "bridge_min_r": 0.576,
+  "r_bridge_g1": 0.587,
+  "r_bridge_g2": 0.576,
+  "alts": [
+   "CCDC22",
+   "COMMD3",
+   "COMMD2"
+  ]
+ },
+ {
+  "g1": "MRPL47",
+  "g2": "MRPL40",
+  "id1": "Q9HD33",
+  "id2": "Q9NQ50",
+  "r_pair": 0.561,
+  "pDockQ": 0.034,
+  "bridge": "MRPL20",
+  "bridge_min_r": 0.657,
+  "r_bridge_g1": 0.657,
+  "r_bridge_g2": 0.666,
+  "alts": [
+   "LARS2",
+   "MRPL17",
+   "MRPS6"
+  ]
+ },
+ {
+  "g1": "GADD45GIP1",
+  "g2": "MRPL19",
+  "id1": "Q8TAE8",
+  "id2": "P49406",
+  "r_pair": 0.556,
+  "pDockQ": 0.031,
+  "bridge": "MRPL15",
+  "bridge_min_r": 0.602,
+  "r_bridge_g1": 0.621,
+  "r_bridge_g2": 0.602,
+  "alts": [
+   "MRPL39",
+   "MRPL13",
+   "MRPL46"
+  ]
+ },
+ {
+  "g1": "MRPL47",
+  "g2": "MRPL11",
+  "id1": "Q9HD33",
+  "id2": "Q9Y3B7",
+  "r_pair": 0.534,
+  "pDockQ": 0.034,
+  "bridge": "NARS2",
+  "bridge_min_r": 0.565,
+  "r_bridge_g1": 0.623,
+  "r_bridge_g2": 0.565,
+  "alts": [
+   "MRPL18",
+   "MRPL23",
+   "MRPL21"
+  ]
+ },
+ {
+  "g1": "MRPL22",
+  "g2": "MRPL47",
+  "id1": "Q9NWU5",
+  "id2": "Q9HD33",
+  "r_pair": 0.534,
+  "pDockQ": 0.032,
+  "bridge": "MRPL21",
+  "bridge_min_r": 0.627,
+  "r_bridge_g1": 0.627,
+  "r_bridge_g2": 0.646,
+  "alts": [
+   "GFM1",
+   "MRPS6",
+   "MRPS14"
+  ]
+ },
+ {
+  "g1": "MRPL47",
+  "g2": "GADD45GIP1",
+  "id1": "Q9HD33",
+  "id2": "Q8TAE8",
+  "r_pair": 0.534,
+  "pDockQ": 0.031,
+  "bridge": "MRPL43",
+  "bridge_min_r": 0.637,
+  "r_bridge_g1": 0.637,
+  "r_bridge_g2": 0.641,
+  "alts": [
+   "MARS2",
+   "MRPS24",
+   "MRPL39"
+  ]
+ },
+ {
+  "g1": "NDUFS3",
+  "g2": "NDUFV2",
+  "id1": "O75489",
+  "id2": "P19404",
+  "r_pair": 0.522,
+  "pDockQ": 0.031,
+  "bridge": "NDUFS1",
+  "bridge_min_r": 0.568,
+  "r_bridge_g1": 0.568,
+  "r_bridge_g2": 0.758,
+  "alts": [
+   "NDUFA1",
+   "NDUFS2",
+   "NDUFB10"
+  ]
+ },
+ {
+  "g1": "MRPL47",
+  "g2": "MRPL19",
+  "id1": "Q9HD33",
+  "id2": "P49406",
+  "r_pair": 0.521,
+  "pDockQ": 0.031,
+  "bridge": "MRPL39",
+  "bridge_min_r": 0.593,
+  "r_bridge_g1": 0.632,
+  "r_bridge_g2": 0.593,
+  "alts": [
+   "MRPL15",
+   "MRPL13",
+   "MRPL46"
+  ]
+ },
+ {
+  "g1": "MRPL37",
+  "g2": "MRPL11",
+  "id1": "Q9BZE1",
+  "id2": "Q9Y3B7",
+  "r_pair": 0.52,
+  "pDockQ": 0.031,
+  "bridge": "MRPL18",
+  "bridge_min_r": 0.562,
+  "r_bridge_g1": 0.606,
+  "r_bridge_g2": 0.562,
+  "alts": [
+   "MRPL23",
+   "MRPL21",
+   "NARS2"
+  ]
+ },
+ {
+  "g1": "MRPL37",
+  "g2": "MRPL40",
+  "id1": "Q9BZE1",
+  "id2": "Q9NQ50",
+  "r_pair": 0.517,
+  "pDockQ": 0.033,
+  "bridge": "MRPL18",
+  "bridge_min_r": 0.606,
+  "r_bridge_g1": 0.606,
+  "r_bridge_g2": 0.634,
+  "alts": [
+   "MRPL23",
+   "MRPL21",
+   "MRPL15"
+  ]
+ },
+ {
+  "g1": "MRPL22",
+  "g2": "MRPL37",
+  "id1": "Q9NWU5",
+  "id2": "Q9BZE1",
+  "r_pair": 0.494,
+  "pDockQ": 0.032,
+  "bridge": "MRPL21",
+  "bridge_min_r": 0.602,
+  "r_bridge_g1": 0.627,
+  "r_bridge_g2": 0.602,
+  "alts": [
+   "MRPL20",
+   "MRPS6",
+   "LARS2"
+  ]
+ },
+ {
+  "g1": "MRPS33",
+  "g2": "MRPS9",
+  "id1": "Q9Y291",
+  "id2": "P82933",
+  "r_pair": 0.493,
+  "pDockQ": 0.031,
+  "bridge": "MRPS24",
+  "bridge_min_r": 0.607,
+  "r_bridge_g1": 0.607,
+  "r_bridge_g2": 0.65,
+  "alts": [
+   "MRPS6",
+   "MRPL20",
+   "MRPS25"
+  ]
+ },
+ {
+  "g1": "HAX1",
+  "g2": "CLPB",
+  "id1": "O00165",
+  "id2": "Q9H078",
+  "r_pair": 0.472,
+  "pDockQ": 0.047,
+  "bridge": "MTX2",
+  "bridge_min_r": 0.356,
+  "r_bridge_g1": 0.356,
+  "r_bridge_g2": 0.402,
+  "alts": [
+   "MTCH2",
+   "DNAJC11",
+   "HTRA2"
+  ]
+ },
+ {
+  "g1": "MRPL22",
+  "g2": "MRPL2",
+  "id1": "Q9NWU5",
+  "id2": "Q5T653",
+  "r_pair": 0.461,
+  "pDockQ": 0.031,
+  "bridge": "MRPL21",
+  "bridge_min_r": 0.627,
+  "r_bridge_g1": 0.627,
+  "r_bridge_g2": 0.628,
+  "alts": [
+   "MRPS6",
+   "MRPL20",
+   "LARS2"
+  ]
+ },
+ {
+  "g1": "MRPL40",
+  "g2": "MRPL11",
+  "id1": "Q9NQ50",
+  "id2": "Q9Y3B7",
+  "r_pair": 0.458,
+  "pDockQ": 0.034,
+  "bridge": "NARS2",
+  "bridge_min_r": 0.565,
+  "r_bridge_g1": 0.582,
+  "r_bridge_g2": 0.565,
+  "alts": [
+   "MRPL18",
+   "MRPL23",
+   "MRPL21"
+  ]
+ },
+ {
+  "g1": "MRPL30",
+  "g2": "MRPL47",
+  "id1": "Q8TCC3",
+  "id2": "Q9HD33",
+  "r_pair": 0.451,
+  "pDockQ": 0.032,
+  "bridge": "MRPL13",
+  "bridge_min_r": 0.605,
+  "r_bridge_g1": 0.605,
+  "r_bridge_g2": 0.616,
+  "alts": [
+   "MRPS14",
+   "MRPL16",
+   "MRPL15"
+  ]
+ },
+ {
+  "g1": "MRPL37",
+  "g2": "MRPL30",
+  "id1": "Q9BZE1",
+  "id2": "Q8TCC3",
+  "r_pair": 0.44,
+  "pDockQ": 0.031,
+  "bridge": "MRPL18",
+  "bridge_min_r": 0.606,
+  "r_bridge_g1": 0.606,
+  "r_bridge_g2": 0.61,
+  "alts": [
+   "MRPL13",
+   "MRPL15",
+   "MRPL39"
+  ]
+ },
+ {
+  "g1": "MORF4L1",
+  "g2": "EMSY",
+  "id1": "Q9UBU8",
+  "id2": "Q7Z589",
+  "r_pair": 0.434,
+  "pDockQ": 0.045,
+  "bridge": "PHF12",
+  "bridge_min_r": 0.418,
+  "r_bridge_g1": 0.418,
+  "r_bridge_g2": 0.643,
+  "alts": [
+   "SIN3B",
+   "GATAD1",
+   "KDM5A"
+  ]
+ },
+ {
+  "g1": "MRPL13",
+  "g2": "MRPL1",
+  "id1": "Q9BYD1",
+  "id2": "Q9BYD6",
+  "r_pair": 0.427,
+  "pDockQ": 0.031,
+  "bridge": "MRM3",
+  "bridge_min_r": 0.486,
+  "r_bridge_g1": 0.599,
+  "r_bridge_g2": 0.486,
+  "alts": [
+   "GRSF1",
+   "MRPL18",
+   "GTPBP10"
+  ]
+ },
+ {
+  "g1": "KAT2A",
+  "g2": "TADA3",
+  "id1": "Q92830",
+  "id2": "O75528",
+  "r_pair": 0.407,
+  "pDockQ": 0.053,
+  "bridge": "TADA2B",
+  "bridge_min_r": 0.486,
+  "r_bridge_g1": 0.486,
+  "r_bridge_g2": 0.663,
+  "alts": [
+   "SGF29",
+   "TAF5L",
+   "SUPT20H"
+  ]
+ },
+ {
+  "g1": "MRPL30",
+  "g2": "MRPL1",
+  "id1": "Q8TCC3",
+  "id2": "Q9BYD6",
+  "r_pair": 0.4,
+  "pDockQ": 0.031,
+  "bridge": "GRSF1",
+  "bridge_min_r": 0.474,
+  "r_bridge_g1": 0.496,
+  "r_bridge_g2": 0.474,
+  "alts": [
+   "MRM3",
+   "MRPL18",
+   "GTPBP10"
+  ]
+ },
+ {
+  "g1": "MTX2",
+  "g2": "CHCHD3",
+  "id1": "O75431",
+  "id2": "Q9NX63",
+  "r_pair": 0.39,
+  "pDockQ": 0.038,
+  "bridge": "MTCH2",
+  "bridge_min_r": 0.38,
+  "r_bridge_g1": 0.497,
+  "r_bridge_g2": 0.38,
+  "alts": [
+   "TAFAZZIN",
+   "DNAJC11",
+   "HTRA2"
+  ]
+ }
+]
