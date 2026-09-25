@@ -1,3 +1,7 @@
+> **SUPERSEDED 2026-09-25 by [STATE.md](STATE.md).** Kept for history. Parts of it are stale:
+> the RpoC-RpoB recovery claim was retracted by HIGHER_CAL, the omega fold argument was removed
+> by OMEGA, and XLHUMAN is no longer abandoned. Do not act from this file.
+
 # Handoff: af3-hitcall, 2026-09-25 evening
 
 Read this first. Supersedes `HANDOFF_2026-09-25_v2.md` for anything dated today.
