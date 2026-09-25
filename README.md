@@ -5,12 +5,14 @@ them, and the confidence scores do not come with an interpretation. This reposit
 a confident prediction about a **never-before-solved** complex turns out to be correct, using
 predictions that were frozen before the answers existed.
 
-**Headline:** 81% correct in human (n = 146) and 89% in yeast (n = 84), against 2% for low-confidence
-predictions. The deficit on never-solved pairs is in **recall, not precision**.
+**Headline:** Among predicted pairs that were subsequently solved, the interface was correct in 81%
+of 146 confident human cases and 89% of 84 confident yeast cases, against 2% for low-confidence human
+cases. This is conditional on later structure solving; it does not estimate the chance that an
+arbitrary unsolved pair interacts in cells.
 
-Applying the method prospectively identified an essential **2:2 RNase J heterotetramer** in
-*Mycoplasma pneumoniae* with a catalytically dead partner subunit, supported by five independent
-published lines of evidence.
+Applying the method to *Mycoplasma pneumoniae* produced a **2:2 RNase J : MPN621 assembly
+hypothesis** consistent with published crosslinks and co-elution. The interaction and MPN621 paralog
+assignment were previously reported; the proposed stoichiometry has not been directly measured here.
 
 Braxton Mensah, Indiana University Bloomington. bsmensah@iu.edu
 
@@ -36,6 +38,10 @@ deposition dates of the structures used as ground truth.
 | Human, interface correct (F1 >= 0.5) | **81%** (n = 146) | 2% (n = 110) |
 | Yeast, interface correct | **89%** (n = 84) | shuffled null 1% |
 
+**Selection limit:** all evaluated pairs in this table had a structure solved after the predictions
+were recorded. Solving is not random, and these fractions are not calibrated probabilities for
+unsolved candidates.
+
 Survived five pre-registered attacks:
 
 | Attack | Result |
@@ -59,7 +65,8 @@ suggests the information is absent from a pairwise calculation rather than disca
 
 ## The biology
 
-*M. pneumoniae* RNase J (MPN280) and MPN621 form a 2:2 heterotetramer.
+Models of *M. pneumoniae* RNase J (MPN280) and MPN621 favor a 2:2 heterotetramer over the modeled
+1:1 alternative. This is a structural hypothesis, not an experimentally established stoichiometry.
 
 | Evidence | Result |
 |---|---|
@@ -68,27 +75,32 @@ suggests the information is absent from a pairwise calculation rather than disca
 | Heterodimer alone | 3 crosslinks stranded at 51-63 A |
 | Specificity control | length-matched decoy, ipTM 0.12-0.17 |
 | Crosslinks, two chemistries | DSSO and DSS agree on the same residue pairs |
-| SEC-MS (published) | both peak at 297.8 kDa; excludes 1:1, fits 2:2 |
+| SEC-MS (published) | both peak at apparent mass 297.8 kDa; favors a larger assembly over 1:1 but cannot establish stoichiometry alone |
 | Essentiality (published) | both subunits essential in *M. pneumoniae* |
 | Catalytic residues | RNase J 4/4 retained; MPN621 **0/4** |
 
-MPN621 keeps the fold and loses the chemistry. Removing it drops RNase J self-association from ipTM
-0.81 to 0.50, consistent with a structural subunit.
+MPN621 retains the fold but not four aligned catalytic residues; catalytic inactivity has not been
+directly measured here. Changing chain composition drops the predicted RNase J self-association
+confidence from ipTM 0.81 to 0.50, which motivates a structural-role hypothesis but does not measure
+stabilization in cells.
 
-**As a drug target, aim at the interface and not the active site.** The closest human relative, CPSF73,
-retains three of four catalytic residues, so active-site chemistry is a selectivity liability. The
-interface is only 24.6% identical.
+**Drug-development status:** the RNase J : MPN621 interface is a possible target to investigate, not
+a validated drug target. The closest human relative, CPSF73, retains three of four aligned catalytic
+residues; the compared interface residues are 24.6% identical. Neither observation establishes
+selective inhibition or antibacterial activity.
 
 ### What is *not* claimed
 
-RNase J is a **known** metallo-beta-lactamase fold. This is not a new fold. The new contributions are
-the 2:2 architecture, the crosslink-validated model, the measured loss of all four catalytic residues,
-the SEC-based stoichiometry argument, and the interface map. The interaction itself appears,
-undiscussed, in O'Reilly et al. 2020's own PPI table, and Lluch-Senar et al. 2015 annotate MPN621 as
-"probably non-catalytic". Prior work is stated precisely in `PREPRINT_DRAFT.md`.
+RNase J is a **known** metallo-beta-lactamase fold. The contribution here is a computational 2:2
+architecture consistent with published crosslinks, a sequence-based catalytic-residue comparison,
+the SEC-based stoichiometry argument, and an interface map. The interaction itself appears in
+O'Reilly et al. 2020's PPI table and supplementary discussion, which also identifies MPN621 as the
+missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-catalytic". See
+`new_biology/RNASEJ_MG423.md` for the evidence and prior-work limits.
 
-**Caveat:** MG423 is non-essential in *M. genitalium* though MPN621 is essential in *M. pneumoniae*.
-The target argument applies to *M. pneumoniae*.
+**Species caveat:** MG423 is non-essential in *M. genitalium* though MPN621 is essential in
+*M. pneumoniae*. The essentiality observation supporting further target investigation comes from
+*M. pneumoniae*.
 
 ## Layout
 
@@ -101,8 +113,8 @@ The target argument applies to *M. pneumoniae*.
 | `analysis_*.py`, `verify_*.py` | the analysis code; these are the authoritative record |
 | `rnasej/` | AFJ scorer, interface map, SEC stoichiometry |
 | `new_biology/` | the RNase J write-up and models (**non-commercial, see LICENSE**) |
-| `cleanroom/` | Boltz-2 virtual screen, MIT-licensed path with no AlphaFold input |
-| `registry/` | 6,010 open confident pairs with a forecast, sha256 in `SHA256.txt` |
+| `cleanroom/` | prepared Boltz-2 screen inputs and scripts; no completed screen result claimed |
+| `registry/` | 6,010 confident-pair candidates, sha256 in `SHA256.txt` |
 
 ## Reproducing
 
@@ -125,13 +137,14 @@ All inputs are public: Todor et al. 2026 (Zenodo 15499631), Burke et al. 2023, H
 **This repository is not under a single licence.** Code and analysis are MIT. The six AlphaFold Server
 model files in `new_biology/` and `rnasej/` are **non-commercial only** under the AF Server Output
 Terms, which also forbid using that output in ligand-binding prediction. That prohibition is why the
-virtual screen in `cleanroom/` was built on Boltz-2 (MIT) from public sequences with no AlphaFold input
+planned virtual screen in `cleanroom/` uses Boltz-2 (MIT) from public sequences with no AlphaFold input
 anywhere. Read `LICENSE` before reusing anything.
 
 ## Status
 
-No lab, no faculty sponsor, no institutional funding, no grant. Public data and a laptop, with the
-virtual screen run on general-access university compute (see `IP_RECORD.md`).
+No lab, no faculty sponsor, no institutional funding, no grant. The analyses use public data. The
+planned virtual screen has not produced results; university compute access is still being arranged
+(see `IP_RECORD.md` for provenance notes).
 
 The RNase J complex is computational plus published orthogonal data. **No new experiment has been
 performed.** The obvious next step is a wet-lab test, and I am looking for a group that wants to run

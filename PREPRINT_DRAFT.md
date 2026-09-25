@@ -1,4 +1,4 @@
-# Confident AlphaFold predictions of never-solved protein complexes are usually correct, and reveal an essential heterotetrameric RNase J in *Mycoplasma*
+# Time-split assessment of predicted protein-complex interfaces and a 2:2 RNase J assembly hypothesis in *Mycoplasma*
 
 **Braxton Mensah**
 Indiana University Bloomington
@@ -19,17 +19,17 @@ subtilis* with AlphaFold-Multimer and in the human interactome with AlphaFold2.
 
 We then asked whether the weak class is weak in precision or only in recall. Using predictions frozen
 before the answers existed, we scored confident never-solved predictions against complexes released in
-2022-2026. Their interfaces were correct in **81% of 146 human cases** and **89% of 84 yeast cases**,
+2022-2026. Among pairs subsequently solved, their interfaces were correct in **81% of 146 human cases** and **89% of 84 yeast cases**,
 against **2%** for low-confidence predictions. The result survived removal of all homologous structural
 precedent (81% and 92%), a shuffled-interface null (2%), an entry-level cluster bootstrap, an
 independent contact-based metric, and a grid of distance and correctness thresholds. Missed
 interactions were instead small, non-autonomous contacts inside large assemblies.
 
-Applying this to *Mycoplasma*, we identify a previously undescribed architecture: the essential
-ribonuclease RNase J and the essential, catalytically dead paralog MPN621/MG423 form a 2:2
-heterotetramer. Five independent lines agree, and only the tetramer accounts for all six in-cell
-crosslinks. The complex is a candidate antibacterial target whose interface is poorly conserved in the
-closest human relative.
+Applying this to *Mycoplasma*, we evaluate a 2:2 assembly hypothesis for RNase J and its partner
+MPN621/MG423, whose interaction and paralog relationship were previously described. The predicted
+assembly is consistent with published crosslinks and co-elution; the tested 1:1 model does not
+account for all six crosslinks. Neither 2:2 stoichiometry nor catalytic inactivity has been directly
+measured here. The interface merits experimental study but is not a validated antibacterial target.
 
 ---
 
@@ -61,13 +61,11 @@ ordering of events is externally verifiable from deposition dates rather than as
 
 Here we take that approach. We first show that the aggregate accuracy of a genome-wide screen averages
 two populations that differ substantially, and that the split reproduces across three organisms, three
-prediction systems and two independent notions of ground truth. We then ask the question that matters for
-triage, which is not how well confidence ranks all pairs but how often a confident prediction about a
-never-solved pair turns out to be correct. Using models frozen before the answers existed, we find that
-it is usually correct, and that what the screens miss has a specific and structural explanation rather
-than a scoring one. Finally we apply the result prospectively, and describe an essential ribonuclease
-complex in *Mycoplasma* that the screen proposed and that five independent lines of published evidence
-support.
+prediction systems and two independent notions of ground truth. We then measure interface correctness
+for never-solved pairs that received structures later, using models frozen before those answers
+existed. Confident predictions often match that selected set of later structures. Misses are associated
+with smaller, more assembly-dependent interfaces. Finally, we examine a predicted RNase J assembly in
+*Mycoplasma* against previously published experimental evidence and state what remains unmeasured.
 
 ## Results
 
@@ -83,7 +81,7 @@ AlphaFold-Multimer and in human HuRI pairs with AlphaFold2 (0.917 vs 0.636, +0.2
 A time split shows this is not memorisation: complexes first solved *after* the training cutoff still
 score 0.81, close to seen complexes and far above never-solved pairs.
 
-### Confident predictions of never-solved complexes are usually right
+### Confident predictions among later-solved complexes often have the right interface
 
 | Test | Confident | Low confidence |
 |---|---|---|
@@ -93,6 +91,8 @@ score 0.81, close to seen complexes and far above never-solved pairs.
 | Human, solved with direct contact | 2.5% | 0.29% (OR 8.8 [5.8, 14.1]) |
 
 Stable across release cohorts (80% for 2022-23, 82% for 2024-26).
+The interface fractions are conditional on subsequent structure solving, a selected subset of all
+unsolved pairs. They are not calibrated interaction probabilities for the remaining unsolved pairs.
 
 ### The result survives every attack we designed
 
@@ -113,7 +113,7 @@ have interfaces one third the size (30 vs 85 residue-pair contacts). Pool compos
 interface-restricted confidence scores (ipSAE, LIS), trunk contact probabilities and sample
 reproducibility all failed to recover them, so the information is not elsewhere in the output.
 
-### An essential heterotetrameric RNase J in *Mycoplasma*
+### A 2:2 RNase J assembly hypothesis in *Mycoplasma*
 
 | Evidence | Result |
 |---|---|
@@ -122,35 +122,35 @@ reproducibility all failed to recover them, so the information is not elsewhere 
 | Heterodimer only | 3 near links satisfied, 3 far links at 51-63 A |
 | Specificity control | RNase J + length-matched PtsI: ipTM 0.12-0.17 |
 | Crosslinks, two chemistries | DSSO and DSS agree, same residue pairs |
-| SEC-MS (published) | both peak at 297.8 kDa = 4.7x monomer; excludes 127 kDa 1:1, fits 254 kDa 2:2; 5% of 437 proteins peak there |
+| SEC-MS (published) | both peak at apparent mass 297.8 kDa = 4.7x monomer; favors a larger assembly over 1:1, but does not alone establish 2:2; 5% of 437 proteins peak there |
 | Essentiality (published) | MPN280 **E/E**; MPN621 **E/E and E by colony isolation** |
 | Catalytic residues | RNase J 4/4 retained; MPN621 **0/4** |
 | Architecture | 178 contacts per heterodimer vs 7-9 across; J-J 60, partner-partner 64 |
 | Human off-target | interface 24.6% identical to CPSF73 (which retains 3/4 catalytic residues) |
 
-MPN621 keeps the fold and loses the chemistry, and removing RNase J's partner drops RNase J
-self-association from ipTM 0.81 to 0.50, consistent with a structural subunit.
+MPN621 retains the fold but lacks four aligned catalytic residues. Activity has not been assayed here.
+Changing chain composition drops predicted RNase J self-association confidence from ipTM 0.81 to
+0.50, which motivates a structural-role hypothesis but does not measure cellular stabilization.
 
 ## Discussion
 
-The central result is a reframing. On never-solved pairs, a genome-wide screen looks weak by AUROC, 0.71
-against STRING and 0.57 against crosslinks, and that weakness is easy to read as unreliability. It is
-not. When the same screen is confident about such a pair, it is right about the interface 81% of the time
-in human and 89% in yeast, against 2% for low-confidence predictions. The deficit is in recall, not
-precision. Most real interactions never receive a confident score, but the confident scores that are
-issued are trustworthy.
+The central result is a reframing. On never-solved pairs, a genome-wide screen scores AUROC 0.71
+against STRING and 0.57 against crosslinks. In our later-solved subset, confident predictions have
+the right interface in 81% of human cases and 89% of yeast cases, against 2% for low-confidence human
+predictions. This supports a useful triage signal in that selected subset. It does not establish the
+precision of the screen over all unsolved pairs, because subsequent structure solving is selective.
 
 This distinction changes how a screen should be used. Ranking metrics reward recovering as many true
 positives as possible, which is the right objective when the output is a ranked list to be read in full.
 It is the wrong objective when the output is a shortlist for experiments, where the cost of a false
 positive is a wasted assay and the cost of a false negative is an opportunity that was never visible in
-the first place. Treated as a precision instrument with an accepted low recall, a confident never-solved
-prediction is a reasonable basis for committing bench time. Treated as a recall instrument, the same
-screen looks disappointing and its most useful output gets discounted.
+the first place. The time-split evidence supports considering confident never-solved predictions for
+bench follow-up alongside independent evidence and experimental cost. Prospective validation on an
+unselected set is still needed before treating confidence as the probability of a cellular interaction.
 
 It also changes how these systems should be benchmarked. Reporting one accuracy figure over a mixed
-population overstates performance on the class users care about and understates the precision available
-within it. Both errors point the same way, toward misplaced confidence in aggregate numbers. We would
+population can overstate performance on the class users care about and obscure a useful signal within
+the later-solved subset. We would
 argue for stratifying by structural precedent as a default in this literature, because the split we find
 is large, it is consistent across systems, and it is invisible in the pooled statistic.
 
@@ -166,32 +166,29 @@ and sample reproducibility. The information is not being discarded by the scorin
 from a pairwise calculation. That suggests the productive direction is assembly-aware prediction rather
 than better post-hoc rescoring of pairwise output.
 
-The *Mycoplasma* RNase J complex illustrates what the precision result licenses in practice. The screen
-placed the pair in the top 0.1% of 113,050 candidates, and every independent line we could find agrees:
-a dedicated prediction reaches ipTM 0.84 and satisfies all six in-cell crosslinks across all five
-samples, whereas the heterodimer alone leaves three at 51 to 63 A; crosslinks from two different
-chemistries identify the same residue pairs; published SEC-MS puts both proteins at 297.8 kDa, which
-excludes a 1:1 complex and fits a 2:2; and both subunits are essential in *M. pneumoniae*. The
-architecture is a 2:2 heterotetramer in which one subunit has kept the fold and lost the chemistry,
-having lost all four catalytic residues while RNase J retains all four. The natural interpretation is a
-structural rather than catalytic subunit, supported by the observation that removing the partner drops
-RNase J self-association from ipTM 0.81 to 0.50.
+The *Mycoplasma* RNase J case illustrates how a prediction can be followed with independent evidence.
+The pooled screen placed the pair in the top 0.1% of 113,050 candidates. A dedicated 2:2 prediction
+reaches ipTM 0.84 and is consistent with six reported crosslinks across five model samples; the tested
+1:1 pose leaves three links at 51 to 63 A. Published SEC-MS gives both proteins an apparent peak at
+297.8 kDa, compatible with a larger assembly but not a direct stoichiometry measurement. The
+interaction and paralog assignment had already been reported. Both subunits are essential in
+*M. pneumoniae*, but that does not establish that disrupting this interface is lethal. MPN621 lacks
+four aligned catalytic residues; a structural role and catalytic inactivity remain hypotheses pending
+direct experiments.
 
-For drug discovery this points away from the obvious target. The active site is the conventional place to
-aim, but the closest human relative, CPSF73, retains three of four catalytic residues, so active-site
-chemistry is a selectivity liability. The interface is only 24.6% identical to CPSF73 over the
-corresponding region, which inverts the usual ordering: the protein-protein interface, normally the
-harder target, is here the more selective one. Whether it is druggable is an open question that this work
-does not answer, and protein-protein interfaces are among the least tractable targets for conventional
-small molecules.
+For drug discovery, the interface could be investigated experimentally. The closest human relative,
+CPSF73, retains three of four aligned catalytic residues, while the compared interface residues are
+24.6% identical. Those comparisons neither establish selectivity nor show that the interface can be
+inhibited by a compound. No antibacterial activity has been measured here.
 
 Several limits bound these conclusions and are worth stating alongside them. Correctness can only be
 measured on pairs that someone later solved, and solvable complexes may simply be easier ones, so 81% and
 89% are estimates for a population that is not quite the population of interest. Many recent depositions
 are cryo-EM and some were built with AlphaFold assistance; the X-ray-only subset gives 53% on 19 cases,
-which we take as the conservative bound. The RNase J complex rests on computation plus published
-orthogonal data, and no new experiment was performed here. And MG423 is non-essential in *M. genitalium*
-even though MPN621 is essential in *M. pneumoniae*, so the target argument applies to the latter only.
+which we report as a smaller, more conservative subset. The RNase J assembly hypothesis rests on
+computation plus published orthogonal data, and no new experiment was performed here. MG423 is
+non-essential in *M. genitalium* even though MPN621 is essential in *M. pneumoniae*; target-related
+inferences must therefore be species-specific.
 
 ## Limitations
 
@@ -200,21 +197,22 @@ even though MPN621 is essential in *M. pneumoniae*, so the target argument appli
   subset gives 53%, the conservative bound.
 - Public predictions may influence which complexes labs choose to solve, so the "solved more often"
   result is anticipation, not proof of cause.
-- **MG423 is non-essential in *M. genitalium*** though essential in *M. pneumoniae*; the target argument
-  applies to *M. pneumoniae*.
+- **MG423 is non-essential in *M. genitalium*** though MPN621 is essential in *M. pneumoniae*;
+  essentiality cannot be generalized between species.
 - The RNase J complex is computational plus published orthogonal data. No new experiment was performed.
 
 ## Prior work, stated precisely
 
-- The RNase J : MPN621 interaction is present, undiscussed, in O'Reilly et al. 2020's own PPI table
-  (5% PPI FDR).
+- The RNase J : MPN621 interaction is present in O'Reilly et al. 2020's PPI table (5% PPI FDR),
+  and the study's supplementary text discusses MPN621 as the missing RNase J paralog.
 - That MG423 is an RNase J paralog possibly inactive was noted by Chilamakuri et al. 2011 in one
   sentence, and MPN621 is annotated "probably non-catalytic" by Lluch-Senar et al. 2015.
 - *B. subtilis* RNase J1-J2 is a known heterocomplex (Mathy et al. 2010), modelled from crosslinks plus
   deep learning by Stahl et al. 2024 (PDB-IHM 9A5V).
-- **New here:** the prospective precision result; the non-autonomy explanation; and for RNase J, the 2:2
-  architecture, the crosslink-validated model, measured loss of all four catalytic residues, the
-  SEC-based stoichiometry argument, and the interface map.
+- **New here:** a time-split interface-correctness estimate for later-solved pairs; analysis of missed
+  contacts; and for RNase J, a computational 2:2 model consistent with published crosslinks, a
+  sequence-based catalytic-residue comparison, the SEC-based stoichiometry argument, and an interface
+  map. The cellular assembly and biochemical roles remain to be measured.
 
 ## Methods
 
