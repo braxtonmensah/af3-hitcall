@@ -19,6 +19,28 @@ So: small money possible within **3 months**, the large money lands around **12 
 January deadline slips (most often because SAM.gov was started late), everything shifts to the April 5
 deadline and award moves to early 2028.
 
+## Two fast routes found 2026-09-25 (both beat SBIR by ~9 months)
+
+**1. YC Early Decision for Students — the fastest large check that exists.**
+"Apply now, do YC after you graduate... If you're accepted, **we'll fund you immediately** and hold your
+place for after you graduate." Standard deal **$500k** ($125k for ~7% plus a $375k SAFE), committed the
+day you get in. Solo founders are eligible.
+- **Deadline: November 2, 2026, 8pm PT** for a guaranteed **decision by December 11, 2026.**
+- That is ~5 weeks to apply and ~11 weeks to money. Odds ~1%.
+- Dilutive, and it means committing to build a company.
+
+**2. Biswas Family Foundation Fast Grants — best fit of anything found.**
+Tiers of **$25k / $50k / $100k**, single payment, 12-month project. Scope explicitly includes
+"**Building AI tools or agents that scale a scientist's leverage**", which is exactly the platform.
+Application is short: title, one-sentence summary, the idea, what you'll do, why now/why this team,
+budget, outputs, bio.
+- **Cycle 2 deadline: December 15, 2026. Decision ~January 1, 2027.**
+- **Catch: institutional affiliation is required.** "Applicants must be affiliated with an institution
+  eligible to receive a charitable gift from a US private foundation." The gift goes to the institution.
+- So this route runs **through IU with a faculty sponsor**, which means IU administers the money and
+  IU's IP policy attaches. That is the trade: ~$100k on a 3-month clock, versus sole ownership.
+  It also means the Dalia email now has a concrete $100k attached to it.
+
 ## Odds of clearing $50k
 
 | Route | Amount if hit | P(hit) | Basis for the number |
@@ -49,6 +71,23 @@ plus a likely small grant. The median outcome is roughly $10-15k.
 - Patents. Nothing here is patentable, so filing anything is wasted money.
 - More computation on the same complex. Five independent lines already agree; a sixth adds little.
 - Talking to pharma about licensing. There is no licensable asset without IP.
+
+## On "$300k in one month"
+
+Not achievable, and I want to be unambiguous rather than encouraging. The binding constraints are
+calendars set by other people:
+
+| Route | Earliest money | Why not sooner |
+|---|---|---|
+| NIH SBIR | ~Sep 2027 | Deadlines Jan 5 / Apr 5; review and council take ~9 months |
+| YC Early Decision | **Dec 11, 2026** | Application deadline Nov 2, interviews in Nov/Dec |
+| Biswas Fast Grants | **~Jan 1, 2027** | Cycle 2 closes Dec 15 |
+| Emergent Ventures | ~4-8 weeks | Rolling, but typically $5-25k, not $300k |
+| Angel/pre-seed | theoretically weeks | Needs a formed company, warm intros, and usually traction |
+
+The fastest possible **$300k+** event is YC on **December 11, 2026**, about 11 weeks out, at roughly 1%.
+Nothing in the next 30 days can deliver six figures. What the next 30 days can do is make the
+December and January decisions winnable: preprint public, applications in, company formed.
 
 ## The honest summary
 
