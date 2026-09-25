@@ -21,17 +21,24 @@ for any 1:1 model a general signature of higher-order assembly? It was run blind
 *M. genitalium* pairs. Among confident predictions (S0 > 0.2) the split signature picked out, without
 being told what they were:
 
-| Pair | What it is | Known stoichiometry |
+| Pair | What it is | PDB-derived stoichiometry label |
 |---|---|---|
-| MG_340-MG_341 | RpoC-RpoB | RNA polymerase core, alpha2-beta-beta-prime |
-| MG_177-MG_341 | RpoA-RpoB | alpha is present in **two copies** |
-| MG_191-MG_192 | Adhesin P1-Adhesin P40/P90 | Nap adhesin, a dimer of heterodimers |
-| MG_272-MG_273, MG_272-MG_274, MG_273-MG_274 | PdhC-PdhB-PdhA | pyruvate dehydrogenase, a 60-subunit E2 core with E1 alpha2beta2 |
-| MG_139-MG_423 | RNase J-MG423 | the 2:2 heterotetramer from TETRA |
+| MG_177-MG_341 | RpoA-RpoB | **higher**: alpha is present in two copies (352 of 356 assemblies) |
+| MG_272-MG_273, MG_272-MG_274, MG_273-MG_274 | PdhC-PdhB-PdhA | **higher**: all three pairs, pyruvate dehydrogenase |
+| MG_191-MG_192 | Adhesin P1-Adhesin P40/P90 | **ambiguous** (1 assembly each way); demoted to unverified |
+| ~~MG_340-MG_341~~ | ~~RpoC-RpoB~~ | **one-to-one** (367 of 370 assemblies). **Removed from this list.** |
+| MG_139-MG_423 | RNase J-MG423 | unlabelled: no solved homologous co-complex, which is the point of it |
 
-Four independent textbook higher-order assemblies, recovered by a distance rule that knows nothing
-about any of them. Among confident pairs, **15 of 15 split pairs have an oligomeric partner against 4
-of 17 clean dimers.**
+**This list was corrected by its own pre-registered calibration test** (`PREREG_HIGHER_CAL.md`,
+committed before any assembly record was fetched). RpoC-RpoB is a 1:1 pair sitting inside a larger
+assembly, so the rule fired on it for the wrong reason and the prereg required its removal. What
+stands is four verified higher-order recoveries across two unrelated machines, plus an ambiguous
+fifth.
+
+**The error rates, which matter more than the list.** Against PDB-derived labels on 55 pairs, the
+split call has sensitivity 75% (9 of 12), a false-positive rate of 12% (5 of 42), and precision 64%
+against a 22% base rate, a lift of 2.9x. It is a useful flag, not a determination. Among confident
+pairs, 15 of 15 split pairs have an oligomeric partner against 4 of 17 clean dimers.
 
 ## The evidence for MG354 specifically
 
