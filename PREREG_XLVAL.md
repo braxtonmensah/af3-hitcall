@@ -45,3 +45,12 @@ paper describes the interaction.
 
 Every candidate and control with its numbers. Controls must mostly fail, or the test is not
 discriminating and no candidate is called supported.
+
+## Amendment 1 (2026-09-24, before any candidate distance was computed): crosslink site resolution
+
+A label-free check showed the Links file's protein positions do not match the FASTA for many proteins
+(only 44% of sites fell on K/S/T/Y; only 40% of peptides sat at their stated start). Sites are now
+recomputed by locating each link's peptides in the sequence (site = peptide position + position of the
+link within the peptide), keeping the registered 5% link FDR from the Links file. After the fix, 99.1% of
+sites are K, S, T, Y or protein N-termini, as DSSO chemistry requires. 327 inter-protein links remain
+usable; links whose peptides cannot be located are dropped and counted.
