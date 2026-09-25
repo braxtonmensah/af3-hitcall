@@ -27,7 +27,9 @@ YDIR = os.path.join(HERE, "vscreen_yaml")
 RDIR = os.path.join(HERE, "vscreen_yaml_rejected")
 MSA_DIR = os.path.join(HERE, "msa")
 POD_MSA_PREFIX = "/workspace/screen/msa/"
-MAX_HEAVY_ATOMS = 100
+# Boltz-2 affinity rejects ligands above 128 atoms counting heavy atoms AND hydrogens
+# (docs/prediction.md). This is the bound that actually fails jobs at run time.
+MAX_TOTAL_ATOMS = 128
 
 
 def parse(path):
@@ -62,10 +64,12 @@ def check(path):
             bad.append("unparseable SMILES")
         else:
             n = mol.GetNumHeavyAtoms()
+            total = Chem.AddHs(mol).GetNumAtoms()
             if n < 6:
                 bad.append("ligand too small (%d heavy atoms)" % n)
-            elif n > MAX_HEAVY_ATOMS:
-                bad.append("ligand too large (%d heavy atoms)" % n)
+            elif total > MAX_TOTAL_ATOMS:
+                bad.append("over Boltz-2 affinity limit (%d atoms with H, max %d)"
+                           % (total, MAX_TOTAL_ATOMS))
             if "." in d["smiles"]:
                 bad.append("multi-component SMILES (salt/mixture)")
     if not d["msa"]:

@@ -83,7 +83,11 @@ def seq(acc):
 # mixtures, and a handful are tiny inorganics (lithium carbonate, urea). Boltz-2 expects one
 # covalent ligand, so a multi-component SMILES is at best ambiguous and at worst a crash. The same
 # rule is applied to the screen set and the decoy set, so the null stays a fair comparison.
-MIN_HEAVY, MAX_HEAVY = 6, 100
+MIN_HEAVY = 6
+# Boltz-2's affinity module rejects a ligand of more than 128 atoms counting heavy atoms AND
+# hydrogens (docs/prediction.md). Filtering on heavy atoms alone is not the same bound and lets
+# through molecules that die at run time: a 65-heavy-atom peptide macrocycle is 144 total.
+MAX_TOTAL_ATOMS = 128
 
 
 def prep_ligand(smi):
@@ -97,8 +101,9 @@ def prep_ligand(smi):
     if not frags:
         return None
     mol = max(frags, key=lambda m: m.GetNumHeavyAtoms())
-    n = mol.GetNumHeavyAtoms()
-    if n < MIN_HEAVY or n > MAX_HEAVY:
+    if mol.GetNumHeavyAtoms() < MIN_HEAVY:
+        return None
+    if Chem.AddHs(mol).GetNumAtoms() > MAX_TOTAL_ATOMS:
         return None
     return Chem.MolToSmiles(mol)
 
