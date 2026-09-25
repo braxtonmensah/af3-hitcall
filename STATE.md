@@ -55,6 +55,29 @@ Repo is public: https://github.com/braxtonmensah/af3-hitcall
 | **OMEGA** | Inconclusive under the registered rule; no omega-like fold either direction. `analysis_omega.py` |
 | **HIGHER_CAL** | Calibrated (delta +0.63, CI [0.076, 0.964]); forced the RpoC-RpoB retraction. `analysis_higher_cal.py` |
 | **XLHUMAN** | Closed. Controls 0/10, 7 of 15 supported, 0 new. `analysis_xlhuman.py`, `analysis_xlhuman_novelty.py` |
+| **CODEP** | D1 supported (+0.0203, CI [0.0098, 0.0317]) but **entirely carried by annotated complexes**: within CORUM +0.0585 holds, outside CORUM +0.0047 does not. `analysis_codep.py` |
+
+### CODEP is the strongest and the most double-edged result in the repo
+
+**Why it matters scientifically.** It is the first validation that is not structure-adjacent. CRISPR
+gene-effect profiles were produced by cell biology and cannot have been contaminated by a structure
+predictor, so it is the one answer to "your 81% might be models agreeing with themselves" that does
+not depend on the PDB at all. The instrument gate passed (known complexes beat low-confidence pairs by
++0.103), and the effect survives essentiality matching.
+
+**Why it constrains the pitch.** The gap disappears outside CORUM-annotated complexes, where 3,027 of
+the 3,441 confident pairs live. That is H1 again in a functional register: informative on the class the
+field already recognises, near-chance on the rest. And **96.3% of confident never-solved pairs already
+have BioGRID or IntAct evidence**, so "never solved" has always meant *no structure*, never *no
+evidence of interaction*.
+
+**Never say the registry is a list of novel interactions or novel targets.** The pre-registration
+committed to that consequence in advance and it is now in force.
+
+**What did come out of it:** `TARGETS.md`, 32 pairs that are structurally confident, functionally
+co-dependent, selectively essential (not pan-essential) and structurally unsolved, of which 17 are not
+in CORUM. NFE2L2-MAFG, ISL1-LDB1, CCNC-PAX5, AP1M1-IKZF1 and TMCO6-ZNF511 are the ones worth a look.
+Read that file's limits section before using it anywhere.
 
 **No committed pre-registration is now without a reported result.** That was the one thing in this
 repo that looked bad, and it is fixed.
