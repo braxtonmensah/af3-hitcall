@@ -1,0 +1,1847 @@
+{
+ "n_registry_pairs": 6010,
+ "n_inter_urps": 3636,
+ "n_candidates_with_links": 34,
+ "n_controls": 30,
+ "candidates_testable": 15,
+ "controls_testable": 10,
+ "controls_supported": 0,
+ "discrimination_passes": true,
+ "candidates_supported": 7,
+ "O1_supported_pairs": [
+  {
+   "key": "P06733_P09104",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.166,
+   "supported": true,
+   "links": [
+    [
+     197,
+     60,
+     "DSSO",
+     19.8,
+     true
+    ],
+    [
+     233,
+     54,
+     "DSSO",
+     12.9,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P09497_Q00610",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.75,
+   "null_p95": 0.25,
+   "null_mean": 0.068,
+   "supported": true,
+   "links": [
+    [
+     148,
+     1503,
+     "DHSO",
+     15.7,
+     true
+    ],
+    [
+     204,
+     1187,
+     "DMTMM",
+     127.3,
+     false
+    ],
+    [
+     204,
+     1516,
+     "DSSO",
+     20.3,
+     true
+    ],
+    [
+     223,
+     1535,
+     "DSSO",
+     18.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P11021_Q15084",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 2,
+   "satisfied_fraction": 0.5,
+   "null_p95": 0.25,
+   "null_mean": 0.029,
+   "supported": true,
+   "links": [
+    [
+     213,
+     383,
+     "DMTMM",
+     14.9,
+     true
+    ],
+    [
+     213,
+     387,
+     "DMTMM",
+     13.5,
+     true
+    ],
+    [
+     546,
+     247,
+     "DHSO",
+     71.2,
+     false
+    ],
+    [
+     579,
+     85,
+     "DSSO",
+     90.3,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P40222_Q9NUQ3",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.106,
+   "supported": true,
+   "links": [
+    [
+     377,
+     339,
+     "DSSO",
+     10.2,
+     true
+    ],
+    [
+     384,
+     339,
+     "DSSO",
+     18.1,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q12905_Q12906",
+   "status": "testable",
+   "n_usable": 5,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.2,
+   "null_mean": 0.034,
+   "supported": true,
+   "links": [
+    [
+     360,
+     332,
+     "DSSO",
+     15.7,
+     true
+    ],
+    [
+     363,
+     337,
+     "DHSO",
+     21.0,
+     true
+    ],
+    [
+     364,
+     332,
+     "DSSO",
+     22.4,
+     true
+    ],
+    [
+     364,
+     342,
+     "DSSO",
+     17.8,
+     true
+    ],
+    [
+     45,
+     298,
+     "DMTMM",
+     11.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q16891_Q9NX63",
+   "status": "testable",
+   "n_usable": 6,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.833,
+   "null_p95": 0.167,
+   "null_mean": 0.026,
+   "supported": true,
+   "links": [
+    [
+     76,
+     451,
+     "DSSO",
+     60.7,
+     false
+    ],
+    [
+     130,
+     516,
+     "DSSO",
+     24.5,
+     true
+    ],
+    [
+     136,
+     516,
+     "DSSO",
+     20.1,
+     true
+    ],
+    [
+     136,
+     519,
+     "DMTMM",
+     18.3,
+     true
+    ],
+    [
+     136,
+     521,
+     "DMTMM",
+     21.5,
+     true
+    ],
+    [
+     142,
+     521,
+     "DMTMM",
+     20.5,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q8WVM8_Q9P2W9",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 2,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.073,
+   "supported": true,
+   "links": [
+    [
+     63,
+     143,
+     "DSSO",
+     17.5,
+     true
+    ],
+    [
+     63,
+     147,
+     "DSSO",
+     20.8,
+     true
+    ]
+   ]
+  }
+ ],
+ "candidates": [
+  {
+   "key": "B5ME19_P60228",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     275,
+     628,
+     "DSSO",
+     18.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "O00471_Q8IYI6",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     132,
+     60,
+     "DSSO",
+     22.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "O14950_P35579",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.0,
+   "null_mean": 0.019,
+   "supported": false,
+   "links": [
+    [
+     202,
+     151,
+     "DSSO",
+     51.5,
+     false
+    ],
+    [
+     860,
+     151,
+     "DSSO",
+     46.3,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "O60645_Q96A65",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     40,
+     122,
+     "DSSO",
+     6.7,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "O95251_Q6IE81",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     376,
+     464,
+     "DSSO",
+     22.5,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P06733_P09104",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.166,
+   "supported": true,
+   "links": [
+    [
+     197,
+     60,
+     "DSSO",
+     19.8,
+     true
+    ],
+    [
+     233,
+     54,
+     "DSSO",
+     12.9,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P08670_P48681",
+   "status": "testable",
+   "n_usable": 3,
+   "n_failed_site": 2,
+   "satisfied_fraction": 0.333,
+   "null_p95": 0.333,
+   "null_mean": 0.024,
+   "supported": false,
+   "links": [
+    [
+     294,
+     201,
+     "DMTMM",
+     10.3,
+     true
+    ],
+    [
+     402,
+     330,
+     "DSSO",
+     33.0,
+     false
+    ],
+    [
+     402,
+     422,
+     "DSSO",
+     127.2,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P08670_Q04695",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     445,
+     419,
+     "DSSO",
+     15.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P09497_Q00610",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.75,
+   "null_p95": 0.25,
+   "null_mean": 0.068,
+   "supported": true,
+   "links": [
+    [
+     148,
+     1503,
+     "DHSO",
+     15.7,
+     true
+    ],
+    [
+     204,
+     1187,
+     "DMTMM",
+     127.3,
+     false
+    ],
+    [
+     204,
+     1516,
+     "DSSO",
+     20.3,
+     true
+    ],
+    [
+     223,
+     1535,
+     "DSSO",
+     18.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P11021_Q15084",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 2,
+   "satisfied_fraction": 0.5,
+   "null_p95": 0.25,
+   "null_mean": 0.029,
+   "supported": true,
+   "links": [
+    [
+     213,
+     383,
+     "DMTMM",
+     14.9,
+     true
+    ],
+    [
+     213,
+     387,
+     "DMTMM",
+     13.5,
+     true
+    ],
+    [
+     546,
+     247,
+     "DHSO",
+     71.2,
+     false
+    ],
+    [
+     579,
+     85,
+     "DSSO",
+     90.3,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P32119_Q06830",
+   "status": "testable",
+   "n_usable": 3,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.667,
+   "null_p95": 0.667,
+   "null_mean": 0.185,
+   "supported": false,
+   "links": [
+    [
+     120,
+     10,
+     "DSSO",
+     11.3,
+     true
+    ],
+    [
+     93,
+     196,
+     "DSSO",
+     7.7,
+     true
+    ],
+    [
+     93,
+     92,
+     "DSSO",
+     52.7,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P32322_Q96C36",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.064,
+   "supported": false,
+   "links": [
+    [
+     307,
+     267,
+     "DMTMM",
+     82.5,
+     false
+    ],
+    [
+     47,
+     319,
+     "DMTMM",
+     89.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P35606_P53621",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     714,
+     832,
+     "DHSO",
+     10.1,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P38919_Q9Y3X0",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     284,
+     19,
+     "DSSO",
+     28.3,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P40222_Q9NUQ3",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.106,
+   "supported": true,
+   "links": [
+    [
+     377,
+     339,
+     "DSSO",
+     10.2,
+     true
+    ],
+    [
+     384,
+     339,
+     "DSSO",
+     18.1,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P60709_P63267",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.122,
+   "supported": false,
+   "links": [
+    [
+     100,
+     84,
+     "DHSO",
+     51.3,
+     false
+    ],
+    [
+     99,
+     84,
+     "DHSO",
+     48.0,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P60709_Q01518",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 1,
+   "links": [
+    [
+     61,
+     287,
+     "DSSO",
+     17.9,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "P60709_Q9UHB6",
+   "status": "testable",
+   "n_usable": 3,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.333,
+   "null_mean": 0.063,
+   "supported": false,
+   "links": [
+    [
+     113,
+     468,
+     "DSSO",
+     63.1,
+     false
+    ],
+    [
+     328,
+     273,
+     "DSSO",
+     60.8,
+     false
+    ],
+    [
+     50,
+     210,
+     "DSSO",
+     31.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P63261_Q9ULV4",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     19,
+     224,
+     "DMTMM",
+     38.4,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "Q01780_Q13901",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     46,
+     23,
+     "DMTMM",
+     9.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q12905_Q12906",
+   "status": "testable",
+   "n_usable": 5,
+   "n_failed_site": 0,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.2,
+   "null_mean": 0.034,
+   "supported": true,
+   "links": [
+    [
+     360,
+     332,
+     "DSSO",
+     15.7,
+     true
+    ],
+    [
+     363,
+     337,
+     "DHSO",
+     21.0,
+     true
+    ],
+    [
+     364,
+     332,
+     "DSSO",
+     22.4,
+     true
+    ],
+    [
+     364,
+     342,
+     "DSSO",
+     17.8,
+     true
+    ],
+    [
+     45,
+     298,
+     "DMTMM",
+     11.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q13330_Q16576",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "Q15363_Q7Z7H5",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "Q16891_Q9NX63",
+   "status": "testable",
+   "n_usable": 6,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.833,
+   "null_p95": 0.167,
+   "null_mean": 0.026,
+   "supported": true,
+   "links": [
+    [
+     76,
+     451,
+     "DSSO",
+     60.7,
+     false
+    ],
+    [
+     130,
+     516,
+     "DSSO",
+     24.5,
+     true
+    ],
+    [
+     136,
+     516,
+     "DSSO",
+     20.1,
+     true
+    ],
+    [
+     136,
+     519,
+     "DMTMM",
+     18.3,
+     true
+    ],
+    [
+     136,
+     521,
+     "DMTMM",
+     21.5,
+     true
+    ],
+    [
+     142,
+     521,
+     "DMTMM",
+     20.5,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q52LJ0_Q9Y224",
+   "status": "testable",
+   "n_usable": 3,
+   "n_failed_site": 2,
+   "satisfied_fraction": 0.667,
+   "null_p95": 0.667,
+   "null_mean": 0.238,
+   "supported": false,
+   "links": [
+    [
+     245,
+     234,
+     "DSSO",
+     17.2,
+     true
+    ],
+    [
+     245,
+     241,
+     "DSSO",
+     25.0,
+     true
+    ],
+    [
+     256,
+     241,
+     "DSSO",
+     34.4,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "Q8IXQ6_Q8TDB6",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     401,
+     557,
+     "DSSO",
+     10.4,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q8IYI6_Q9UPT5",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     78,
+     53,
+     "DHSO",
+     10.6,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q8NCA5_Q9Y224",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 4,
+   "links": [
+    [
+     171,
+     289,
+     "DSSO",
+     14.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q8TAQ2_Q92925",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "Q8WVM8_Q9P2W9",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 2,
+   "satisfied_fraction": 1.0,
+   "null_p95": 0.5,
+   "null_mean": 0.073,
+   "supported": true,
+   "links": [
+    [
+     63,
+     143,
+     "DSSO",
+     17.5,
+     true
+    ],
+    [
+     63,
+     147,
+     "DSSO",
+     20.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q9BRT2_Q9NVA1",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     288,
+     71,
+     "DSSO",
+     19.8,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q9Y224_Q9Y3I0",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     158,
+     241,
+     "DSSO",
+     19.1,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q9Y296_Q9Y5R8",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     41,
+     51,
+     "DSSO",
+     18.9,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q9Y5J9_Q9Y5L4",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.5,
+   "null_p95": 1.0,
+   "null_mean": 0.466,
+   "supported": false,
+   "links": [
+    [
+     64,
+     43,
+     "DSSO",
+     12.7,
+     true
+    ],
+    [
+     53,
+     53,
+     "DMTMM",
+     29.0,
+     false
+    ]
+   ]
+  }
+ ],
+ "controls": [
+  {
+   "key": "O00233_P17980",
+   "status": "no model"
+  },
+  {
+   "key": "O15144_P61160",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.046,
+   "supported": false,
+   "links": [
+    [
+     253,
+     286,
+     "DSSO",
+     54.0,
+     false
+    ],
+    [
+     46,
+     295,
+     "DSSO",
+     43.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "O95478_Q9BZE4",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     52,
+     16,
+     "DSSO",
+     33.4,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P07910_Q14103",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     29,
+     197,
+     "DSSO",
+     45.7,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P08238_P31948",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 1,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.25,
+   "null_mean": 0.023,
+   "supported": false,
+   "links": [
+    [
+     486,
+     347,
+     "DSSO",
+     44.6,
+     false
+    ],
+    [
+     486,
+     354,
+     "DSSO",
+     50.2,
+     false
+    ],
+    [
+     523,
+     568,
+     "DSSO",
+     65.8,
+     false
+    ],
+    [
+     523,
+     577,
+     "DSSO",
+     64.6,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P09622_P82909",
+   "status": "no model"
+  },
+  {
+   "key": "P09651_P14866",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 1,
+   "links": [
+    [
+     350,
+     269,
+     "DSSO",
+     65.6,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P09651_P31942",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.154,
+   "supported": false,
+   "links": [
+    [
+     350,
+     255,
+     "DSSO",
+     67.8,
+     false
+    ],
+    [
+     350,
+     97,
+     "DSSO",
+     66.5,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P09651_P38159",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 1,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.119,
+   "supported": false,
+   "links": [
+    [
+     350,
+     163,
+     "DSSO",
+     116.8,
+     false
+    ],
+    [
+     52,
+     150,
+     "DSSO",
+     104.4,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P09651_P52272",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 1,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.048,
+   "supported": false,
+   "links": [
+    [
+     350,
+     381,
+     "DSSO",
+     106.4,
+     false
+    ],
+    [
+     350,
+     716,
+     "DSSO",
+     68.4,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P16401_P62805",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.0,
+   "null_mean": 0.001,
+   "supported": false,
+   "links": [
+    [
+     113,
+     25,
+     "DMTMM",
+     60.5,
+     false
+    ],
+    [
+     113,
+     53,
+     "DMTMM",
+     64.8,
+     false
+    ],
+    [
+     113,
+     54,
+     "DMTMM",
+     66.3,
+     false
+    ],
+    [
+     88,
+     54,
+     "DMTMM",
+     48.8,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P22626_P31942",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     94,
+     67,
+     "DSSO",
+     47.7,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P27635_P30050",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     82,
+     99,
+     "DSSO",
+     62.8,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P32969_P50914",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     28,
+     187,
+     "DSSO",
+     69.6,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P39023_P62829",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     66,
+     123,
+     "DSSO",
+     32.8,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P43686_P51665",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     70,
+     181,
+     "DMTMM",
+     40.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P46777_P62913",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "P46781_P61247",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.0,
+   "null_mean": 0.006,
+   "supported": false,
+   "links": [
+    [
+     240,
+     121,
+     "DSSO",
+     90.4,
+     false
+    ],
+    [
+     249,
+     139,
+     "DSSO",
+     93.9,
+     false
+    ],
+    [
+     249,
+     155,
+     "DSSO",
+     98.4,
+     false
+    ],
+    [
+     249,
+     91,
+     "DSSO",
+     97.6,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P46782_P62263",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 2,
+   "links": [
+    [
+     201,
+     63,
+     "DSSO",
+     63.5,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P48444_P53621",
+   "status": "testable",
+   "n_usable": 2,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.5,
+   "null_mean": 0.039,
+   "supported": false,
+   "links": [
+    [
+     46,
+     11,
+     "DSSO",
+     48.1,
+     false
+    ],
+    [
+     46,
+     38,
+     "DSSO",
+     55.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P49368_Q9H2J4",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "P62081_P62266",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "P62277_P62888",
+   "status": "no model"
+  },
+  {
+   "key": "P62424_Q8IY81",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 0,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.0,
+   "null_mean": 0.002,
+   "supported": false,
+   "links": [
+    [
+     245,
+     697,
+     "DMTMM",
+     84.5,
+     false
+    ],
+    [
+     75,
+     697,
+     "DMTMM",
+     82.9,
+     false
+    ],
+    [
+     75,
+     698,
+     "DMTMM",
+     84.3,
+     false
+    ],
+    [
+     75,
+     700,
+     "DMTMM",
+     88.9,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "P62851_P62913",
+   "status": "testable",
+   "n_usable": 4,
+   "n_failed_site": 2,
+   "satisfied_fraction": 0.0,
+   "null_p95": 0.25,
+   "null_mean": 0.024,
+   "supported": false,
+   "links": [
+    [
+     67,
+     14,
+     "DSSO",
+     37.3,
+     false
+    ],
+    [
+     67,
+     19,
+     "DMTMM",
+     36.1,
+     false
+    ],
+    [
+     67,
+     20,
+     "DSSO",
+     36.1,
+     false
+    ],
+    [
+     67,
+     25,
+     "DSSO",
+     35.3,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "Q13330_Q92769",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 0,
+   "n_failed_site": 1,
+   "links": []
+  },
+  {
+   "key": "Q13573_Q96DI7",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     170,
+     349,
+     "DSSO",
+     71.1,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "Q8NFH3_Q96EE3",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     161,
+     96,
+     "DSSO",
+     46.9,
+     false
+    ]
+   ]
+  },
+  {
+   "key": "Q8TAQ2_Q969G3",
+   "status": "untestable (<2 usable links)",
+   "n_usable": 1,
+   "n_failed_site": 0,
+   "links": [
+    [
+     872,
+     228,
+     "DSSO",
+     28.2,
+     true
+    ]
+   ]
+  },
+  {
+   "key": "Q9BV38_Q9Y4W2",
+   "status": "no model"
+  }
+ ],
+ "O3_novelty": [
+  {
+   "pair": "P06733_P09104",
+   "genes": "ENO1-ENO2",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 1173,
+   "epmc_top": [
+    {
+     "id": "41863390",
+     "title": "1p/19q codeletion induces targetable and imageable vulnerabilities in glucose metabolism in oligodendrogliomas.",
+     "year": "2026"
+    },
+    {
+     "id": "PMC13297130",
+     "title": "Extracellular Pgk1 or Its Derived Short Peptide Interacted with Membrane-Associated Enolase 2 Receptor: A Potential Therapy for ALS Motor Neuron Degen",
+     "year": "2026"
+    },
+    {
+     "id": "42192505",
+     "title": "Enolase 2-mediated lactylation-dependent disruption of the GNL3-MDM2-p53 axis in age-related osteoarthritis.",
+     "year": "2026"
+    },
+    {
+     "id": "41823547",
+     "title": "Enolase 1: A paradigm of metabolic enzyme\u00a0moonlighting in tumorigenesis (Review).",
+     "year": "2026"
+    },
+    {
+     "id": "42346134",
+     "title": "Targeting Glycolytic Plasticity to Overcome Therapy Resistance in Cancer Stem Cells: Mechanisms and Clinical Perspectives.",
+     "year": "2026"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "P09497_Q00610",
+   "genes": "CLTB-CLTC",
+   "n_homologous_cocomplex_entries": 7,
+   "example_entries": [
+    "1XI4",
+    "3IYV",
+    "3LVG",
+    "3LVH",
+    "6SCT"
+   ],
+   "epmc_hits": 135,
+   "epmc_top": [
+    {
+     "id": "42630443",
+     "title": "Annexin A2 facilitates Japanese encephalitis virus replication by regulating endocytosis and intracellular transport in PK15 cells.",
+     "year": "2026"
+    },
+    {
+     "id": "41791708",
+     "title": "G6PD facilitates axon regeneration via clathrin-mediated endocytosis.",
+     "year": "2026"
+    },
+    {
+     "id": "42257032",
+     "title": "Defect in lysosomal enzyme trafficking and sorting is associated with irreversibility of pulmonary arterial hypertension.",
+     "year": "2026"
+    },
+    {
+     "id": "41204291",
+     "title": "Identification and validation of key genes related to apoptosis in multiple organ dysfunction syndrome.",
+     "year": "2025"
+    },
+    {
+     "id": "41446579",
+     "title": "Comparative analysis of lipid metabolism in trophoblast subpopulations in preeclampsia and &lt;i&gt;in vitro&lt;/i&gt; hypoxia model.",
+     "year": "2025"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "P11021_Q15084",
+   "genes": "HSPA5-PDIA6",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 547,
+   "epmc_top": [
+    {
+     "id": "41667239",
+     "title": "KRAS-driven protein disulfide isomerase family A member 6 expression suppresses PRKR-like endoplasmic reticulum kinase-mediated immunogenic cell death",
+     "year": "2026"
+    },
+    {
+     "id": "42337069",
+     "title": "Quantitative interactome mapping of skeletal muscle insulin resistance.",
+     "year": "2026"
+    },
+    {
+     "id": "40371728",
+     "title": "Deciphering the Molecular Crosstalk of Endoplasmic Reticulum Stress and Immune Infiltration in Endometriosis.",
+     "year": "2025"
+    },
+    {
+     "id": "42224595",
+     "title": "Coordinated expression and assembly of BiP, p58&lt;sup&gt;IPK&lt;/sup&gt;, and ER chaperone complexes maximize proinsulin folding in pancreatic \u03b2 cell",
+     "year": "2026"
+    },
+    {
+     "id": "40466971",
+     "title": "IRE1\u03b1-mediated endoplasmic reticulum stress response regulates oxidative damage in CYP4V2 deficient human retinal pigment epithelial cells.",
+     "year": "2025"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "P40222_Q9NUQ3",
+   "genes": "TXLNA-TXLNG",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 15,
+   "epmc_top": [
+    {
+     "id": "40010430",
+     "title": "Gain and loss of the centrosomal protein taxilin-beta influences cardiac proteostasis and stress.",
+     "year": "2025"
+    },
+    {
+     "id": "41888776",
+     "title": "CEP170 as a novel molecular link between centrosomal function and cerebral cortical development.",
+     "year": "2026"
+    },
+    {
+     "id": "38102665",
+     "title": "Multiscale protein networks systematically identify aberrant protein interactions and oncogenic regulators in seven cancer types.",
+     "year": "2023"
+    },
+    {
+     "id": "41630047",
+     "title": "Electroacupuncture alleviates migraine through CXCL13/CXCR5-mediated communication.",
+     "year": "2026"
+    },
+    {
+     "id": "32185195",
+     "title": "High <i>TXLNA</i> Expression Predicts Favourable Outcome for Pancreatic Adenocarcinoma Patients.",
+     "year": "2020"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "Q12905_Q12906",
+   "genes": "ILF2-ILF3",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 402,
+   "epmc_top": [
+    {
+     "id": "41665012",
+     "title": "Scaffolding of the H4K5ac chromatin remodeling complex by lncRNA MAHAC mediates epithelial-mesenchymal transition.",
+     "year": "2026"
+    },
+    {
+     "id": "PPR1221327",
+     "title": "Primate lineage specification requires suppression of Alu hyperediting",
+     "year": "2026"
+    },
+    {
+     "id": "41572068",
+     "title": "ILF2 cooperates with ILF3/KLF16 to drive colorectal cancer progression via modulating the behaviors of both tumor cells and M2 macrophages.",
+     "year": "2026"
+    },
+    {
+     "id": "PMC13545455",
+     "title": "Mandarin fish ILF2 negatively regulates type I interferon signaling by promoting autophagy\u2013lysosome\u2011dependent turnover of IRF3",
+     "year": "2026"
+    },
+    {
+     "id": "41512856",
+     "title": "ICAM1 mRNA entraps ILF2/ILF3 to inhibit transcription of EIF4E and global protein synthesis.",
+     "year": "2026"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "Q16891_Q9NX63",
+   "genes": "IMMT-CHCHD3",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 129,
+   "epmc_top": [
+    {
+     "id": "42610510",
+     "title": "CDK4/MERCs/PINK1 Axis Drives PFOA/HFPO-TA-Induced Cardiac Senescence via Mitophagy Defect and cGAS-STING Activation: In Vitro Amelioration by Cycloast",
+     "year": "2026"
+    },
+    {
+     "id": "40975168",
+     "title": "The ubiquitin-binding protein ANKRD13A mediates VCP-dependent mitochondrial outer membrane rupture during PINK1/Parkin-mediated mitophagy.",
+     "year": "2025"
+    },
+    {
+     "id": "42178653",
+     "title": "MICOS and MIMAS, multifunctional assemblies linking mitochondrial biogenesis, architecture, and function.",
+     "year": "2026"
+    },
+    {
+     "id": "41369368",
+     "title": "Imbalance in MICOS Proteins in Rat Liver Mitochondria in an Induced Hyperthyroidism Model.",
+     "year": "2025"
+    },
+    {
+     "id": "40302794",
+     "title": "Integration of multi-omics and single-cell transcriptome reveals mitochondrial outer membrane protein-2 (MTX-2) as a prognostic biomarker and characte",
+     "year": "2025"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  },
+  {
+   "pair": "Q8WVM8_Q9P2W9",
+   "genes": "SCFD1-STX18",
+   "n_homologous_cocomplex_entries": 0,
+   "example_entries": [],
+   "epmc_hits": 18,
+   "epmc_top": [
+    {
+     "id": "39245571",
+     "title": "Visualization of ER-to-Golgi trafficking of procollagen X.",
+     "year": "2024"
+    },
+    {
+     "id": "41718976",
+     "title": "COG Complex in Golgi Trafficking and Glycosylation.",
+     "year": "2026"
+    },
+    {
+     "id": "42450133",
+     "title": "Comparative Interactome Analysis Reveals Architectural Principles Governing K&lt;sup&gt;+&lt;/sup&gt; Channel Function in Cancer.",
+     "year": "2026"
+    },
+    {
+     "id": "37887855",
+     "title": "Loss of Sec-1 Family Domain-Containing 1 (<i>scfd1</i>) Causes Severe Cardiac Defects and Endoplasmic Reticulum Stress in Zebrafish.",
+     "year": "2023"
+    },
+    {
+     "id": "37071682",
+     "title": "Cross-linking mass spectrometry discovers, evaluates, and corroborates structures and protein-protein interactions in the human cell.",
+     "year": "2023"
+    }
+   ],
+   "bartolec_s5_rows": 1,
+   "is_new": false
+  }
+ ],
+ "O3_n_new": 0
+}
