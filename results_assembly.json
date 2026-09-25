@@ -1,0 +1,16 @@
+{
+ "universe": 3527,
+ "edges": 47477,
+ "r_edge": 0.3,
+ "n_communities": 1392,
+ "n_clusters_in_range": 58,
+ "A0_recovered": 34,
+ "A0_total": 447,
+ "A0_frac": 0.0761,
+ "A0_sensitive": false,
+ "A1_purity_ge_0.5": 11,
+ "A2_n": 37,
+ "A3_null_clusters": 0,
+ "A3_null_A2": 0,
+ "A2_exceeds_null": true
+}

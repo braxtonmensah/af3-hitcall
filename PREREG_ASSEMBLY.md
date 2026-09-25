@@ -83,3 +83,57 @@ clusters it produces. **An A2 count that does not exceed the null count is not a
 - DepMap is cancer cell lines, so assemblies without a fitness phenotype in culture are invisible.
 - An unannotated cluster may be unannotated because its members are poorly studied rather than because
   the assembly is new. That confound cannot be removed with this data and is stated with any result.
+
+
+---
+
+# OUTCOME, recorded 2026-09-25: A0 FAILED, and the fault is in this pre-registration
+
+**A0 = 34 of 447 CORUM complexes majority-recovered, 7.6%, against a 40% bar. The gate fails, so by
+the rule written above nothing downstream is interpreted.** A2's 37 unannotated clusters are reported
+in `assembly_unannotated.csv` and are **not claimed**.
+
+## Why it failed, diagnosed rather than explained away
+
+The failure is **not** that co-dependency cannot group proteins. It is that this file specified a
+size cap and then measured recovery against complexes the cap had already thrown away.
+
+- Gene universe: 3,527. Genes actually placed in a size-3-to-60 cluster: **332**, under 10%.
+- Louvain at resolution 1.0 put most of the graph into communities **larger than 60**, which step 4
+  discarded.
+- Of the 447 complexes in A0's denominator, **70% had zero members inside any kept cluster**. The
+  median fraction of a complex's members landing in a kept cluster was **0.00**.
+
+So A0 measured the size cap, not the clustering. A gate that a correct method would also fail is a
+broken gate, and it was written here before the data was seen, which is where the fault belongs.
+
+A second, smaller specification error: the "CORUM complexes" were reconstructed from Burke S1's
+pairwise `CORUM_ID_selection` column, so 21% of them are a single pair and none are guaranteed
+complete. That is not the CORUM complex list, it is a projection of CORUM onto one screen's pairs.
+
+## What is NOT claimed
+
+The A2 clusters include what look like the Fanconi anemia pathway, PBAF, the VHL-Elongin-EGLN1
+complex, peroxisome biogenesis, UFMylation and the SKI complex. **Recognising them is not evidence.**
+It is the same after-the-fact recognition that `PREREG_BRIDGE.md` explicitly refuses to count, and the
+gate that was supposed to license the claim did not pass. Nothing from this run goes into the
+preprint, a grant application, or any pitch.
+
+One descriptive observation that does survive, because it needs no gate: the degree-preserving null
+produced **zero** clusters in the 3-to-60 size range against 58 in the real graph. The dependency
+graph is not random. That says the structure is real; it says nothing about whether this partition of
+it is right.
+
+## What a corrected test needs, and it is a NEW pre-registration
+
+Re-running with a different cap after seeing this fail would be gate-shopping. A corrected version is
+`PREREG_ASSEMBLY2` and must fix three things:
+
+1. **Real CORUM**, downloaded from the CORUM resource, not projected from Burke pairs.
+2. **No hard size cap.** Multi-resolution or hierarchical clustering, with the resolution chosen by a
+   criterion fixed in advance, so no complex is discarded before it can be recovered.
+3. **A0 computed only over complexes whose members are actually in the gene universe**, with the
+   coverage reported per complex, so the gate cannot again measure something other than recovery.
+
+Until that exists, the honest statement is: **co-dependency clustering was tried once, the test as
+designed could not evaluate it, and the question is open.**
