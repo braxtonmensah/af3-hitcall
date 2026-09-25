@@ -8,9 +8,14 @@
 # the same time even if some ligands are slower. Re-running is safe and resumes: a job that already
 # has an affinity result is skipped, so a walltime kill costs one chunk, not the shard.
 #
+# Partition is h100-single, NOT the v100 partition. Quartz has both (h100-single: g[39-88],
+# v100: g[1-24]). H100 is Hopper (sm_90) with native bfloat16, which is what Boltz-2 wants, and is
+# supported by the torch that `pip install boltz` pulls. The V100s are Volta (sm_70): no hardware
+# bf16, and dropped entirely by CUDA 13, so that torch has no kernels for them at all. Choosing the
+# H100 partition removes both problems instead of working around them.
 #SBATCH --job-name=af3screen
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:v100:1
+#SBATCH --partition=h100-single
+#SBATCH --gres=gpu:h100:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=12:00:00
@@ -35,8 +40,8 @@ echo "[$(date -u +%H:%M:%S)] shard $I of $N on $(hostname)"
 nvidia-smi --query-gpu=name,memory.total,compute_cap --format=csv,noheader
 
 # ---------------------------------------------------------------- precision probe
-# V100 is Volta (sm_70) and has NO bfloat16 in hardware. Boltz-2 reaches for bf16, so establish what
-# this card can actually do before burning a 12 hour allocation on it.
+# On H100 this should all pass. Kept because it costs one second and catches a partition mistake:
+# if a job lands on a V100 instead, bf16 will fail here rather than 8 hours in.
 python - <<'PY'
 import torch
 p = torch.cuda.get_device_properties(0)
