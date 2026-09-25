@@ -11,7 +11,7 @@ from Bio import Align
 from analysis_h1_h2_lib import LOCI, precedent_matrix_strict
 
 L = r"C:\Users\bmens\NQ_local\af3-hitcall"
-rng = np.random.default_rng(18)
+rng = np.random.default_rng(19 if os.environ.get("XL_DATA") == "DSS" else 18)
 CAND = [("MG_139", "MG_423"), ("MG_098", "MG_099"), ("MG_014", "MG_015"), ("MG_411", "MG_412"), ("MG_179", "MG_180"),
         ("MG_027", "MG_150"), ("MG_119", "MG_121"), ("MG_241", "MG_242"), ("MG_098", "MG_181"), ("MG_078", "MG_080"),
         ("MG_127", "MG_249"), ("MG_001", "MG_419"), ("MG_409", "MG_410"), ("MG_098", "MG_179")]
@@ -31,7 +31,27 @@ for line in open(os.path.join(L, "xlms2020", "Full_database_combined.fasta")):
         mpnseq[cur] += line.strip()
 
 acc = lambda s: str(s).split(";")[0].split("|")[-1]
-X = pd.read_csv(os.path.join(L, "xlms2020", "Myco_InCell_DSSO_dataset_5link_5PPI_Links_xiFDR1.2.30.59dev.csv"), index_col=False, low_memory=False)
+# POST HOC option (XLVAL Amendment 2, after results): the crosslink study's FASTA has corrupted residues in some
+# entries (e.g. "K(a"); XL_SEQ=uniprot swaps in current UniProt sequences for M. pneumoniae proteins.
+if os.environ.get("XL_SEQ") == "uniprot":
+    cache = os.path.join(L, "verify", "mpn_uniprot_seqs.json")
+    if not os.path.exists(cache):
+        import requests
+        import re as _re
+        got, accs = {}, sorted(a for a in mpnseq if _re.fullmatch(r"[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9][A-Z][A-Z0-9]{2}[0-9]", a))
+        for k in range(0, len(accs), 100):
+            t = requests.get("https://rest.uniprot.org/uniprotkb/accessions", params={"accessions": ",".join(accs[k:k + 100]), "format": "fasta"}, timeout=120).text
+            cur2 = None
+            for line in t.splitlines():
+                if line.startswith(">"):
+                    cur2 = line.split("|")[1]; got[cur2] = ""
+                elif cur2:
+                    got[cur2] += line.strip()
+        json.dump(got, open(cache, "w"))
+    mpnseq.update(json.load(open(cache)))
+XL = os.environ.get("XL_DATA", "DSSO")  # PREREG_XLDSS: "DSS" reads the independent DSS dataset (PXD017695)
+XDIR = os.path.join(L, "xlms2020" if XL == "DSSO" else "xlms2020_dss")
+X = pd.read_csv(os.path.join(XDIR, f"Myco_InCell_{XL}_dataset_5link_5PPI_Links_xiFDR1.2.30.59dev.csv"), index_col=False, low_memory=False)
 X = X[X.isTT & ~X.isDecoy & (X.fdr <= 0.05)].copy()
 X["a"], X["b"] = X.Protein1.map(acc), X.Protein2.map(acc)
 X["ga"], X["gb"] = X.a.map(p2g), X.b.map(p2g)
@@ -40,7 +60,7 @@ X = X[X.ga.notna() & X.gb.notna() & (X.ga != X.gb)]
 # many proteins (different start sites), so each link's site is recomputed by locating its peptides in the
 # sequence: site = peptide position + link position within the peptide. Links whose peptides cannot be
 # located are dropped and counted.
-PP = pd.read_csv(os.path.join(L, "xlms2020", "Myco_InCell_DSSO_dataset_5link_5PPI_PeptidePairs_xiFDR1.2.30.59dev.csv"), index_col=False, low_memory=False)
+PP = pd.read_csv(os.path.join(XDIR, f"Myco_InCell_{XL}_dataset_5link_5PPI_PeptidePairs_xiFDR1.2.30.59dev.csv"), index_col=False, low_memory=False)
 PP = PP[PP.isTT & ~PP.isDecoy].rename(columns={"link id": "link_id"})
 
 
@@ -153,4 +173,5 @@ if __name__ == "__main__":
     for x in res["candidates"]:
         print(x["pair"], {k: x.get(k) for k in ("S0", "n_links", "dropped", "n_models", "satisfied", "null_p95", "supported", "min_dist_per_link")})
     print("controls:", res["control_summary"], "discriminates:", res["test_discriminates"])
-    json.dump(res, open("results_xlval.json", "w"), indent=1, default=lambda o: o if not isinstance(o, (np.integer, np.floating)) else o.item())
+    outname = "results_xldss.json" if XL == "DSS" else ("results_xlval_uniprotseq.json" if os.environ.get("XL_SEQ") == "uniprot" else "results_xlval.json")
+    json.dump(res, open(outname, "w"), indent=1, default=lambda o: o if not isinstance(o, (np.integer, np.floating)) else o.item())
