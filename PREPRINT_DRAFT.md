@@ -35,8 +35,39 @@ closest human relative.
 
 ## Introduction
 
-*(To write: AlphaFold and complex prediction; genome-scale screens; the triage problem; that reported
-benchmark numbers are aggregate; what a prospective test adds.)*
+Accurate structure prediction has moved from single chains to complexes, and from individual targets to
+whole proteomes. Pooled screens now evaluate every possible protein pair in an organism, tens or hundreds
+of thousands of predictions at a time, and report ranked lists of candidate interactions. The bottleneck
+has moved accordingly. It is no longer generating hypotheses, it is deciding which of them is worth an
+experiment.
+
+That decision rests on the confidence scores the models emit, and on benchmark numbers reported as a
+single figure of merit. A screen that reports AUROC 0.81 against a reference interaction set invites the
+reading that any given confident prediction has a correspondingly good chance of being real. This
+reading is what a triage decision actually depends on, and it is not what the number measures.
+
+The difficulty is that the evaluated population is not homogeneous. Some protein pairs already have a
+solved co-complex, often one present in the model's training data. Others have never been solved in
+complex by any method. These are not equally hard, and they are not equally interesting. A screen's
+purpose is to say something about the second class, because the first class is already known. An
+aggregate score computed over both is dominated by whichever class is larger, and tells the user little
+about the predictions they would actually act on.
+
+Separating the two classes retrospectively runs into circularity. Any pair used to measure accuracy must
+have been solved to serve as ground truth, so the never-solved class is, by construction, the class for
+which no contemporaneous ground truth exists. The natural resolution is to wait. Predictions made and
+published before a structure existed can be scored against that structure once it appears, and the
+ordering of events is externally verifiable from deposition dates rather than asserted by the analyst.
+
+Here we take that approach. We first show that the aggregate accuracy of a genome-wide screen averages
+two populations that differ substantially, and that the split reproduces across three organisms, three
+prediction systems and two independent notions of ground truth. We then ask the question that matters for
+triage, which is not how well confidence ranks all pairs but how often a confident prediction about a
+never-solved pair turns out to be correct. Using models frozen before the answers existed, we find that
+it is usually correct, and that what the screens miss has a specific and structural explanation rather
+than a scoring one. Finally we apply the result prospectively, and describe an essential ribonuclease
+complex in *Mycoplasma* that the screen proposed and that five independent lines of published evidence
+support.
 
 ## Results
 
@@ -102,9 +133,65 @@ self-association from ipTM 0.81 to 0.50, consistent with a structural subunit.
 
 ## Discussion
 
-*(To write: recall not precision; implications for screen design and for benchmark reporting; the
-interface as an antibacterial target and why interface-directed beats active-site given CPSF73;
-limitations.)*
+The central result is a reframing. On never-solved pairs, a genome-wide screen looks weak by AUROC, 0.71
+against STRING and 0.57 against crosslinks, and that weakness is easy to read as unreliability. It is
+not. When the same screen is confident about such a pair, it is right about the interface 81% of the time
+in human and 89% in yeast, against 2% for low-confidence predictions. The deficit is in recall, not
+precision. Most real interactions never receive a confident score, but the confident scores that are
+issued are trustworthy.
+
+This distinction changes how a screen should be used. Ranking metrics reward recovering as many true
+positives as possible, which is the right objective when the output is a ranked list to be read in full.
+It is the wrong objective when the output is a shortlist for experiments, where the cost of a false
+positive is a wasted assay and the cost of a false negative is an opportunity that was never visible in
+the first place. Treated as a precision instrument with an accepted low recall, a confident never-solved
+prediction is a reasonable basis for committing bench time. Treated as a recall instrument, the same
+screen looks disappointing and its most useful output gets discounted.
+
+It also changes how these systems should be benchmarked. Reporting one accuracy figure over a mixed
+population overstates performance on the class users care about and understates the precision available
+within it. Both errors point the same way, toward misplaced confidence in aggregate numbers. We would
+argue for stratifying by structural precedent as a default in this literature, because the split we find
+is large, it is consistent across systems, and it is invisible in the pooled statistic.
+
+What the screens miss has a structural explanation rather than a scoring one. Missed interactions have
+roughly one third the interface area of recovered ones, 30 versus 85 residue-pair contacts, come from
+larger assemblies, and are substantially more likely to have their interface also contacting a third
+chain. These are non-autonomous contacts, interfaces that do not form in isolation because they are
+stabilised by the rest of the assembly. Asking a pairwise predictor about them is close to ill-posed: the
+question presupposes a two-body complex that does not independently exist. Consistent with that reading,
+six separate attempts to recover the misses from information already in the output all failed, including
+pool composition, shared partners, interface-restricted confidence scores, trunk contact probabilities
+and sample reproducibility. The information is not being discarded by the scoring function, it is absent
+from a pairwise calculation. That suggests the productive direction is assembly-aware prediction rather
+than better post-hoc rescoring of pairwise output.
+
+The *Mycoplasma* RNase J complex illustrates what the precision result licenses in practice. The screen
+placed the pair in the top 0.1% of 113,050 candidates, and every independent line we could find agrees:
+a dedicated prediction reaches ipTM 0.84 and satisfies all six in-cell crosslinks across all five
+samples, whereas the heterodimer alone leaves three at 51 to 63 A; crosslinks from two different
+chemistries identify the same residue pairs; published SEC-MS puts both proteins at 297.8 kDa, which
+excludes a 1:1 complex and fits a 2:2; and both subunits are essential in *M. pneumoniae*. The
+architecture is a 2:2 heterotetramer in which one subunit has kept the fold and lost the chemistry,
+having lost all four catalytic residues while RNase J retains all four. The natural interpretation is a
+structural rather than catalytic subunit, supported by the observation that removing the partner drops
+RNase J self-association from ipTM 0.81 to 0.50.
+
+For drug discovery this points away from the obvious target. The active site is the conventional place to
+aim, but the closest human relative, CPSF73, retains three of four catalytic residues, so active-site
+chemistry is a selectivity liability. The interface is only 24.6% identical to CPSF73 over the
+corresponding region, which inverts the usual ordering: the protein-protein interface, normally the
+harder target, is here the more selective one. Whether it is druggable is an open question that this work
+does not answer, and protein-protein interfaces are among the least tractable targets for conventional
+small molecules.
+
+Several limits bound these conclusions and are worth stating alongside them. Correctness can only be
+measured on pairs that someone later solved, and solvable complexes may simply be easier ones, so 81% and
+89% are estimates for a population that is not quite the population of interest. Many recent depositions
+are cryo-EM and some were built with AlphaFold assistance; the X-ray-only subset gives 53% on 19 cases,
+which we take as the conservative bound. The RNase J complex rests on computation plus published
+orthogonal data, and no new experiment was performed here. And MG423 is non-essential in *M. genitalium*
+even though MPN621 is essential in *M. pneumoniae*, so the target argument applies to the latter only.
 
 ## Limitations
 
@@ -131,9 +218,65 @@ limitations.)*
 
 ## Methods
 
-*(To write from the scripts, which are the authoritative record: `analysis_future.py`,
-`analysis_future_yeast.py`, `verify_v1.py`, `verify_v4.py`, `analysis_coop.py`, `analysis_xlval.py`,
-`analysis_tetra.py`, `rnasej/score_afj.py`, `rnasej/interface_map.py`, `rnasej/sec_coelution.py`.)*
+The scripts named below are the authoritative record; this section describes what they do. Each
+pre-registration file (`PREREG_*.md`) was committed before the corresponding data were joined, and
+`git log` preserves that ordering.
+
+**Data.** The *M. genitalium* pooled screen and its scores are from Todor et al. 2026 (Zenodo 15499631).
+Frozen 2021 predictions are the Burke et al. 2023 human set and the Humphreys et al. 2021 yeast set
+(ModelArchive ma-bak-cepc). In-cell crosslinks are O'Reilly et al. 2020 (PRIDE PXD017711 and PXD017695,
+CC0). Essentiality and SEC-MS are from Lluch-Senar et al. 2015. Reference structures, sequence mappings
+and annotations are from RCSB PDB, SIFTS and UniProt. All are public.
+
+**Reproducing the screen and stratifying it.** `analysis_h1_h2.py` and `analysis_h3.py` recompute
+size-corrected ipTM and score it against STRING experimental evidence at two thresholds, and against the
+crosslink set. Positives are split by whether a co-complex for that pair existed in the PDB before the
+predictor's training cutoff, giving the solved and never-solved strata. `analysis_time.py` performs the
+time split that distinguishes memorisation from generalisation, scoring complexes first solved after the
+cutoff separately. `analysis_bsu.py` and `analysis_human.py` repeat the stratification in *B. subtilis*
+with AlphaFold-Multimer and in human HuRI pairs with AlphaFold2.
+
+**The prospective test.** `analysis_future.py` and `analysis_future_yeast.py` implement PREREG_FUTURE.
+Step A extracts direct contacts and experimental interfaces from the mmCIF of each entry released in
+2022-2026, cached per entry. Step B computes anticipation odds ratios for whether a confident 2021
+prediction was subsequently solved at all, and solved with direct contact. Step C scores interface
+correctness of the frozen models against the later structure, with F1 >= 0.5 as the registered criterion.
+Because the models were published before the reference structures were deposited, the ordering is
+verifiable from deposition dates rather than asserted.
+
+**Attacks.** Homologous precedent is removed in `bsu_precedent.py` and `pdb_precedent.py` by excluding
+any pair with a pre-2022 homologous co-complex. The shuffled null relocates interfaces to random
+positions of matched size. Non-independence is handled by an entry-level cluster bootstrap.
+`verify_v1.py` and `verify_v4.py` implement PREREG_VERIFY, recomputing residue-pair Fnat directly from
+coordinates for both models and SIFTS-mapped reference structures, in separate code from the stored
+interface sets used in Step C, and sweeping a grid of distance cutoffs (6, 8, 10 A) crossed with F1
+thresholds (0.3, 0.5, 0.7). Circularity from AlphaFold-assisted model building is addressed by restricting
+to entries with no in-silico starting model, and separately to X-ray-only entries.
+
+**Negative results.** Eight registered hypotheses returned negative or inconclusive and are reported
+rather than dropped: per-protein normalisation and interface PAE (`posthoc.py`), pool context
+(`analysis_context.py`), structure-level rescue (`analysis_struct.py`, `rescue/score_rescue.py`),
+disease-variant enrichment twice (`analysis_clinvar.py`, `analysis_clinvar2.py`), literature labels
+(`analysis_litjev.py`), rigid composition (`analysis_compose.py`) and pooled shared partners
+(`analysis_coop.py`).
+
+**RNase J.** `rnasej/score_afj.py` implements PREREG_AFJ, scoring dedicated AlphaFold Server predictions
+of (RNase J)2(MPN621)2 against the four registered outcomes, with a length-matched PtsI decoy as the
+specificity control. Crosslink satisfaction is evaluated as Ca-Ca distance below 30 A, across all five
+returned samples. Note that AF Server orders chains by entity, all copies of entity 1 before entity 2,
+which the scorer accounts for. `analysis_xlval.py` resolves crosslink sites against current UniProt
+sequences, because the published crosslink FASTA contains corrupted residues; this raised usable links
+from 327 to 580. `analysis_tetra.py` implements PREREG_TETRA, placing two copies of the heterodimer on
+solved RNase J tetramer templates to test whether the far crosslinks are satisfied across copies rather
+than within one. Interface contacts, catalytic-residue retention and the CPSF73 comparison are computed
+in `rnasej/interface_map.py`; the SEC-MS stoichiometry argument is in `rnasej/sec_coelution.py`.
+
+**Statistics.** `metrics.py` provides tie-aware weighted AUROC and AUPRC and the node bootstrap used
+throughout. The bootstrap resamples proteins rather than pairs, so pair (i, j) carries weight c_i * c_j
+where c is each protein's multiplicity in the resample; this respects the dependence induced by a protein
+appearing in many pairs. Scores do not change between replicates, so each score vector is sorted once and
+each replicate is a bincount over tie groups. Confidence intervals on differences between strata are
+Bonferroni-corrected where multiple comparisons are reported.
 
 ## Data and code availability
 
