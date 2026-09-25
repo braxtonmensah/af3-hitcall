@@ -88,3 +88,56 @@ any result.
 - DepMap is cancer cell lines; assemblies with no fitness phenotype in culture are invisible.
 - CORUM is itself incomplete, so an "unannotated" cluster may be annotated elsewhere. A2 is therefore
   a candidate list, and its false-positive rate against the wider literature is unmeasured here.
+
+
+---
+
+# OUTCOME, recorded 2026-09-25: A0 FAILED. The route is closed, as this file committed.
+
+**A0 = 27.6% (540 of 1,955 CORUM complexes majority-recovered), against a 35% bar.** It fails on the
+absolute criterion at every resolution tested: 27.6% at 0.5, 27.5% at 1.0, 23.6% at 2.0, 22.7% at 4.0.
+This is not a tuning artifact. Universe 13,437 genes, 62,332 edges, real CORUM 5.0, coverage-aware
+denominator with median coverage 3 subunits per complex. The gate was fair this time and the method
+did not clear it.
+
+**Per the rule written above, the co-dependency-clustering route is closed. There is no third
+pre-registration.**
+
+## The ratio criterion was also mis-designed, and that is recorded rather than quietly dropped
+
+A0 on the degree-preserving null came out at **51.9%**, higher than the real graph. That is not the
+null beating the method; it is a degenerate null. Louvain on the shuffled graph returns **one
+community of 4,777 nodes, 35.6% of the graph**, with the next largest being size 3. A single blob
+trivially contains a majority of every complex's subunits. So the "3x the null" criterion could never
+have been informative, and it was my specification error for the second time in this pair of
+pre-registrations. It changes nothing here because the absolute bar failed independently.
+
+## Why it failed, and this part is worth keeping
+
+The A2 clusters show the reason plainly. They are **pathways, not physical assemblies**:
+
+- `LZTR1 NF1 RASA2 SPRED1 SPRED2` - negative regulators of RAS. A real, tight functional module whose
+  members largely do not touch each other.
+- `CMAS GNE NANS SLC35A1` - sialic acid biosynthesis. Enzymes acting in series, not a complex.
+- `ASNS ATF4 EIF2AK4 GCN1` - the integrated stress response.
+- `RAB18 RAB3GAP1 RAB3GAP2 TBC1D20` - the Warburg Micro syndrome module.
+
+**Co-dependency partitions the genome into functional modules, and a functional module is usually a
+pathway rather than a complex.** That is exactly why it cannot serve as a "what to fold together"
+oracle: folding a pathway together predicts nothing. A0 is a test of *physical complex* recovery, and
+the instrument measures something adjacent to but different from that.
+
+The A4 confound also came in against the A2 list: the median number of Burke S1 appearances for an A2
+cluster member is **1**. These proteins are unannotated in large part because few people have studied
+them, not because a new assembly has been found.
+
+## What this failure does for BRIDGE, which is the useful part
+
+It sharpens why `PREREG_BRIDGE` is designed the way it is. BRIDGE does not partition anything. It asks
+a **local** question: given a pair that already has independent physical support and a failed pairwise
+model, which single gene is most co-dependent with **both**? That question stays inside the
+neighbourhood of a known-real physical interaction, so it does not sweep in the pathway members that
+sink a global partition. The two results are consistent: co-dependency is informative about physical
+assembly *locally, conditioned on a real pair*, and not informative *globally, unconditioned*.
+
+BRIDGE remains open and its jobs remain built. This file closes only the clustering route.

@@ -1,0 +1,55 @@
+{
+ "universe": 13437,
+ "edges": 62332,
+ "corum_complexes": 5064,
+ "denominator": 1955,
+ "median_coverage": 3.0,
+ "resolutions": {
+  "0.5": {
+   "modularity": 0.6998,
+   "n_comm": 8840,
+   "A0": 0.2762,
+   "A0_recovered": 540,
+   "median_coverage": 3.0,
+   "sizes_3_40": 90
+  },
+  "1.0": {
+   "modularity": 0.4492,
+   "n_comm": 8849,
+   "A0": 0.2752,
+   "A0_recovered": 538,
+   "median_coverage": 3.0,
+   "sizes_3_40": 98
+  },
+  "2.0": {
+   "modularity": 0.2423,
+   "n_comm": 8992,
+   "A0": 0.2358,
+   "A0_recovered": 461,
+   "median_coverage": 3.0,
+   "sizes_3_40": 132
+  },
+  "4.0": {
+   "modularity": 0.2052,
+   "n_comm": 9138,
+   "A0": 0.2271,
+   "A0_recovered": 444,
+   "median_coverage": 3.0,
+   "sizes_3_40": 135
+  }
+ },
+ "chosen_resolution": 0.5,
+ "modularity": 0.6998,
+ "A0": 0.2762,
+ "A0_recovered": 540,
+ "A0_null": 0.5187,
+ "A0_null_recovered": 1014,
+ "A0_ratio_to_null": 0.53,
+ "A0_gate_passes": false,
+ "A1_purity_ge_0.5": 33,
+ "A1_clusters": 77,
+ "A2_n": 47,
+ "A3_null_A2": 0,
+ "A2_exceeds_null": true,
+ "A4_median_studied_A2": 1.0
+}
