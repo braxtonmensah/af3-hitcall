@@ -8,3 +8,8 @@ cleanroom/library_approved.smi
 
 # regenerable transfer bundle, see cleanroom/quartz/PUSH.md
 cleanroom/af3screen_bundle.tar.gz
+
+# Funding applications, odds estimates and unsent outreach are strategy documents, not science.
+# A reviewer should not be able to read our estimate of their acceptance rate, or see which other
+# funders we approached. Kept on disk, never in the public repo.
+outreach/
