@@ -2,3 +2,7 @@
 # with "bad interpreter: /bin/bash^M", so keep them LF in the working copy on Windows too.
 *.sh        text eol=lf
 *.slurm     text eol=lf
+
+# job YAMLs are consumed on Linux; a CR inside the msa: path breaks the run
+*.yaml text eol=lf
+*.a3m  text eol=lf

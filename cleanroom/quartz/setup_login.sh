@@ -78,6 +78,10 @@ mkdir -p .warm_out
 boltz predict .warm.yaml --out_dir .warm_out --accelerator cpu --diffusion_samples 1 \
     --sampling_steps 10 --cache "$BOLTZ_CACHE" 2>&1 | tail -15 || true
 
+echo "== normalising line endings"
+# a bundle built on Windows can carry CRLF, and a stray CR ends up inside the msa: path
+if [ -d "$BASE/yaml" ]; then sed -i 's/$//' "$BASE/yaml"/*.yaml; echo "  stripped CR from $(ls "$BASE/yaml"/*.yaml | wc -l) job files"; fi
+
 echo "== pointing the job YAMLs at this account's MSA directory"
 # The YAMLs ship with a placeholder MSA path. Rewrite it from $HOME rather than guessing IU's home
 # convention, so this is correct whatever the account's real path turns out to be.

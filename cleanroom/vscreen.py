@@ -160,7 +160,10 @@ def write_jobs(limit, decoys, offtarget, msa_prefix):
             # to human CPSF73, while the active site keeps 3 of 4 catalytic residues
             contacts = ", ".join("[A, " + str(p) + "]" for p in pocket[:20])
             y += ["constraints:", "  - pocket:", "      binder: L", "      contacts: [" + contacts + "]"]
-        open(os.path.join(YDIR, tag + cid + ".yaml"), "w").write("\n".join(y) + "\n")
+        # newline="\n" is not cosmetic: these are consumed on Linux, and on Windows the default
+        # translates to CRLF, which leaves a carriage return inside the msa: path when parsed
+        with open(os.path.join(YDIR, tag + cid + ".yaml"), "w", newline="\n") as fh:
+            fh.write("\n".join(y) + "\n")
     print("wrote", len(chosen), "jobs to", YDIR, "| target:", acc, "| pocket residues:", len(pocket))
 
 
