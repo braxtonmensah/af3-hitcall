@@ -19,6 +19,16 @@ interactions (AUROC 0.57-0.71 here) is therefore a recall problem, not a precisi
 | COOP-H | Real structures of AF's hits vs misses | Misses: 27% of interface touches a third chain (hits 11%), from larger assemblies (10.5 vs 6 entities), with pair contacts one third the size (30 vs 85) |
 | Nulls that shape the claim | M. genitalium pooled AF3 | Pool context, shared partners, ipSAE/LIS, trunk contact probability, and sample reproducibility do not recover the misses: the information is not in the output |
 
+## Verification (PREREG_VERIFY, all pre-registered, 2026-09-24)
+
+| Threat | Check | Result |
+|---|---|---|
+| Homologous precedent makes it easy | Pairs with no pre-2022 homologous co-complex (RCSB, E <= 1e-3) | Human 81% [0.73, 0.88], n = 114; yeast 92% [0.84, 0.98], n = 61 |
+| Correctness is trivially easy | Same interfaces shifted to random positions | 2% (human), 1% (yeast) |
+| Pairs from one structure are not independent | Entry-level cluster bootstrap | CIs unchanged |
+| The metric is flattering or buggy | Residue-pair Fnat recomputed from raw coordinates, separate code | 80% human, 87-90% yeast; 96-98% agreement |
+| Threshold choice | 6 / 8 / 10 A x F1 0.3 / 0.5 / 0.7 | 57% (strictest) to 88% (loosest) |
+
 ## Why it matters
 
 1. **For labs.** A confident never-solved hit is worth a bench experiment. A low score says nothing about
