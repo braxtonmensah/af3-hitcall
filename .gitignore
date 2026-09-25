@@ -2,3 +2,6 @@ data/
 *.xlsx
 *.zip
 __pycache__/
+cleanroom/vscreen_yaml/
+cleanroom/vscreen_out/
+cleanroom/library_approved.smi
