@@ -1,0 +1,807 @@
+{
+ "candidates": [
+  {
+   "pair": "MG_139-MG_423",
+   "S0": 0.647977180554153,
+   "prec": false,
+   "n_links": 4,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.75,
+   "median_dist": 19.203041076660156,
+   "min_dist_per_link": [
+    21.3,
+    15.7,
+    56.3,
+    16.3
+   ],
+   "null_mean": 0.09290000000000001,
+   "null_p95": 0.35,
+   "supported": true,
+   "links": [
+    [
+     120,
+     502
+    ],
+    [
+     120,
+     546
+    ],
+    [
+     228,
+     224
+    ],
+    [
+     409,
+     322
+    ]
+   ]
+  },
+  {
+   "pair": "MG_098-MG_099",
+   "S0": 0.612175341384668,
+   "prec": false,
+   "n_links": 3,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 1.0,
+   "median_dist": 12.59798526763916,
+   "min_dist_per_link": [
+    22.2,
+    12.3,
+    10.2
+   ],
+   "null_mean": 0.0948,
+   "null_p95": 0.3333333333333333,
+   "supported": true,
+   "links": [
+    [
+     385,
+     368
+    ],
+    [
+     458,
+     74
+    ],
+    [
+     462,
+     74
+    ]
+   ]
+  },
+  {
+   "pair": "MG_014-MG_015",
+   "S0": 0.602620086115184,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 1.0,
+   "median_dist": 10.81356143951416,
+   "min_dist_per_link": [
+    10.8
+   ],
+   "null_mean": 0.175,
+   "null_p95": 1.0,
+   "supported": false,
+   "links": [
+    [
+     246,
+     105
+    ]
+   ]
+  },
+  {
+   "pair": "MG_411-MG_412",
+   "S0": 0.5007110415977,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 5
+  },
+  {
+   "pair": "MG_179-MG_180",
+   "S0": 0.497777161105703,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 10
+  },
+  {
+   "pair": "MG_027-MG_150",
+   "S0": 0.480587803623016,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 5
+  },
+  {
+   "pair": "MG_119-MG_121",
+   "S0": 0.452394396554558,
+   "prec": false,
+   "n_links": 2,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 1.0,
+   "median_dist": 18.57732582092285,
+   "min_dist_per_link": [
+    14.8,
+    19.0
+   ],
+   "null_mean": 0.2572,
+   "null_p95": 1.0,
+   "supported": false,
+   "links": [
+    [
+     407,
+     299
+    ],
+    [
+     407,
+     303
+    ]
+   ]
+  },
+  {
+   "pair": "MG_241-MG_242",
+   "S0": 0.43819908593971,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 1.0,
+   "median_dist": 15.286467552185059,
+   "min_dist_per_link": [
+    14.3
+   ],
+   "null_mean": 0.09779999999999998,
+   "null_p95": 1.0,
+   "supported": false,
+   "links": [
+    [
+     35,
+     332
+    ]
+   ]
+  },
+  {
+   "pair": "MG_098-MG_181",
+   "S0": 0.435363908305813,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 10
+  },
+  {
+   "pair": "MG_078-MG_080",
+   "S0": 0.373851511146074,
+   "prec": false,
+   "n_links": 2,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 1.0,
+   "median_dist": 13.851263046264648,
+   "min_dist_per_link": [
+    9.1,
+    15.9
+   ],
+   "null_mean": 0.0854,
+   "null_p95": 0.5,
+   "supported": true,
+   "links": [
+    [
+     21,
+     674
+    ],
+    [
+     266,
+     58
+    ]
+   ]
+  },
+  {
+   "pair": "MG_127-MG_249",
+   "S0": 0.266982981910295,
+   "prec": false,
+   "n_links": 2,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.8,
+   "median_dist": 17.148296356201172,
+   "min_dist_per_link": [
+    16.7,
+    13.9
+   ],
+   "null_mean": 0.0441,
+   "null_p95": 0.4,
+   "supported": true,
+   "links": [
+    [
+     130,
+     464
+    ],
+    [
+     130,
+     471
+    ]
+   ]
+  },
+  {
+   "pair": "MG_001-MG_419",
+   "S0": 0.240520765401517,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 5
+  },
+  {
+   "pair": "MG_409-MG_410",
+   "S0": 0.21703220369858,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 10
+  },
+  {
+   "pair": "MG_098-MG_179",
+   "S0": 0.207743951253456,
+   "prec": false,
+   "n_links": 0,
+   "dropped": 0,
+   "n_models": 5
+  }
+ ],
+ "controls": [
+  {
+   "pair": "MG_301-MG_324",
+   "S0": -0.00126024944662541,
+   "prec": false,
+   "n_links": 4,
+   "dropped": 0,
+   "n_models": 15,
+   "satisfied": 0.0,
+   "median_dist": 101.53387451171875,
+   "min_dist_per_link": [
+    45.3,
+    46.4,
+    43.5,
+    40.6
+   ],
+   "null_mean": 0.0073,
+   "null_p95": 0.03333333333333333,
+   "supported": false,
+   "links": [
+    [
+     129,
+     1
+    ],
+    [
+     143,
+     1
+    ],
+    [
+     268,
+     1
+    ],
+    [
+     336,
+     1
+    ]
+   ]
+  },
+  {
+   "pair": "MG_271-MG_273",
+   "S0": 0.00116107713373703,
+   "prec": false,
+   "n_links": 4,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.05,
+   "median_dist": 90.24039459228516,
+   "min_dist_per_link": [
+    76.9,
+    47.6,
+    66.9,
+    16.4
+   ],
+   "null_mean": 0.004849999999999999,
+   "null_p95": 0.05,
+   "supported": false,
+   "links": [
+    [
+     126,
+     231
+    ],
+    [
+     131,
+     254
+    ],
+    [
+     228,
+     326
+    ],
+    [
+     450,
+     49
+    ]
+   ]
+  },
+  {
+   "pair": "MG_238-MG_301",
+   "S0": -0.000679057633282104,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 110.3658218383789,
+   "min_dist_per_link": [
+    96.9
+   ],
+   "null_mean": 0.0,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     351,
+     83
+    ]
+   ]
+  },
+  {
+   "pair": "MG_230-MG_238",
+   "S0": 2.4930835584544963e-05,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.0,
+   "median_dist": 85.49415588378906,
+   "min_dist_per_link": [
+    42.1
+   ],
+   "null_mean": 0.0238,
+   "null_p95": 0.2,
+   "supported": false,
+   "links": [
+    [
+     15,
+     351
+    ]
+   ]
+  },
+  {
+   "pair": "MG_124-MG_407",
+   "S0": 0.000463936557382832,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.0,
+   "median_dist": 131.72763061523438,
+   "min_dist_per_link": [
+    56.3
+   ],
+   "null_mean": 0.0,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     9,
+     349
+    ]
+   ]
+  },
+  {
+   "pair": "MG_078-MG_321",
+   "S0": 0.0044501897950576,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 52.404232025146484,
+   "min_dist_per_link": [
+    32.2
+   ],
+   "null_mean": 0.009200000000000002,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     120,
+     534
+    ]
+   ]
+  },
+  {
+   "pair": "MG_020-MG_312",
+   "S0": -0.00180027986824899,
+   "prec": false,
+   "n_links": 2,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 97.71928405761719,
+   "min_dist_per_link": [
+    73.9,
+    64.0
+   ],
+   "null_mean": 0.0156,
+   "null_p95": 0.1,
+   "supported": false,
+   "links": [
+    [
+     1,
+     976
+    ],
+    [
+     171,
+     966
+    ]
+   ]
+  },
+  {
+   "pair": "MG_049-MG_300",
+   "S0": 0.00236712640255528,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 89.02808380126953,
+   "min_dist_per_link": [
+    58.2
+   ],
+   "null_mean": 0.07479999999999999,
+   "null_p95": 0.4,
+   "supported": false,
+   "links": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "pair": "MG_050-MG_391",
+   "S0": 0.000539224125242918,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 120.48675537109375,
+   "min_dist_per_link": [
+    85.9
+   ],
+   "null_mean": 0.0004,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     217,
+     446
+    ]
+   ]
+  },
+  {
+   "pair": "MG_305-MG_324",
+   "S0": -0.00146233778761609,
+   "prec": false,
+   "n_links": 2,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.0,
+   "median_dist": 116.47638702392578,
+   "min_dist_per_link": [
+    67.1,
+    77.9
+   ],
+   "null_mean": 0.007,
+   "null_p95": 0.05,
+   "supported": false,
+   "links": [
+    [
+     47,
+     1
+    ],
+    [
+     243,
+     1
+    ]
+   ]
+  },
+  {
+   "pair": "MG_140-MG_178",
+   "S0": -0.000913305442659884,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 60.984230041503906,
+   "min_dist_per_link": [
+    51.4
+   ],
+   "null_mean": 0.0004,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     142,
+     39
+    ]
+   ]
+  },
+  {
+   "pair": "MG_040-MG_078",
+   "S0": 0.0012377265480325,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.2,
+   "median_dist": 67.05705261230469,
+   "min_dist_per_link": [
+    17.3
+   ],
+   "null_mean": 0.0068000000000000005,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     166,
+     120
+    ]
+   ]
+  },
+  {
+   "pair": "MG_391-MG_451",
+   "S0": -0.00338929141004443,
+   "prec": false,
+   "n_links": 5,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 103.37657928466797,
+   "min_dist_per_link": [
+    74.3,
+    74.3,
+    99.1,
+    89.0,
+    72.6
+   ],
+   "null_mean": 8e-05,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     207,
+     52
+    ],
+    [
+     208,
+     52
+    ],
+    [
+     446,
+     10
+    ],
+    [
+     446,
+     41
+    ],
+    [
+     446,
+     57
+    ]
+   ]
+  },
+  {
+   "pair": "MG_305-MG_392",
+   "S0": 0.00744615985255268,
+   "prec": false,
+   "n_links": 3,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 65.06246185302734,
+   "min_dist_per_link": [
+    59.3,
+    51.4,
+    37.7
+   ],
+   "null_mean": 0.035,
+   "null_p95": 0.13333333333333333,
+   "supported": false,
+   "links": [
+    [
+     84,
+     434
+    ],
+    [
+     243,
+     352
+    ],
+    [
+     335,
+     14
+    ]
+   ]
+  },
+  {
+   "pair": "MG_214-MG_296",
+   "S0": 0.000309723289592743,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 59.909034729003906,
+   "min_dist_per_link": [
+    50.3
+   ],
+   "null_mean": 0.07440000000000001,
+   "null_p95": 0.2,
+   "supported": false,
+   "links": [
+    [
+     55,
+     121
+    ]
+   ]
+  },
+  {
+   "pair": "MG_301-MG_357",
+   "S0": -0.00453102532485004,
+   "prec": false,
+   "n_links": 4,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.0,
+   "median_dist": 103.628662109375,
+   "min_dist_per_link": [
+    47.7,
+    55.6,
+    53.5,
+    60.0
+   ],
+   "null_mean": 0.002,
+   "null_p95": 0.025,
+   "supported": false,
+   "links": [
+    [
+     129,
+     140
+    ],
+    [
+     129,
+     368
+    ],
+    [
+     179,
+     218
+    ],
+    [
+     219,
+     140
+    ]
+   ]
+  },
+  {
+   "pair": "MG_088-MG_481",
+   "S0": 0.00440080958123685,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.0,
+   "median_dist": 89.14588165283203,
+   "min_dist_per_link": [
+    81.7
+   ],
+   "null_mean": 0.0238,
+   "null_p95": 0.2,
+   "supported": false,
+   "links": [
+    [
+     148,
+     16
+    ]
+   ]
+  },
+  {
+   "pair": "MG_190-MG_299",
+   "S0": -0.001163592613768785,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.1,
+   "median_dist": 106.80021667480469,
+   "min_dist_per_link": [
+    26.4
+   ],
+   "null_mean": 0.0057,
+   "null_p95": 0.1,
+   "supported": false,
+   "links": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "pair": "MG_394-MG_407",
+   "S0": -0.00415012307136822,
+   "prec": false,
+   "n_links": 1,
+   "dropped": 0,
+   "n_models": 10,
+   "satisfied": 0.0,
+   "median_dist": 100.34346008300781,
+   "min_dist_per_link": [
+    65.7
+   ],
+   "null_mean": 0.0026,
+   "null_p95": 0.0,
+   "supported": false,
+   "links": [
+    [
+     240,
+     349
+    ]
+   ]
+  },
+  {
+   "pair": "MG_229-MG_305",
+   "S0": 0.0095572694252382,
+   "prec": false,
+   "n_links": 5,
+   "dropped": 0,
+   "n_models": 5,
+   "satisfied": 0.2,
+   "median_dist": 44.226070404052734,
+   "min_dist_per_link": [
+    16.6,
+    27.0,
+    38.5,
+    40.0,
+    44.2
+   ],
+   "null_mean": 0.09104000000000001,
+   "null_p95": 0.28,
+   "supported": false,
+   "links": [
+    [
+     197,
+     47
+    ],
+    [
+     197,
+     142
+    ],
+    [
+     197,
+     166
+    ],
+    [
+     197,
+     331
+    ],
+    [
+     300,
+     433
+    ]
+   ]
+  }
+ ],
+ "control_summary": {
+  "n": 20,
+  "supported": 0,
+  "mean_satisfied": 0.027500000000000004
+ },
+ "test_discriminates": true
+}
