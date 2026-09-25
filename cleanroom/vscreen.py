@@ -79,6 +79,30 @@ def seq(acc):
     return t.split("\n", 1)[1].replace("\n", "")
 
 
+# Ligand preparation. ChEMBL ships approved drugs as formulated: many are salts ("drug.HCl") or
+# mixtures, and a handful are tiny inorganics (lithium carbonate, urea). Boltz-2 expects one
+# covalent ligand, so a multi-component SMILES is at best ambiguous and at worst a crash. The same
+# rule is applied to the screen set and the decoy set, so the null stays a fair comparison.
+MIN_HEAVY, MAX_HEAVY = 6, 100
+
+
+def prep_ligand(smi):
+    """Desalt to the largest fragment and size-filter. Returns canonical SMILES, or None to reject."""
+    from rdkit import Chem, RDLogger
+    RDLogger.DisableLog("rdApp.*")
+    mol = Chem.MolFromSmiles(smi)
+    if mol is None:
+        return None
+    frags = Chem.GetMolFrags(mol, asMols=True, sanitizeFrags=True)
+    if not frags:
+        return None
+    mol = max(frags, key=lambda m: m.GetNumHeavyAtoms())
+    n = mol.GetNumHeavyAtoms()
+    if n < MIN_HEAVY or n > MAX_HEAVY:
+        return None
+    return Chem.MolToSmiles(mol)
+
+
 def pocket_residues():
     if not os.path.exists(IFACE_JSON):
         return []
@@ -91,26 +115,38 @@ def pocket_residues():
     return sorted(out)
 
 
-def write_jobs(limit, decoys, offtarget):
+def write_jobs(limit, decoys, offtarget, msa_prefix):
     os.makedirs(YDIR, exist_ok=True)
     acc = OFFTARGET_ACC if offtarget else TARGET_ACC
     prot = seq(acc)
     pocket = [] if offtarget else pocket_residues()
-    lib = [l.split(TAB) for l in open(LIB).read().splitlines() if TAB in l]
+    raw = [l.split(TAB) for l in open(LIB).read().splitlines() if TAB in l]
+    lib, rejected = [], 0
+    for smi, cid in raw:
+        clean = prep_ligand(smi)
+        if clean is None:
+            rejected += 1
+        else:
+            lib.append((clean, cid))
+    print("library:", len(raw), "->", len(lib), "usable (%d rejected as salt/mixture/size)" % rejected)
     if decoys:
+        # decoys must be disjoint from the screen set, or a compound scores in both arms and the
+        # null caps itself
         random.seed(25)
-        chosen = random.sample(lib, min(decoys, len(lib)))
+        pool = lib[limit:]
+        chosen = random.sample(pool, min(decoys, len(pool)))
         tag = "decoy_"
     else:
         chosen = lib[:limit]
         tag = "off_" if offtarget else ""
     for smi, cid in chosen:
-        msa = os.path.join(MSA_DIR, acc + ".a3m")
         y = ["version: 1", "sequences:",
              "  - protein:", "      id: A", "      sequence: " + prot]
-        if os.path.exists(msa):
-            # same protein for every ligand: one precomputed MSA, no MSA-server calls at run time
-            y += ["      msa: " + msa.replace("\\", "/")]
+        if os.path.exists(os.path.join(MSA_DIR, acc + ".a3m")):
+            # Same protein for every ligand: one precomputed MSA, no MSA-server calls at run time.
+            # The path written is where the MSA will live *on the pod*, not locally, and it is
+            # quoted because the local checkout sits under a directory containing spaces.
+            y += ['      msa: "' + msa_prefix.rstrip("/") + "/" + acc + '.a3m"']
         y += [
              "  - ligand:", "      id: L", "      smiles: '" + smi + "'",
              "properties:", "  - affinity:", "      binder: L"]
@@ -172,11 +208,13 @@ if __name__ == "__main__":
     ap.add_argument("--limit", type=int, default=400)
     ap.add_argument("--decoys", type=int, default=0, help="write N random-compound decoy jobs as a null")
     ap.add_argument("--offtarget", action="store_true", help="write jobs against human CPSF73 instead")
+    ap.add_argument("--msa-prefix", default="/workspace/screen/msa",
+                    help="directory holding the .a3m files on the machine that will run the jobs")
     a = ap.parse_args()
     if a.fetch:
         fetch_library()
     if a.write:
-        write_jobs(a.limit, a.decoys, a.offtarget)
+        write_jobs(a.limit, a.decoys, a.offtarget, a.msa_prefix)
     if a.rank:
         rank()
     if not any((a.fetch, a.write, a.rank)):
