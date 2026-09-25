@@ -95,9 +95,10 @@ Commits today, newest first: `b9a6223` (RNAP3 job + scorer + Amendment 1), `4e48
 `9900012` (PREREG_OMEGA), `d605b06` (PREREG_RNAP3), `5e231af` (HIGHER result), `edd50fd`
 (PREREG_HIGHER), `2a4c8f8` (PREREG_XLHUMAN).
 
-**Uncommitted and unreviewed:** `PREPRINT_DRAFT.md` (114 lines changed) and `README.md` (61 lines).
-These were edited during responses that were withheld, so nobody has seen what they say. **Read the
-diff before committing or pushing.**
+**Working tree is clean.** The `PREPRINT_DRAFT.md` and `README.md` edits made during withheld
+responses were committed as `9b76390`, "Qualify time-split and RNase J claims". Nobody has read that
+diff, so **review `git show 9b76390` before pushing**, since it touches claim wording in the two
+documents every funder will read.
 
 **XLHUMAN is abandoned.** `PREREG_XLHUMAN.md` is committed (`2a4c8f8`) and the human crosslink tables
 are downloaded to `NQ_local/af3-hitcall/xlhuman/`, but the analysis was halted by a safety classifier
