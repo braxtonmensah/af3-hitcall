@@ -45,6 +45,26 @@ tetramer (3ZQ4).
 | Heterotetramer on the 3ZQ4 template | **All 6 distinct links within 30 A in 5/5 AF3 samples** (far links 12.5-15 A across copies; random-lysine null 95th pct 0.33); 1-7 minor CA clashes. Copy placement used structural fit only, never the crosslinks |
 | Controls | 0/20 crosslinked low-confidence pairs pass the same test (both datasets) |
 
+**How many independent lines this is, stated exactly, because "five independent" overstates it.**
+The five *published* lines come from **three** studies, and two pairs of them share a study:
+
+| # | Line | Study |
+|---|---|---|
+| 1 | AF3 genome-wide pooled screen | Todor et al. 2026 |
+| 2 | In-cell crosslinks, DSSO | O'Reilly et al. 2020 |
+| 3 | In-cell crosslinks, DSS | O'Reilly et al. 2020, **same study**, second chemistry |
+| 4 | Transposon essentiality | Lluch-Senar et al. 2015 |
+| 5 | SEC-MS co-elution at 297.8 kDa | Lluch-Senar et al. 2015, **same study** |
+
+Lines 2 and 3 detect **the same residue pairs** (MG139 K120 to MG423 502 and 546), so the second
+chemistry rules out a crosslinker artefact rather than adding an independent observation. Lines 4 and
+5 come from one paper's two supplementary tables.
+
+So the accurate phrasing is **"five published lines from three independent studies"**, and that is
+what `STATE.md` and the outreach drafts now say. Three independent studies is still strong; claiming
+five independent lines was not supportable and this table is the reason.
+
+
 Model: `rnaseJ_MG139_MG423_heterotetramer_CA.pdb` (MG139 = chains A, C; MG423 = chains B, D; CA only).
 
 ## Essentiality and co-elution from published data (2026-09-25)

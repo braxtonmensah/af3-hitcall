@@ -31,7 +31,7 @@ Repo is public: https://github.com/braxtonmensah/af3-hitcall
 - The 81% is **conditional on later being solved**, which is 2.7% of confident calls. It is not the
   probability that an arbitrary confident pair interacts. Say so before someone else does.
 - What screens miss is **non-autonomous contacts**; six recovery routes all failed.
-- *M. pneumoniae* RNase J + MPN621 **2:2 heterotetramer**, five independent published lines.
+- *M. pneumoniae* RNase J + MPN621 **2:2 heterotetramer**, five published lines from three independent studies.
 - The **stoichiometry rule is calibrated**: sensitivity 75%, false-positive rate 12%, precision 64%
   against a 22% base rate (HIGHER_CAL, n=54 labelled pairs).
 
