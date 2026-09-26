@@ -174,13 +174,78 @@ def _cached(name, url, parse=json.loads):
     return parse(open(p, encoding="utf-8").read())
 
 
-def entity_seq(pdb, entity):
+TAG_PATTERNS = [
+    # Terminal expression tags, matched only at the termini. Stripping these is not cosmetic: 6M8Q's
+    # CPSF3 entity begins GSSHHHHHHSSGLVPRGSH, a His6 plus a thrombin site, and **a His tag chelates
+    # metals**. Leaving it in a job that also supplies a Zn ion invites the tag to take the zinc,
+    # on the receptor that carries the gate's load-bearing rung. It is also 19 residues of
+    # disordered linker the model would try to place.
+    r"^[GSAM]{0,6}H{6,10}[GSAM]{0,4}(?:LVPR.?GS)?[GSAMH]{0,4}",
+    r"^M?[GSA]{0,4}(?:ENLYFQ[GS]?)",
+    r"^M?[GSA]{0,4}(?:WSHPQFEK)[GSA]{0,6}",
+    r"(?:H{6,10})[GSAM]{0,6}$",
+]
+
+
+def uniprot_seq(acc):
+    """Native sequence, cached. The authority on where a construct's tag ends."""
+    txt = _cached("up_%s.fasta" % acc, "https://rest.uniprot.org/uniprotkb/%s.fasta" % acc,
+                  parse=lambda t: t)
+    return "".join(txt.split("\n")[1:]).strip()
+
+
+def strip_tags(s, acc=None, probe=15):
+    """Trim terminal expression tags. Returns (sequence, n_trimmed_from_N_terminus).
+
+    Anchored to the native UniProt sequence rather than to regexes, because guessing where a tag
+    ends is exactly the kind of thing that goes wrong quietly: a pattern for His6 plus a thrombin
+    site over-trimmed 6M8Q by three residues and ate the native MSA that Q9UKF6 begins with. Here
+    the first position whose following `probe`-mer occurs in the native sequence is the true start
+    of the construct, and everything before it is tag.
+
+    The N-terminal count is returned because every residue index taken from the deposited
+    coordinates indexes the UNTRIMMED sequence. Trimming without shifting those indices would leave
+    the pocket pointing at the wrong residues, which is the same class of defect as the pocket
+    truncation recorded in PREREG_VSCREEN Amendment 3.
+    """
+    if not acc:
+        return s, 0
+    try:
+        native = uniprot_seq(acc)
+    except SystemExit:
+        return s, 0
+    if not native:
+        return s, 0
+    n_trim = 0
+    for i in range(0, min(len(s) - probe, 80)):
+        if s[i:i + probe] in native:
+            n_trim = i
+            break
+    else:
+        return s, 0
+    if n_trim and len(s) - n_trim < 80:
+        return s, 0
+    s = s[n_trim:]
+    # Trailing tag: walk back while the tail stops matching the native sequence.
+    for j in range(len(s), max(len(s) - 80, 80), -1):
+        if s[j - probe:j] in native:
+            s = s[:j]
+            break
+    return s, n_trim
+
+
+def entity_seq(pdb, entity, with_offset=False):
     d = _cached("%s_ent%s.json" % (pdb, entity),
                 "https://data.rcsb.org/rest/v1/core/polymer_entity/%s/%s" % (pdb, entity))
     s = (d.get("entity_poly") or {}).get("pdbx_seq_one_letter_code_can", "")
     s = "".join(s.split())
     if not s:
         sys.exit("no sequence for %s entity %s" % (pdb, entity))
+    refs = ((d.get("rcsb_polymer_entity_container_identifiers") or {})
+            .get("reference_sequence_identifiers") or [])
+    acc = next((r.get("database_accession") for r in refs
+                if (r.get("database_name") or "").upper().startswith("UNIPROT")), None)
+    s, n_trim = strip_tags(s, acc)
     # Canonical one-letter code can carry X for modified residues; Boltz needs standard residues.
     bad = set(s) - set("ACDEFGHIKLMNPQRSTVWY")
     if bad:
@@ -188,7 +253,7 @@ def entity_seq(pdb, entity):
               % (pdb, entity, sorted(bad)))
         for b in bad:
             s = s.replace(b, "G")
-    return s
+    return (s, n_trim) if with_offset else s
 
 
 def cif_text(pdb):
@@ -203,7 +268,7 @@ def cif_text(pdb):
     return open(p, encoding="utf-8", errors="replace").read()
 
 
-def pocket_from_cif(pdb, ccd, entity_chains, cutoff=5.0):
+def pocket_from_cif(pdb, ccd, entity_chains, cutoff=5.0, offsets=None):
     """Residues within `cutoff` A of the named ligand, as (chain_id, seq_index) pairs.
 
     Why this exists: the screen steers each ligand to the RNase J interface with a `pocket`
@@ -283,6 +348,16 @@ def pocket_from_cif(pdb, ccd, entity_chains, cutoff=5.0):
         mapping = {a: want[i] for i, a in enumerate(sorted(counts, key=counts.get, reverse=True))
                    if i < len(want)}
         sel = [(mapping[a], sid, best[(a, sid)]) for a, sid in hits if a in mapping]
+    # Shift to the trimmed sequence the job actually carries. label_seq_id indexes the UNTRIMMED
+    # entity sequence, so a stripped expression tag moves every index; a contact that fell inside
+    # the tag is dropped rather than remapped, because it has no counterpart in the job.
+    if offsets:
+        shifted = []
+        for c, sid, d2 in sel:
+            off = offsets.get(c, 0)
+            if sid - off >= 1:
+                shifted.append((c, sid - off, d2))
+        sel = shifted
     # Nearest first, so a later truncation keeps the residues that actually line the site.
     sel.sort(key=lambda t: t[2])
     return [(c, sid) for c, sid, _ in sel]
@@ -346,18 +421,22 @@ def main(a):
 
     # Resolve every sequence and ligand first, so a fetch failure costs nothing written.
     print("resolving receptors")
-    chains, seqs = {}, {}
+    chains, seqs, offsets = {}, {}, {}
     for r in receptors_used:
         spec = RECEPTORS[r]
-        cs = []
+        cs, off = [], {}
         for cid, ent in sorted(spec["entities"].items()):
-            s = entity_seq(spec["pdb"], ent)
-            cs.append((cid, s))
-            seqs["%s_%s" % (r, cid)] = s
+            seq_s, n_trim = entity_seq(spec["pdb"], ent, with_offset=True)
+            cs.append((cid, seq_s))
+            off[cid] = n_trim
+            seqs["%s_%s" % (r, cid)] = seq_s
         chains[r] = cs
-        n = sum(len(s) for _, s in cs)
-        print("  %-11s %s  %d chain(s), %4d residues, metals %s"
-              % (r, spec["pdb"], len(cs), n, spec["metals"]))
+        offsets[r] = off
+        n = sum(len(x) for _, x in cs)
+        trimmed = ", ".join("%s-%d" % (c, v) for c, v in off.items() if v)
+        print("  %-11s %s  %d chain(s), %4d residues, metals %s%s"
+              % (r, spec["pdb"], len(cs), n, spec["metals"],
+                 "  tag trimmed: " + trimmed if trimmed else ""))
 
     # Pocket per (receptor, structure, ligand), resolved once and reused.
     _pk_cache = {}
@@ -365,11 +444,16 @@ def main(a):
     def pockets_for(r, pdb, ccd):
         k = (r, pdb, ccd)
         if k not in _pk_cache:
-            pk = pocket_from_cif(pdb, ccd, chains[r])
+            pk = pocket_from_cif(pdb, ccd, chains[r], offsets=offsets[r])
             if not pk:
                 sys.exit("no pocket contacts found for %s in %s; refusing to write an "
                          "unconstrained gate job, because the screen is constrained and the two "
                          "would not be the same protocol" % (ccd, pdb))
+            lens = {c: len(x) for c, x in chains[r]}
+            bad = [(c, i) for c, i in pk if not (1 <= i <= lens.get(c, 0))]
+            if bad:
+                sys.exit("pocket indices outside the trimmed sequence for %s/%s: %s. A tag was "
+                         "stripped without shifting the coordinates' indices." % (pdb, ccd, bad[:5]))
             _pk_cache[k] = pk
         return _pk_cache[k]
 

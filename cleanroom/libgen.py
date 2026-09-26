@@ -47,6 +47,11 @@ MASTER = os.path.join(HERE, "library_master.tsv")
 SOURCES_JSON = os.path.join(HERE, "library_sources.json")
 CHEMBL = "https://www.ebi.ac.uk/chembl/api/data/molecule"
 
+# Types that are genuinely not a small-molecule screening ligand. Everything else, INCLUDING
+# "Unknown" and null, is kept and judged on its structure instead. See fetch_chembl_source.
+REJECT_TYPES = {"Protein", "Antibody", "Oligosaccharide", "Oligonucleotide", "Cell", "Gene",
+                "Enzyme"}
+
 # Boltz-2's affinity module rejects a ligand above 128 atoms counting heavy atoms AND hydrogens
 # (docs/prediction.md). This is the bound that actually fails jobs at run time, so it is applied
 # here rather than being discovered on a paid GPU.
@@ -245,11 +250,19 @@ def fetch_chembl_source(name, src_id, licence):
             cid = m.get("molecule_chembl_id")
             back.add(cid)
             smi = (m.get("molecule_structures") or {}).get("canonical_smiles")
+            mt = m.get("molecule_type")
             if not smi:
                 dropped["no_structure"] += 1
-            elif m.get("molecule_type") != "Small molecule":
-                dropped["type:" + str(m.get("molecule_type"))] += 1
+            elif mt in REJECT_TYPES:
+                dropped["type:" + str(mt)] += 1
             else:
+                # "Unknown" and null are ACCEPTED. molecule_type is a curation annotation, not a
+                # structural fact, and for a donated academic collection it is mostly unassigned:
+                # 20,408 of CO-ADD's 24,205 ChEMBL entries are "Unknown". Rejecting on it threw away
+                # 84% of the set. What decides usability is the structure, and we have it: desalting,
+                # the heavy-atom floor and the Boltz-2 atom bound are applied in build() to every
+                # source alike. A spot check missed this because the sampled ids happened to be
+                # well-characterised approved drugs that CO-ADD also contains.
                 rows.append((smi, cid))
         seen_back |= back
         missing = set(chunk) - back
@@ -263,15 +276,26 @@ def fetch_chembl_source(name, src_id, licence):
     if dropped:
         for k, v in dropped.most_common():
             print("    dropped %-26s %d" % (k, v))
-    yield_frac = len(rows) / max(1, len(uniq))
-    if yield_frac < 0.8:
-        # Refuse to record a source whose provenance is a mystery. A partial set silently labelled
-        # with this licence and this src_id is worse than no set: every later count and every claim
-        # about where a hit came from would be wrong.
+    # Two different things were conflated in the first version of this check, and conflating them
+    # made a correct filter decision look like a broken fetch.
+    #
+    #   fetch integrity  = did the API return the ids we asked for? A shortfall here means the
+    #                      source on disk is not the source it claims to be, which is a defect.
+    #   filter yield     = how many of those we chose to keep. A shortfall here is a decision, and
+    #                      the accounting above says which rule made it.
+    #
+    # Only the first is a reason to refuse to write.
+    fetched = len(seen_back) / max(1, len(uniq))
+    if fetched < 0.98:
         raise SystemExit(
-            "only %.1f%% of the %d ids yielded a structure. Not writing %s: a source recorded under "
-            "this src_id and licence must actually be that source. Investigate the accounting above "
-            "before retrying." % (100 * yield_frac, len(uniq), name))
+            "the API returned only %.1f%% of the %d ids (%d missing). Not writing %s: a source "
+            "recorded under this src_id and licence must actually be that source. This is a fetch "
+            "problem, not a filter decision -- see not_returned_by_api above."
+            % (100 * fetched, len(uniq), len(uniq) - len(seen_back), name))
+    keep = len(rows) / max(1, len(uniq))
+    if keep < 0.5:
+        print("  NOTE: keeping only %.1f%% of the ids. That is a filter decision, not a fetch "
+              "failure; the accounting above says which rule dropped them." % (100 * keep))
     path = os.path.join(RAW, name + ".smi")
     with open(path, "w", newline="\n") as f:
         for smi, cid in rows:

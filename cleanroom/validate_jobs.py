@@ -107,7 +107,19 @@ def check(path):
 
 
 def arm_of(name):
-    """Which arm a job belongs to, from the filename convention vscreen.py writes."""
+    """Which arm a job belongs to, from the filename conventions the builders write.
+
+    build_gate.py uses its own prefixes (gate_A_, gate_B_, gate_neg_, gnull_), and leaving them out
+    meant the gate's 250 jobs all counted as "screen": the cross-arm duplicate check silently did
+    not apply to the gate at all, which is the one place a molecule appearing in both the scored arm
+    and its null would be hardest to notice.
+    """
+    if name.startswith("gnull_"):
+        return "decoy"
+    if name.startswith("gate_neg_"):
+        return "negative"
+    if name.startswith("gate_"):
+        return "positive"
     if name.startswith("decoy_"):
         return "decoy"
     if name.startswith("off_"):
@@ -133,7 +145,7 @@ def cross_arm_report(by_key):
         for arm, n in same_arm.items():
             if n > 1:
                 waste.append((arm, sorted(j for j in jobs if arm_of(j) == arm)))
-        if "decoy" in arms and ("screen" in arms or "positive" in arms):
+        if "decoy" in arms and ("screen" in arms or "positive" in arms or "negative" in arms):
             fatal.append(sorted(jobs))
         elif "positive" in arms and "screen" in arms:
             fatal.append(sorted(jobs))
@@ -165,9 +177,8 @@ def main(prune):
             problems[f] = bad
 
     print("%d job files in %s" % (len(files), YDIR))
-    real = [f for f in files if not f.startswith(("decoy_", "off_"))]
-    print("  %d screen, %d decoy, %d off-target"
-          % (len(real), sum(f.startswith("decoy_") for f in files), sum(f.startswith("off_") for f in files)))
+    arms = collections.Counter(arm_of(f[:-5]) for f in files)
+    print("  " + ", ".join("%d %s" % (v, k) for k, v in sorted(arms.items())))
     for label, ctr in (("MSA", msas), ("protein", seqs)):
         print("  %s variants: %d" % (label, len(ctr)))
         for k, v in ctr.most_common():

@@ -1,0 +1,30 @@
+fetching coadd src_id 40
+  records 1000
+  records 2000
+  records 3000
+  records 4000
+  records 5000
+  records 6000
+  records 7000
+  records 8000
+  records 9000
+  records 10000
+  records 11000
+  records 12000
+  records 13000
+  records 14000
+  records 15000
+  records 16000
+  records 17000
+  records 18000
+  records 19000
+  records 20000
+  records 21000
+  records 22000
+  records 23000
+  records 24000
+  24315 records -> 24205 distinct ChEMBL ids; fetching structures
+      40/24205 ids ->     40 structures
+    1040/24205 ids ->   1039 structures
+    2040/24205 ids ->   2039 structures
+    3040/24205 ids ->   3036 structures
