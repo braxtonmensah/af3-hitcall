@@ -1,5 +1,27 @@
 # Structurally unsolved, functionally coupled, selectively essential interfaces
 
+> **READ THIS BEFORE THE LIST. The functional claim this list is built on was WITHDRAWN.**
+>
+> Filter 2 below is CRISPR co-dependency, and `PREREG_CODEP_R` tested whether that signal replicates
+> in a second perturbation technology. **It does not.** DEMETER2 RNAi (shRNA, 699 lines, different
+> labs and panels, predating the CRISPR data) gives **-0.0042, CI [-0.0129, 0.0047]** where CRISPR
+> gave +0.0203, while its own sensitivity gate passed at +0.0486. That is not an underpowering
+> excuse: the gates put RNAi at 0.47x CRISPR sensitivity, so a real +0.0203 implies about +0.0095 in
+> RNAi, and the observed upper bound of +0.0047 sits below it. The point estimate is negative.
+>
+> **So this list must never be presented as resting on a validated functional claim.** What it is: a
+> defensible intersection of four public signals (confident interface model, co-dependent in CRISPR,
+> selectively essential, no solved structure). What it is not: a validated target list, a list of
+> novel interactions, or evidence that co-dependency carries structural information.
+>
+> Two further constraints, both established before the data and both now in force:
+> **96.3%** of confident never-solved pairs already carry BioGRID or IntAct evidence, so "never
+> solved" has always meant *no structure*, never *no evidence of interaction*. And the structural
+> advantage does **not** hold outside CORUM-annotated complexes, where 3,027 of the 3,441 confident
+> pairs live.
+>
+> See `STATE.md` and `PREREG_CODEP_R.md`. Do not cite CODEP without CODEP_R.
+
 Produced 2026-09-25 from `PREREG_CODEP` (committed `0da2677` before any DepMap data was downloaded)
 plus two post hoc filters that are labelled as post hoc below. Everything here is computed from public
 data: Burke et al. 2021 predictions, DepMap 24Q4 Public gene effect, CORUM and BioGRID/IntAct flags as

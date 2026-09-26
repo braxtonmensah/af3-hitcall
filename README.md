@@ -103,10 +103,30 @@ directly measured here. Changing chain composition drops the predicted RNase J s
 confidence from ipTM 0.81 to 0.50, which motivates a structural-role hypothesis but does not measure
 stabilization in cells.
 
-**Drug-development status:** the RNase J : MPN621 interface is a possible target to investigate, not
-a validated drug target. The closest human relative, CPSF73, retains three of four aligned catalytic
-residues; the compared interface residues are 24.6% identical. Neither observation establishes
-selective inhibition or antibacterial activity.
+**Drug-development status, corrected 2026-09-26: the interface itself is not ligandable, and no
+screen against it will be run.** A buried-cavity scan of both ortholog models
+(`cleanroom/analysis_ligandability.py`) puts the largest non-catalytic cavity at the interface at
+**26 and 27 A^3** on the RNase J side, against 76 A^3 for the shallowest *drugged* reference in the
+calibration set and 575 for a comfortably drugged one. MPN621's side looked better at 273 A^3 but
+**does not replicate**: the ortholog gives 82, a ratio of 3.3, while the three other cavities measured
+agree within 9%. So the flat reading is the reproducible one.
+
+What survives is a different site: **MPN621's own degenerate cleft**, 491 and 470 A^3 across the two
+models (ratio 1.04), on residues where **0 of 4 catalytic positions are conserved** while RNase J
+keeps all four and human CPSF73 keeps three. Its cleft is 25% identical to its paralogue's and 20% to
+CPSF73's, which is no more than background identity, i.e. it carries no active-site conservation
+constraint. That is a selectivity *prospect* and not a measured margin. Pre-registered as
+`PREREG_MPN621.md`; **not run**.
+
+None of this establishes selective inhibition or antibacterial activity, and MPN621 has no known
+function, so a ligand in its cleft may do nothing. Its essentiality is the only functional handle and
+it is species-split: essential in *M. pneumoniae*, annotated non-essential for the *M. genitalium*
+ortholog.
+
+**A funding claim previously made here and in `COSTS.md` does not hold.** PACE's 2025 call is
+restricted to drug-resistant Gram-negatives and CARB-X runs off the CDC 2013 and WHO 2017 lists;
+*M. pneumoniae* is on none of them, and it cannot be fixed by changing organism because RNase J is
+absent from *E. coli* and most Gammaproteobacteria.
 
 ### What is *not* claimed
 

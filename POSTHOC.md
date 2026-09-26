@@ -44,3 +44,22 @@ druggable interfaces, and it must never be presented as the latter.
 **Status: descriptive.** No gate, no null, no claim about accuracy or druggability. It is a lookup that
 says where this project's confident models overlap with complexes the pharmaceutical literature already
 annotates, and it is useful for choosing which interface to model next, nothing more.
+
+### PH-DRUG addendum, 2026-09-26: the join is dominated by one signal, quantified
+
+The caveat above says CORUM's `subunits_drugs` means a subunit is drugged, not the interface. That is
+correct but it understates how concentrated the effect is. Counted:
+
+- **46 of the 92 rows carry the identical five-drug HDAC-inhibitor string**, and 51 carry vorinostat
+  at all. Those rows say "HDAC1 or HDAC2 is somewhere in this complex" and nothing about an interface.
+- Rows like TUBA1C-TUBB with 18 drugs, or H2AC20-H2BC18 with 14, are the join misfiring on
+  promiscuously-annotated complexes rather than finding druggable interfaces.
+
+So the 92 should not be described as 92 independent observations. **Cite this table only as a lookup
+for which interface to model next, never as a count of druggable interfaces**, and if a number is
+quoted, quote it after removing the HDAC block.
+
+Separately, and for the same reason of not double-counting: the **MMV Pathogen Box is not an
+independent compound prior** from CO-ADD. 397 of its 398 compounds are already inside CO-ADD's ChEMBL
+deposit, so any staging plan listing them as two priors (including the table in
+`cleanroom/LIBRARIES.md`) is counting one set twice.
