@@ -173,7 +173,7 @@ missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-cataly
 
 ## Reproducing
 
-Python 3.11 (not 3.13: `biopython`, `dm-tree` and `gemmi` have no 3.13 wheels).
+Python 3.11. Not 3.13: `biopython` has no 3.13 wheels.
 
 ```bash
 pip install -r requirements.txt

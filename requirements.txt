@@ -1,0 +1,35 @@
+# Python 3.11. biopython has no 3.13 wheels, so 3.13 will not work.
+#
+# Versions are deliberately unpinned. These are the packages the scripts
+# actually import, read off the import statements rather than off a pip
+# freeze, and no specific version set here has been tested from a clean
+# install. An unpinned name you can resolve beats a pin that is wrong.
+
+# Required by the four commands in the README's "Reproducing" section.
+# scipy and remotezip come in through the local metrics.py and
+# human_extract.py modules rather than directly.
+numpy
+pandas
+requests
+scipy
+biopython
+remotezip
+
+# analysis_assembly.py, analysis_assembly2.py
+networkx
+
+# extract_structs.py
+orjson
+
+# Compound-screen tooling in cleanroom/ only: libgen.py, validate_jobs.py,
+# vscreen.py. Not needed to reproduce any result in RESULTS.md.
+rdkit
+
+# Document generation only. build_sample_report.py and cleanroom/md_to_docx.py.
+reportlab
+python-docx
+
+# One set that is known to work, recorded rather than pinned. Checked
+# 2026-09-26 on Python 3.11.9: numpy 2.4.4, pandas 2.2.3, requests 2.33.1,
+# scipy 1.17.1, biopython 1.88, remotezip 0.12.6, networkx 3.6.1,
+# orjson 3.11.8, rdkit 2026.3.6, reportlab 4.5.1, python-docx 1.2.0.
