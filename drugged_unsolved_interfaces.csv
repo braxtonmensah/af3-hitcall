@@ -1,0 +1,93 @@
+pair,pDockQ,n_complexes,example_complex,n_drugs,drugs
+TADA2B-TADA3,0.731,1,"SAGA complex, GCN5-linked",1,pentostatin
+HDAC1-SIN3A,0.728,29,DNMT3B complex,6,belinostat;panobinostat;pimitespib;romidepsin;tucidinostat;vorinostat
+NCAPD2-NCAPH,0.728,1,Condensin I-PARP-1-XRCC1 complex,4,niraparib;olaparib;rucaparib;talazoparib tosylate
+HDAC1-SIN3B,0.724,5,BRMS1-mSin3A corepressor complex,6,belinostat;panobinostat;pimitespib;romidepsin;tucidinostat;vorinostat
+HDAC2-MTA3,0.724,1,SIX3-LSD1-NuRD(MTA3) complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+H2AC20-H2BC18,0.722,1,TIP60-C complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+SMARCC1-SMARCD2,0.72,4,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+SMARCC1-SMARCD3,0.718,2,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GUCY1A2-GUCY1B1,0.712,1,GUCY1A2-GUCY1B1 complex,5,glyceryl trinitrate;isosorbide dinitrate;isosorbide mononitrate;nitric oxide;nitroprusside
+SMARCD1-SMARCD2,0.701,3,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ATXN7L3-USP22,0.699,1,"SAGA complex, GCN5-linked",1,pentostatin
+SMARCC2-SMARCD2,0.698,4,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+PDE1A-PDE1C,0.694,1,PDE1A-PDE1C complex,1,dipyridamole
+GSE1-HMG20B,0.694,3,Anti-HDAC2 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+SMARCC2-SMARCD3,0.688,2,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+EPC1-ING3,0.688,1,TIP60-C complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+HSPA5-HSPA8,0.682,1,HCF-1 complex,6,belinostat;panobinostat;pimitespib;romidepsin;tucidinostat;vorinostat
+YWHAG-YWHAH,0.68,1,Kinase maturation complex 1,1,pimitespib
+YWHAB-YWHAZ,0.676,1,Kinase maturation complex 1,1,pimitespib
+PRKACA-PRKAR2A,0.675,1,KCNQ1 macromolecular complex,3,amifampridine;fampridine;guanidine
+YWHAB-YWHAH,0.672,1,Kinase maturation complex 1,1,pimitespib
+TUBA1C-TUBB,0.669,1,CD4 receptor complex,18,brentuximab vedotin;cabazitaxel;dasatinib;docetaxel;enfortumab vedotin;eribulin
+ILF2-ILF3,0.667,1,Nop56p-associated pre-rRNA complex,19,aclarubicin;belotecan;brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin
+DTX3L-PARP9,0.666,1,AR-DTX3L-PARP9 complex,24,apalutamide;bicalutamide;cyproterone acetate;danazol;darolutamide;drostanolone propionate
+MTA1-RBBP7,0.658,5,SNF2h-cohesin-NuRD complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+EPC1-MEAF6,0.657,1,TIP60-C complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+PDE1B-PDE1C,0.655,1,PDE1B-PDE1C complex,1,dipyridamole
+MTA3-RBBP4,0.649,1,SIX3-LSD1-NuRD(MTA3) complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2B-MBD2,0.638,2,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MTA2-RBBP4,0.624,13,Mi2/NuRD complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MTA3-RBBP7,0.619,1,SIX3-LSD1-NuRD(MTA3) complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ECSIT-NDUFAF1,0.594,3,"Ecsit complex (ECSIT, GAPDH, MT-CO2, NDUFAF1, TRAF",1,metformin
+ING3-MEAF6,0.592,1,TIP60-C complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+PWP1-RPL15,0.564,1,Nop56p-associated pre-rRNA complex,19,aclarubicin;belotecan;brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin
+PSMD5-PSMD9,0.552,1,PA700-20S-PA28 complex,3,bortezomib;carfilzomib;ixazomib
+NFKB1-REL,0.537,5,NFKB1-NFKB2-REL-RELA-RELB complex,1,cepharanthine
+SIN3B-SUDS3,0.532,1,HCF-1 complex,6,belinostat;panobinostat;pimitespib;romidepsin;tucidinostat;vorinostat
+PRKAR2A-PRKAR2B,0.53,1,PKA (RII-alpha and RII-beta)-AKAP5-ADRB1 complex,38,acebutolol;alprenolol;arbutamine;atenolol;betaxolol;bevantolol
+HDAC2-SMARCC1,0.511,7,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+NFKB2-REL,0.51,5,NFKB1-NFKB2-REL-RELA-RELB complex,1,cepharanthine
+NFKB2-RELB,0.505,4,NFKB1-NFKB2-REL-RELA-RELB complex,1,cepharanthine
+HDAC2-MIER2,0.502,1,HDAC1-HDAC2-MIER1-MIER2 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ACTL6A-HDAC2,0.502,6,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ACTB-HSPA8,0.473,1,P2X7 receptor signalling complex,2,lifitegrast;pimitespib
+MTA1-MTA2,0.463,2,SNF2h-cohesin-NuRD complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HSPA8-SRSF1,0.458,1,CDC5L complex,9,aclarubicin;daunorubicin;doxorubicin;etoposide;etoposide phosphate;idarubicin
+SMARCD1-SMARCD3,0.435,2,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+NCAPH-SMC4,0.42,1,Condensin I-PARP-1-XRCC1 complex,4,niraparib;olaparib;rucaparib;talazoparib tosylate
+SIN3A-SUDS3,0.417,4,mSin3A corepressor complex,6,belinostat;panobinostat;pimitespib;romidepsin;tucidinostat;vorinostat
+DPF2-HDAC2,0.407,1,LARC complex (LCR-associated remodeling complex),5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+NFKB1-RELB,0.405,4,NFKB1-NFKB2-REL-RELA-RELB complex,1,cepharanthine
+MBD3-MTA1,0.386,3,SNF2h-cohesin-NuRD complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HSPA5-TUBB,0.386,1,SNW1 complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+GPS2-HDAC3,0.382,4,NCOR complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+NFKBIA-REL,0.38,3,TNFalpha-NFkappa B signaling complex,1,cepharanthine
+ACTL6A-HDAC1,0.376,3,BRM-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+KEAP1-SQSTM1,0.373,1,KEAP1-SQSTM1 complex,1,dimethyl fumarate
+SMARCC1-SMARCE1,0.372,5,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MBD2-MTA2,0.364,6,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MBD3-MTA3,0.362,2,Mi2/NuRD-BCL6-MTA3 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MAP2K5-SQSTM1,0.349,1,MAP2K5-PRKCD-SQSTM1 complex,1,ingenol mebutate
+EEF1G-TUBB,0.347,1,SNW1 complex,14,brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin;eribulin;ixabepilone
+GATAD2A-HDAC2,0.337,2,HDAC2-asscociated core complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2B-SMARCE1,0.332,1,LARC complex (LCR-associated remodeling complex),5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+CTBP2-LCOR,0.327,1,CtBP complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2B-RBBP4,0.316,3,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2B-HDAC2,0.313,3,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2A-RBBP7,0.312,3,HDAC1-associated core complex cII,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HDAC1-PHF21A,0.311,7,CoREST-HDAC complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+CTBP1-ZNF516,0.301,1,CtBP complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+MBD2-MTA3,0.295,1,SIX3-LSD1-NuRD(MTA3) complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ACTL6A-MTA2,0.294,1,LARC complex (LCR-associated remodeling complex),5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+NFKBIB-REL,0.291,3,TNFalpha-NFkappa B signaling complex,1,cepharanthine
+GSE1-HDAC1,0.279,3,Anti-HDAC2 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+FBL-YBX1,0.278,1,Nop56p-associated pre-rRNA complex,19,aclarubicin;belotecan;brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin
+SMARCD3-SMARCE1,0.278,2,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+ILF2-SFPQ,0.276,1,CDC5L complex,9,aclarubicin;daunorubicin;doxorubicin;etoposide;etoposide phosphate;idarubicin
+HDAC2-MBD2,0.276,5,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HDGF-YWHAE,0.273,1,Emerin complex 52,3,dextrothyroxine;levothyroxine;liothyronine
+PDRG1-PFDN2,0.269,1,Kinase maturation complex 1,1,pimitespib
+MYBBP1A-NOP56,0.263,1,Nop56p-associated pre-rRNA complex,19,aclarubicin;belotecan;brentuximab vedotin;cabazitaxel;docetaxel;enfortumab vedotin
+CTBP1-ZEB1,0.26,2,CtBP complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GPS2-TBL1XR1,0.257,4,NCOR complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HDAC2-RAN,0.255,1,ALL-1 supercomplex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HDAC1-ZNF217,0.251,5,CoREST-HDAC complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+GATAD2A-HDAC1,0.25,2,HDAC1-associated core complex cII,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+SMARCD2-SMARCE1,0.249,4,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+PDE8A-UNC119,0.247,1,PDE8A-UNC119 complex,2,dipyridamole;flavoxate
+NFKBIA-RELB,0.246,2,TNFalpha-NFkappa B signaling complex,1,cepharanthine
+GATAD2B-RBBP7,0.243,2,MeCP1 complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+HDAC1-HMG20B,0.232,7,CoREST-HDAC complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
+SMARCA4-SMARCD3,0.232,1,BRG1-SIN3A complex,5,belinostat;panobinostat;romidepsin;tucidinostat;vorinostat
