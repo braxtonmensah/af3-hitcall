@@ -5,15 +5,21 @@ them, and the confidence scores do not come with an interpretation. This reposit
 a confident prediction about a **never-before-solved** complex turns out to be correct, using
 predictions that were frozen before the answers existed.
 
-**Headline:** Among predicted pairs that were subsequently solved, the interface was correct in 81%
-of 146 confident human cases and 89% of 84 confident yeast cases, against 2% for low-confidence human
-cases. This is conditional on later structure solving; it does not estimate the chance that an
-arbitrary unsolved pair interacts in cells.
+**The test is a time split that cannot be arranged after the fact.** The predictions were published
+by other groups in 2021. They are scored here against complexes the PDB released between 2022 and
+2026, so the answers did not exist anywhere when the predictions were made. That separation is
+external to this repository and does not depend on trusting anything inside it.
 
-**Read that as a range, not a number.** Most of the 2022-2026 entries are cryo-EM, and cryo-EM models
-are sometimes built starting from AlphaFold, which would let a model agree with itself. On the
-X-ray-only subset the rate is **53% (n = 19, CI [0.32, 0.74])**. The defensible claim is **53% to
-81%**, and that spread is the honest measure of how much circularity cannot be excluded.
+**Headline:** among confident never-solved pairs that were later solved, the interface was correct in
+**81% of 146 human cases** and **89% of 84 yeast cases**, against **2%** for low-confidence human
+cases. Two things qualify that number and both belong in the same breath as it.
+
+- **It is conditional on the pair later being solved**, which is 2.7% of confident calls. It is not
+  the probability that an arbitrary confident pair interacts in cells.
+- **Read it as the top of a range.** Most 2022-2026 entries are cryo-EM, and cryo-EM models are
+  sometimes built starting from AlphaFold, which would let a model agree with itself. On the
+  X-ray-only subset the rate is **53% (n = 19, CI [0.32, 0.74])**. The defensible claim is **53% to
+  81%**, and that spread is the honest measure of how much circularity cannot be excluded.
 
 Applying the method to *Mycoplasma pneumoniae* produced a **2:2 RNase J : MPN621 assembly
 hypothesis** consistent with published crosslinks and co-elution. The interaction and MPN621 paralog
@@ -25,16 +31,24 @@ Braxton Mensah, Indiana University Bloomington. bsmensah@iu.edu
 
 ## Why you should believe any of this
 
-Every hypothesis was written down in a `PREREG_*.md` file and committed to version control **before**
-the corresponding data were joined. `git log` preserves the order, and that ordering is the point:
-it is externally checkable rather than asserted.
+**First, the time split above.** It is the load-bearing control, and it is external. The ground truth
+was deposited in the PDB by other groups, years after the 2021 predictions were published. Nothing in
+this repository can move those dates, and no choice made here can reach back and change them.
 
-- **21 hypotheses pre-registered.** 8 returned negative or inconclusive and are reported, not dropped.
-- **Claims were retracted when checks failed**, and the retractions are in the history.
+**Second, pre-registration.** Every hypothesis was written into a `PREREG_*.md` file and committed
+before the corresponding data were joined. There are **32** of them.
+
+- **Ten returned a negative, inconclusive, or failed-gate result** and are reported rather than
+  dropped: CLINVAR, CLINVAR2, LITJEV, CONTEXT, STRUCT, COMPOSE, ASSEMBLY, ASSEMBLY2, CODEP_R, OMEGA.
+- **Three claims were withdrawn** after later checks contradicted them. The withdrawals are in the
+  history, not edited away.
 - Post hoc analyses are labelled as post hoc, in `POSTHOC.md`.
 
-If you want to audit this, start with `git log --oneline` and compare commit dates against the
-deposition dates of the structures used as ground truth.
+**About the commit history, plainly:** it is compressed. Most of this was committed across a small
+number of days, so the gap between a registration and its result is often hours rather than weeks.
+The ordering is real and you can check it with `git log --oneline`, but read it as bookkeeping, not
+as the evidence. The evidence is that predictions frozen in 2021 could not have been tuned against
+structures released from 2022 onward.
 
 ## The result in one table
 
@@ -57,7 +71,7 @@ Survived five pre-registered attacks:
 | Independent metric (Fnat from raw coordinates, separate code) | 80% human, 87-90% yeast |
 | Threshold grid (6/8/10 A x F1 0.3/0.5/0.7) | 57% to 88%; 81% at the registered setting |
 
-## Two claims this repository retracted about itself
+## Three claims this repository retracted about itself
 
 Both came from tests that were pre-registered specifically to attack earlier results, and both are
 reported here rather than quietly dropped.
@@ -66,6 +80,7 @@ reported here rather than quietly dropped.
 |---|---|
 | "The stoichiometry rule recovered RNA polymerase beta/beta-prime blind" | PDB assembly records label that pair 1:1 in 367 of 370 assemblies. HIGHER_CAL's pre-registration required its removal. Verified recoveries are RpoA-RpoB and three pyruvate dehydrogenase pairs |
 | "MG354 may be the missing omega subunit" | OMEGA found no omega-family fold in either search direction. MG354 binds RNA polymerase; it does not look like omega. Its structure is already solved (PDB 1TM9); it is uncharacterized in function, not structure |
+| "Confident never-solved predictions are functionally coupled" (CRISPR co-dependency) | Claimed from DepMap CRISPR, then **withdrawn the same day** when CODEP_R failed to replicate it in RNAi. The RNAi gate passed at +0.0486, so the instrument was sensitive; the primary came back -0.0042, CI [-0.0129, 0.0047]. Do not cite CODEP without CODEP_R |
 
 The stoichiometry rule now ships with measured error rates instead of a list of successes:
 **sensitivity 75%, false-positive rate 12%, precision 64% against a 22% base rate** (n = 54 pairs
@@ -123,7 +138,7 @@ function, so a ligand in its cleft may do nothing. Its essentiality is the only 
 it is species-split: essential in *M. pneumoniae*, annotated non-essential for the *M. genitalium*
 ortholog.
 
-**A funding claim previously made here and in `COSTS.md` does not hold.** PACE's 2025 call is
+**A funding claim previously made here does not hold.** PACE's 2025 call is
 restricted to drug-resistant Gram-negatives and CARB-X runs off the CDC 2013 and WHO 2017 lists;
 *M. pneumoniae* is on none of them, and it cannot be fixed by changing organism because RNase J is
 absent from *E. coli* and most Gammaproteobacteria.
@@ -138,8 +153,7 @@ missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-cataly
 `new_biology/RNASEJ_MG423.md` for the evidence and prior-work limits.
 
 **Species caveat:** MG423 is non-essential in *M. genitalium* though MPN621 is essential in
-*M. pneumoniae*. The essentiality observation supporting further target investigation comes from
-*M. pneumoniae*.
+*M. pneumoniae*. Any argument resting on essentiality rests on the *M. pneumoniae* observation only.
 
 ## Layout
 
@@ -147,7 +161,7 @@ missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-cataly
 |---|---|
 | `STATE.md` | **read first**: current status, what is claimable, what was retracted |
 | `PREPRINT_DRAFT.md` | the full write-up |
-| `PREREG_*.md` | the 26 pre-registrations, committed before data were joined |
+| `PREREG_*.md` | the 32 pre-registrations, committed before data were joined |
 | `RESULTS.md` | every test and its numbers |
 | `POSTHOC.md` | analyses that were not pre-registered, labelled |
 | `analysis_*.py`, `verify_*.py` | the analysis code; these are the authoritative record |
@@ -183,8 +197,7 @@ anywhere. Read `LICENSE` before reusing anything.
 ## Status
 
 No lab, no faculty sponsor, no institutional funding, no grant. The analyses use public data. The
-planned virtual screen has not produced results; university compute access is still being arranged
-(see `IP_RECORD.md` for provenance notes).
+planned virtual screen has not produced results.
 
 The RNase J complex is computational plus published orthogonal data. **No new experiment has been
 performed.** The obvious next step is a wet-lab test, and I am looking for a group that wants to run
