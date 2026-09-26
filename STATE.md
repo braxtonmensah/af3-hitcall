@@ -145,12 +145,34 @@ span both chains. 250 jobs, 3-6 GPU-hours, built and staged in `cleanroom/gate_j
 likely outcome (Tier A passes, Tier B fails) is the one that makes a null at the interface
 *uninformative* rather than a negative about the target.
 
-**The screen may be aimed at the wrong chain.** A buried-cavity scan of the repo's own AF3 model
-(`cleanroom/TARGET_EXPANSION.md`, `cleanroom/iface_pocket.py`) puts the largest non-catalytic cavity
-on the **RNase J** side at **26 A^3**, i.e. flat, while **MPN621** carries a **273 A^3** cavity (419
-and 470 in the *M. genitalium* ortholog), has the stronger essentiality evidence, and conserves 0 of
-4 catalytic residues. Only rank order should be quoted: absolute volumes swing 13-fold between two
-structures of the same protein. This is not yet acted on and needs its own amendment.
+**THE INTERFACE IS NOT LIGANDABLE ON EITHER SIDE. Do not run the interface screen.** Amendment 4,
+`cleanroom/analysis_ligandability.py`, `results_ligandability.json`. Largest cavity per chain across
+both ortholog models, calibrated against KEAP1:p62 575 A^3 (drugged), MDM2:p53 76 (drugged but
+shallow), c-Fos:c-Jun 0 (flat):
+
+| Cavity | *M. pneumoniae* | *M. genitalium* | ratio |
+|---|---|---|---|
+| RNase J catalytic cleft | 1262 | 1155 | 1.09 |
+| **RNase J largest non-catalytic interface cavity** | **26** | **27** | **1.04** |
+| **MPN621 degenerate cleft** | **491** | **470** | **1.04** |
+| MPN621 largest non-catalytic interface cavity | 273 | 82 | **3.33** |
+
+Three of four reproduce within 9%. **The one that does not is the 273 A^3 cavity that
+`TARGET_EXPANSION.md` recommended re-aiming the screen at**, so that recommendation is not adopted:
+by the standard that validates the other three it is a one-model artefact, and even at its largest
+only 28% of its lining residues are interface residues. RNase J's interface face is flat at 26 and
+27 A^3 and that now counts as established. **So the screen's expected null was structurally
+predetermined, not merely a low prior.**
+
+**The one pocket worth pursuing is MPN621's degenerate cleft**: 491 / 470 A^3 at ratio 1.04,
+comparable to the drugged KEAP1 reference, and sitting on residues where **0 of 4 catalytic
+positions are conserved** while RNase J keeps all four and human CPSF73 keeps three. That inverts
+the reason the screen went to the interface: the catalytic cleft is non-selective **on RNase J**
+because it is conserved, and MPN621 has lost exactly the machinery that makes those clefts resemble
+each other. It also puts the problem back in-distribution for a tool with no protein-protein
+affinity module. **It is not pre-registered and needs its own prereg**, whose selectivity arm must
+compare against *M. pneumoniae* RNase J as well as human CPSF73, because a compound hitting both
+paralogues says nothing about which one matters.
 
 **Library: 13,293 distinct molecules** (was 2,297), from ChEMBL phases 1-4, iPPI-DB and the MMV
 Pathogen Box, deduplicated on InChIKey after desalting, property-annotated, PAINS-flagged, with
