@@ -149,3 +149,106 @@ property-annotated table is `cleanroom/library_master.tsv`. Composition is regen
 `libgen.py --report` and the number quoted anywhere must be the distinct-molecule count from that
 table, never the raw line count of a download: on the approved set alone those differ by 30%
 (3,273 raw, 2,297 distinct and Boltz-usable).
+
+---
+
+# Amendment 1, 2026-09-25: the gate is fixed, and it runs before the screen is built
+
+Written **before any Boltz-2 score exists for any arm of this screen**, on any machine. What has been
+seen at this point: a literature and PDB survey of known ligands of this fold family
+(`cleanroom/POSITIVE_CONTROLS.md`, committed with this amendment), and nothing else. No prediction
+has been run.
+
+## What the survey changed, and it is not a detail
+
+**No small molecule is known to bind bacterial RNase J, from any organism.** All 27 RNase J entries
+in the PDB carry only metals, RNA, or UMP as a substrate fragment. The nearest literature
+candidates, the RnpA inhibitors from *S. aureus* degradosome screens, were refuted as colloidal
+aggregators (PMID 33972249) and are excluded by name below.
+
+So **the gate cannot be run against the target.** Any gate here is a surrogate on homologous folds,
+and it therefore measures something narrower than "this pipeline works": it measures whether the
+pipeline recovers known ligands of related proteins under the same protocol. That distinction is
+written into the claim table below rather than left for the discussion section.
+
+## The gate is two tiers, because they license two different claims
+
+### Tier A: does the method recover known active-site ligands of this fold?
+
+| Compound | PDB ligand | Run against | Evidence it binds |
+|---|---|---|---|
+| JTE-607 free acid (NVP-LTM531) | JBG | human CPSF73, Q9UKF6 | Kd 370 nM reported, 2.49 A co-crystal 6M8Q, PMID 31819276. Boron-free and does **not** coordinate the metals, so it tests pocket recognition rather than chelation |
+| Tao compound 1 | XYX | human CPSF73 | photoaffinity label + probe displacement + co-crystal 8T1Q, PMID 37967558 |
+| Tao compound 2 | XZC | human CPSF73 | same evidence chain, co-crystal 8T1R |
+| SNM1A quinazoline-hydroxamate | U2O | human SNM1A, DCLRE1A | IC50 0.8 uM on **purified enzyme**, co-crystal 8C8S, PMID 38817593 |
+| Ceftriaxone | 9F2 | human Artemis, DCLRE1C | co-crystal 7APV at IC50 65 uM. Deliberately the weak rung, to locate where the score stops separating a true weak binder from noise |
+
+### Tier B: does it recover a ligand at an interface, which is what this screen asks?
+
+| Compound | PDB ligand | Run against | Why |
+|---|---|---|---|
+| Inositol hexakisphosphate | IHP | INTS4-INTS9-INTS11 Integrator cleavage module | The **only** documented small molecule at a protein-protein interface in this fold family: 55 A from the INTS11 active site, contacting all three subunits, 7SN8, PMID 36180473. INTS11 is the CPSF73 paralogue |
+| nsp10-nsp14 ExoN interface fragments | see 9FWH / 9FWM / 9FWT | SARS-CoV-2 nsp14 : nsp10 | A published nuclease-plus-obligate-partner interface fragment campaign with measured affinities, PMID 40794865. Not this fold, but the same problem shape, and the only case of drug-like **fragments** at a nuclease interface |
+
+### Negative controls, run in the same batch
+
+- **JTE-607 parent ethyl ester** against CPSF73. It is a prodrug and is not the binding species, so it
+  must score **below** its own free acid. If it scores above, the pipeline is rewarding
+  lipophilicity rather than recognition, and that finding invalidates Tier A whatever else passes.
+- **AN3661** against human CPSF73. A potent antiparasitic whose human cytotoxicity is 60 to >100 uM
+  across six human lines, i.e. no evidence of engaging the human protein. A high score here is a
+  red flag on the scoring function.
+- **Ebselen, disulfiram, auranofin** against Artemis. These inhibit by thiol and metal reactivity
+  with no co-crystal. A structure-based score should **not** rationalise them.
+- **Excluded by name: RNPA2000, purpurin, iriginol hexaacetate.** Refuted as aggregators.
+
+## Pass criteria, fixed now
+
+- **A1.** All five Tier A compounds score above the **95th percentile** of the matched null
+  (arm N, same protocol) when run against their own cognate protein.
+- **A2.** The JTE-607 free acid scores above the JTE-607 parent ester.
+- **A3.** At most one of the three reactive negative controls reaches the Tier A compounds range.
+- **B1.** IP6 scores above the 95th percentile of the matched null against the Integrator module.
+- **B2.** At least one nsp14 interface fragment does the same.
+
+## What each outcome licenses, fixed now
+
+| Outcome | What may be claimed |
+|---|---|
+| A passes, B passes, RNase J screen null | "The method recovers known active-site ligands of this fold and the one known interface ligand in it, under this protocol, and found nothing at the RNase J : MPN621 interface." A publishable negative. |
+| **A passes, B fails** | The method finds active sites, not interfaces. **A null at the RNase J interface is then uninformative and is reported as uninformative, not as a negative result about the target.** This is the most likely outcome and the screen is planned around it. |
+| A fails | Stop. The screen has no measured sensitivity and nothing it outputs means anything in either direction. No compound purchase, and the 15 GPU-hours for the main screen are not spent. |
+
+## The staging rule, which is the operational point of this amendment
+
+**The gate runs first, alone, and the main screen is not built or submitted until the gate has been
+read.** The gate is about 15 jobs, roughly ten minutes of GPU. The main screen as selected is 1,200
+jobs, about 15 GPU-hours. Running them together would spend the 15 hours before knowing whether any
+of it is interpretable, and the gate own most likely outcome is the one that makes the main screen
+uninterpretable. Order matters more than throughput here.
+
+## One open technical item that blocks the gate
+
+The gate compounds include two chemotypes that bind **by chelating the active-site metals** (the
+benzoxaborole boronates and the hydroxamate). The job files as currently written contain **no metal
+ions at all**, and an MBL-fold nuclease is a two-metal hydrolase. Scoring a metal-chelating ligand
+against a metal-free active site would fail those rungs for a reason that has nothing to do with the
+pipeline ability to rank binders.
+
+So before the gate runs: whether and how metal ions are supplied must be settled, and **the same
+policy must apply to the gate receptors and to the RNase J receptor**, or a Tier A pass and an
+RNase J null are not comparable. The source structures are themselves inconsistent (Zn in 6M8Q, Fe
+in 8T1Q and 8T1R, which Tao et al. attribute to bacterial expression), so the policy is ours to fix
+and to state. It is being resolved against Boltz-2 schema in `cleanroom/BOLTZ_SCHEMA.md` and will
+be recorded in a further amendment **before any score exists**.
+
+## Two caveats carried forward from the survey
+
+- The **Kd of 370 nM** for the JTE-607 acid is the most load-bearing number in the gate and the
+  assay behind it is **unverified**: the Nat Chem Biol methods are paywalled, so whether it came
+  from SPR, ITC, MST or competition is not established. Do not quote it externally before reading
+  the PDF. The co-crystal 6M8Q does not depend on it.
+- **Both chains of the target are predictions.** P75497 and P75174 have zero PDB entries between
+  them, and P75174 is annotated only as "uncharacterized MG423 homolog" with no function, family or
+  subunit assignment. The interface this screen aims at is not in any deposited structure. That was
+  already stated in the limitations above; the survey confirms it independently.

@@ -13,3 +13,7 @@ cleanroom/af3screen_bundle.tar.gz
 # A reviewer should not be able to read our estimate of their acceptance rate, or see which other
 # funders we approached. Kept on disk, never in the public repo.
 outreach/
+
+# Generated job sets: rebuild with cleanroom/build_screen_jobs.py from the committed selection
+# table. Committing 1,200 near-identical YAMLs would bury the diff that matters.
+cleanroom/jobs_*/
