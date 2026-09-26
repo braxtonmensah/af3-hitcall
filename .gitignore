@@ -17,3 +17,5 @@ outreach/
 # Generated job sets: rebuild with cleanroom/build_screen_jobs.py from the committed selection
 # table. Committing 1,200 near-identical YAMLs would bury the diff that matters.
 cleanroom/jobs_*/
+cleanroom/gate_jobs/
+cleanroom/gate_cache/*.cif

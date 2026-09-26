@@ -252,3 +252,89 @@ be recorded in a further amendment **before any score exists**.
   them, and P75174 is annotated only as "uncharacterized MG423 homolog" with no function, family or
   subunit assignment. The interface this screen aims at is not in any deposited structure. That was
   already stated in the limitations above; the survey confirms it independently.
+
+---
+
+# Amendment 2, 2026-09-25: the metal policy, the pocket policy, and a correction to the gate's cost
+
+Still **before any Boltz-2 score exists**. What has been read since Amendment 1: the deposited
+structures themselves (sequences, ligands, metal stoichiometry, and ligand contact residues, all
+fetched from RCSB and cached under `cleanroom/gate_cache/`). No prediction has been run.
+
+Amendment 1 left one technical item open and made one estimate. Reading the structures settles the
+item and shows the estimate was wrong. Both are recorded here.
+
+## 1. The metal policy: one catalytic Zn per nuclease chain
+
+The assumption going in was the canonical **di-zinc** metallo-beta-lactamase site. **The deposited
+structures of this subfamily do not support it.** Counted from the entries themselves:
+
+| Entry | Protein | Metals deposited | Per chain |
+|---|---|---|---|
+| 6M8Q | human CPSF3 + JTE-607 acid | 2 Zn, for 2 protein copies | 1 Zn |
+| 8T1Q | human CPSF73 + benzoxaborole | 1 Fe | 1 |
+| 8C8S | human SNM1A + hydroxamate | 1 Zn | 1 Zn |
+| 7APV | human Artemis + ceftriaxone | 1 Zn + 1 Ni | 1 Zn |
+| **3ZQ4** | ***B. subtilis* RNase J1 tetramer** | 4 Zn + 4 Ca, 4 chains | **1 Zn** |
+
+3ZQ4 matters most: it is the template this project's own RNase J heterotetramer model was built and
+validated against (`new_biology/RNASEJ_MG423.md`), and it carries one Zn per chain.
+
+**Policy, applied identically to every MBL-beta-CASP receptor including the RNase J target: one Zn
+per nuclease chain.** The Fe in 8T1Q and 8T1R is substituted with Zn, which Tao et al. attribute to
+bacterial expression. Crystallisation additives (PO4, SO4, CL, EDO, DMS) and the idiosyncratic
+second ions (the Ni in 7APV, the Ca in 3ZQ4) are not modelled, because including them for some
+receptors and not others is the inconsistency Amendment 1 forbade.
+
+**One receptor is exempt and the exemption is stated:** nsp10-nsp14 is not an MBL-fold protein. Its
+2 Zn and 1 Mg are a structural zinc site and the ExoN catalytic metal, both real, so it is built as
+deposited.
+
+## 2. The pocket policy: every gate ligand is constrained to its own crystallographic site
+
+A problem Amendment 1 did not catch. The screen steers each ligand to the RNase J interface with a
+pocket constraint. The gate as described would have run **unconstrained**. A pocket constraint
+changes the pose search and plausibly the score, so an unconstrained gate and a constrained screen
+are **not the same protocol**, and a gate pass would not transfer.
+
+So each gate ligand is constrained to the residues within 5 A of it **in its own co-crystal**,
+computed from the deposited coordinates, truncated to the same 20 contacts the screen uses.
+Compounds without their own structure, and every decoy, use their receptor's reference pocket, so
+the null answers the right question: what an unrelated compound scores when forced into that same
+pocket.
+
+Contacts found: CPSF73/JBG 31, Artemis/ceftriaxone 19, SNM1A/U2O 12, **nsp10-nsp14/A1IGR 12 spanning
+both chains**. That last one is worth stating plainly: the Tier B rung's pocket is confirmed by the
+coordinates to sit across the protein-protein interface, which is what makes it the rung that
+licenses an interface claim.
+
+## 3. Correction: the gate is 250 jobs, not 15, and 3 to 6 GPU-hours, not ten minutes
+
+Amendment 1 said "about 15 jobs, roughly ten minutes of GPU". **That was wrong**, and the error was
+omitting the null. The pass criteria are stated as percentiles of a matched null, and scores are not
+comparable across different proteins, so **each receptor needs its own null**. At 60 decoys per
+receptor across 4 receptors that is 240 null jobs against 10 gate compounds: **250 jobs, 3.1
+GPU-hours at 45 s and 6.2 at 90 s.**
+
+The staging conclusion is unchanged and if anything is firmer. The gate is still one fifth to one
+third of the main screen's 15 hours, and it still decides whether those 15 hours produce anything
+interpretable. **Gate first, alone, unchanged.** But it is not free and the earlier figure should
+not be quoted.
+
+**A consequence for the criteria.** With 60 decoys, "above the 95th percentile" is estimated from
+the top 3 and is noisy. The criteria in Amendment 1 are therefore restated as exact ranks, which
+need no percentile estimate: **a gate compound passes if it outscores at least 57 of its receptor's
+60 matched decoys** (empirical p = 3/61 = 0.049). A1, B1 and B2 are read this way. A2 and A3 are
+unchanged, being direct comparisons.
+
+## 4. Two receptor decisions recorded so they are not silently forgotten
+
+- **Receptors are the crystallised constructs, not full-length UniProt.** 6M8Q's CPSF3 entity is 478
+  residues against 684 in UniProt; 8C8S's SNM1A is 343 against 1,040. Full length would fold domains
+  the co-crystal never contained and cost several times more.
+- **The IP6 / Integrator rung of Tier B is declared and deliberately not built.** The *Drosophila*
+  cleavage module is IntS4 1,032 + IntS11 597 + IntS9 654 = **2,283 residues**, an 80GB-class job per
+  ligand costing more than the entire main screen. It stays in the code behind `--with-integrator`
+  so the reason for its absence is in the repository rather than in anyone's memory. **Tier B
+  therefore rests on the nsp10-nsp14 fragment rung alone**, which was already the harder and more
+  informative of the two, but it means Tier B is a single rung and B2 carries it.
