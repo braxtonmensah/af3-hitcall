@@ -507,3 +507,35 @@ real cleft is the kind of question the tool was built for; a screen at a flat in
   other software. Only the ratios and the rank order against the calibration set are used here.
 - "0 of 4 catalytic residues conserved" is a statement about four aligned positions, not a measured
   selectivity margin against human CPSF73. It is a reason to test selectivity, not a result about it.
+
+---
+
+# Amendment 3 addendum, 2026-09-26: the gate rests on two rungs and that is not fixable from this series
+
+Amendment 3 demoted three Tier A compounds to diagnostics on the grounds that they bind by chelating
+active-site metals, which the affinity head cannot represent. That was argued from chemotype
+(benzoxaborole boronate, hydroxamate) rather than measured, and it left the gate resting on two rungs.
+Since a third would materially strengthen it, the whole SNM1A series was checked for a non-chelating
+member, by measuring each ligand's closest approach to the metals in its own entry.
+
+| Entry | Ligand | Closest metal contact | |
+|---|---|---|---|
+| 8C8S | U2O | Zn 2.04 A | chelator |
+| 8C8D | U2C | Zn 2.02 A | chelator |
+| 8C8B | U1L | Zn 1.94 A | chelator |
+| 8CEW | UFI | Ni 2.02 A, Zn 2.15 A | chelator |
+| 8CF0 | UF3 | Ni 2.04 A | chelator |
+| 8CG9 | R3Z | Ni 2.09 A, Zn 2.17 A | chelator |
+| 8CG9 | XOB | Zn 2.15 A | chelator |
+
+Every one is a direct coordination bond, not a contact. **All seven are chelators, so there is no
+third representable rung available from the SNM1A series**, and the chemotype argument in Amendment 3
+is confirmed rather than merely plausible.
+
+**So Tier A rests on two rungs and Tier B on one, and that is the honest size of the gate.** It is a
+real limitation on what a Tier A pass licenses: two compounds on two proteins is enough to show the
+method is not dead, and not enough to characterise where it works. Any write-up says so.
+
+This is also the reason the three diagnostics are still run rather than dropped. If a compound whose
+binding mode the affinity head provably cannot represent nonetheless scores well, that says something
+about what the score is actually keying on, and it costs nothing to find out.
