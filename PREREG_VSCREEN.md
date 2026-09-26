@@ -420,3 +420,90 @@ There is also **no protein-protein affinity module in the repository at all**.
 That does not change any test above, and it is not a reason to skip the screen, which is cheap. It is
 the number that should sit next to any positive result, and it means a shortlist from this pipeline
 is a ranking to test, never an affinity estimate.
+
+---
+
+# Amendment 4, 2026-09-26: the interface is not ligandable on either side, and the one reproducible pocket is somewhere else
+
+Still **before any Boltz-2 score exists**. What has been measured since Amendment 3: buried-cavity
+scans of the two AF3 models the repo already holds, reported by `cleanroom/analysis_ligandability.py`
+into `cleanroom/results_ligandability.json`. No prediction has been run.
+
+`cleanroom/TARGET_EXPANSION.md` recommended re-aiming the screen at MPN621's side of the interface,
+on a 273 A^3 cavity against RNase J's 26 A^3. **Checking that on the second, independent ortholog
+model dissolves it**, and the same check turns up something better.
+
+## The measurement
+
+Largest cavity per chain per model, scanned identically and calibrated against KEAP1:p62 = 575 A^3
+(drugged), MDM2:p53 = 76 A^3 (drugged but shallow), c-Fos:c-Jun = 0 A^3 (flat, undrugged).
+
+| Cavity | *M. pneumoniae* | *M. genitalium* | ratio |
+|---|---|---|---|
+| RNase J catalytic cleft | 1262 | 1155 | **1.09** |
+| RNase J largest non-catalytic interface cavity | 26 | 27 | **1.04** |
+| MPN621 degenerate cleft | 491 | 470 | **1.04** |
+| **MPN621 largest non-catalytic interface cavity** | **273** | **82** | **3.33** |
+
+Three of the four reproduce within 9% between two independently predicted models of orthologous
+complexes. **The one that does not is exactly the one the recommendation rested on.** By the same
+standard that makes the other three trustworthy, 273 A^3 is a property of one model rather than of
+the protein, and `iface_pocket.py`'s own warning already said volumes swing up to 13-fold with
+conformation.
+
+## Three conclusions, in order of how well supported they are
+
+**1. RNase J's interface face is flat, and that is now established rather than suspected.** 26 and
+27 A^3 across both models, against 76 for the shallowest drugged reference in the calibration set.
+**The screen's current target has no pocket.** This is the firmest result here.
+
+**2. MPN621's side is not the fix.** Its non-catalytic interface cavity does not reproduce, and even
+in the model where it is largest only **28%** of its lining residues are interface residues, so it is
+mostly a pocket on MPN621 that happens to touch the interface rather than an interface pocket. A
+ligand there would not obviously disturb the interaction. **The re-aiming recommendation is not
+adopted.**
+
+**3. So the interface is not ligandable on either side**, and the screen's expected null was
+structurally predetermined rather than merely a low prior. That is worth knowing before spending 15
+GPU-hours on it, and it is the main practical consequence of this amendment.
+
+## What the same scan found that is worth acting on
+
+**MPN621's degenerate cleft is the only large, reproducible, selectivity-favourable pocket in this
+system.** 491 and 470 A^3 across the two models, a ratio of 1.04, comparable to the drugged KEAP1:p62
+reference at 575. And unlike every other large cavity here it sits on residues where **0 of the 4
+catalytic positions are conserved** (V71, E73, N74, N365 against B. subtilis J1's H76, D78, H79,
+H368), whereas RNase J itself keeps all four and human CPSF73 keeps three.
+
+That last point is the selectivity argument and it runs the opposite way from the interface logic.
+The reason the screen aimed at the interface was that the catalytic site is conserved and therefore
+non-selective. **On MPN621 that reasoning does not apply, because MPN621 has lost the catalytic
+machinery that makes RNase J's and CPSF73's clefts similar to each other.**
+
+**It also moves the problem in-distribution.** Boltz-2's affinity head was trained largely on
+conventional pockets and has no protein-protein affinity module at all (Amendment 3). A screen at a
+real cleft is the kind of question the tool was built for; a screen at a flat interface is not.
+
+## What this changes, and what it does not
+
+- **The main screen is not built or run against the RNase J interface.** Amendment 1's staging rule
+  already held it behind the gate; this removes the reason to run it at all in its current form.
+- **The gate is unaffected and still runs first.** It tests the method on known ligands of related
+  folds, which is worth knowing whatever the target turns out to be, and three of its four receptors
+  are conventional pockets, so it is a fair test of a conventional-pocket screen.
+- **A screen against MPN621's cleft is not pre-registered here and is not authorised by this
+  amendment.** It needs its own pre-registration, with its own selectivity arm, and the honest
+  version of that arm is harder than the current one: the right comparator is no longer only human
+  CPSF73 but also *M. pneumoniae* RNase J itself, since a compound that hits both paralogues tells
+  you nothing about which one matters.
+
+## Limits of this amendment
+
+- Both models are **predictions**, from the same engine, of a complex with no experimental structure
+  on either chain. Two AF3 models agreeing is weaker evidence than two crystal structures agreeing,
+  and they share whatever systematic error the engine has.
+- Only `model_0` was scanned per job. Per-sample variation within a job is unmeasured.
+- The cavity scan is a coarse grid method and absolute volumes are not comparable to numbers from
+  other software. Only the ratios and the rank order against the calibration set are used here.
+- "0 of 4 catalytic residues conserved" is a statement about four aligned positions, not a measured
+  selectivity margin against human CPSF73. It is a reason to test selectivity, not a result about it.

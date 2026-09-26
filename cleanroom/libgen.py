@@ -226,24 +226,58 @@ def fetch_chembl_source(name, src_id, licence):
         print("  records", len(ids), flush=True)
     uniq = sorted(set(ids))
     print("  %d records -> %d distinct ChEMBL ids; fetching structures" % (len(ids), len(uniq)))
-    rows = []
+    rows, seen_back = [], set()
+    dropped = collections.Counter()
     mol_url = "https://www.ebi.ac.uk/chembl/api/data/molecule.json"
-    for i in range(0, len(uniq), 50):
-        chunk = uniq[i:i + 50]
+    CH = 40
+    for i in range(0, len(uniq), CH):
+        chunk = uniq[i:i + CH]
+        # limit must exceed the chunk size or the response is silently truncated and the missing
+        # ids look like molecules that do not exist. This is accounted per chunk below so that a
+        # shortfall is reported rather than inferred from a total at the end.
         r = requests.get(mol_url, params={"molecule_chembl_id__in": ",".join(chunk),
-                                          "limit": 100}, timeout=300)
+                                          "limit": CH * 2}, timeout=300)
         r.raise_for_status()
-        for m in r.json().get("molecules", []):
+        j = r.json()
+        got = j.get("molecules", [])
+        back = set()
+        for m in got:
+            cid = m.get("molecule_chembl_id")
+            back.add(cid)
             smi = (m.get("molecule_structures") or {}).get("canonical_smiles")
-            if smi and m.get("molecule_type") == "Small molecule":
-                rows.append((smi, m["molecule_chembl_id"]))
-        if i and i % 500 == 0:
-            print("  structures", len(rows), flush=True)
+            if not smi:
+                dropped["no_structure"] += 1
+            elif m.get("molecule_type") != "Small molecule":
+                dropped["type:" + str(m.get("molecule_type"))] += 1
+            else:
+                rows.append((smi, cid))
+        seen_back |= back
+        missing = set(chunk) - back
+        if missing:
+            dropped["not_returned_by_api"] += len(missing)
+        if (i // CH) % 25 == 0:
+            print("  %6d/%d ids -> %6d structures" % (i + len(chunk), len(uniq), len(rows)),
+                  flush=True)
+    print("  accounting: %d ids in, %d returned by the API, %d usable structures"
+          % (len(uniq), len(seen_back), len(rows)))
+    if dropped:
+        for k, v in dropped.most_common():
+            print("    dropped %-26s %d" % (k, v))
+    yield_frac = len(rows) / max(1, len(uniq))
+    if yield_frac < 0.8:
+        # Refuse to record a source whose provenance is a mystery. A partial set silently labelled
+        # with this licence and this src_id is worse than no set: every later count and every claim
+        # about where a hit came from would be wrong.
+        raise SystemExit(
+            "only %.1f%% of the %d ids yielded a structure. Not writing %s: a source recorded under "
+            "this src_id and licence must actually be that source. Investigate the accounting above "
+            "before retrying." % (100 * yield_frac, len(uniq), name))
     path = os.path.join(RAW, name + ".smi")
     with open(path, "w", newline="\n") as f:
         for smi, cid in rows:
             f.write(smi + "\t" + cid + "\n")
     _record_source(name, {"licence": licence, "src_id": src_id, "n_raw": len(rows),
+                          "n_ids": len(uniq), "n_records": len(ids),
                           "fetched": datetime.date.today().isoformat(),
                           "endpoint": url, "path": os.path.relpath(path, HERE)})
     print("wrote", len(rows), "->", path)
