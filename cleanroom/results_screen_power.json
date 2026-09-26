@@ -1,0 +1,106 @@
+{
+ "trials": 20000,
+ "false_hits": [
+  {
+   "n_screen": 300,
+   "n_decoy": 50,
+   "expected": 5.882,
+   "p_at_least_one": 0.8584
+  },
+  {
+   "n_screen": 300,
+   "n_decoy": 300,
+   "expected": 0.997,
+   "p_at_least_one": 0.4973
+  },
+  {
+   "n_screen": 1000,
+   "n_decoy": 50,
+   "expected": 19.608,
+   "p_at_least_one": 0.952
+  },
+  {
+   "n_screen": 1000,
+   "n_decoy": 1000,
+   "expected": 0.999,
+   "p_at_least_one": 0.5062
+  },
+  {
+   "n_screen": 2000,
+   "n_decoy": 2000,
+   "expected": 1.0,
+   "p_at_least_one": 0.4972
+  },
+  {
+   "n_screen": 3273,
+   "n_decoy": 3273,
+   "expected": 1.0,
+   "p_at_least_one": 0.4976
+  }
+ ],
+ "fdr": [
+  {
+   "n_screen": 300,
+   "decoys_needed": 2999
+  },
+  {
+   "n_screen": 1000,
+   "decoys_needed": 9999
+  },
+  {
+   "n_screen": 2000,
+   "decoys_needed": 19999
+  },
+  {
+   "n_screen": 3273,
+   "decoys_needed": 32729
+  }
+ ],
+ "power": [
+  {
+   "n_per_arm": 150,
+   "auc": [
+    0.55,
+    0.57,
+    0.6,
+    0.65
+   ],
+   "power": [
+    0.322,
+    0.554,
+    0.85,
+    0.994
+   ]
+  },
+  {
+   "n_per_arm": 300,
+   "auc": [
+    0.55,
+    0.57,
+    0.6,
+    0.65
+   ],
+   "power": [
+    0.563,
+    0.843,
+    0.989,
+    1.0
+   ]
+  },
+  {
+   "n_per_arm": 1000,
+   "auc": [
+    0.55,
+    0.57,
+    0.6,
+    0.65
+   ],
+   "power": [
+    0.972,
+    1.0,
+    1.0,
+    1.0
+   ]
+  }
+ ]
+}

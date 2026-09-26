@@ -5,5 +5,35 @@
   "n_raw": 3273,
   "origin": "C:\\Users\\bmens\\OneDrive - Indiana University\\NQ_Project\\af3-hitcall\\cleanroom\\library_approved.smi",
   "path": "library_raw\\chembl_approved.smi"
+ },
+ "chembl_phase1": {
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/molecule",
+  "fetched": "2026-09-25",
+  "licence": "CC BY-SA 3.0",
+  "n_raw": 950,
+  "path": "library_raw\\chembl_phase1.smi",
+  "query": {
+   "max_phase": 1
+  }
+ },
+ "chembl_phase2": {
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/molecule",
+  "fetched": "2026-09-25",
+  "licence": "CC BY-SA 3.0",
+  "n_raw": 7016,
+  "path": "library_raw\\chembl_phase2.smi",
+  "query": {
+   "max_phase": 2
+  }
+ },
+ "chembl_phase3": {
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/molecule",
+  "fetched": "2026-09-25",
+  "licence": "CC BY-SA 3.0",
+  "n_raw": 1113,
+  "path": "library_raw\\chembl_phase3.smi",
+  "query": {
+   "max_phase": 3
+  }
  }
 }

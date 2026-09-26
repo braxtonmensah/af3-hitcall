@@ -394,12 +394,56 @@ def _ks(a, b):
     return d
 
 
+def select_paired(n_pairs, pool, seed=25):
+    """Draw n_pairs (screen, decoy) couples from the same MW x cLogP bin.
+
+    Selecting the screen set first and matching afterwards has a structural problem: a screen set
+    chosen for maximum diversity lands in sparse bins, and a sparse bin has no second member to
+    serve as its decoy. That is what produced a 400 versus 333 split, which quietly breaks the 1:1
+    ratio the design relies on to keep the expected number of null-beating compounds at 1.0.
+
+    Choosing in couples removes the tension: a bin can contribute to the screen only if it can also
+    pay for the decoy. The screen set is slightly less diverse than it could be, and in exchange
+    the null is exactly matched at bin level and exactly the same size, which is the trade worth
+    making.
+    """
+    rng = random.Random(seed)
+    buckets = collections.defaultdict(list)
+    for r in pool:
+        buckets[_bin(r)].append(r)
+    for b in buckets.values():
+        rng.shuffle(b)
+    # Round-robin across bins so the pairs spread over property space instead of piling into the
+    # densest bin, and stop when no bin can supply a further couple.
+    screen, decoys = [], []
+    keys = sorted(buckets, key=lambda b: -len(buckets[b]))
+    while len(screen) < n_pairs:
+        progressed = False
+        for b in keys:
+            if len(screen) >= n_pairs:
+                break
+            if len(buckets[b]) >= 2:
+                screen.append(buckets[b].pop())
+                decoys.append(buckets[b].pop())
+                progressed = True
+        if not progressed:
+            break
+    return screen, decoys
+
+
 def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True, seed=25):
     """Pick the screen set and a property-matched decoy set, and write both with an arm column."""
     rows = load_master()
     usable = [r for r in rows if not (exclude_pains and r["pains"])]
     print("pool:", len(rows), "->", len(usable), "after PAINS exclusion" if exclude_pains else "")
     rng = random.Random(seed)
+    if n_decoys == n_screen and strategy == "diverse":
+        screen, decoys = select_paired(n_screen, usable, seed=seed)
+        if len(screen) < n_screen:
+            print("only %d couples available, not %d: some bins cannot pay for a decoy."
+                  % (len(screen), n_screen))
+        _write_selection(screen, decoys, out_path)
+        return
     if strategy == "diverse":
         # Spread the screen set across MW x cLogP bins instead of taking the head of a file.
         # A screen set drawn from one corner of property space cannot tell you anything about the
@@ -427,6 +471,10 @@ def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True,
     if shortfall:
         print("WARNING: %d decoys unmatched and NOT back-filled. The null is %d, not %d."
               % (shortfall, len(decoys), n_decoys))
+    _write_selection(screen, decoys, out_path)
+
+
+def _write_selection(screen, decoys, out_path):
     with open(out_path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["arm"] + FIELDS, delimiter="\t")
         w.writeheader()
@@ -436,8 +484,13 @@ def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True,
                 row["also_in"] = ";".join(row["also_in"]) if isinstance(row["also_in"], list) else row["also_in"]
                 w.writerow(row)
     print("screen", len(screen), "| decoys", len(decoys), "->", out_path)
+    keys = {r["inchikey"] for r in screen} & {r["inchikey"] for r in decoys}
+    if keys:
+        # Cannot happen by construction, but this is the exact defect that capped the null in the
+        # staged 650-job set, so it is asserted rather than assumed.
+        print("FATAL: %d molecules are in both arms: %s" % (len(keys), sorted(keys)[:5]))
     print("\nmatch quality (KS statistic, lower is better matched):")
-    for k in ("mw", "clogp", "heavy", "rotb"):
+    for k in ("mw", "clogp", "heavy", "rotb", "tpsa"):
         print("   %-7s D = %.3f" % (k, _ks([r[k] for r in screen], [r[k] for r in decoys])))
     print("\nA D above about 0.15 on mw or heavy means the null is still distinguishable by size.")
 
