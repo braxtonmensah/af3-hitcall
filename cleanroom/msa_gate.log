@@ -1,0 +1,9 @@
+5 MSA(s) to ensure
+
+artemis_A    362 aa, submitting
+   artemis_A     0s RUNNING
+   artemis_A    60s RUNNING
+artemis_A    wrote 2040 sequences | query row matches the construct: yes
+cpsf73_A     478 aa, submitting
+   cpsf73_A      0s RUNNING
+   cpsf73_A     60s RUNNING

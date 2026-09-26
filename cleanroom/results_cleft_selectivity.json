@@ -1,0 +1,302 @@
+{
+ "target": {
+  "name": "MPN621",
+  "accession": "P75174",
+  "length": 561
+ },
+ "cleft_residues": [
+  15,
+  18,
+  37,
+  69,
+  71,
+  73,
+  74,
+  142,
+  162,
+  163,
+  201,
+  234,
+  329,
+  332,
+  334,
+  358,
+  359,
+  363,
+  365,
+  387
+ ],
+ "catalytic_equivalent_positions": [
+  69,
+  71,
+  73,
+  74,
+  365
+ ],
+ "comparisons": {
+  "M_pneumoniae_RNaseJ": {
+   "background_identity": 0.2406,
+   "cleft_conserved": 5,
+   "cleft_n": 20,
+   "cleft_unaligned": 0,
+   "cleft_fraction": 0.25,
+   "cleft_vs_background": 1.04,
+   "positions": [
+    {
+     "target": "R15",
+     "other": "V27",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N18",
+     "other": "N30",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "T37",
+     "other": "F49",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N69",
+     "other": "H81",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "V71",
+     "other": "H83",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "E73",
+     "other": "D85",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "N74",
+     "other": "H86",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "S142",
+     "other": "S151",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "D162",
+     "other": "G171",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "D163",
+     "other": "D172",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R201",
+     "other": "E208",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "S234",
+     "other": "S241",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "M329",
+     "other": "S338",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R332",
+     "other": "P341",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "A334",
+     "other": "P343",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "G358",
+     "other": "S367",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R359",
+     "other": "P368",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "S363",
+     "other": "S375",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N365",
+     "other": "H377",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "S387",
+     "other": "H399",
+     "identical": false,
+     "catalytic_equivalent": false
+    }
+   ],
+   "accession": "P75497",
+   "note": "the paralogue in the same organism; arm O1"
+  },
+  "human_CPSF73": {
+   "background_identity": 0.221,
+   "cleft_conserved": 4,
+   "cleft_n": 20,
+   "cleft_unaligned": 0,
+   "cleft_fraction": 0.2,
+   "cleft_vs_background": 0.9,
+   "positions": [
+    {
+     "target": "R15",
+     "other": "V23",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N18",
+     "other": "S26",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "T37",
+     "other": "E48",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N69",
+     "other": "H71",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "V71",
+     "other": "H73",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "E73",
+     "other": "D75",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "N74",
+     "other": "H76",
+     "identical": false,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "S142",
+     "other": "H158",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "D162",
+     "other": "G178",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "D163",
+     "other": "D179",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R201",
+     "other": "R218",
+     "identical": true,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "S234",
+     "other": "E255",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "M329",
+     "other": "A408",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R332",
+     "other": "H413",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "A334",
+     "other": "I415",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "G358",
+     "other": "N450",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "R359",
+     "other": "T451",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "S363",
+     "other": "T455",
+     "identical": false,
+     "catalytic_equivalent": false
+    },
+    {
+     "target": "N365",
+     "other": "N457",
+     "identical": true,
+     "catalytic_equivalent": true
+    },
+    {
+     "target": "S387",
+     "other": "S482",
+     "identical": true,
+     "catalytic_equivalent": false
+    }
+   ],
+   "accession": "Q9UKF6",
+   "note": "the human off-target; arm O2"
+  }
+ }
+}
