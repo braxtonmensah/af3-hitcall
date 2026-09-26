@@ -69,3 +69,25 @@ consistent answers) but they are five wasted slots.
 
 **Arms BR and CT are still unrun**, 40 jobs, and the daily quota is 30. They need either two more
 days on AF Server or a funded GPU. Run them only after the gate passes.
+
+---
+
+## Scoring note, 2026-09-25: the page ipTM is valid for arm P and NOT for arms BR/CT
+
+The AlphaFold Server result page prints a single `ipTM = x` for a job.
+
+- **Arm P has two chains, so that number IS the A-B chain-pair ipTM.** Reading it off the page is a
+  valid screen and is how the 19 arm-P values in `armP_iptm.json` were collected. A value below 0.5
+  is the best of five samples and so cannot meet the amended "3 of 5" rule; it fails outright.
+- **Arms BR and CT have three chains, so the page number is the WHOLE-COMPLEX ipTM**, averaging all
+  three chain pairs. It is **not** the A-B value the amended criterion asks for and must not be used
+  as one. RNAP3 is the proof: its page ipTM was **0.87** while the MG354-RpoB chain pair was **0.57**
+  and MG354-RpoC was **0.43**.
+
+**So BR and CT must be scored from `*_summary_confidences_*.json` inside each downloaded zip, using
+`chain_pair_iptm[0][1]`** (chains are written A, B, then the bridge or control as C). Do not shortcut
+this with the page value.
+
+First BR job back, `taf6l_tada2b_br`, shows a page ipTM of 0.13 against the same pair's arm-P value of
+0.13. That is suggestive of no rescue, and it is **not** a result: it is the wrong quantity, n = 1,
+and the pre-registered comparison is over 20 pairs with a McNemar test.
