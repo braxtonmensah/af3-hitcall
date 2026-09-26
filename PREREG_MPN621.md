@@ -270,3 +270,63 @@ MPN621 and RNase J must not rank the whole screen near-identically, needs O1 acr
 not only across a shortlist. It is therefore evaluated at stage 3 on all 400, and **not** substituted
 with a shortlist-only version, because a shortlist is selected on arm S and a correlation computed on
 it would be conditioned on the thing being tested.
+
+---
+
+# Amendment 3, 2026-09-26: the library is now 31% fragments, so the primary test is read per stratum
+
+Still **before any Boltz-2 score exists for this target**.
+
+## What changed in the library
+
+The compound library grew to **36,267 distinct molecules** with CO-ADD's ChEMBL deposit (23,343 of
+them). Two facts about that set change how the screen should be read.
+
+**It is fragment-heavy.** CO-ADD's academic donations are **41%** rule-of-three fragments against
+iPPI-DB's 2%, which took the library from 13% fragments to **31%**, and dropped the median molecular
+weight from 361 to 279.
+
+**The MMV Pathogen Box is not an independent prior.** 397 of its 398 compounds are already inside
+CO-ADD's deposit. Anything that treats them as two separate priors, including the staging table in
+`cleanroom/LIBRARIES.md`, is double-counting one set.
+
+## Why this changes the test rather than just the numbers
+
+Fragments and drug-like compounds are two populations with different size, different chemistry and
+every reason to have different score distributions. Pooling two populations into one statistic is
+**the error this project has already made once and corrected**: its own headline AUROC of 0.81
+averages a precedented population at 0.85 and a never-solved one at 0.71, and the honest reading was
+only visible once they were separated.
+
+So the selection is now **stratified**: 200 rule-of-three fragments and 200 drug-like compounds in
+arm S, each with its own property-matched null, and the stratum recorded per compound
+(`selection_v2.tsv`, `libgen.py --select --stratify`).
+
+**M1 is reported pooled AND per stratum, and the pooled figure is never quoted alone.** If the two
+strata disagree in verdict, the scorer says so explicitly and the pooled number is labelled as an
+average over disagreeing populations.
+
+Matching is verified within each stratum as well as overall, because an overall match can hide a
+within-stratum mismatch: if fragment screen compounds were paired against drug-like decoys and vice
+versa, the pooled distributions would still agree while every individual comparison was wrong.
+Measured: overall MW D = 0.030, within drug-like 0.035, within fragments 0.060, all far below the
+0.15 bar.
+
+## Consequence fixed in advance
+
+- **If only the fragment stratum enriches**, the honest claim is about fragments at this cleft, which
+  is a legitimate and conventional result for a hard site, and the shortlist is fragments. It is
+  **not** a claim about the library as a whole.
+- **If only the drug-like stratum enriches**, the same in reverse.
+- **If they disagree, no pooled AUC is quoted in any write-up**, and the two are reported side by side
+  with their own CIs.
+
+## What this does not change
+
+The gate, the staging, the metal policy and arm Z are unaffected. Arms O1 and O2 inherit the same
+stratified selection, so the selectivity comparison is within-compound and therefore within-stratum
+by construction.
+
+The jobs were rebuilt from `selection_v2.tsv` and re-validated: 800 jobs, 400 screen and 400 decoy,
+one protein, one MSA, no cross-arm duplicate molecules, and the scorer's self-test now includes a
+fixture in which the strata disagree and confirms the disagreement is detected.

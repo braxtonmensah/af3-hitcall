@@ -552,12 +552,43 @@ def select_paired(n_pairs, pool, seed=25):
     return screen, decoys
 
 
-def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True, seed=25):
-    """Pick the screen set and a property-matched decoy set, and write both with an arm column."""
+def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True, seed=25,
+           stratify=False):
+    """Pick the screen set and a property-matched decoy set, and write both with an arm column.
+
+    `stratify` splits the draw evenly between rule-of-three fragments and everything else, and
+    records which stratum each compound is in. It exists because the library is now 31% fragments,
+    up from 13%, after CO-ADD's academic donations came in at 41% fragments against iPPI-DB's 2%.
+    Fragments and drug-like compounds are two populations with different size and chemistry, and
+    pooling two populations into one statistic is the mistake this project has already made once:
+    its own headline AUROC of 0.81 averages a precedented and a never-solved population that score
+    0.85 and 0.71. A stratified draw lets the primary test be read per stratum instead.
+    """
     rows = load_master()
     usable = [r for r in rows if not (exclude_pains and r["pains"])]
     print("pool:", len(rows), "->", len(usable), "after PAINS exclusion" if exclude_pains else "")
     rng = random.Random(seed)
+    if stratify:
+        if n_decoys != n_screen:
+            sys.exit("--stratify requires an equal-sized null (--decoys == --select)")
+        groups = {"fragment": [r for r in usable if r["is_fragment"]],
+                  "druglike": [r for r in usable if not r["is_fragment"]]}
+        half = n_screen // 2
+        screen, decoys = [], []
+        for name in ("fragment", "druglike"):
+            s, d = select_paired(half, groups[name], seed=seed)
+            if len(s) < half:
+                print("stratum %s: only %d couples available, not %d" % (name, len(s), half))
+            for r in s:
+                r["stratum"] = name
+            for r in d:
+                r["stratum"] = name
+            screen += s
+            decoys += d
+            print("stratum %-9s screen %4d | decoys %4d  (pool %d)"
+                  % (name, len(s), len(d), len(groups[name])))
+        _write_selection(screen, decoys, out_path, stratified=True)
+        return
     if n_decoys == n_screen and strategy == "diverse":
         screen, decoys = select_paired(n_screen, usable, seed=seed)
         if len(screen) < n_screen:
@@ -595,13 +626,16 @@ def select(n_screen, n_decoys, out_path, strategy="diverse", exclude_pains=True,
     _write_selection(screen, decoys, out_path)
 
 
-def _write_selection(screen, decoys, out_path):
+def _write_selection(screen, decoys, out_path, stratified=False):
+    fields = ["arm"] + FIELDS + (["stratum"] if stratified else [])
     with open(out_path, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["arm"] + FIELDS, delimiter="\t")
+        w = csv.DictWriter(f, fieldnames=fields, delimiter="\t")
         w.writeheader()
         for arm, rs in (("screen", screen), ("decoy", decoys)):
             for r in rs:
                 row = dict(r, arm=arm)
+                if not stratified:
+                    row.pop("stratum", None)
                 row["also_in"] = ";".join(row["also_in"]) if isinstance(row["also_in"], list) else row["also_in"]
                 w.writerow(row)
     print("screen", len(screen), "| decoys", len(decoys), "->", out_path)
@@ -613,6 +647,17 @@ def _write_selection(screen, decoys, out_path):
     print("\nmatch quality (KS statistic, lower is better matched):")
     for k in ("mw", "clogp", "heavy", "rotb", "tpsa"):
         print("   %-7s D = %.3f" % (k, _ks([r[k] for r in screen], [r[k] for r in decoys])))
+    if stratified:
+        # An overall match can hide a within-stratum mismatch: if the fragment screen compounds are
+        # paired with drug-like decoys and vice versa, the pooled distributions still agree while
+        # every individual comparison is wrong. So the match is reported per stratum too.
+        print("   within each stratum:")
+        for name in sorted({r.get("stratum") for r in screen if r.get("stratum")}):
+            sc = [r for r in screen if r.get("stratum") == name]
+            dc = [r for r in decoys if r.get("stratum") == name]
+            print("     %-9s n=%-4d mw D = %.3f   heavy D = %.3f"
+                  % (name, len(sc), _ks([r["mw"] for r in sc], [r["mw"] for r in dc]),
+                     _ks([r["heavy"] for r in sc], [r["heavy"] for r in dc])))
     print("\nA D above about 0.15 on mw or heavy means the null is still distinguishable by size.")
 
 
@@ -635,6 +680,9 @@ if __name__ == "__main__":
     ap.add_argument("--decoys", type=int, default=0)
     ap.add_argument("--strategy", choices=["diverse", "random"], default="diverse")
     ap.add_argument("--keep-pains", action="store_true")
+    ap.add_argument("--stratify", action="store_true",
+                    help="draw half from rule-of-three fragments and half from the rest, and record "
+                         "the stratum, so the primary test can be read per population")
     ap.add_argument("--out", default=os.path.join(HERE, "selection.tsv"))
     a = ap.parse_args()
 
@@ -658,6 +706,7 @@ if __name__ == "__main__":
     if a.report:
         report()
     if a.select:
-        select(a.select, a.decoys, a.out, strategy=a.strategy, exclude_pains=not a.keep_pains)
+        select(a.select, a.decoys, a.out, strategy=a.strategy, exclude_pains=not a.keep_pains,
+               stratify=a.stratify)
     if not any((a.fetch, a.add_file, a.build, a.report, a.select)):
         ap.print_help()

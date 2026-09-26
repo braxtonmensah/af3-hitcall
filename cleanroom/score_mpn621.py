@@ -166,7 +166,8 @@ def score(jobs_dir, out_dir, selection=None, quiet=False):
         sys.exit("arms S and N are both required; got S=%d N=%d" % (len(S), len(N)))
     res = {"n": {k: len(v) for k, v in by_arm.items()}, "tests": {}}
 
-    # ---- M1
+    # ---- M1, pooled and then per stratum
+    props = properties(selection)
     a, b = list(S.values()), list(N.values())
     auc = auc_mw(a, b)
     lo, hi = auc_ci(a, b)
@@ -174,8 +175,39 @@ def score(jobs_dir, out_dir, selection=None, quiet=False):
     res["tests"]["M1"] = {"auc": round(auc, 4), "ci": [round(lo, 4), round(hi, 4)],
                           "verdict": verdict, "n_screen": len(a), "n_null": len(b)}
 
+    # A pooled AUC over two populations is the mistake this project already made once: its headline
+    # 0.81 averages a precedented population at 0.85 and a never-solved one at 0.71. The selection is
+    # drawn half rule-of-three fragments and half drug-like, so the primary test is reported per
+    # stratum as well as pooled, and a pooled figure is never quoted alone.
+    strata = {}
+    for k in S:
+        st = (props.get(k) or {}).get("stratum")
+        if st:
+            strata.setdefault(st, {"S": [], "N": []})["S"].append(S[k])
+    for k in N:
+        st = (props.get(k) or {}).get("stratum")
+        if st and st in strata:
+            strata[st]["N"].append(N[k])
+    per = {}
+    for st, d in sorted(strata.items()):
+        if len(d["S"]) < 20 or len(d["N"]) < 20:
+            per[st] = {"n_screen": len(d["S"]), "n_null": len(d["N"]),
+                       "note": "too few to read separately"}
+            continue
+        sa = auc_mw(d["S"], d["N"])
+        slo, shi = auc_ci(d["S"], d["N"])
+        per[st] = {"auc": round(sa, 4), "ci": [round(slo, 4), round(shi, 4)],
+                   "verdict": "enriched" if slo > 0.5 else
+                              ("anti-enriched" if shi < 0.5 else "null"),
+                   "n_screen": len(d["S"]), "n_null": len(d["N"])}
+    res["tests"]["M1_by_stratum"] = per
+    if per:
+        verdicts = {v.get("verdict") for v in per.values() if "verdict" in v}
+        res["tests"]["M1"]["strata_disagree"] = len(verdicts) > 1
+        if len(verdicts) > 1:
+            res["tests"]["M1"]["verdict"] += " (POOLED; strata disagree, read them separately)"
+
     # ---- M5, read before M1 is believed
-    props = properties(selection)
     mw = [(float(props[k]["mw"]), S[k]) for k in S if k in props and props[k].get("mw")]
     hv = [(float(props[k]["heavy"]), S[k]) for k in S if k in props and props[k].get("heavy")]
     res["tests"]["M5"] = {
@@ -238,6 +270,16 @@ def score(jobs_dir, out_dir, selection=None, quiet=False):
         m1 = res["tests"]["M1"]
         print("\nM1  AUC %.4f  CI [%.4f, %.4f]  -> %s   (S=%d vs N=%d)"
               % (m1["auc"], m1["ci"][0], m1["ci"][1], m1["verdict"], m1["n_screen"], m1["n_null"]))
+        for st, d in sorted(res["tests"].get("M1_by_stratum", {}).items()):
+            if "auc" in d:
+                print("    %-9s AUC %.4f  CI [%.4f, %.4f]  -> %-14s (n=%d vs %d)"
+                      % (st, d["auc"], d["ci"][0], d["ci"][1], d["verdict"],
+                         d["n_screen"], d["n_null"]))
+            else:
+                print("    %-9s %s (n=%d vs %d)" % (st, d["note"], d["n_screen"], d["n_null"]))
+        if res["tests"]["M1"].get("strata_disagree"):
+            print("    STRATA DISAGREE. The pooled AUC averages two populations and must not be")
+            print("    quoted alone; this is the error this project's own 0.81 headline made.")
         m5 = res["tests"]["M5"]
         print("M5  score vs MW r=%s | vs heavy atoms r=%s | size-driven: %s"
               % (m5["pearson_score_vs_mw"], m5["pearson_score_vs_heavy"], m5["size_driven"]))
@@ -331,6 +373,24 @@ def selftest(jobs_dir, selection):
     run(by_mw, "enrichment driven by MW",
         lambda r: ("size-driven" in r["tests"]["M1"]["verdict"] or r["tests"]["M5"]["size_driven"],
                    "M1 " + r["tests"]["M1"]["verdict"]))
+
+    # Strata must be read separately when they disagree. Fragments enriched, drug-like not: the
+    # pooled AUC can look positive while half the library shows nothing, which is the failure mode
+    # this project's own 0.81 headline has.
+    props_st = properties(selection)
+    def split(name, meta):
+        st = (props_st.get(meta["inchikey"]) or {}).get("stratum")
+        if meta["arm"] == "S" and st == "fragment":
+            return rng.uniform(0.55, 1.0)
+        if meta["arm"] == "S":
+            return rng.uniform(0.0, 0.5)
+        return rng.uniform(0.0, 0.5)
+    if any((props_st.get(m["inchikey"]) or {}).get("stratum") for m in jobs.values()):
+        run(split, "strata disagree",
+            lambda r: (bool(r["tests"]["M1"].get("strata_disagree")),
+                       "disagree flag %s" % r["tests"]["M1"].get("strata_disagree")))
+    else:
+        print("  %-26s -> selection has no stratum column; skipped" % "strata disagree")
 
     tmp = tempfile.mkdtemp()
     try:
