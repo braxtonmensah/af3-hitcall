@@ -1,4 +1,11 @@
-"""Boltz-2 virtual screen against the RNase J : MPN621 interface. Clean-room and commercial-safe.
+"""Boltz-2 virtual screen against the RNase J : MPN621 interface.
+
+STATUS, 2026-09-26: this interface screen is not to be run. A pre-registered cavity scan
+(analysis_ligandability.py) puts the largest non-catalytic cavity on the RNase J interface face at
+26 and 27 A^3 across the two ortholog models, against 76 A^3 for the shallowest drugged reference
+in the calibration set. The face is flat and the expected null was structurally predetermined. See
+STATE.md and PREREG_MPN621.md Amendment 4. This file is kept because it is the code the
+pre-registration refers to.
 
 Why Boltz-2 and not AlphaFold: AlphaFold Server's Output Terms forbid use "IN CONNECTION WITH ANY
 AUTOMATED SYSTEM THAT PREDICTS THE BINDING OR INTERACTION OF THE PROTEIN WITH LIGANDS OR PEPTIDES".
@@ -14,15 +21,14 @@ Honest expectations:
     conventional compounds.
   - Boltz-2's affinity head was trained largely on conventional pockets, so scores at a PPI interface
     are a ranking, not truth.
-  - The likely honest outcome is "no convincing hit". That costs ~$2k and still closes or opens the
-    compound route, which is what PACE (GBP 1M) and CARB-X require.
+  - The likely honest outcome is "no convincing hit".
 
 Usage:
     python vscreen.py --fetch                  # approved-drug library from ChEMBL (free)
     python vscreen.py --write --limit 400      # Boltz-2 jobs against the interface
     python vscreen.py --write --decoys 50      # random-compound null set
     python vscreen.py --write --offtarget      # same compounds vs human CPSF73 (selectivity)
-    # on a rented GPU only (never IU hardware, see COMMERCIAL.md):
+    # on a rented GPU:
     #   pip install boltz -U
     #   boltz predict cleanroom/vscreen_yaml --use_msa_server --out_dir cleanroom/vscreen_out
     python vscreen.py --rank                   # rank, with decoy null and selectivity check
