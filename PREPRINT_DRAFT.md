@@ -4,7 +4,10 @@
 Indiana University Bloomington
 *Correspondence:* bsmensah@iu.edu
 
-**DRAFT — not posted. Every number traces to `RESULTS.md` and is reproducible from the repository.**
+Every number traces to `RESULTS.md` in the repository and is reproducible from it.
+
+*Funding:* This work received no external funding.
+*Competing interests:* The author declares no competing interests.
 
 ---
 

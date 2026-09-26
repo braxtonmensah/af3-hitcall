@@ -243,7 +243,7 @@ Pre-registered (`PREREG_RNAP3.md`), job files and scorer ready in `cleanroom/rna
 
 ## Operational facts that cost a cycle each
 
-- `MSYS_NO_PATHCONV=1 wsl.exe -d Ubuntu -- bash -lc 'ssh quartz "<cmd>"'` — the env var matters,
+- `MSYS_NO_PATHCONV=1 wsl.exe -d Ubuntu -- bash -lc 'ssh quartz "<cmd>"'` , and the env var matters,
   Git Bash rewrites `/mnt/c/...` otherwise.
 - The O'Reilly crosslink FASTA has corrupted residues. Use current UniProt sequences plus peptide
   location (XLVAL Amendment 2).
