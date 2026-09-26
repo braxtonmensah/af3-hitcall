@@ -1,0 +1,9 @@
+{
+ "chembl_approved": {
+  "fetched": "2026-09-25",
+  "licence": "CC BY-SA 3.0",
+  "n_raw": 3273,
+  "origin": "C:\\Users\\bmens\\OneDrive - Indiana University\\NQ_Project\\af3-hitcall\\cleanroom\\library_approved.smi",
+  "path": "library_raw\\chembl_approved.smi"
+ }
+}

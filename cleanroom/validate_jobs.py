@@ -7,6 +7,10 @@ Every failure caught here is a job that would otherwise crash mid-run on a rente
   - the MSA path resolves to a readable file (here or in msa/) and is identical across jobs
   - pocket contacts are 1-based positions inside the protein sequence
   - job ids are unique, so no result silently overwrites another
+  - the same MOLECULE does not appear in both the screen arm and the decoy arm. Unique job ids do
+    not give you this: ChEMBL ships the same structure under several ids as different salt forms,
+    and after desalting they are one molecule. A compound sitting in both arms caps its own null,
+    because it can never score above the best decoy when it *is* the best decoy.
 
 Usage:
     python validate_jobs.py                 # report
@@ -102,9 +106,44 @@ def check(path):
     return bad, d
 
 
+def arm_of(name):
+    """Which arm a job belongs to, from the filename convention vscreen.py writes."""
+    if name.startswith("decoy_"):
+        return "decoy"
+    if name.startswith("off_"):
+        return "off"
+    if name.startswith("pos_"):
+        return "positive"
+    return "screen"
+
+
+def cross_arm_report(by_key):
+    """Report molecules that appear in more than one arm.
+
+    screen <-> off is by design: the off-target arm is deliberately the same compounds run against
+    the selectivity protein. Every other pairing is a defect, and screen <-> decoy is the one that
+    silently destroys the result rather than just wasting money.
+    """
+    fatal, waste = [], []
+    for key, jobs in by_key.items():
+        if len(jobs) < 2:
+            continue
+        arms = {arm_of(j) for j in jobs}
+        same_arm = collections.Counter(arm_of(j) for j in jobs)
+        for arm, n in same_arm.items():
+            if n > 1:
+                waste.append((arm, sorted(j for j in jobs if arm_of(j) == arm)))
+        if "decoy" in arms and ("screen" in arms or "positive" in arms):
+            fatal.append(sorted(jobs))
+        elif "positive" in arms and "screen" in arms:
+            fatal.append(sorted(jobs))
+    return fatal, waste
+
+
 def main(prune):
     files = sorted(f for f in os.listdir(YDIR) if f.endswith(".yaml"))
     problems, msas, seqs, ids = {}, collections.Counter(), collections.Counter(), collections.Counter()
+    by_key = collections.defaultdict(list)
     for f in files:
         bad, d = check(os.path.join(YDIR, f))
         ids[f[:-5]] += 1
@@ -112,6 +151,16 @@ def main(prune):
             msas[d["msa"]] += 1
         if d["sequence"]:
             seqs[d["sequence"][:30] + "/%d" % len(d["sequence"])] += 1
+        if d["smiles"]:
+            mol = Chem.MolFromSmiles(d["smiles"])
+            if mol is not None:
+                # Key on the protein too. The same ligand against two different proteins is two
+                # different jobs; only a collision on the same protein is a duplicate.
+                try:
+                    prot = (d["sequence"] or "")[:40]
+                    by_key[(Chem.MolToInchiKey(mol), prot)].append(f[:-5])
+                except Exception:
+                    pass
         if bad:
             problems[f] = bad
 
@@ -123,12 +172,48 @@ def main(prune):
         print("  %s variants: %d" % (label, len(ctr)))
         for k, v in ctr.most_common():
             print("    %-70s %d jobs" % (k, v))
+
+    # Several MSA *files* is normal: one per protein, so a two-protein run has two. Several MSA
+    # *directories* is not, and it is not cosmetic. It means the arms were written at different
+    # times with different --msa-prefix values, so no single machine can resolve them all and
+    # whichever arm points at the other host's layout dies at run time, after the setup is paid
+    # for. Counted as a defect rather than printed as neutral information.
+    prefixes = collections.Counter()
+    for m, v in msas.items():
+        prefixes[os.path.dirname(m)] += v
+    mixed_msa = len(prefixes) > 1
+    if mixed_msa:
+        print("\n  FATAL: jobs point at %d different MSA directories. One machine cannot resolve"
+              % len(prefixes))
+        print("  all of them, so whichever arm names the other host's layout will fail at run time.")
+        print("  Rewrite the whole set with one --msa-prefix before spending any GPU time.")
+        for p, v in prefixes.most_common():
+            print("    %-62s %d jobs" % (p, v))
     dupes = [k for k, v in ids.items() if v > 1]
     if dupes:
         print("  DUPLICATE job ids (results would overwrite):", dupes)
 
-    if not problems:
+    fatal, waste = cross_arm_report(by_key)
+    if waste:
+        n = sum(len(j) - 1 for _, j in waste)
+        print("\n  %d jobs are a repeat of a molecule already in the same arm (paid twice for one answer):" % n)
+        for arm, jobs in sorted(waste)[:20]:
+            print("    %-9s %s" % (arm, " = ".join(jobs)))
+        if len(waste) > 20:
+            print("    ... and %d more" % (len(waste) - 20))
+    if fatal:
+        print("\n  FATAL: %d molecules appear in the decoy null AND in a scored arm." % len(fatal))
+        print("  Each one caps its own null: it cannot score above the best decoy when it is the")
+        print("  best decoy, and it caps every compound below it too. Re-draw the decoy set with")
+        print("  libgen.py --select, which deduplicates on InChIKey after desalting.")
+        for jobs in sorted(fatal):
+            print("    " + " = ".join(jobs))
+
+    if not problems and not fatal and not mixed_msa:
         print("\nAll %d jobs valid. Safe to run." % len(files))
+        return
+    if not problems:
+        print("\nPer-job checks all pass, but the set as a whole is not safe to run. See above.")
         return
     print("\n%d jobs with problems:" % len(problems))
     by_reason = collections.Counter()
