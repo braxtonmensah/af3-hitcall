@@ -20,10 +20,20 @@
   "mrpl13_mrpl47_p": 0.26,
   "mrpl13_mrpl37_p": 0.09,
   "mrpl13_mrpl2_p": 0.07,
-  "acad9_ecsit_p": 0.66
+  "acad9_ecsit_p": 0.66,
+  "pard3_pard6b_p": 0.39
  },
  "pending": [
-  "washc5_washc3_p",
-  "pard3_pard6b_p"
- ]
+  "washc5_washc3_p"
+ ],
+ "gate": {
+  "criterion": "amended: chain-pair ipTM >= 0.5 (top-ranked model screen)",
+  "bar": "at most 4 of 20",
+  "above": [
+   "acad9_ecsit_p",
+   "sephs1_qrich1_p"
+  ],
+  "n_read": 19,
+  "verdict": "PASSES - decided regardless of the 1 unread job"
+ }
 }
