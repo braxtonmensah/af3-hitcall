@@ -35,8 +35,9 @@ Braxton Mensah, Indiana University Bloomington. bsmensah@iu.edu
 was deposited in the PDB by other groups, years after the 2021 predictions were published. Nothing in
 this repository can move those dates, and no choice made here can reach back and change them.
 
-**Second, pre-registration.** Every hypothesis was written into a `PREREG_*.md` file and committed
-before the corresponding data were joined. There are **32** of them.
+**Second, pre-registration.** Every hypothesis was written into a `PREREG*.md` file and committed
+before the corresponding data were joined. There are **33** of them, and you can count them with
+`ls PREREG*.md`.
 
 - **Ten returned a negative, inconclusive, or failed-gate result** and are reported rather than
   dropped: CLINVAR, CLINVAR2, LITJEV, CONTEXT, STRUCT, COMPOSE, ASSEMBLY, ASSEMBLY2, CODEP_R, OMEGA.
@@ -161,7 +162,7 @@ missing paralog. Lluch-Senar et al. 2015 annotate MPN621 as "probably non-cataly
 |---|---|
 | `STATE.md` | **read first**: current status, what is claimable, what was retracted |
 | `PREPRINT_DRAFT.md` | the full write-up |
-| `PREREG_*.md` | the 32 pre-registrations, committed before data were joined |
+| `PREREG*.md` | the 33 pre-registrations, committed before data were joined |
 | `RESULTS.md` | every test and its numbers |
 | `POSTHOC.md` | analyses that were not pre-registered, labelled |
 | `analysis_*.py`, `verify_*.py` | the analysis code; these are the authoritative record |

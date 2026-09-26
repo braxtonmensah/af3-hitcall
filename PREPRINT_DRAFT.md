@@ -272,8 +272,8 @@ interface sets used in Step C, and sweeping a grid of distance cutoffs (6, 8, 10
 thresholds (0.3, 0.5, 0.7). Circularity from AlphaFold-assisted model building is addressed by restricting
 to entries with no in-silico starting model, and separately to X-ray-only entries.
 
-**Negative results.** Eight registered hypotheses returned negative or inconclusive and are reported
-rather than dropped: per-protein normalisation and interface PAE (`posthoc.py`), pool context
+**Negative results.** The registered hypotheses below returned negative or inconclusive results and
+are reported rather than dropped: per-protein normalisation and interface PAE (`posthoc.py`), pool context
 (`analysis_context.py`), structure-level rescue (`analysis_struct.py`, `rescue/score_rescue.py`),
 disease-variant enrichment twice (`analysis_clinvar.py`, `analysis_clinvar2.py`), literature labels
 (`analysis_litjev.py`), rigid composition (`analysis_compose.py`) and pooled shared partners
@@ -309,8 +309,12 @@ forbid commercial use.**
 
 ## Pre-registration statement
 
-Twenty-one hypotheses were pre-registered and committed to version control before the corresponding data
-were joined; `git log` preserves the order. Eight returned negative or inconclusive results and are
-reported: per-protein normalisation, interface PAE, pool context, structure-level rescue scores,
-disease-variant enrichment (twice), literature labels, rigid composition, and pooled shared partners.
-Post hoc analyses are labelled as such.
+Every hypothesis was pre-registered and committed to version control before the corresponding data
+were joined; `git log` preserves the order. The repository holds 33 pre-registration files
+(`PREREG*.md`); this paper reports the subset listed in Methods. The registered hypotheses that
+returned negative or inconclusive results are named there and are reported rather than dropped:
+per-protein normalisation, interface PAE, pool context, structure-level rescue scores,
+disease-variant enrichment (twice), literature labels, rigid composition, and pooled shared
+partners. Tests registered after this draft, including OMEGA, ASSEMBLY, ASSEMBLY2 and CODEP_R, also
+returned negative or inconclusive results and are recorded in `RESULTS.md`. Post hoc analyses are
+labelled as such.
