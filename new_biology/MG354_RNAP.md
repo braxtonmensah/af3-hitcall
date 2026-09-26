@@ -1,6 +1,9 @@
 # MG354 is an RNA polymerase-associated protein in *Mycoplasma*
 
-> **Status 2026-09-25:** crosslink evidence stands; the omega hypothesis lost its fold argument (OMEGA, below); the three-chain test (RNAP3) is pre-registered and not yet run.
+> **Status 2026-09-25 (final):** **RNAP3 has now run and SUPPORTS the claim.** A three-chain model
+> places 4 of the 5 in-cell crosslinks within reach, with the RpoB-RpoC control at 0.95 and chain-pair
+> ipTM 0.910. The omega hypothesis separately lost its fold argument (OMEGA). So: MG354 binds the
+> assembled RNA polymerase core; it is not shown to be omega.
 
 Found 2026-09-25 by the pre-registered HIGHER test (`PREREG_HIGHER.md`, committed `edd50fd` before any
 distance was computed). Full numbers in `results_higher.json`.
@@ -88,9 +91,14 @@ cite 1TM9 and say "uncharacterized function", never "unknown structure".
 
 ## What would settle it, in order of cost
 
-1. **A dedicated structure prediction of MG354 with RpoB and RpoC together**, then check whether all
-   five crosslinks fall within reach. This is the direct analogue of what TETRA did for RNase J and
-   needs GPU time, not a lab.
+1. ~~A dedicated structure prediction of MG354 with RpoB and RpoC together.~~ **DONE 2026-09-25, and
+   it supports the reading.** AlphaFold Server, 2,817 residues, 5 samples. Control first: RpoB-RpoC
+   0.95 of 20 links within 30 A in every sample (bar 0.70), chain-pair ipTM 0.910. Primary: **4 of 5
+   MG354 links satisfied** in the best sample (13.0, 20.8, 15.6, 19.8 A) against a null of p95 0.40.
+   Three of five samples give 4/5 and their MG354 ipTM is 0.57/0.43; the two that fail collapse to
+   0.17/0.15, so confidence and crosslink satisfaction agree. The one link that fails everywhere is at
+   **residue 1**, a flexible N-terminus and the least reliable site assignment. What the pairwise
+   models could not show, the three-chain model does: MG354 reaches both beta and beta-prime at once.
 2. ~~Fold comparison against solved omega subunits.~~ **Done (OMEGA): no omega-like fold found.**
    The NMR structure 1TM9 already exists and can be used directly in any docking or modelling step.
 3. **Pull-down of tagged RpoC**, testing whether MG354 co-purifies. A lab experiment, days not months.
