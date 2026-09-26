@@ -96,6 +96,74 @@ limits section, and add the non-replication to it before showing it to anyone.
 **No committed pre-registration is now without a reported result.** That was the one thing in this
 repo that looked bad, and it is fixed.
 
+## The compound screen, 2026-09-25 late: rebuilt, pre-registered, and NOT run
+
+`PREREG_VSCREEN.md` plus three amendments, all committed before any Boltz-2 score exists. Read the
+amendments, not just the body: each one corrects something the previous one got wrong, including two
+defects in code committed the same day.
+
+**The old staged screen must not be run.** 650 jobs were staged and validated. Checking them by
+molecule rather than by filename found four defects:
+
+1. Its decision rule, "compounds that beat every decoy", returns **5.88 compounds in expectation and
+   fires at all with probability 0.86 under a pure null where nothing binds** (300 screen vs 50
+   decoys). It was a near-certainty attached to a $650-1,800 purchase. `cleanroom/screen_power.py`.
+2. Four molecules sat in both the screen arm and the decoy null under different ChEMBL ids, each
+   capping its own null. Same defect as the one caught once before; the earlier fix was applied to
+   the job set, never to the cause, which is deduplicating on the SMILES string before desalting.
+3. The arms named two different MSA directories, so on either machine one arm dies at run time.
+4. **`pocket[:20]` is not a geometric choice.** On this interface it keeps residues 25-357 and
+   discards 358-569 entirely. Independently measured, the kept 20 sit a median 15 A from the
+   catalytic site and the dropped 45 at 33 A, so the constraint was aimed at the catalytic-proximal
+   half, which is the least selective part of the interface. `build_screen_jobs.py` now refuses to
+   truncate; `build_gate.py` ranks contacts by distance to the ligand.
+
+**Per-compound significance is unreachable here and that is stated in advance.** The floor on an
+empirical p-value is 1/(decoys+1), so the top of 300 needs 2,999 decoys to clear BH q<0.10. The
+primary test is therefore distributional (Mann-Whitney vs a matched null, power 0.84 at AUC 0.57
+with 300/arm) and the shortlist is labelled hypotheses.
+
+**Two things about Boltz-2 that constrain everything** (`cleanroom/BOLTZ_SCHEMA.md`, read from source
+at v2.2.1):
+
+- **The affinity head cannot see ions.** It pools protein-to-binder and binder-to-binder pairs only.
+  Supplying the metals fixes the pose, not the score, so a metal-chelating ligand cannot be scored
+  for what makes it bind. This demoted three of five Tier A gate rungs to diagnostics.
+- **`affinity_pred_value` is log10 IC50 in uM, so LOWER is stronger.** Rank on
+  `affinity_probability_binary`, where higher is binder. `vscreen.py --rank` prints the first with no
+  direction stated; do not read that column without labelling it.
+
+**The gate.** Nothing is known to bind bacterial RNase J from any organism (all 27 PDB entries carry
+only metals, RNA or UMP; the RnpA candidates were refuted as aggregators, PMID 33972249). So the gate
+is a surrogate on related folds and rests on **two** representable Tier A rungs, not five: the
+JTE-607 acid on CPSF73 (Kd 370 nM, 6M8Q, does not coordinate metals) and ceftriaxone on Artemis
+(7APV, and measured from the coordinates it sits 14.1 A from the only Zn, which is structural). Tier
+B rests on a single rung, the nsp10-nsp14 fragment, whose pocket is confirmed from coordinates to
+span both chains. 250 jobs, 3-6 GPU-hours, built and staged in `cleanroom/gate_jobs/`.
+
+**Staging rule: the gate runs first and alone.** The main screen is 15 GPU-hours and the gate's most
+likely outcome (Tier A passes, Tier B fails) is the one that makes a null at the interface
+*uninformative* rather than a negative about the target.
+
+**The screen may be aimed at the wrong chain.** A buried-cavity scan of the repo's own AF3 model
+(`cleanroom/TARGET_EXPANSION.md`, `cleanroom/iface_pocket.py`) puts the largest non-catalytic cavity
+on the **RNase J** side at **26 A^3**, i.e. flat, while **MPN621** carries a **273 A^3** cavity (419
+and 470 in the *M. genitalium* ortholog), has the stronger essentiality evidence, and conserves 0 of
+4 catalytic residues. Only rank order should be quoted: absolute volumes swing 13-fold between two
+structures of the same protein. This is not yet acted on and needs its own amendment.
+
+**Library: 13,293 distinct molecules** (was 2,297), from ChEMBL phases 1-4, iPPI-DB and the MMV
+Pathogen Box, deduplicated on InChIKey after desalting, property-annotated, PAINS-flagged, with
+licence and date per compound. `cleanroom/libgen.py`, `cleanroom/LIBRARIES.md`. The null is now
+property-matched and 1:1 with the screen, because the affinity head tracks ligand size.
+
+**Corrected: the PACE/CARB-X claim in `COSTS.md` was wrong.** Both funders are scoped to
+Gram-negatives and *M. pneumoniae* is on neither list, and it cannot be fixed by changing organism
+because RNase J is absent from *E. coli* and most Gammaproteobacteria. Fixed in place with sources.
+
+**Corrected: MG354's ipTM.** The 0.910 in `new_biology/MG354_RNAP.md` is the **RpoB-RpoC control**,
+not MG354's own chain pair, which is 0.57/0.43. Do not quote 0.910 for MG354.
+
 ## The only outstanding test
 
 **RNAP3**: does a three-chain model of MG354 + RpoB + RpoC bring the five crosslinks within reach?
