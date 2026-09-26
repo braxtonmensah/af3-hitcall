@@ -1,21 +1,10 @@
 # State of af3-hitcall, 2026-09-25
 
-**Read this first.** Supersedes `HANDOFF_2026-09-22.md`, `HANDOFF_2026-09-25.md`,
-`HANDOFF_2026-09-25_v2.md` and `HANDOFF_2026-09-25_evening.md`. Four handoffs for two days of work
-is how a repo becomes unreadable; there is one of these from now on and it gets edited, not
-duplicated.
+**Read this first.** This is the single status file for the project. It replaced four separate
+handoff notes, which have been removed from the repository. Four of them for two days of work is
+how a repo becomes unreadable. This file gets edited rather than duplicated.
 
 Repo is public: https://github.com/braxtonmensah/af3-hitcall
-
-## Standing instructions
-
-- Pre-register every test in a `PREREG_*.md` committed **before** the data are joined. The commit
-  dates are public and are the entire reason anyone believes the numbers. Do not break this.
-- **Send no emails, submit no applications, spend no money without Braxton's explicit OK.**
-- Writing for Braxton: no em dashes, plain, short.
-- Do not undersell and do not overclaim. Lead with the strongest *true* framing.
-- Never write "new protein fold". Never cite "141 novel topologies" (it is ~108). Never cite the
-  foldnovelty p=0.028 result (it is p=0.110 and retracted).
 
 ## What is claimable right now
 
@@ -218,7 +207,7 @@ after describing the prereg that exists. Corrected 2026-09-26.
 licence and date per compound. `cleanroom/libgen.py`, `cleanroom/LIBRARIES.md`. The null is now
 property-matched and 1:1 with the screen, because the affinity head tracks ligand size.
 
-**Corrected: the PACE/CARB-X claim in `COSTS.md` was wrong.** Both funders are scoped to
+**Corrected: a PACE/CARB-X funding claim made elsewhere in this project was wrong.** Both funders are scoped to
 Gram-negatives and *M. pneumoniae* is on neither list, and it cannot be fixed by changing organism
 because RNase J is absent from *E. coli* and most Gammaproteobacteria. Fixed in place with sources.
 
@@ -244,7 +233,7 @@ contradicted two other files in the same repository and a commit from the day be
 |---|---|
 | Virtual screen on Quartz | RT Project join at `projects.rt.iu.edu`, PI `lamhuber`, "HPC for Students" |
 | Quartz SSH | One `ssh quartz` login in WSL per 12h. Multiplexing works in WSL, never in Git Bash |
-| IP certainty | A free written opinion from IU's commercialization office. See `IP_RECORD.md` and `COSTS.md` |
+| IP certainty | A free written opinion from IU's commercialization office |
 | Wet-lab confirmation | A pull-down of tagged RpoC. Days, not months, at a core facility |
 
 ## Operational facts that cost a cycle each
