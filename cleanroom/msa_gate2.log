@@ -2,3 +2,8 @@
 
 artemis_A    361 aa, submitting
    artemis_A     0s RUNNING
+   artemis_A    60s RUNNING
+artemis_A    wrote 2049 sequences | query row matches the construct: yes
+cpsf73_A     459 aa, submitting
+   cpsf73_A      0s RUNNING
+   cpsf73_A     60s RUNNING

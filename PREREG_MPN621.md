@@ -138,3 +138,79 @@ strong, M1 is downgraded to inconclusive regardless of its CI.
 desalting, with source, licence and date per compound. The selection and its property-matched null
 are written by `libgen.py --select` and committed before the run; the KS statistics per property are
 reported with the result.
+
+---
+
+# Amendment 1, 2026-09-26: the metal is a confound in the selectivity arm, and it is measured rather than assumed away
+
+Written **before any Boltz-2 score exists for this target**. What has been read since the body of this
+file: the cleft residue identities, the model-to-UniProt index mapping, and the 6M8Q construct
+mapping. No prediction has been run.
+
+`PREREG_VSCREEN` Amendment 2 fixed a metal policy of **one catalytic Zn per MBL-beta-CASP nuclease
+chain**, applied identically to every receptor. Applying it here exposes a problem that policy cannot
+settle.
+
+## The measurement
+
+Residues lining each cleft, checked for zinc ligands:
+
+| Receptor | Cleft residues | Potential Zn ligands | Histidines |
+|---|---|---|---|
+| **MPN621 (target, arm S)** | RNTNVENSDDRSMRAGRSNS | E73, D162, D163 | **none** |
+| **RNase J (paralogue, arm O1)** | FEDYSTNSSNSESNPNHSHE | E84, D85, E311, H373, H377, E401 | **H373, H377** |
+
+MBL zinc sites are histidine-rich; the family signature is HxHxDH. **MPN621's cleft has no histidine
+at all**, consistent with it having lost catalysis, while RNase J's retains two. Carboxylates alone
+can coordinate zinc, but weakly and without the geometry, so **whether MPN621 holds a catalytic metal
+is genuinely unresolved** and no policy statement makes it resolved.
+
+## Why this is a confound and not a detail
+
+Arm O1 is the selectivity test that justifies a purchase. If MPN621 is built without a zinc and
+RNase J with one, then a compound can score higher on MPN621 **because its pocket has no competing
+metal in it**, not because of any complementarity to MPN621. That failure mode points in the
+direction that flatters the target, which is the worst direction for it to point.
+
+Building MPN621 *with* a zinc is not obviously safer: a zinc with no histidines to hold it may drift
+during folding and distort the very pocket being screened.
+
+## What is fixed now
+
+**The screen runs with MPN621 metal-free**, because the residue evidence says it has no canonical
+site and inventing one is the larger assumption. RNase J and CPSF73 are built with one Zn each,
+because they have the His/Asp cluster. **This is a declared deviation from `PREREG_VSCREEN`
+Amendment 2's uniform rule, and the reason is that the rule assumed every receptor in the comparison
+is a metalloenzyme, which is exactly what is not true here.**
+
+**Arm Z (sensitivity, pre-registered now, not optional).** The **top 25 of arm S by score plus 25
+screen compounds drawn at random by committed seed** are re-run against MPN621 **with one Zn**, same
+pocket, same everything else. 50 jobs.
+
+- **If the Spearman correlation between arm S and arm Z on those 50 exceeds 0.8**, the ranking does
+  not depend on the metal and the selectivity result stands as reported.
+- **If it does not**, the ranking is metal-dependent, the choice above is load-bearing rather than
+  incidental, and **M2 and M3 must be reported as conditional on a metal assignment the evidence does
+  not settle**. No purchase on a metal-dependent selectivity margin.
+
+Arm Z is a subset rather than a duplicate of arm S because doubling the largest arm to answer a
+sensitivity question is not a good use of the budget, and 50 paired compounds is enough for a
+Spearman at this threshold.
+
+## Two index facts confirmed, recorded so nobody re-derives them
+
+- **The AF3 model's residue numbering is UniProt numbering**, verified residue by residue for both
+  chains: chain A against P75497 (569 of 569, zero mismatches) and chain C against P75174 (561 of
+  561, zero mismatches). So the pre-registered cleft residues are valid against the full-length
+  sequences supplied to the engine, and no offset applies.
+- **6M8Q's CPSF3 construct is a contiguous slice of Q9UKF6 beginning at residue 1**, so the
+  co-crystal pocket for arm O2 carries over to the full-length sequence unchanged, and the existing
+  `msa/Q9UKF6.a3m` is the right MSA for it. Arm O2 uses the **real co-crystal pocket**, not a
+  predicted cavity, which makes it the best-grounded of the three pockets in this screen.
+
+## Arm O1's pocket, fixed now
+
+RNase J's catalytic cleft, the 20 residues nearest its 1262 A^3 cavity in the same model, by the same
+geometric rule as the target's: `49, 84, 85, 92, 151, 205, 206, 241, 266, 270, 308, 311, 313, 340,
+343, 345, 373, 375, 377, 401`. It contains D85 and H377, two of the four catalytic residues, which is
+the check that it is the right site.
