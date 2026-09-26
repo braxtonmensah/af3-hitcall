@@ -214,3 +214,59 @@ RNase J's catalytic cleft, the 20 residues nearest its 1262 A^3 cavity in the sa
 geometric rule as the target's: `49, 84, 85, 92, 151, 205, 206, 241, 266, 270, 308, 311, 313, 340,
 343, 345, 373, 375, 377, 401`. It contains D85 and H377, two of the four catalytic residues, which is
 the check that it is the right site.
+
+---
+
+# Amendment 2, 2026-09-26: a confound checked and cleared, and the staging that follows from cost
+
+Still **before any Boltz-2 score exists for this target**.
+
+## MSA depth is 10x apart between the arms, and it does not matter
+
+The MSAs came back uneven in a way that bears directly on arms O1 and O2:
+
+| Receptor | Arm | MSA sequences |
+|---|---|---|
+| MPN621, P75174 | S, the target | **464** |
+| *M. pneumoniae* RNase J, P75497 | O1 | 4,623 |
+| human CPSF73, Q9UKF6 | O2 | 6,000 |
+
+MSA depth drives prediction confidence, so a tenfold gap between the target and the receptors that
+judge its selectivity is a candidate confound in exactly the comparison that would justify a
+purchase: a cross-receptor score difference could be receptor quality rather than chemistry.
+
+**Measured, and it is not a problem** (`cleanroom/pocket_confidence.py`). pLDDT restricted to the
+pocket residues, which is the part a ligand is steered into rather than the model overall:
+
+| Chain | Receptor | pLDDT overall | **pLDDT at the pocket** | min at pocket |
+|---|---|---|---|---|
+| A | RNase J, arm O1 | 93.4 | **92.5** | 84.4 |
+| C | MPN621, arm S | 91.0 | **92.0** | 83.6 |
+
+A gap of **0.4 points**, both in AlphaFold's "very high" band, all 20 pocket residues resolved in
+each. Receptor quality is not a plausible explanation for any difference between these arms. The
+likely reason the shallow MSA costs nothing here is that MPN621 is an RNase J paralogue, so its fold
+is constrained by the family even with few direct homologs.
+
+**This is recorded as a cleared confound rather than dropped**, because the check is cheap, the
+concern was legitimate, and a reader should be able to see that it was tested rather than assumed
+either way. It is reported alongside any selectivity claim.
+
+## Staging, because the full design is 1,600 jobs
+
+Four arms over 400 screen compounds is **1,600 jobs, 20 to 40 GPU-hours**. The arms are therefore
+staged, and the staging is not a restriction but a consequence of what each arm is for:
+
+1. **The gate first**, unchanged, 250 jobs. Nothing below is interpreted until A1 passes.
+2. **Arms S and N**, 800 jobs, 10-20 GPU-hours. These answer M1.
+3. **Arms O1 and O2 only if M1 enriches.** They answer a per-compound purchase question, and a null
+   M1 produces no shortlist, so there is nothing to ask it about. Building them alongside S and N
+   would spend half the budget on a question a null M1 deletes.
+4. **Arm Z last**, 50 jobs, once arm S is scored, since half its membership is arm S's top 25. Its
+   other 25 are fixed now by committed seed so they cannot be chosen after seeing anything.
+
+**The one thing this staging costs**, stated plainly: the kill switch in the body of this file, that
+MPN621 and RNase J must not rank the whole screen near-identically, needs O1 across the screen and
+not only across a shortlist. It is therefore evaluated at stage 3 on all 400, and **not** substituted
+with a shortlist-only version, because a shortlist is selected on arm S and a correlation computed on
+it would be conditioned on the thing being tested.

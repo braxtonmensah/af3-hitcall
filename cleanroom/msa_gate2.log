@@ -7,3 +7,15 @@ artemis_A    wrote 2049 sequences | query row matches the construct: yes
 cpsf73_A     459 aa, submitting
    cpsf73_A      0s RUNNING
    cpsf73_A     60s RUNNING
+   cpsf73_A    120s RUNNING
+cpsf73_A     wrote 5517 sequences | query row matches the construct: yes
+nsp1014_A    already present, 533 sequences
+nsp1014_B    289 aa, submitting
+   nsp1014_B     0s RUNNING
+   nsp1014_B    60s RUNNING
+nsp1014_B    wrote 414 sequences | query row matches the construct: yes
+snm1a_A      already present, 4956 sequences
+
+5 of 5 ready in C:\Users\bmens\OneDrive - Indiana University\NQ_Project\af3-hitcall\cleanroom\msa
+the gate can now run offline; validate with:
+  YAML_DIR=gate_jobs py -3.11 validate_jobs.py
