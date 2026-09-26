@@ -60,12 +60,27 @@ proteins produce more links and are likelier to show any over-length self-link.
 **The load-bearing evidence is blind recovery, not the primary test.** Run across 236 testable pairs
 knowing nothing about any of them, the rule picked out four textbook higher-order assemblies:
 
-- RNA polymerase (RpoC-RpoB and RpoA-RpoB; RpoA genuinely is present in two copies)
-- The Nap adhesin P1 / P40-P90, a dimer of heterodimers
+- RNA polymerase: **RpoA-RpoB only** (alpha genuinely is present in two copies, 352 of 356
+  assemblies). ~~RpoC-RpoB~~ **RETRACTED** by `PREREG_HIGHER_CAL`, which labelled it **one-to-one in
+  367 of 370 PDB assemblies** and removed it from every recovery list. It is a 1:1 pair sitting
+  inside a larger machine, which is exactly what the label exists to exclude.
+- ~~The Nap adhesin P1 / P40-P90~~ **DEMOTED to unverified**: its label came back **ambiguous**
+  (1 vs 1).
 - All three pyruvate dehydrogenase pairs (a 60-subunit E2 core)
-- The RNase J : MG423 heterotetramer from TETRA
+- The RNase J : MG423 heterotetramer from TETRA (unlabelled by construction: no solved homologous
+  co-complex)
 
-**Lead with that list in any pitch.** It is the part that cannot be explained by selection.
+**Corrected 2026-09-26.** This list previously contained RpoC-RpoB and an unqualified Nap adhesin,
+contradicting the retraction notice at the top of this same file. The header was right and the list
+was stale.
+
+**Do not lead with this list.** That instruction was written before the calibration. `STATE.md` now
+says blind recovery is **secondary** and that the figures to quote are the error rates: sensitivity
+75% (9/12), false-positive rate 12% (5/42), precision 64% against a 22% base rate. Two of the four
+bullets above moved on relabelling, which is the reason a list of recognisable names is weaker
+evidence than a measured error rate.
+
+**This file is superseded by `STATE.md`.** It is kept for the record, not as guidance.
 
 ### The new finding: MG354 on RNA polymerase
 
