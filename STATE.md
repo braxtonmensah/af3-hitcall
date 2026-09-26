@@ -141,9 +141,44 @@ JTE-607 acid on CPSF73 (Kd 370 nM, 6M8Q, does not coordinate metals) and ceftria
 B rests on a single rung, the nsp10-nsp14 fragment, whose pocket is confirmed from coordinates to
 span both chains. 250 jobs, 3-6 GPU-hours, built and staged in `cleanroom/gate_jobs/`.
 
-**Staging rule: the gate runs first and alone.** The main screen is 15 GPU-hours and the gate's most
-likely outcome (Tier A passes, Tier B fails) is the one that makes a null at the interface
-*uninformative* rather than a negative about the target.
+**Staging rule: the gate runs first and alone.** The gate's most likely outcome (Tier A passes, Tier
+B fails) is the one that makes a null at an interface *uninformative* rather than a negative about
+the target.
+
+**THE GATE IS RUNNABLE. 250 jobs in `cleanroom/gate_jobs/`, all five MSAs present and verified.**
+Nothing is blocking it but a GPU. Two things were fixed to get there, both the kind that fail
+silently:
+
+- **6M8Q's CPSF3 construct carries a His6 tag** (`GSSHHHHHHSSGLVPRGSH`). That is the receptor for the
+  JTE-607 acid, one of only two rungs whose mode the affinity head can represent, and **a His tag
+  chelates metals** in a job that deliberately supplies a Zn. Tags are now stripped, anchored to the
+  UniProt sequence rather than to a regex (a regex over-trimmed by 3 and ate the native `MSA`).
+- **Trimming shifts every pocket index**, since they come from `label_seq_id` on the untrimmed
+  sequence. Offsets now flow through, contacts inside a trimmed region are dropped, and the builder
+  refuses to write an index outside its chain. Verified: the 6M8Q pocket shifts by exactly 19 with
+  residue identities preserved.
+- Each MSA is keyed to its **construct**, not an accession, and the query row is checked against the
+  job sequence before the file is accepted. A full-length MSA would have had the wrong columns.
+
+## The MPN621 cleft screen: pre-registered, stage 1 built, not run
+
+`PREREG_MPN621.md` + 2 amendments. Four arms: S (MPN621 cleft), N (matched null), O1 (*M. pneumoniae*
+RNase J, **the paralogue arm the old design never had**), O2 (human CPSF73, using the real 6M8Q
+co-crystal pocket). 1,600 jobs at 20-40 GPU-hours if run whole, so it is staged: gate, then S+N (800
+jobs, built and validated in `cleanroom/mpn621_jobs/`), then O1+O2 **only if M1 enriches**, then arm Z.
+
+**Two confounds found in the selectivity arm, one real and one cleared:**
+
+- **Real: the metal.** MPN621's cleft has **no histidine at all** (only E73, D162, D163) while RNase
+  J's keeps H373 and H377. So the target may hold no catalytic zinc and its comparator does. Built
+  metal-free with the comparators zinc-bearing, which is a **declared deviation** from VSCREEN
+  Amendment 2's uniform rule, plus **arm Z**: 50 compounds re-run on MPN621 *with* a zinc. If
+  Spearman(S, Z) < 0.8 the selectivity margin is metal-dependent and cannot justify a purchase.
+- **Cleared: MSA depth.** MPN621 has **464** sequences against 4,623 for RNase J and 6,000 for
+  CPSF73, a tenfold gap in exactly the comparison that would justify buying. Measured at the pocket:
+  pLDDT **92.0 vs 92.5**, minima 83.6 and 84.4, all 20 residues resolved in each. A 0.4-point gap,
+  both very high, so receptor quality cannot explain a cross-arm difference.
+  `cleanroom/pocket_confidence.py`.
 
 **THE INTERFACE IS NOT LIGANDABLE ON EITHER SIDE. Do not run the interface screen.** Amendment 4,
 `cleanroom/analysis_ligandability.py`, `results_ligandability.json`. Largest cavity per chain across

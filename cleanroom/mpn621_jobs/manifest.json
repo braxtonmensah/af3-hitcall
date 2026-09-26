@@ -1,0 +1,4161 @@
+{
+ "created": "2026-09-26T00:44:07",
+ "prereg": "PREREG_MPN621.md + Amendment 1",
+ "selection": "selection_v1.tsv",
+ "msa_prefix": "/workspace/mpn621/msa",
+ "z_random_seed": 30,
+ "receptors": {
+  "S": {
+   "acc": "P75174",
+   "metals": [],
+   "note": "MPN621, no metal: no histidine in the cleft",
+   "pocket": [
+    15,
+    18,
+    37,
+    69,
+    71,
+    73,
+    74,
+    142,
+    162,
+    163,
+    201,
+    234,
+    329,
+    332,
+    334,
+    358,
+    359,
+    363,
+    365,
+    387
+   ]
+  },
+  "N": {
+   "acc": "P75174",
+   "metals": [],
+   "note": "same receptor and pocket as S",
+   "pocket": [
+    15,
+    18,
+    37,
+    69,
+    71,
+    73,
+    74,
+    142,
+    162,
+    163,
+    201,
+    234,
+    329,
+    332,
+    334,
+    358,
+    359,
+    363,
+    365,
+    387
+   ]
+  },
+  "O1": {
+   "acc": "P75497",
+   "metals": [
+    [
+     "ZN",
+     1
+    ]
+   ],
+   "note": "RNase J paralogue, His373/His377 present",
+   "pocket": [
+    49,
+    84,
+    85,
+    92,
+    151,
+    205,
+    206,
+    241,
+    266,
+    270,
+    308,
+    311,
+    313,
+    340,
+    343,
+    345,
+    373,
+    375,
+    377,
+    401
+   ]
+  },
+  "O2": {
+   "acc": "Q9UKF6",
+   "metals": [
+    [
+     "ZN",
+     1
+    ]
+   ],
+   "note": "human CPSF73, co-crystal pocket from 6M8Q",
+   "pocket": [
+    241,
+    331,
+    43,
+    330,
+    110,
+    239,
+    45,
+    356,
+    47,
+    329,
+    240,
+    44,
+    74,
+    114,
+    52,
+    332,
+    49,
+    354,
+    333,
+    122
+   ]
+  },
+  "Z": {
+   "acc": "P75174",
+   "metals": [
+    [
+     "ZN",
+     1
+    ]
+   ],
+   "note": "MPN621 WITH a zinc: Amendment 1 sensitivity",
+   "pocket": [
+    15,
+    18,
+    37,
+    69,
+    71,
+    73,
+    74,
+    142,
+    162,
+    163,
+    201,
+    234,
+    329,
+    332,
+    334,
+    358,
+    359,
+    363,
+    365,
+    387
+   ]
+  }
+ },
+ "jobs": {
+  "CHEMBL2105247": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KMUBBNQZNBTUSH-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989954": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MDEJTPWQNNMAQF-BVMLLJBZSA-N"
+  },
+  "CHEMBL2105527": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IQWYAQCHYZHJOS-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104110": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KUOYUNPLUMKQIF-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104039": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GFFFJSWQOUVZCY-UHFFFAOYSA-N"
+  },
+  "CHEMBL723": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OGHNVEJMJSYVRP-UHFFFAOYSA-N"
+  },
+  "CHEMBL1516410": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ODUOJXZPIYUATO-LJQANCHMSA-N"
+  },
+  "CHEMBL2104583": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IUUBFDSJJHOTDI-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104013": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XPHBRTNHVJSEQD-ATJXCDBQSA-N"
+  },
+  "CHEMBL476323": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DDDZBLNULGDPGA-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106691": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZJWWWCZRROHPDH-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104042": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VCZPUGSOJXZKIP-WCQYABFASA-N"
+  },
+  "CHEMBL4297440": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FSXLOWIFSZNIMV-UHFFFAOYSA-N"
+  },
+  "CHEMBL3604010": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VKEQBMCRQDSRET-UHFFFAOYSA-N"
+  },
+  "CHEMBL151475": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ICAXEUYZCLRXKY-UHFFFAOYSA-N"
+  },
+  "CHEMBL3545289": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GNYWBETUYIZBHL-CQSZACIVSA-P"
+  },
+  "CHEMBL2107465": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OMLDMGPCWMBPAN-YPMHNXCESA-N"
+  },
+  "CHEMBL2105759": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XUZMWHLSFXCVMG-UHFFFAOYSA-N"
+  },
+  "CHEMBL1903897": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OINXXHYENYVYPB-UHFFFAOYSA-N"
+  },
+  "CHEMBL197": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SGTNSNPWRIOYBX-HHHXNRCGSA-N"
+  },
+  "CHEMBL1175": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZEUITGRIYCTCEM-KRWDZBQOSA-N"
+  },
+  "CHEMBL134920": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LHIALLMPKJMSIQ-NSCUHMNNSA-N"
+  },
+  "CHEMBL3580737": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KJSGTWFWVTYPFZ-AWEZNQCLSA-N"
+  },
+  "CHEMBL1201231": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JDOZJEUDSLGTLU-VWUMJDOOSA-N"
+  },
+  "CHEMBL2105291": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FLGJKPPXEKYCBY-AKCFYGDASA-N"
+  },
+  "CHEMBL6068008": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DUYJMQONPNNFPI-VPYROQPTSA-N"
+  },
+  "CHEMBL1200761": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BFPSDSIWYFKGBC-UHFFFAOYSA-N"
+  },
+  "CHEMBL355063": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YTLQFZVCLXFFRK-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105922": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WDSCBUNMANHPFH-UHFFFAOYSA-N"
+  },
+  "CHEMBL5314488": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HNRWGYDMTRPLCQ-SNVBAGLBSA-N"
+  },
+  "CHEMBL254193": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ALAXZYHFVBSJKZ-UHFFFAOYSA-N"
+  },
+  "CHEMBL4559134": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XIIOFHFUYBLOLW-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104934": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QSXXLDDWVCEBFP-UHFFFAOYSA-N"
+  },
+  "CHEMBL236687": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NDTYTMIUWGWIMO-SNVBAGLBSA-N"
+  },
+  "CHEMBL8846": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WAAVMZLJRXYRMA-UHFFFAOYSA-N"
+  },
+  "CHEMBL4650218": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HYBAKUMPISVZQP-DEOSSOPVSA-N"
+  },
+  "CHEMBL4297430": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WWRKIQZKFGMESZ-SFUJAXRZSA-N"
+  },
+  "CHEMBL460287": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UMILHIMHKXVDGH-UHFFFAOYSA-N"
+  },
+  "CHEMBL291962": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ROHFNLRQFUQHCH-YFKPBYRVSA-N"
+  },
+  "CHEMBL503356": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UCQFSGCWHRTMGG-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107508": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "APVPOHHVBBYQAV-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107172": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KYIAWOXNPBANEW-UHFFFAOYSA-N"
+  },
+  "CHEMBL4277900": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AEFFENQISAXIKE-UHFFFAOYSA-N"
+  },
+  "CHEMBL1472830": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UQZVCDCIMBLVNR-TWYODKAFSA-N"
+  },
+  "CHEMBL20883": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WFWLQNSHRPWKFK-UHFFFAOYSA-N"
+  },
+  "CHEMBL2381408": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IDKAKZRYYDCJDU-HBMMIIHUSA-N"
+  },
+  "CHEMBL4594289": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OCJRRXHWPBXZSU-BNCZGPJRSA-N"
+  },
+  "CHEMBL3138624": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OBUIQEYZGMZXPJ-NPQHDNJNSA-N"
+  },
+  "CHEMBL1599": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UQLLWWBDSUHNEB-CZUORRHYSA-N"
+  },
+  "CHEMBL4297378": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BISPBXFUKNXOQY-RITPCOANSA-M"
+  },
+  "CHEMBL7890": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KCWZGJVSDFYRIX-YFKPBYRVSA-N"
+  },
+  "CHEMBL5095174": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MNEOHCYSHVKLIC-UHFFFAOYSA-N"
+  },
+  "CHEMBL314338": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LUOUCHOLMUUZBO-SVSXJNCISA-N"
+  },
+  "CHEMBL5314944": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ABAPCYNTEPGBNJ-FTGAXOIBSA-N"
+  },
+  "CHEMBL6068056": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GXTVPHUMJMZDSF-UHFFFAOYSA-N"
+  },
+  "CHEMBL5314510": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PCKYITPVOLEZKL-UHFFFAOYSA-N"
+  },
+  "CHEMBL1085699": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ANEBWFXPVPTEET-UHFFFAOYSA-N"
+  },
+  "CHEMBL4297318": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JAYVKNDQKXUNOJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL3218576": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PZBCKZWLPGJMAO-UHFFFAOYSA-N"
+  },
+  "CHEMBL4297374": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RYAYYVTWKAOAJF-QISPRATLSA-N"
+  },
+  "CHEMBL1525": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RLLPVAHGXHCWKJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL2111065": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CEJLBZWIKQJOAT-UHFFFAOYSA-N"
+  },
+  "CHEMBL4297298": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VFUXSYAXEKYYMB-UHFFFAOYSA-N"
+  },
+  "CHEMBL5314406": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MAFACRSJGNJHCF-UHFFFAOYSA-N"
+  },
+  "CHEMBL239243": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XOAAWQZATWQOTB-UHFFFAOYSA-N"
+  },
+  "CHEMBL4284604": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JHSLCXRZVJOZQZ-ZJUUUORDSA-N"
+  },
+  "CHEMBL2107065": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MAJFXTGRPADJLU-UHFFFAOYSA-N"
+  },
+  "CHEMBL849": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XEFQLINVKFYRCS-UHFFFAOYSA-N"
+  },
+  "CHEMBL1440": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OFVLGDICTFRJMM-WESIUVDSSA-N"
+  },
+  "CHEMBL1885899": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CYDRXTMLKJDRQH-UHFFFAOYSA-N"
+  },
+  "CHEMBL4303058": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AWSWJRUMDBPELJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL1752": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KSCFJBIXMNOVSH-UHFFFAOYSA-N"
+  },
+  "CHEMBL359227": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NNDHDYDFEDRMGH-ZPGZUGTNSA-N"
+  },
+  "CHEMBL2106747": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AJDSHXKJJDQZCJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL1534": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AUNGANRZJHBGPY-SCRDCRAPSA-N"
+  },
+  "CHEMBL4065122": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WNEODWDFDXWOLU-QHCPKHFHSA-N"
+  },
+  "CHEMBL4650302": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KRKNYBCHXYNGOX-UHFFFAOYSA-M"
+  },
+  "CHEMBL3989836": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GLDSBTCHEGZWCV-NVDFJPPOSA-N"
+  },
+  "CHEMBL2106321": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YETULFFXNIHQLK-UHFFFAOYSA-N"
+  },
+  "CHEMBL1166": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KXNPVXPOPUZYGB-IOVMHBDKSA-N"
+  },
+  "CHEMBL1329032": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OPVPGKGADVGKTG-BQBZGAKWSA-N"
+  },
+  "CHEMBL2105011": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FIOAEFCJGZJUPW-ODFYUTSGSA-N"
+  },
+  "CHEMBL376488": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QUIJNHUBAXPXFS-XLJNKUFUSA-N"
+  },
+  "CHEMBL3822773": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XBUXXJUEBFDQHD-NHCUHLMSSA-N"
+  },
+  "CHEMBL689": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FBPFZTCFMRRESA-KVTDHHQDSA-N"
+  },
+  "CHEMBL42583": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LPUDGHQMOAHMMF-JBACZVJFSA-N"
+  },
+  "CHEMBL582857": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NJXZWIIMWNEOGJ-WEWKHQNJSA-N"
+  },
+  "CHEMBL104186": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AGURKSYKTJQPNA-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105953": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XSPUSVIQHBDITA-RKYNPMAHSA-N"
+  },
+  "CHEMBL3597634": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SILHYVDKGHXGBL-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106054": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZKIDWWQMNXGYHV-BYJSBFAFSA-N"
+  },
+  "CHEMBL2111186": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VSEIDZLLWQQJGK-BRXYURPTSA-N"
+  },
+  "CHEMBL297884": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PJZPDFUUXKKDNB-KNINVFKUSA-N"
+  },
+  "CHEMBL5095168": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JNSMRGMLNPEWLR-PDCLSYJBSA-N"
+  },
+  "CHEMBL1476245": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XVQUOJBERHHONY-SECBINFHSA-N"
+  },
+  "CHEMBL4296719": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DVJAMEIQRSHVKC-BDAKNGLRSA-N"
+  },
+  "CHEMBL3989512": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DZMVCVHATYROOS-ZBFGKEHZSA-N"
+  },
+  "CHEMBL1200423": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GGGDNPWHMNJRFN-UHFFFAOYSA-M"
+  },
+  "CHEMBL74632": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JWCSIUVGFCSJCK-CAVRMKNVSA-N"
+  },
+  "CHEMBL17879": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "STPKWKPURVSAJF-LJEWAXOPSA-N"
+  },
+  "CHEMBL532": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ULGZDMOVFRHVEP-RWJQBGPGSA-N"
+  },
+  "CHEMBL2104416": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "POPWFGNRCCUJGU-RSSVFQIBSA-N"
+  },
+  "CHEMBL3989959": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RSBPYSTVZQAADE-RQJHMYQMSA-N"
+  },
+  "CHEMBL1697843": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IYJMSDVSVHDVGT-PEQKVOOWSA-N"
+  },
+  "CHEMBL2103776": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QTBMDDQRDDABNC-UHFFFAOYSA-N"
+  },
+  "CHEMBL1358": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VWUXBMIQPBEWFH-WCCTWKNTSA-N"
+  },
+  "CHEMBL4640542": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JQXVCGMANURRRW-UHFFFAOYSA-N"
+  },
+  "CHEMBL4279455": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DXOJIXGRFSHVKA-BZVZGCBYSA-N"
+  },
+  "CHEMBL3707373": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DSLZVSRJTYRBFB-AJSXGEPRSA-N"
+  },
+  "CHEMBL4525964": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KUQWGLQLLVFLSM-ONAXAZCASA-N"
+  },
+  "CHEMBL6068552": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KSKLDMGKWDUQCT-DNQXCXABSA-N"
+  },
+  "CHEMBL2103811": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QYNUQALWYRSVHF-ABLWVSNPSA-L"
+  },
+  "CHEMBL1200855": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OHKOGUYZJXTSFX-KZFFXBSXSA-L"
+  },
+  "CHEMBL1201118": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SNBUBQHDYVFSQF-HIFRSBDPSA-M"
+  },
+  "CHEMBL1162144": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LCTONWCANYUPML-UHFFFAOYSA-N"
+  },
+  "CHEMBL1697794": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "TXHUMRBWIWWBGW-GVGNIZHQSA-N"
+  },
+  "CHEMBL3989917": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HZIYEEMJNBKMJH-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105024": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HHFIATHHSBFCBY-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106769": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FOYWNSCCNCUEPU-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104857": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OKACKALPXHBEMA-UHFFFAOYSA-N"
+  },
+  "CHEMBL12543": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SECXISVLQFMRJM-UHFFFAOYSA-N"
+  },
+  "CHEMBL4297618": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FPUQGCOBYOXAED-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106431": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZLNMZWDQJJAEAM-QPBDZWBWSA-N"
+  },
+  "CHEMBL2103934": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FNDSQXMSCAOERP-UHFFFAOYSA-N"
+  },
+  "CHEMBL6068417": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NRWORBQAOQVYBJ-GJZUVCINSA-M"
+  },
+  "CHEMBL1200357": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JWCSIUVGFCSJCK-CAVRMKNVSA-L"
+  },
+  "CHEMBL1096237": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GMJWGJSDPOAZTP-MIDYMNAOSA-N"
+  },
+  "CHEMBL3707306": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DJSXNILVACEBLP-UHFFFAOYSA-J"
+  },
+  "CHEMBL1076930": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CJCYTUJOSMYXLE-JDLSZIHUSA-N"
+  },
+  "CHEMBL3827379": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XDMUFNNPLXHNKA-ZTESCHFWSA-N"
+  },
+  "CHEMBL4297077": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HRWVXKVRSNICJQ-GMJIGYHYSA-N"
+  },
+  "CHEMBL2105824": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XATZHCXBMKRRDO-REHNUXHNSA-N"
+  },
+  "CHEMBL2106964": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VMIYNXFWQJSJDA-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106404": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HDFVMCZXNURVCU-UHFFFAOYSA-N"
+  },
+  "CHEMBL206468": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QPYJXFZUIJOGNX-HSUXUTPPSA-N"
+  },
+  "CHEMBL6068007": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JBYJTCVXUMWTJJ-YRCZKMHPSA-N"
+  },
+  "CHEMBL4594371": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RGFBRLNVZCCMSV-BIRGHMBHSA-N"
+  },
+  "CHEMBL152452": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SQVRNKJHWKZAKO-USOVHJGOSA-N"
+  },
+  "CHEMBL106971": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RZESKRXOCXWCFX-UHFFFAOYSA-N"
+  },
+  "CHEMBL1908306": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZXEIEKDGPVTZLD-NDEPHWFRSA-N"
+  },
+  "CHEMBL1201005": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DYAIAHUQIPBDIP-AXAPSJFSSA-L"
+  },
+  "CHEMBL2105439": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CZPAAISSUBSIDF-ZQZMJUSDSA-N"
+  },
+  "CHEMBL3989886": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GZZJHPZDXZCDDA-MBJUQXSJSA-N"
+  },
+  "CHEMBL207197": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ITIXDWVDFFXNEG-JHOUSYSJSA-N"
+  },
+  "CHEMBL6068557": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JVTAAEKCZFNVCJ-REOHCLBHSA-M"
+  },
+  "CHEMBL3694493": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PFORUFFGGNOLPJ-QAQDUYKDSA-N"
+  },
+  "CHEMBL3989415": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VFYNXKZVOUXHDX-VDPUEHCXSA-N"
+  },
+  "CHEMBL2105004": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KZYHGCLDUQBASN-UHFFFAOYSA-N"
+  },
+  "CHEMBL1950576": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ASXBYYWOLISCLQ-HZYVHMACSA-N"
+  },
+  "CHEMBL3971095": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AXWDHVUJXNOWCC-RAEGKSCOSA-N"
+  },
+  "CHEMBL269787": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FMMCHWHNSUBYAV-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989437": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BGGBQBAMDUCKFN-ZGJBTBESSA-N"
+  },
+  "CHEMBL2374220": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VRTWBAAJJOHBQU-KMWAZVGDSA-N"
+  },
+  "CHEMBL5567890": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WDRJGMSUTPVXDH-KBOGUJPVSA-N"
+  },
+  "CHEMBL3916700": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SNXJYSXRLKUBSZ-WBXFWKJNSA-N"
+  },
+  "CHEMBL1200656": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NCXMLFZGDNKEPB-FFPOYIOWSA-N"
+  },
+  "CHEMBL1721515": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WDLRUFUQRNWCPK-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989421": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VQQSDVBOXQHCHU-SKPOXZENSA-N"
+  },
+  "CHEMBL2110847": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NAPSCFZYZVSQHF-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107319": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OJLHWPALWODJPQ-QNWVGRARSA-N"
+  },
+  "CHEMBL3989530": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AKGJIVJDHCUPMI-ISMOLGHHSA-N"
+  },
+  "CHEMBL1201075": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UUMLTINZBQPNGF-UHFFFAOYSA-N"
+  },
+  "CHEMBL1233511": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IMQLKJBTEOYOSI-GPIVLXJGSA-N"
+  },
+  "CHEMBL3989461": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VDNLFJGJEQUWRB-GRMCBZHISA-L"
+  },
+  "CHEMBL173929": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KBPHJBAIARWVSC-RGZFRNHPSA-N"
+  },
+  "CHEMBL3989812": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BYZJBHCTZJGJFV-AOOOYVTPSA-N"
+  },
+  "CHEMBL2105945": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KBGAYAKRZNYFFG-BOHATCBPSA-N"
+  },
+  "CHEMBL443684": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JLYAXFNOILIKPP-KXQOOQHDSA-N"
+  },
+  "CHEMBL1975551": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HSUDWURBWSUCOB-JPHWUADUSA-N"
+  },
+  "CHEMBL1200482": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GCFBRXLSHGKWDP-XCGNWRKASA-M"
+  },
+  "CHEMBL2105100": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GSPPFJJUCULBDC-NQLNTKRDSA-N"
+  },
+  "CHEMBL1614665": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JUVHVMCKLDZLGN-TVNFHGJBSA-N"
+  },
+  "CHEMBL4297647": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GZRNOYTVBWWFLJ-NTPALUMKSA-N"
+  },
+  "CHEMBL501122": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZCCUWMICIWSJIX-NQJJCJBVSA-N"
+  },
+  "CHEMBL14060": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ISWSIDIOOBJBQZ-UHFFFAOYSA-N"
+  },
+  "CHEMBL3040582": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UDMJANYPQWEDFT-ZAWFUYGJSA-N"
+  },
+  "CHEMBL1213327": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RGJOEKWQDUBAIZ-IBOSZNHHSA-N"
+  },
+  "CHEMBL221572": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NSKGQURZWSPSBC-VVPCINPTSA-N"
+  },
+  "CHEMBL2105085": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZPACYDRSPFRDHO-ROBAGEODSA-N"
+  },
+  "CHEMBL176": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SKKLOUVUUNMCJE-FQSMHNGLSA-N"
+  },
+  "CHEMBL449062": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XMGQYMWWDOXHJM-JTQLQIEISA-N"
+  },
+  "CHEMBL2106119": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RGHNJXZEOKUKBD-SQOUGZDYSA-M"
+  },
+  "CHEMBL4297395": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VFRROHXSMXFLSN-KVTDHHQDSA-N"
+  },
+  "CHEMBL5314951": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZQTKOYMWCCSKON-XKXNWSITSA-N"
+  },
+  "CHEMBL1201304": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BDBMLMBYCXNVMC-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989787": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KCUSRWLYTAYGAU-KQSQHPHMSA-N"
+  },
+  "CHEMBL1534653": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FJLUATLTXUNBOT-UHFFFAOYSA-N"
+  },
+  "CHEMBL6068040": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CPOJUYUGONJVPZ-WIXASUBBSA-N"
+  },
+  "CHEMBL2104217": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DSLZVSRJTYRBFB-LLEIAEIESA-L"
+  },
+  "CHEMBL2105248": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FEWJPZIEWOKRBE-JCYAYHJZSA-M"
+  },
+  "CHEMBL265502": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FIAFUQMPZJWCLV-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106372": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FZDZULUFHNDEDJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL476960": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FZNCGRZWXLXZSZ-CIQUZCHMSA-N"
+  },
+  "CHEMBL3182320": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IYVFNTXFRYQLRP-VVSTWUKXSA-N"
+  },
+  "CHEMBL3989635": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JJSYIUAIQSRVQR-BLNLWOAQSA-N"
+  },
+  "CHEMBL2219413": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QPDYBCZNGUJZDK-DNQXCXABSA-N"
+  },
+  "CHEMBL3707372": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MKDALIOACIEUJM-XCFCBFDASA-N"
+  },
+  "CHEMBL2110877": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NAALWFYYHHJEFQ-ZASNTINBSA-N"
+  },
+  "CHEMBL501174": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OAIJSZIZWZSQBC-GYZMGTAESA-N"
+  },
+  "CHEMBL505268": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VWMZIGBYZQUQOA-QEEMJVPDSA-N"
+  },
+  "CHEMBL184618": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PGBHMTALBVVCIT-VCIWKGPPSA-N"
+  },
+  "CHEMBL4297080": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QQFZVDWDMZYSQX-FUUYDGDCSA-N"
+  },
+  "CHEMBL1956820": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RFGUWOCFYCYEDM-ZOMNBDOOSA-N"
+  },
+  "CHEMBL2106391": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XPEPMWYMISJEEQ-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107403": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YEYZSIPYIGWRIT-HENWMNBSSA-M"
+  },
+  "CHEMBL3907479": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BEMNJULZEQTDJY-UHFFFAOYSA-N"
+  },
+  "CHEMBL1200430": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FHXBMXJMKMWVRG-SLHNCBLASA-N"
+  },
+  "CHEMBL1371412": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HLLICFJUWSZHRJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107237": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KOIGYXJOGRVNIS-UHFFFAOYSA-N"
+  },
+  "CHEMBL2110970": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WEQNUNAIQXHGHB-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107786": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HWEOXFSBSQIWSY-MRXNPFEDSA-N"
+  },
+  "CHEMBL4297484": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PLMAPPWZOQMTBI-XUTJKUGGSA-N"
+  },
+  "CHEMBL1908006": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RXXBBHGCAXVBES-XMUHMHRVSA-N"
+  },
+  "CHEMBL2105113": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SMQXDOVGKKMUIZ-UHFFFAOYSA-N"
+  },
+  "CHEMBL341578": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WMVSIGOLIQMRHF-UHFFFAOYSA-N"
+  },
+  "CHEMBL1968696": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KCASCYQNVLPVDP-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105550": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XGCBETZGOIOAKF-UHFFFAOYSA-N"
+  },
+  "CHEMBL1201010": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SYWHXTATXSMDSB-GSLJADNHSA-N"
+  },
+  "CHEMBL7728": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UYXAWHWODHRRMR-UHFFFAOYSA-N"
+  },
+  "CHEMBL3039498": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HZVLFTCYCLXTGV-UHFFFAOYSA-N"
+  },
+  "CHEMBL4802251": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GHTYIKRPXXXLDM-SFHVURJKSA-N"
+  },
+  "CHEMBL155674": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IKYTUOHXXXPNOG-UHFFFAOYSA-N"
+  },
+  "CHEMBL3916929": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MBKYLPOPYYLTNW-ZDUSSCGKSA-N"
+  },
+  "CHEMBL359965": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JDLKFOPOAOFWQN-UHFFFAOYSA-N"
+  },
+  "CHEMBL3545233": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QYTBBBAHNIWFOD-NRFANRHFSA-N"
+  },
+  "CHEMBL669": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JURKNVYFZMSNLP-UHFFFAOYSA-N"
+  },
+  "CHEMBL979": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NPPQSCRMBWNHMW-UHFFFAOYSA-N"
+  },
+  "CHEMBL4303782": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QYCXWOACFWMQFO-WZWZCULESA-N"
+  },
+  "CHEMBL12806": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RXOBKRPNVDTZQF-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104050": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IORHSKBXWWSQME-UHFFFAOYSA-N"
+  },
+  "CHEMBL4297478": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SLIVDYMORZGPLW-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989497": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GGXDVUAOXCBCBN-HJZGYWQISA-N"
+  },
+  "CHEMBL7010": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IKFBPFGUINLYQI-UHFFFAOYSA-N"
+  },
+  "CHEMBL574": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LMYRWZFENFIFIT-UHFFFAOYSA-N"
+  },
+  "CHEMBL374975": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IECPWNUMDGFDKC-MZJAQBGESA-N"
+  },
+  "CHEMBL2104233": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CNANHKGYHBTGAQ-UHFFFAOYSA-N"
+  },
+  "CHEMBL3984425": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XUMALORDVCFWKV-IBGZPJMESA-N"
+  },
+  "CHEMBL5095103": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MMVBKZHQTLDYKG-UHFFFAOYSA-N"
+  },
+  "CHEMBL29411": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MGSRCZKZVOBKFT-UHFFFAOYSA-N"
+  },
+  "CHEMBL191491": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YIMFXBPXUPTIEJ-OUKQBFOZSA-N"
+  },
+  "CHEMBL2104139": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SOESEFMFRCCMQV-QWAPGEGQSA-N"
+  },
+  "CHEMBL274239": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HTJXMOGUGMSZOG-UHFFFAOYSA-N"
+  },
+  "CHEMBL842": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JBMKAUGHUNFTOL-UHFFFAOYSA-N"
+  },
+  "CHEMBL573": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PVNIIMVLHYAWGP-UHFFFAOYSA-N"
+  },
+  "CHEMBL71733": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LDHMAVIPBRSVRG-UHFFFAOYSA-O"
+  },
+  "CHEMBL2107303": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LHPBUFXEIOLURH-GQZONRFDSA-N"
+  },
+  "CHEMBL1201293": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AFCGFAGUEYAMAO-UHFFFAOYSA-N"
+  },
+  "CHEMBL5314928": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZVFMYSNPRZIABV-UHFFFAOYSA-N"
+  },
+  "CHEMBL5314423": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BWINBHTTZLVXGT-NVXWUHKLSA-N"
+  },
+  "CHEMBL1006": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JKOQGQFVAUAYPM-UHFFFAOYSA-N"
+  },
+  "CHEMBL446373": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IDAWWPOAHPVPMY-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105661": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YVAFBXLHPINSIK-QHCPKHFHSA-N"
+  },
+  "CHEMBL6060997": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ILVXQVHFMCJXTE-MRXNPFEDSA-N"
+  },
+  "CHEMBL5314419": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QCGUSIANLFXSGE-GFCCVEGCSA-L"
+  },
+  "CHEMBL108358": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FVRDYQYEVDDKCR-DBRKOABJSA-N"
+  },
+  "CHEMBL70246": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HCYFGRCYSCXKNQ-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104712": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NNFGKFKPLQYECP-BYXNGVTISA-N"
+  },
+  "CHEMBL345524": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NWGGKKGAFZIVBJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL167691": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PVCULFYROUOVGJ-UHFFFAOYSA-N"
+  },
+  "CHEMBL19393": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KWTSXDURSIMDCE-MRVPVSSYSA-N"
+  },
+  "CHEMBL2107792": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VZVNFRFMDNFPOM-VWLOTQADSA-N"
+  },
+  "CHEMBL4594350": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PEMUGDMSUDYLHU-ZEQRLZLVSA-N"
+  },
+  "CHEMBL141157": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QCUZOJBYWQPLIN-BNMFZAHFSA-N"
+  },
+  "CHEMBL1201081": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IMBXEJJVJRTNOW-XYMSELFBSA-M"
+  },
+  "CHEMBL1736": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GGGDNPWHMNJRFN-UHFFFAOYSA-N"
+  },
+  "CHEMBL1200776": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VDHAWDNDOKGFTD-MRXNPFEDSA-N"
+  },
+  "CHEMBL1149": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PHIQHXFUZVPYII-ZCFIWIBFSA-N"
+  },
+  "CHEMBL2158051": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LSXUTRRVVSPWDZ-MKKUMYSQSA-N"
+  },
+  "CHEMBL444929": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UIRKNQLZZXALBI-MSVGPLKSSA-N"
+  },
+  "CHEMBL29757": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CKLJMWTZIZZHCS-UWTATZPHSA-N"
+  },
+  "CHEMBL5314566": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MAYZWDRUFKUGGP-VIFPVBQESA-N"
+  },
+  "CHEMBL2107067": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UDSFVOAUHKGBEK-CNQKSJKFSA-N"
+  },
+  "CHEMBL1393904": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JDKRQGOIZPRQRU-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107536": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PKXWXHGLEXOSQK-UHFFFAOYSA-N"
+  },
+  "CHEMBL1023": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NAVMQTYZDKMPEU-UHFFFAOYSA-N"
+  },
+  "CHEMBL1330": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GNJCUHZOSOYIEC-GAROZEBRSA-N"
+  },
+  "CHEMBL245019": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HZQDCMWJEBCWBR-UUOKFMHZSA-N"
+  },
+  "CHEMBL4802214": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FQKALOFOWPDTED-WBAXXEDZSA-N"
+  },
+  "CHEMBL2106868": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DXKIKFNSKJTQBC-BQELKBSMSA-N"
+  },
+  "CHEMBL271475": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IPVFGAYTKQKGBM-BYPJNBLXSA-N"
+  },
+  "CHEMBL2113336": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KOWWOODYPWDWOJ-NNXCXUQRSA-N"
+  },
+  "CHEMBL1200577": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FEWJPZIEWOKRBE-JCYAYHJZSA-N"
+  },
+  "CHEMBL92": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZDZOTLJHXYCWBA-VCVYQWHSSA-N"
+  },
+  "CHEMBL248594": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HJXMNVQARNZTEE-UHFFFAOYSA-N"
+  },
+  "CHEMBL222913": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZBHXIWJRIFEVQY-IHMPYVIRSA-N"
+  },
+  "CHEMBL460283": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MQXVYODZCMMZEM-ZYUZMQFOSA-N"
+  },
+  "CHEMBL5314434": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RPBNLMPTFCTXRQ-UHFFFAOYSA-N"
+  },
+  "CHEMBL2103860": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WSYALRNYQFNNGP-HKBQPEDESA-N"
+  },
+  "CHEMBL4594414": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SIRZPOBKMRMKDI-UHFFFAOYSA-O"
+  },
+  "CHEMBL6067641": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GZCGUPFRVQAUEE-KCDKBNATSA-N"
+  },
+  "CHEMBL4297315": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WDJHHCAKBRKCLW-IBGZPJMESA-N"
+  },
+  "CHEMBL4065616": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RWWYLEGWBNMMLJ-YSOARWBDSA-N"
+  },
+  "CHEMBL112570": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HVYWMOMLDIMFJA-DPAQBDIFSA-N"
+  },
+  "CHEMBL1201794": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FVTCRASFADXXNN-SCRDCRAPSA-N"
+  },
+  "CHEMBL6068073": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HYMSACOZWCUWKA-YKDDYUEBSA-N"
+  },
+  "CHEMBL4553146": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HHDDKDPLFXIPBX-DLFZDVPBSA-N"
+  },
+  "CHEMBL6067963": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FPQIBCPWXJSFOQ-ILNPBIMBSA-N"
+  },
+  "CHEMBL3121849": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LCHMHYPWGWYXEL-ZYADHFCISA-N"
+  },
+  "CHEMBL1201224": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HJJDBAOLQAWBMH-YCRCPZNHSA-N"
+  },
+  "CHEMBL1230222": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CFKMVGJGLGKFKI-UHFFFAOYSA-N"
+  },
+  "CHEMBL2311128": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UCKYOOZPSJFJIZ-XVKVHKPRSA-N"
+  },
+  "CHEMBL206031": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JORVRJNILJXMMG-OLNQLETPSA-N"
+  },
+  "CHEMBL4297589": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FYXHWMQPCJOJCH-GMAHTHKFSA-N"
+  },
+  "CHEMBL1200820": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IVBHGBMCVLDMKU-GXNBUGAJSA-M"
+  },
+  "CHEMBL3544947": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZLNYUCXXSDDIFU-UHFFFAOYSA-N"
+  },
+  "CHEMBL529": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MQTOSJVFKKJCRP-BICOPXKESA-N"
+  },
+  "CHEMBL83626": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RKSMVPNZHBRNNS-UHFFFAOYSA-N"
+  },
+  "CHEMBL466246": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QNRRHYPPQFELSF-CNYIRLTGSA-N"
+  },
+  "CHEMBL3989688": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WKWHOLCUESSZIQ-UHFFFAOYSA-K"
+  },
+  "CHEMBL1200986": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GUTXTARXLVFHDK-UHFFFAOYSA-N"
+  },
+  "CHEMBL1178725": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RPDFDSQFBCJTDY-GAQXSTBRSA-N"
+  },
+  "CHEMBL2105750": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MHFMTUBUVQZIRE-WINRQGAFSA-N"
+  },
+  "CHEMBL269732": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QJJXYPPXXYFBGM-LFZNUXCKSA-N"
+  },
+  "CHEMBL3989844": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DSLZVSRJTYRBFB-LLEIAEIESA-N"
+  },
+  "CHEMBL3391662": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UAUIUKWPKRJZJV-QPLHLKROSA-N"
+  },
+  "CHEMBL6068055": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BQSTXYPXJZXZNU-ZEOIZOQSSA-N"
+  },
+  "CHEMBL1572": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CIDUJQMULVCIBT-MQDUPKMGSA-N"
+  },
+  "CHEMBL317052": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LZPZPHGJDAGEJZ-AKAIJSEGSA-N"
+  },
+  "CHEMBL1256994": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RZZPDXZPRHQOCG-OJAKKHQRSA-M"
+  },
+  "CHEMBL279597": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QNAYBMKLOCPYGJ-REOHCLBHSA-N"
+  },
+  "CHEMBL76903": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OPZKBPQVWDSATI-KHPPLWFESA-N"
+  },
+  "CHEMBL4213970": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "KPQQGHGDBBJGFA-QNGWXLTQSA-N"
+  },
+  "CHEMBL2304040": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AMMYEZPDRKXESR-CEJYENBDSA-N"
+  },
+  "CHEMBL3247378": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JGDXFQORBMPJGR-YUMQZZPRSA-N"
+  },
+  "CHEMBL1163": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AXRYRYVKAWYZBR-GASGPIRDSA-N"
+  },
+  "CHEMBL501613": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QXLPXWSKPNOQLE-UHFFFAOYSA-N"
+  },
+  "CHEMBL1557889": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PYWYBTRACMRUQV-UHFFFAOYSA-N"
+  },
+  "CHEMBL3187384": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CAVZBWFUMSXZFB-LJWNLINESA-N"
+  },
+  "CHEMBL5314575": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YFSNREBZTKMFEB-DHGHKPCRSA-N"
+  },
+  "CHEMBL1938400": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "VGEXRDWWPSGZDH-UHFFFAOYSA-N"
+  },
+  "CHEMBL1615772": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "AXFGWXLCWCNPHP-UHFFFAOYSA-N"
+  },
+  "CHEMBL5569030": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NQGKNAVUMAHSQN-KDRPOVOJSA-N"
+  },
+  "CHEMBL296306": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JCQLYHFGKNRPGE-FCVZTGTOSA-N"
+  },
+  "CHEMBL5314445": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IZLOSIXADNUSCM-ZWYZQBDTSA-N"
+  },
+  "CHEMBL410414": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "TUOSYWCFRFNJBS-BHVANESWSA-N"
+  },
+  "CHEMBL2008915": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DIRJDIBCAHCCFL-AQFAATAFSA-N"
+  },
+  "CHEMBL1084430": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LYMICVBGNUEHGE-FUQPUAIBSA-N"
+  },
+  "CHEMBL608": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FYPMFJGVHOHGLL-UHFFFAOYSA-N"
+  },
+  "CHEMBL2104958": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FGBGXESDYFKUFX-UHFFFAOYSA-N"
+  },
+  "CHEMBL2152047": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JPIJQSOTBSSVTP-STHAYSLISA-N"
+  },
+  "CHEMBL2110869": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WCKFMTGGCBJGEZ-GLQQXDFUSA-N"
+  },
+  "CHEMBL435191": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QMVPQBFHUJZJCS-NTKFZFFISA-N"
+  },
+  "CHEMBL4458276": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HFZITXBUTWITPT-YWVKMMECSA-N"
+  },
+  "CHEMBL221886": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "URWAJWIAIPFPJE-YFMIWBNJSA-N"
+  },
+  "CHEMBL2152999": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LCFWOFKPFDWYLR-CEFNRUSXSA-N"
+  },
+  "CHEMBL4802143": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HUIKCRXUQCSUJS-ZLRZYOKSSA-N"
+  },
+  "CHEMBL500576": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LYPFDBRUNKHDGX-UHFFFAOYSA-N"
+  },
+  "CHEMBL5558927": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HPTPDBYCFHFWJG-CWTKIQHKSA-N"
+  },
+  "CHEMBL2107372": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SLGIWUWTSWJBQE-VLCCYYTCSA-N"
+  },
+  "CHEMBL181886": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LCTONWCANYUPML-UHFFFAOYSA-M"
+  },
+  "CHEMBL12131": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JMPFSEBWVLAJKM-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105629": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NMDYYWFGPIMTKO-KLCPSUAYSA-N"
+  },
+  "CHEMBL1200455": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NTHXOOBQLCIOLC-UHFFFAOYSA-N"
+  },
+  "CHEMBL2304044": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OCFOTEIMZBKQFS-DGMGPCKZSA-N"
+  },
+  "CHEMBL1207607": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "YAVMDSYMZGJNES-UHFFFAOYSA-N"
+  },
+  "CHEMBL272342": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HIZOPJQOPKRKFM-UHFFFAOYSA-N"
+  },
+  "CHEMBL1201204": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PWAUCHMQEXVFJR-PMAPCBKXSA-N"
+  },
+  "CHEMBL3039514": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "BVAZQCUMNICBAQ-PZHYSIFUSA-N"
+  },
+  "CHEMBL5314577": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "USUWIEBBBWHKNI-KHIFEHGGSA-M"
+  },
+  "CHEMBL3681949": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FWXVGKSWZJEPQI-UHFFFAOYSA-N"
+  },
+  "CHEMBL5095031": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HBZAZSCNDMDWEU-GNZRQIOVSA-N"
+  },
+  "CHEMBL2104643": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "TVZGACDUOSZQKY-LBPRGKRZSA-L"
+  },
+  "CHEMBL4594229": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZEFUFVWPRPISAD-FLUPTLLOSA-N"
+  },
+  "CHEMBL307346": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RLGQACBPNDBWTB-UHFFFAOYSA-N"
+  },
+  "CHEMBL2106403": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XOEUHCONYHZURQ-HNUBZJOYSA-N"
+  },
+  "CHEMBL3039520": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "XEDHVZKDSYZQBF-UHFFFAOYSA-N"
+  },
+  "CHEMBL1200638": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ZDIGNSYAACHWNL-HNNXBMFYSA-N"
+  },
+  "CHEMBL648": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "UVKZSORBKUEBAZ-UHFFFAOYSA-N"
+  },
+  "CHEMBL33211": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "QFGMXJOBTNZHEL-UHFFFAOYSA-N"
+  },
+  "CHEMBL64979": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LGUDKOQUWIHXOV-UHFFFAOYSA-N"
+  },
+  "CHEMBL62919": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "SMYALUSCZJXWHG-UHFFFAOYSA-N"
+  },
+  "CHEMBL3989559": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HEYBXKVTQOEUTP-UHFFFAOYSA-N"
+  },
+  "CHEMBL430150": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "OPYFPDBMMYUPME-UHFFFAOYSA-N"
+  },
+  "CHEMBL68332": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NGOHTJBYABHJKF-UHFFFAOYSA-O"
+  },
+  "CHEMBL726": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "PLDUPXSUYLZYBN-UHFFFAOYSA-N"
+  },
+  "CHEMBL541388": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NGOGFTYYXHNFQH-UHFFFAOYSA-N"
+  },
+  "CHEMBL1326877": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "MEZZCSHVIGVWFI-UHFFFAOYSA-N"
+  },
+  "CHEMBL2107079": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CSNKNIWBSXUJRO-UHFFFAOYSA-N"
+  },
+  "CHEMBL5095193": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LJNFYMMXCXGFCP-LLVKDONJSA-N"
+  },
+  "CHEMBL3221237": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GBEUKTWTUSPHEE-JWJWXJQQSA-N"
+  },
+  "CHEMBL3989451": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LFYBMMHFJIAKFE-PMEKXCSPSA-N"
+  },
+  "CHEMBL48396": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "FKKUMFTYSTZUJG-UHFFFAOYSA-N"
+  },
+  "CHEMBL4081711": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JKDGKIBAOAFRPJ-ZBINZKHDSA-N"
+  },
+  "CHEMBL2104179": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "HAHOPPGVHWVBRR-UHFFFAOYSA-N"
+  },
+  "CHEMBL111": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "JZCPYUJPEARBJL-UHFFFAOYSA-N"
+  },
+  "CHEMBL465123": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WIQRCHMSJFFONW-HNNXBMFYSA-N"
+  },
+  "CHEMBL4802134": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "ILTWRLHXJMWZHP-UHFFFAOYSA-N"
+  },
+  "CHEMBL1963681": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WEAJZXNPAWBCOA-INIZCTEOSA-N"
+  },
+  "CHEMBL1721885": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CTNPALGJUAXMMC-PMFHANACSA-N"
+  },
+  "CHEMBL4297602": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "GVVUZBSCYAVFTI-IYARVYRRSA-N"
+  },
+  "CHEMBL3544932": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WKDACQVEJIVHMZ-UHFFFAOYSA-N"
+  },
+  "CHEMBL3235620": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "LJTSIMVOOOLKOL-FNRDIUJOSA-N"
+  },
+  "CHEMBL2107544": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "RXZTWBVFHQLTBU-UHFFFAOYSA-N"
+  },
+  "CHEMBL1201319": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "WXFIGDLSSYIKKV-RCOVLWMOSA-N"
+  },
+  "CHEMBL2381848": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IBDYYOQKQCCSDP-QFIPXVFZSA-N"
+  },
+  "CHEMBL2105398": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "IZOYMGQQVNAMHS-UHFFFAOYSA-N"
+  },
+  "CHEMBL2105692": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NVPXUFQLKWKBHK-UHFFFAOYSA-N"
+  },
+  "CHEMBL2103812": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "CATMPQFFVNKDEY-YPMHNXCESA-N"
+  },
+  "CHEMBL470670": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "NOOLISFMXDJSKH-KXUCPTDWSA-N"
+  },
+  "CHEMBL52125": {
+   "arm": "S",
+   "receptor": "P75174",
+   "inchikey": "DBOUGBAQLIXZLV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106863": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DYGIPCPWPHKLMC-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104555": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UJCARUGFZOJPMI-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1562610": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SBDNJUWAMKYJOX-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL93218": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ILORKHQGIMGDFN-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105055": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NEFZSDAFBFJUNW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL4297494": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AFDPFLDWOXXHQM-NRFANRHFSA-N"
+  },
+  "decoy_CHEMBL4116649": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ODGXXYXJORZPHE-ZIAGYGMSSA-N"
+  },
+  "decoy_CHEMBL1725250": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AXWZZEWIGNYBGA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104744": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IWSXBCZCPVUWHT-VIFKTUCRSA-N"
+  },
+  "decoy_CHEMBL2386714": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WRBFPGYDKJBYBI-LGNYVVAJSA-N"
+  },
+  "decoy_CHEMBL311350": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RCIMBBZXSXFZBV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105856": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "TYGVJQQISVEFSH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL61": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YJGVMLPVUAXIQN-XVVDYKMHSA-N"
+  },
+  "decoy_CHEMBL5314958": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WCEFMBSFXJUREW-LIJGXYGRSA-N"
+  },
+  "decoy_CHEMBL4297582": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GLNWREBYRLDPQP-MHZLTWQESA-N"
+  },
+  "decoy_CHEMBL623": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VRBKIVRKKCLPHA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL577": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LZFZMUMEGBBDTC-QEJZJMRPSA-N"
+  },
+  "decoy_CHEMBL709": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WNMJYKCGWZFFKR-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL12208": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HSHNITRMYYLLCV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3977543": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KVCQTKNUUQOELD-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104715": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BNKIWXODDDABSJ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1220": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HJLSLZFTEKNLFI-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3930624": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XJGXCBHXFWBOTN-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3545169": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BLLNYXOLLAVTRF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3989877": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AYSBIMSATXNCSF-VFEFFJNBSA-N"
+  },
+  "decoy_CHEMBL5095088": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BGKSBHPSVMJTFL-IZZNHLLZSA-N"
+  },
+  "decoy_CHEMBL290624": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZZKWNLZUYAGVOT-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1095292": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AAQOQKQBGPPFNS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2008565": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZCVAIGPGEINFCX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3912251": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ALLLQQUASFFEKP-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL14935": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZXFRFPSZAKNPQQ-YTWAJWBKSA-N"
+  },
+  "decoy_CHEMBL2106427": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RKWPZPDLTYBKCL-RVZGXXANSA-N"
+  },
+  "decoy_CHEMBL2104581": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JPEUYYKTUFRADV-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL10758": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FEJCIXJKPISCJV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104573": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZGLIFVFRIOKQLE-LVZFUZTISA-N"
+  },
+  "decoy_CHEMBL2107729": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PQHLRGARXNPFCF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104885": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RJCXNCSJGRUWRW-SJKOYZFVSA-N"
+  },
+  "decoy_CHEMBL5095189": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NFXPEHLDVKVVKA-ISTVAULSSA-N"
+  },
+  "decoy_CHEMBL1330588": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HWGBHCRJGXAGEU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL185": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GHASVSINZRGABV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2063215": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QIBWSQJZKMUZAK-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1201054": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RJFAYQIBOAGBLC-ZEMBQCNESA-N"
+  },
+  "decoy_CHEMBL2105761": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GTOMRUVXHAYDFH-DWXRJYCRSA-N"
+  },
+  "decoy_CHEMBL2104446": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XMLCDJOGFNNCSF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1460": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BXZVVICBKDXVGW-NKWVEPMBSA-N"
+  },
+  "decoy_CHEMBL285855": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ITAMRBIZWGDOHW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL203665": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BWYBBMQLUKXECQ-GIVPXCGWSA-N"
+  },
+  "decoy_CHEMBL5314522": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PGRHEHZIRYNZDV-FUHWJXTLSA-N"
+  },
+  "decoy_CHEMBL1950553": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WUCQGGOGHZRELS-LSCFUAHRSA-N"
+  },
+  "decoy_CHEMBL2064455": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QLLGKCJUPWYJON-HLTSFMKQSA-N"
+  },
+  "decoy_CHEMBL834": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WRUUGTRCQOWXEG-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3746388": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RPVDFHPBGBMWID-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3991932": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LNMRSSIMGCDUTP-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2146108": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JMPOIZCOJJMTHI-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL537": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QIGBRXMKCJKVMJ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL449782": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YVPXVXANRNDGTA-WDYNHAJCSA-N"
+  },
+  "decoy_CHEMBL236345": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OEKXCVYZBVOWBR-BQYQJAHWSA-N"
+  },
+  "decoy_CHEMBL1259059": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "TTZHDVOVKQGIBA-IQWMDFIBSA-N"
+  },
+  "decoy_CHEMBL3126832": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XFLBOEMFLGLWFF-HDXRNPEWSA-N"
+  },
+  "decoy_CHEMBL3976807": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LDZJFVOUPUFOHX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3186849": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZYRLHJIMTROTBO-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1261": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KRKNYBCHXYNGOX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2205230": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZADWXQMNNVICKB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3939295": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MBWRLLRCTIYXDW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL452715": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MLFKVJCWGUZWNV-REOHCLBHSA-N"
+  },
+  "decoy_CHEMBL1950554": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XJFMHMFFBSOEPR-DNZQAUTHSA-N"
+  },
+  "decoy_CHEMBL419952": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JJNUVQIGQRFZAC-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL279605": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PYWBJEDBESDHNP-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2375142": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OFKRKCHCYWQZLY-XHBSWPGZSA-N"
+  },
+  "decoy_CHEMBL4650221": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YUFFSWGQGVEMMI-RCHUDCCISA-N"
+  },
+  "decoy_CHEMBL117348": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QYNUQALWYRSVHF-ABLWVSNPSA-N"
+  },
+  "decoy_CHEMBL1200850": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IRSCQMHQWWYFCW-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL1200734": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MLBVMOWEQCZNCC-OEMFJLHTSA-L"
+  },
+  "decoy_CHEMBL146": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NLZUEZXRPGMBCV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1201019": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NNULBSISHYWZJU-LLKWHZGFSA-M"
+  },
+  "decoy_CHEMBL4073292": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WYFCZWSWFGJODV-MIANJLSGSA-N"
+  },
+  "decoy_CHEMBL110458": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LXBIFEVIBLOUGU-DPYQTVNSSA-N"
+  },
+  "decoy_CHEMBL3989817": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HYQJLIGADHPYIR-OJBANTNJSA-N"
+  },
+  "decoy_CHEMBL2104302": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IYOLBFFHPZOQGW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104438": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UEQVTKSAEXANEZ-YCRCPZNHSA-N"
+  },
+  "decoy_CHEMBL2105616": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GUCKKCMJTSNWCU-BQBZGAKWSA-N"
+  },
+  "decoy_CHEMBL47050": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MDLAAYDRRZXJIF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104286": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OSUWTUZVEDSJAZ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2110875": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZWLPJYVIMWAEDC-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1729883": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VOIFKEWOFUNPBN-QIUUJYRFSA-N"
+  },
+  "decoy_CHEMBL325166": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BYDKEYCXCIVOOV-JTSKRJEESA-N"
+  },
+  "decoy_CHEMBL1374379": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MAFMQEKGGFWBAB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1042": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QYSXJUFSXHHAJI-YRZJJWOYSA-N"
+  },
+  "decoy_CHEMBL2104178": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MMQXRUYUBYWTDP-LNXFEASCSA-N"
+  },
+  "decoy_CHEMBL1922673": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DFQGDHBGRSTTHX-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL5095237": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OIIOPWHTJZYKIL-PMACEKPBSA-N"
+  },
+  "decoy_CHEMBL4297588": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XULSCZPZVQIMFM-IPZQJPLYSA-N"
+  },
+  "decoy_CHEMBL1908325": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AFJYYKSVHJGXSN-XHKIUTQPSA-N"
+  },
+  "decoy_CHEMBL1631107": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YWKJNRNSJKEFMK-PQFQYKRASA-N"
+  },
+  "decoy_CHEMBL26215": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KBPLFHHGFOOTCA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL375611": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AVDUGNCTZRCAHH-MDASVERJSA-N"
+  },
+  "decoy_CHEMBL2104832": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OUMSIYHSIIRHKR-LSHDLFTRSA-N"
+  },
+  "decoy_CHEMBL1697844": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FUWFSXZKBMCSKF-ZASNTINBSA-N"
+  },
+  "decoy_CHEMBL14249": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZKHQWZAMYRWXGA-KQYNXXCUSA-N"
+  },
+  "decoy_CHEMBL3989919": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HZIYEEMJNBKMJH-UHFFFAOYSA-O"
+  },
+  "decoy_CHEMBL1189025": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RXOVOXFAAGIKDQ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104408": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BQDZMZRUXNFTQT-KSJDNICASA-N"
+  },
+  "decoy_CHEMBL1560089": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DSFGXPJYDCSWTA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL334966": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PAEBIVWUMLRPSK-IDTAVKCVSA-N"
+  },
+  "decoy_CHEMBL1200883": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IOYZYMQFUSNATM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL4297495": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZOAIEFWMQLYMTF-YRKXUXMHSA-N"
+  },
+  "decoy_CHEMBL218427": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FQVSDHOWSLEEKJ-LJAQVGFWSA-N"
+  },
+  "decoy_CHEMBL1187572": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LPGWZGMPDKDHEP-NVDFJPPOSA-N"
+  },
+  "decoy_CHEMBL2355839": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DSLZVSRJTYRBFB-DUHBMQHGSA-N"
+  },
+  "decoy_CHEMBL254219": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WDJUZGPOPHTGOT-XUDUSOBPSA-N"
+  },
+  "decoy_CHEMBL5314365": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GAOZTHIDHYLHMS-GDMSFIFLSA-M"
+  },
+  "decoy_CHEMBL1201138": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VVIAGPKUTFNRDU-ABLWVSNPSA-L"
+  },
+  "decoy_CHEMBL2105278": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XZOCIZHAHWDUPU-QWRGUYRKSA-N"
+  },
+  "decoy_CHEMBL3244648": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FBOZXECLQNJBKD-ZDUSSCGKSA-L"
+  },
+  "decoy_CHEMBL358850": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JVTAAEKCZFNVCJ-UWTATZPHSA-N"
+  },
+  "decoy_CHEMBL1200946": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JKWKMORAXJQQSR-MOPIKTETSA-N"
+  },
+  "decoy_CHEMBL300049": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IWTSXJNGTTXMFK-KTQUSEMZSA-N"
+  },
+  "decoy_CHEMBL3989835": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FYQZGCBXYVWXSP-LCHZDSEPSA-N"
+  },
+  "decoy_CHEMBL462018": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "URLYINUFLXOMHP-HTVVRFAVSA-N"
+  },
+  "decoy_CHEMBL1183349": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RSWOJTICKMKTER-QXLBVTBOSA-N"
+  },
+  "decoy_CHEMBL14227": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FERIUCNNQQJTOY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3701382": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VNNWQLOUMFCVJD-XIFFEERXSA-N"
+  },
+  "decoy_CHEMBL1741": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AGOYDEPGAOXOCK-KCBOHYOISA-N"
+  },
+  "decoy_CHEMBL1206833": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IXJCHVMUTFCRBH-SDUHDBOFSA-N"
+  },
+  "decoy_CHEMBL4291143": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VTCJNYICQADBJD-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1908312": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZDSXRJABOCTJTD-HUYBTDLASA-N"
+  },
+  "decoy_CHEMBL428647": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RCINICONZNJXQF-MZXODVADSA-N"
+  },
+  "decoy_CHEMBL507974": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CFMYXEVWODSLAX-QOZOJKKESA-N"
+  },
+  "decoy_CHEMBL3427435": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IZLOSIXADNUSCM-ACRUOGEOSA-N"
+  },
+  "decoy_CHEMBL3822503": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KZTXNPVFWHWJSH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL507674": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GCFBRXLSHGKWDP-XCGNWRKASA-N"
+  },
+  "decoy_CHEMBL2106102": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WJXAHFZIHLTPFR-JLRJEBFFSA-N"
+  },
+  "decoy_CHEMBL2107661": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DRVZFWZGQKGHQO-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL274185": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "TVXOXGBTADZYCZ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3989828": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XUYJLQHKOGNDPB-UHFFFAOYSA-L"
+  },
+  "decoy_CHEMBL3989904": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PENDGIOBPJLVBT-AMXFZXBBSA-N"
+  },
+  "decoy_CHEMBL4297442": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YGIDGBAHDZEYMT-MQFIMZJJSA-N"
+  },
+  "decoy_CHEMBL1231250": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WOUDXEYYJPOSNE-VKZDFBPFSA-N"
+  },
+  "decoy_CHEMBL3084803": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BIDUPMYXGFNAEJ-APGVDKLISA-N"
+  },
+  "decoy_CHEMBL125375": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GZIJBIYIMDKOSA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1276663": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QDUIJCOKQCCXQY-WHJQOFBOSA-N"
+  },
+  "decoy_CHEMBL2104957": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FQUNFJULCYSSOP-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106031": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HCCUQCPVNVAHMV-UHFFFAOYSA-J"
+  },
+  "decoy_CHEMBL4297519": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RLFCSBSRGRJFRO-QAOQTAGDSA-N"
+  },
+  "decoy_CHEMBL2106008": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HPHBOJANXDKUQD-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105774": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RBJROVWIRLFZFC-PNLFXGMVSA-N"
+  },
+  "decoy_CHEMBL1200686": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KASDHRXLYQOAKZ-XDSKOBMDSA-N"
+  },
+  "decoy_CHEMBL2107212": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YLPBXIKWXNRACS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL272080": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UDIIBEDMEYAVNG-ZKFPOVNWSA-N"
+  },
+  "decoy_CHEMBL5314523": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CCDRQWAEZGRMTP-WJOKGBTCSA-N"
+  },
+  "decoy_CHEMBL2104969": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NHHBNHIPCSPSHQ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1208640": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SQKUFYLUXROIFM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3137309": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LQBVNQSMGBZMKD-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3545062": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FHCUMDQMBHQXKK-CDIODLITSA-N"
+  },
+  "decoy_CHEMBL1908313": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QTLQVMGAXZJADU-ZRWMMNBYSA-N"
+  },
+  "decoy_CHEMBL2103982": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YCDUQXXFNZLWJU-CROMWVBPSA-N"
+  },
+  "decoy_CHEMBL1615776": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IQUHNCOJRJBMSU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL177": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LKCWBDHBTVXHDL-RMDFUYIESA-N"
+  },
+  "decoy_CHEMBL3989529": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZQPPMHVWECSIRJ-KTKRTIGZSA-N"
+  },
+  "decoy_CHEMBL1096896": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZOTHAEBAWXWVID-HXEFRTELSA-N"
+  },
+  "decoy_CHEMBL2106035": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VPRFDABTJNLKKR-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1725": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DGAIEPBNLOQYER-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1213250": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JHFNIHVVXRKLEF-DCZLAGFPSA-N"
+  },
+  "decoy_CHEMBL4594438": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BRYXUCLEHAUSDY-WEWMWRJBSA-N"
+  },
+  "decoy_CHEMBL2359248": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JKQXZKUSFCKOGQ-QAYBQHTQSA-N"
+  },
+  "decoy_CHEMBL4802250": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PVPJTBAEAQVTPN-HRAQMCAYSA-N"
+  },
+  "decoy_CHEMBL2105521": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UEZIBPZHJNOZNX-CDTKKYFSSA-N"
+  },
+  "decoy_CHEMBL6068076": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CHCWDBMFOLTXQX-OBTVHEKISA-N"
+  },
+  "decoy_CHEMBL2104399": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MEFAKOINNJLWFO-UWXQCODUSA-N"
+  },
+  "decoy_CHEMBL1908372": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SMSRCGPDNDCXFR-CYWZMYCQSA-N"
+  },
+  "decoy_CHEMBL3989859": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZAKOWWREFLAJOT-ADUHFSDSSA-N"
+  },
+  "decoy_CHEMBL2074822": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XAKKNLNAJBNLPC-MAYKBZFQSA-N"
+  },
+  "decoy_CHEMBL4297475": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QTPZAEAYDWMVJO-GGCSAXROSA-N"
+  },
+  "decoy_CHEMBL2103902": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LNZMRLHZGOBKAN-KAWPREARSA-N"
+  },
+  "decoy_CHEMBL9113": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YXFVVABEGXRONW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068048": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JBJQTRRKPQLQQB-VWPQPMDRSA-N"
+  },
+  "decoy_CHEMBL1200932": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XQZXYNRDCRIARQ-LURJTMIESA-N"
+  },
+  "decoy_CHEMBL2110604": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RHRAMPXHWHSKQB-GGEUKFTFSA-N"
+  },
+  "decoy_CHEMBL2151591": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QUEDXNHFTDJVIY-DQCZWYHMSA-N"
+  },
+  "decoy_CHEMBL223520": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SBUJHOSQTJFQJX-KSACQAOKSA-N"
+  },
+  "decoy_CHEMBL455491": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UAHWPYUMFXYFJY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2068884": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AEMOLEFTQBMNLQ-WAXACMCWSA-M"
+  },
+  "decoy_CHEMBL1977579": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AGRCPNMCOXLKFO-BDVNFPICSA-N"
+  },
+  "decoy_CHEMBL3039519": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ATOLIHZIXHZSBA-BTSKBWHGSA-N"
+  },
+  "decoy_CHEMBL1646": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BDBMLMBYCXNVMC-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL1779325": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BSOQXXWZTUDTEL-QAQREVAFSA-N"
+  },
+  "decoy_CHEMBL706": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BXWNKGSJHAJOGX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068053": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OGIBAYOMUKQFLE-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2096633": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CZONNRSTWJECNT-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105935": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FEWJPZIEWOKRBE-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL1615487": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WWVAPFRKZMUPHZ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3989413": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RTJVUHUGTUDWRK-CSLCKUBZSA-N"
+  },
+  "decoy_CHEMBL1749": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KCXVZYZYPLLWCC-UHFFFAOYSA-L"
+  },
+  "decoy_CHEMBL4297280": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YZSIZVRFVQKMJU-RDGPPVDQSA-N"
+  },
+  "decoy_CHEMBL2303614": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OAEOAAHCJGWJIC-CEVJMMQXSA-N"
+  },
+  "decoy_CHEMBL5314594": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LNKYWHXCKVSEBC-FRAIECQRSA-N"
+  },
+  "decoy_CHEMBL3991434": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MMRCWWRFYLZGAE-ZBZRSYSASA-N"
+  },
+  "decoy_CHEMBL2105048": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZFOVUHQJAMLXDS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1293": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OENHQHLEOONYIE-JLTXGRSLSA-N"
+  },
+  "decoy_CHEMBL1097279": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PAEBIVWUMLRPSK-IDTAVKCVSA-J"
+  },
+  "decoy_CHEMBL370143": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UOZODPSAJZTQNH-LSWIJEOBSA-N"
+  },
+  "decoy_CHEMBL1372": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YPZRWBKMTBYPTK-BJDJZHNGSA-N"
+  },
+  "decoy_CHEMBL1208422": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VDNLFJGJEQUWRB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106389": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SMQYOVYWPWASGU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2111115": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YEYZSIPYIGWRIT-HENWMNBSSA-N"
+  },
+  "decoy_CHEMBL324090": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ANZIISNSHPKVRV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL294199": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YKPUWZUDDOIDPM-SOFGYWHQSA-N"
+  },
+  "decoy_CHEMBL2104267": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IOKKIRANVRFSAH-FQEVSTJZSA-N"
+  },
+  "decoy_CHEMBL2105560": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IYBFBADVQPQHLQ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105217": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ULGABHCZIJXUFO-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105158": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KVCJCEKJKGLBOK-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1207579": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RMPRGCBYQSAAAZ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105346": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VPRGXNLHFBBDFS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2111169": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PRHCHMGCDBUACR-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104746": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GKPFBMQXTRZTOW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL311981": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LLZVAIDABZBAGE-UHFFFAOYSA-O"
+  },
+  "decoy_CHEMBL1904952": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "STAYVYIMUXVGBN-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068025": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XMSYHEQGNQFEEZ-NSHDSACASA-N"
+  },
+  "decoy_CHEMBL2106795": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YDDRXDOPBABLRB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3936761": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RNOAOAWBMHREKO-QFIPXVFZSA-N"
+  },
+  "decoy_CHEMBL1697782": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DALKLAYLIPSCQL-YPYQNWSCSA-N"
+  },
+  "decoy_CHEMBL53292": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YYUAYBYLJSNDCX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL5314458": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YFTARXQOKASKBW-JOYOIKCWSA-N"
+  },
+  "decoy_CHEMBL2106893": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MQUIHBQDYYAEMH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105186": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IFYJCDHOWBSELI-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105440": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DHOKBGHAEUVRMO-SLHNCBLASA-N"
+  },
+  "decoy_CHEMBL2111158": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DREVJBVJBRSSDL-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1801204": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KVLFRAWTRWDEDF-IRXDYDNUSA-N"
+  },
+  "decoy_CHEMBL1779710": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LCDDAGSJHKEABN-MLGOLLRUSA-N"
+  },
+  "decoy_CHEMBL523367": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IERWCEALNGTKIK-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL333325": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SYTNEMZCCLUTNX-NPMXOYFQSA-N"
+  },
+  "decoy_CHEMBL2106663": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NMRJDSZFSHRJHS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104245": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WDMFHQNUSVLQMS-XFYQWYMDSA-N"
+  },
+  "decoy_CHEMBL2104853": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BBACKDMGYMXYLE-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3634561": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DRACNSAQZFZUKW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3989934": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RSNPAKAFCAAMBH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3544914": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MJUVRTYWUMPBTR-MRXNPFEDSA-N"
+  },
+  "decoy_CHEMBL26": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BGRJTUBHPOOWDU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL4650326": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FOHWAQGURRYJFK-ONEGZZNKSA-N"
+  },
+  "decoy_CHEMBL277535": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OCAPBUJLXMYKEJ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3137302": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FLEFKKUZMDEUIP-QFIPXVFZSA-N"
+  },
+  "decoy_CHEMBL3306903": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RAMPGXSXWLFXFU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2107069": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VSAZFRKEFQPOIS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL185885": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NOEGNKMFWQHSLB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL614": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IPEHBUMCGVEMRF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106528": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VSXZKSNSPQZSDB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL472562": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JRBXPUUAYKCCLQ-QMMMGPOBSA-N"
+  },
+  "decoy_CHEMBL372764": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SZFPYBIJACMNJV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL192": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BNRNXUUZRGQAQC-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105190": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GQZQCROBCYNTMU-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL506981": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DYLJVOXRWLXDIG-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL116": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YMARZQAQMVYCKC-OEMFJLHTSA-N"
+  },
+  "decoy_CHEMBL6068392": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CPRLHPSXWZTPMC-XMMPIXPASA-N"
+  },
+  "decoy_CHEMBL2104289": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MMDWBZHWHFGVHF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL470888": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AJACDNCVEGIBNA-KQYNXXCUSA-N"
+  },
+  "decoy_CHEMBL2106759": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RBMHUYBJIYNRLY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL490029": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "STWITCBWQHTJFJ-XMMPIXPASA-N"
+  },
+  "decoy_CHEMBL6068024": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KNGOFJLMZYHAGD-XMMPIXPASA-N"
+  },
+  "decoy_CHEMBL2105195": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CDHVRXOLGDSJGX-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL544": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NWVVVBRKAWDGAB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068523": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VYWRYBZVVSPTQN-SANMLTNESA-N"
+  },
+  "decoy_CHEMBL2107777": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CDSBFDCCJJDFCV-CKZSCMLPSA-N"
+  },
+  "decoy_CHEMBL1269025": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HGVDHZBSSITLCT-JLJPHGGASA-N"
+  },
+  "decoy_CHEMBL6068029": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ODCKWAPNRBCXHV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3991065": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QIVUCLWGARAQIO-OLIXTKCUSA-N"
+  },
+  "decoy_CHEMBL334533": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SSQJFGMEZBFMNV-PMACEKPBSA-N"
+  },
+  "decoy_CHEMBL1311": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YWXYYJSYQOXTPL-SLPGGIOYSA-N"
+  },
+  "decoy_CHEMBL1201033": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YQNFBOJPTAXAKV-OMCISZLKSA-M"
+  },
+  "decoy_CHEMBL279115": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PHEDXBVPIONUQT-RGYGYFBISA-N"
+  },
+  "decoy_CHEMBL1200660": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KLDXJTOLSGUMSJ-JGWLITMVSA-N"
+  },
+  "decoy_CHEMBL4863829": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YIHPGVCWGSURHO-VSBTWAGUSA-N"
+  },
+  "decoy_CHEMBL4076124": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SJXNPGGVGZXKKI-NYYWCZLTSA-N"
+  },
+  "decoy_CHEMBL5314606": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FPIPGXGPPPQFEQ-QZNDTXPVSA-N"
+  },
+  "decoy_CHEMBL1447": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OJMMVQQUTAEWLP-KIDUDLJLSA-N"
+  },
+  "decoy_CHEMBL486696": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YXUPZGKORWTXID-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1730": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GPRBEKHLDVQUJE-QSWIMTSFSA-N"
+  },
+  "decoy_CHEMBL4301787": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IBVJFULICYLKCE-BDVNFPICSA-N"
+  },
+  "decoy_CHEMBL1201045": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GNOGSFBXBWBTIG-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL1887483": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZRJOUVOXPWNFOF-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2107143": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PSVUJBVBCOISSP-SPFKKGSWSA-N"
+  },
+  "decoy_CHEMBL1544": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AUYYCJSJGJYCDS-LBPRGKRZSA-N"
+  },
+  "decoy_CHEMBL1236821": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PYMYPHUHKUWMLA-VPENINKCSA-N"
+  },
+  "decoy_CHEMBL3545057": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HPMZBILYSWLILX-UMDUKNJSSA-N"
+  },
+  "decoy_CHEMBL2106531": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SALPXBRLSNRTNE-RUDMXATFSA-N"
+  },
+  "decoy_CHEMBL2103884": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SWZXEVABPLUDIO-WSZYKNRRSA-N"
+  },
+  "decoy_CHEMBL2107583": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SNFOERUNNSHUGP-ZXZARUISSA-N"
+  },
+  "decoy_CHEMBL1017": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RMMXLENWKUUMAY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106405": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VRFVGZRKFFTPCG-KYHPDETOSA-N"
+  },
+  "decoy_CHEMBL573677": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZLJZDYOBXVOTSA-XMMPIXPASA-N"
+  },
+  "decoy_CHEMBL1232863": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BJHIKXHVCXFQLS-UYFOZJQFSA-N"
+  },
+  "decoy_CHEMBL1201016": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LTINZAODLRIQIX-FBXRGJNPSA-N"
+  },
+  "decoy_CHEMBL2106377": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OIXRDAZPDINJPT-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL2356023": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ILYCWAKSDCYMBB-OPCMSESCSA-N"
+  },
+  "decoy_CHEMBL2105567": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FMZXNVLFJHCSAF-DNVCBOLYSA-N"
+  },
+  "decoy_CHEMBL1767164": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YANGEESWIGIKOP-UUWRZZSWSA-N"
+  },
+  "decoy_CHEMBL3989439": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BNYZXONJFQJYPC-IDZRBWSNSA-N"
+  },
+  "decoy_CHEMBL4297278": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MNOMBFWMICHMKG-MGYWSNOQSA-N"
+  },
+  "decoy_CHEMBL2107756": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LHXFPSQJODNWEW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6069486": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AQOXEJNYXXLRQQ-KRWDZBQOSA-N"
+  },
+  "decoy_CHEMBL1697841": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XVQUOJBERHHONY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1200944": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FKENQMMABCRJMK-RITPCOANSA-M"
+  },
+  "decoy_CHEMBL2104278": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BZHSRUIDLJDTTJ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL5314407": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GBXJAPBXPROFPY-GOSISDBHSA-L"
+  },
+  "decoy_CHEMBL1697708": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YPBATNHYBCGSSN-VWPFQQQWSA-M"
+  },
+  "decoy_CHEMBL3113974": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VCFBPAOSTLMYIV-SANMLTNESA-N"
+  },
+  "decoy_CHEMBL5095089": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VWXDZAZSCZVCPV-YFRBGRBWSA-N"
+  },
+  "decoy_CHEMBL4650232": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XOKCXRVJBBLBSX-HDMCCQRMSA-N"
+  },
+  "decoy_CHEMBL1167": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UNFWWIHTNXNPBV-WXKVUWSESA-N"
+  },
+  "decoy_CHEMBL4297525": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KUBPNVYPKPWGRJ-LIVOIKKVSA-N"
+  },
+  "decoy_CHEMBL1200933": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HDZAQYPYABGTCL-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL479527": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CMSGWTNRGKRWGS-NQIIRXRSSA-N"
+  },
+  "decoy_CHEMBL553025": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GBABOYUKABKIAF-IELIFDKJSA-N"
+  },
+  "decoy_CHEMBL1232510": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IXXFZUPTQVDPPK-ZAWHAJPISA-N"
+  },
+  "decoy_CHEMBL1231391": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OVRNDRQMDRJTHS-UOLFYFMNSA-N"
+  },
+  "decoy_CHEMBL3545058": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XUIIKFGFIJCVMT-GFCCVEGCSA-M"
+  },
+  "decoy_CHEMBL3989795": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GDJNSDVQXIUOGF-BPFJZTMSSA-N"
+  },
+  "decoy_CHEMBL373081": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DNYGXMICFMACRA-XHEDQWPISA-N"
+  },
+  "decoy_CHEMBL2338675": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CZAKJJUNKNPTTO-AJFJRRQVSA-N"
+  },
+  "decoy_CHEMBL1231700": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RZZPDXZPRHQOCG-OJAKKHQRSA-N"
+  },
+  "decoy_CHEMBL62381": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FERIUCNNQQJTOY-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL5314588": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WRYIIOKOQSICTB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL4802244": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MUNWOYRHJPWQNE-GMFUQMJFSA-N"
+  },
+  "decoy_CHEMBL296588": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FAXGPCHRFPCXOO-LXTPJMTPSA-N"
+  },
+  "decoy_CHEMBL2107483": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XTEGRRHNMFDROI-YRRQLQLVSA-N"
+  },
+  "decoy_CHEMBL1652465": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YTMOQFAFGKLYIW-CONSDPRKSA-N"
+  },
+  "decoy_CHEMBL15562": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CZPWVGJYEJSRLH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105631": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZXOSVKYCXLTVGS-KRWDZBQOSA-N"
+  },
+  "decoy_CHEMBL3220708": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "IDRYSCOQVVUBIJ-PPGFLMPOSA-N"
+  },
+  "decoy_CHEMBL2104981": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NNBGCSGCRSCFEA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL435565": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NHUWXMNVGMRODJ-UHFFFAOYSA-P"
+  },
+  "decoy_CHEMBL2105940": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BHXLLRXDAYEMPP-SBGRAJFYSA-N"
+  },
+  "decoy_CHEMBL382300": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BWKDAMBGCPRVPI-ZQRPHVBESA-N"
+  },
+  "decoy_CHEMBL2104398": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "SERLAGPUMNYUCK-BLEZHGCXSA-N"
+  },
+  "decoy_CHEMBL2104817": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NPCYYZYVQAQDBM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2219425": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DDINXHAORAAYAD-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL231884": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GZSOSUNBTXMUFQ-YFAPSIMESA-N"
+  },
+  "decoy_CHEMBL2104786": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DJWYOLJPSHDSAL-ROUUACIJSA-N"
+  },
+  "decoy_CHEMBL5314964": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XPCSGTPPHYORKJ-YHXMLEJGSA-N"
+  },
+  "decoy_CHEMBL36342": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZVXNYZWXUADSRV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1200391": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LENZDBCJOHFCAS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL39541": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OFDNQWIFNXBECV-VFSYNPLYSA-N"
+  },
+  "decoy_CHEMBL2105810": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HCCFUFNFJIUPHS-MZYBJUSBSA-O"
+  },
+  "decoy_CHEMBL4297307": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PPEKGEBBBBNZKS-HGRQIUPRSA-N"
+  },
+  "decoy_CHEMBL2105403": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "URWAJWIAIPFPJE-VHLNBGGKSA-N"
+  },
+  "decoy_CHEMBL363884": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KLBJRPVUPJXXCM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1200768": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ORFOPKXBNMVMKC-DWVKKRMSSA-M"
+  },
+  "decoy_CHEMBL2107360": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VOMKSBFLAZZBOW-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL444963": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DMUAPQTXSSNEDD-QALJCMCCSA-N"
+  },
+  "decoy_CHEMBL2107787": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MODVSQKJJIBWPZ-VLLPJHQWSA-N"
+  },
+  "decoy_CHEMBL1357": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JVTAAEKCZFNVCJ-UHFFFAOYSA-M"
+  },
+  "decoy_CHEMBL1259": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JFXBEKISTKFVAB-AJQTZOPKSA-N"
+  },
+  "decoy_CHEMBL6068413": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YUVGVJYLOFTILT-INJOXJOKSA-N"
+  },
+  "decoy_CHEMBL3989479": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ODYPLCHSCOJEIZ-SFNQMWQSSA-N"
+  },
+  "decoy_CHEMBL2104642": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "RQLDKUSQKQMFCN-AEXVNIBOSA-N"
+  },
+  "decoy_CHEMBL5754780": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DREKSGOBSPWACW-MNMGTKACSA-N"
+  },
+  "decoy_CHEMBL32911": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BBZDXMBRAFTCAA-AREMUKBSSA-N"
+  },
+  "decoy_CHEMBL4594449": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NVHRBQOZEMFKLD-CUYJMHBOSA-N"
+  },
+  "decoy_CHEMBL5095204": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CMLNPOWEANUBIB-XIGHHNHFSA-N"
+  },
+  "decoy_CHEMBL4446782": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "USUWIEBBBWHKNI-KHIFEHGGSA-N"
+  },
+  "decoy_CHEMBL2105825": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PTXGHCGBYMQQIG-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL553204": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "TZJALUIVHRYQQB-XLRXWWTNSA-N"
+  },
+  "decoy_CHEMBL2360464": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "WBXPDJSOTKVWSJ-ZDUSSCGKSA-L"
+  },
+  "decoy_CHEMBL372795": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "UCSJYZPVAKXKNQ-HZYVHMACSA-N"
+  },
+  "decoy_CHEMBL1550879": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VCAVAURZPNANDQ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1328": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "NEYNJQRKHLUJRU-DZUOILHNSA-N"
+  },
+  "decoy_CHEMBL1734": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FBOUYBDGKBSUES-VXKWHMMOSA-N"
+  },
+  "decoy_CHEMBL1233800": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XXBDOTXPQDVHIP-JTQLQIEISA-N"
+  },
+  "decoy_CHEMBL1397886": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XGLHZTBDUXXHOM-WMZJFQQLSA-N"
+  },
+  "decoy_CHEMBL135191": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KYSFUHHFTIGRJN-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1229569": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LITNEAPWQHVPOK-FFSVYQOJSA-N"
+  },
+  "decoy_CHEMBL4789639": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "BBRMAVGRWHNAIG-FIBGUPNXSA-N"
+  },
+  "decoy_CHEMBL4549658": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MDUYWDNWFXSMJJ-XWLWVQCSSA-N"
+  },
+  "decoy_CHEMBL2051959": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DZLOHEOHWICNIL-QGZVFWFLSA-N"
+  },
+  "decoy_CHEMBL2104758": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ORAUEDBBTFLQSK-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL283820": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FJCZHMXAGBYXHJ-QGZVFWFLSA-N"
+  },
+  "decoy_CHEMBL1618378": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "YEYAKZXEBSVURO-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL70566": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZOWQTJXNFTWSCS-IAQYHMDHSA-N"
+  },
+  "decoy_CHEMBL836": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DRHKJLXJIQTDTD-OAHLLOKOSA-N"
+  },
+  "decoy_CHEMBL2106524": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZSYULWHBPBAOKV-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068028": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "MPJMWXDJLRIVPO-KSZLIROESA-N"
+  },
+  "decoy_CHEMBL5095257": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "CWOFQJBATWQSHL-DEOSSOPVSA-N"
+  },
+  "decoy_CHEMBL2105508": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JCMSBXFQPKUFEJ-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL273862": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HAWSQZCWOQZXHI-FQEVSTJZSA-N"
+  },
+  "decoy_CHEMBL346919": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DFYRUELUNQRZTB-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL65030": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "GQGRDYWMOPRROR-XUSMOFMBSA-N"
+  },
+  "decoy_CHEMBL2105413": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "ZRCUMOBNOPSLKM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2106667": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VXROHTDSRBRJLN-UHFFFAOYSA-O"
+  },
+  "decoy_CHEMBL79261": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "LYXKFNHUJJDTIA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2105164": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KHVVROKBGPRWFA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL119385": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "VEPKQEUBKLEPRA-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL3673096": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "KNPYQCPWTWANOG-RUZDIDTESA-N"
+  },
+  "decoy_CHEMBL2105509": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "FRQSLQPWXFAJFO-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL2104216": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "XVWQQNARVMHZBP-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL111272": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "HNPHEZIYSZIWHH-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL6068561": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "PLUKVDOZEJBBIS-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL460499": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "AOCCBINRVIKJHY-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL1200989": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "DJHCCTTVDRAMEH-DUUJBDRPSA-N"
+  },
+  "decoy_CHEMBL2105909": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "QULKGELYPOJSLP-WCABBAIRSA-N"
+  },
+  "decoy_CHEMBL2106836": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "OTRQRKIYHATFKM-UHFFFAOYSA-N"
+  },
+  "decoy_CHEMBL594621": {
+   "arm": "N",
+   "receptor": "P75174",
+   "inchikey": "JSFATNQSLKRBCI-VAEKSGALSA-N"
+  }
+ }
+}
