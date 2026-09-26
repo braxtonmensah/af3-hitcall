@@ -91,3 +91,19 @@ this with the page value.
 First BR job back, `taf6l_tada2b_br`, shows a page ipTM of 0.13 against the same pair's arm-P value of
 0.13. That is suggestive of no rescue, and it is **not** a result: it is the wrong quantity, n = 1,
 and the pre-registered comparison is over 20 pairs with a McNemar test.
+
+## Staging complete, 2026-09-25 end of day
+
+All **40 BR and CT jobs are staged as drafts** on AlphaFold Server (job total 123 -> 163). Drafts cost
+no quota, so tomorrow needs no re-upload: search each name, confirm it is still a draft, submit,
+re-navigate to the list.
+
+**State:** arm P 20/20 run (19 read, gate passes). Arm BR 5 of 20 submitted. Arm CT 0 of 20.
+**Remaining: 35 jobs.** At 30/day that is two more AF Server days, or one funded RunPod session
+(A100 80GB, $1.39/hr, a few hours) which would finish all 35 at once.
+
+**Submission order is fixed** in `submit_order.json`, taken from the pre-registered population order in
+`codep_bridges.csv`, so the order cannot be mistaken for selection after seeing arm P.
+
+**Do not score BR or CT from the page ipTM.** See the scoring note above: three-chain jobs print the
+whole-complex value, and the amended criterion needs `chain_pair_iptm[0][1]` from the zip.
