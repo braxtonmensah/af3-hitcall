@@ -36,6 +36,16 @@
    "max_phase": 3
   }
  },
+ "coadd": {
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/compound_record.json",
+  "fetched": "2026-09-26",
+  "licence": "CC BY-SA 3.0 via ChEMBL. NOT taken from db.co-add.org, whose own notice restricts systematic download and non-commercial use",
+  "n_ids": 24205,
+  "n_raw": 24144,
+  "n_records": 24315,
+  "path": "library_raw\\coadd.smi",
+  "src_id": 40
+ },
  "ippidb": {
   "fetched": "2026-09-25",
   "licence": "Institut Pasteur, no licence stated, academic-open",

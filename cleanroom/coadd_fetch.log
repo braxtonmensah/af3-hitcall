@@ -47,3 +47,10 @@ fetching coadd src_id 40
    20040/24205 ids ->  19987 structures
    21040/24205 ids ->  20987 structures
    22040/24205 ids ->  21985 structures
+   23040/24205 ids ->  22982 structures
+   24040/24205 ids ->  23979 structures
+  accounting: 24205 ids in, 24205 returned by the API, 24144 usable structures
+    dropped no_structure               59
+    dropped type:Protein               1
+    dropped type:Oligosaccharide       1
+wrote 24144 -> C:\Users\bmens\OneDrive - Indiana University\NQ_Project\af3-hitcall\cleanroom\library_raw\coadd.smi
