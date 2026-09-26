@@ -89,8 +89,30 @@ nothing: that is a valid result for the price of $5 of GPU.
 | Assay | $0 if NIAID or CO-ADD accept |
 | **Total to measured antibacterial activity** | **roughly $700-1,800** |
 
-That is the full cash cost of reaching the evidence that PACE (up to GBP 1M, open worldwide) and CARB-X
-require. It is not $300k, and it never was.
+That is the full cash cost of reaching measured antibacterial activity. It is not $300k, and it never
+was.
+
+**CORRECTED 2026-09-25. This paragraph used to say that was "the evidence that PACE (up to GBP 1M,
+open worldwide) and CARB-X require". That is wrong and it must not be repeated in an application.**
+
+Checked against the current calls: **PACE's 2025 antibacterial therapeutics call is restricted to
+drug-resistant Gram-negative priority pathogens** (Enterobacteriaceae prioritising *E. coli* and
+*K. pneumoniae*, *A. baumannii*, *P. aeruginosa*) and explicitly excludes Gram-positives,
+mycobacteria, and Gram-negatives outside its target product profiles. **CARB-X's eligibility runs off
+the CDC 2013 and WHO 2017 priority lists**, and its 2026 round is scoped to priority Gram-negatives
+plus neonatal sepsis. ***M. pneumoniae* is on none of those lists.**
+
+**And this is not fixable by changing organism within the same idea: RNase J is absent from *E. coli*
+and most Gammaproteobacteria**, which is PACE's entire target list. The target family does not exist
+in the pathogens these two funders pay for.
+
+The one candidate here with even a plausible route is ***H. pylori***, which was High priority on WHO
+2017 (which CARB-X still references) and is Gram-negative. That is a reason it is worth considering
+on the science, recorded in `cleanroom/TARGET_EXPANSION.md`; it is **not** a reason to pick a target,
+and "which funder" should never be that reason.
+
+Sources: [PACE 2025 call](https://iuk-business-connect.org.uk/opportunities/pace-pathways-to-antimicrobial-clinical-ef%EF%AC%81cacy-2025-antibacterial-therapeutics/),
+[CARB-X 2026 round](https://carb-x.org/carb-x-news/carb-x-launches-2026-funding-round-to-address-global-burden-of-amr/).
 
 ## 5. What is left, in order
 

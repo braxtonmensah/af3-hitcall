@@ -39,7 +39,7 @@ IFACE_JSON = os.path.join(HERE, "..", "rnasej", "results_interface.json")
 
 TARGET_ACC = "P75497"      # RNase J, the interface-bearing subunit
 OFFTARGET_ACC = "Q9UKF6"   # human CPSF73, the selectivity control
-MAX_POCKET_CONTACTS = 20
+MAX_POCKET_CONTACTS = 20  # engine-side cap; see require_pocket for why it is not a silent slice
 
 PREFIX = {"screen": "", "decoy": "decoy_", "positive": "pos_", "off": "off_"}
 
@@ -58,22 +58,57 @@ def seq(acc, cache=os.path.join(HERE, "seqs")):
     return "".join(open(p).read().split("\n")[1:]).replace("\n", "").strip()
 
 
-def pocket_residues():
+def pocket_residues(chain="RNaseJ"):
     """Interface residues on the target, from the predicted heterotetramer.
 
     Steering to the interface rather than the active site is deliberate: the interface is about 25%
     identical to human CPSF73 while the active site keeps 3 of its 4 catalytic residues, so a
     catalytic-site hit would be the least selective thing we could find.
+
+    **This returns all of them and does not truncate.** vscreen.py wrote `pocket[:20]`, which on
+    this interface keeps residues 25-357 and discards 358-569 in their entirety, because the
+    ordering is by residue number and has nothing to do with geometry. Measured independently, the
+    kept 20 sit a median 15 A from the catalytic site and the dropped 45 sit at 33 A, so the
+    truncation quietly aimed the constraint at the catalytic-proximal half, which is the least
+    selective part of the interface. Truncation is the caller's decision and it has to be
+    geometric; see require_pocket below.
     """
     if not os.path.exists(IFACE_JSON):
         sys.exit("no interface definition at " + IFACE_JSON)
     d = json.load(open(IFACE_JSON))
+    key = {"RNaseJ": "RNaseJ", "MPN621": "MPN621"}.get(chain, chain)
+    resl = d["interface_residues"].get(key)
+    if resl is None:
+        sys.exit("no interface residues for %r in %s; available: %s"
+                 % (chain, IFACE_JSON, sorted(d["interface_residues"])))
     out = []
-    for r in d["interface_residues"]["RNaseJ"]:
+    for r in resl:
         n = "".join(c for c in r if c.isdigit())
         if n:
             out.append(int(n))
     return sorted(set(out))
+
+
+def require_pocket(pocket, limit):
+    """Return `limit` pocket contacts, or refuse.
+
+    There is no defensible way to pick 20 of 65 interface residues from residue numbers alone, and
+    doing it silently is how the constraint ended up pointed at the wrong half of the interface. A
+    geometric selection needs coordinates, which this script does not have: the interface JSON
+    carries residue identities only (`human_extract.parse` drops coordinates, see STATE.md). So the
+    honest behaviour is to fail and say what is needed.
+    """
+    if len(pocket) <= limit:
+        return pocket
+    sys.exit(
+        "%d interface residues but the constraint takes at most %d, and this script cannot choose\n"
+        "between them: the interface JSON has residue identities, not coordinates, so any subset it\n"
+        "picked would be an artefact of residue numbering. That is the defect that aimed the old\n"
+        "screen at the catalytic-proximal half of the interface.\n\n"
+        "Supply a geometric selection instead, via --pocket-residues with a comma-separated list\n"
+        "chosen from the model coordinates (for example the residues lining the target cavity), or\n"
+        "raise --max-contacts if the engine will accept all %d."
+        % (len(pocket), limit, len(pocket)))
 
 
 def read_selection(path):
@@ -98,7 +133,7 @@ def yaml_for(prot_seq, smiles, msa_path, pocket):
     y += ["  - ligand:", "      id: L", "      smiles: '" + smiles + "'",
           "properties:", "  - affinity:", "      binder: L"]
     if pocket:
-        contacts = ", ".join("[A, %d]" % p for p in pocket[:MAX_POCKET_CONTACTS])
+        contacts = ", ".join("[A, %d]" % p for p in pocket)
         y += ["constraints:", "  - pocket:", "      binder: L", "      contacts: [" + contacts + "]"]
     return "\n".join(y) + "\n"
 
@@ -122,7 +157,11 @@ def main(a):
         sys.exit(1)
 
     target = seq(TARGET_ACC)
-    pocket = pocket_residues()
+    if a.pocket_residues:
+        pocket = sorted({int(x) for x in a.pocket_residues.replace(",", " ").split()})
+        print("pocket: %d residues supplied on the command line" % len(pocket))
+    else:
+        pocket = require_pocket(pocket_residues(a.pocket_chain), a.max_contacts)
     out_of_range = [p for p in pocket if p < 1 or p > len(target)]
     if out_of_range:
         sys.exit("pocket residues outside the target sequence: %s" % out_of_range[:5])
@@ -147,8 +186,8 @@ def main(a):
                 "positives": os.path.basename(a.positives) if a.positives else None,
                 "msa_prefix": msa_prefix,
                 "target": TARGET_ACC, "offtarget": OFFTARGET_ACC,
-                "pocket_residues": pocket[:MAX_POCKET_CONTACTS],
-                "pocket_residues_available": len(pocket),
+                "pocket_residues": pocket,
+                "pocket_chain": a.pocket_chain,
                 "jobs": {}}
 
     def write(arm, cid, prot_acc, prot_seq, smiles, use_pocket):
@@ -215,5 +254,10 @@ if __name__ == "__main__":
     ap.add_argument("--out-dir", default=os.path.join(HERE, "jobs"))
     ap.add_argument("--offtarget", action="store_true", default=True)
     ap.add_argument("--no-offtarget", dest="offtarget", action="store_false")
+    ap.add_argument("--pocket-residues",
+                    help="explicit, geometrically chosen pocket residues (comma or space separated)")
+    ap.add_argument("--pocket-chain", default="RNaseJ",
+                    help="which side of the interface to steer to, as keyed in results_interface.json")
+    ap.add_argument("--max-contacts", type=int, default=MAX_POCKET_CONTACTS)
     ap.add_argument("--force", action="store_true", help="overwrite existing job files")
     main(ap.parse_args())

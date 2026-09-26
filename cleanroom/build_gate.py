@@ -69,7 +69,11 @@ RECEPTORS = {
     },
     "artemis": {
         "pdb": "7APV", "entities": {"A": "1"}, "metals": [("ZN", 1)], "pocket_ref": ("7APV", "9F2"),
-        "note": "human Artemis/DCLRE1C, 362 aa. Deposited 1 Zn + 1 Ni; the Ni is dropped as an additive.",
+        "note": "human Artemis/DCLRE1C, 362 aa. Deposited 1 Zn + 1 Ni; the Ni is dropped as an "
+                "additive. NOTE the Zn here is a STRUCTURAL His2Cys2 site (H229/H255/C257/C273), "
+                "14.1 A from ceftriaxone, not the catalytic metal: 7APV models no catalytic metal "
+                "at all. Kept because the site is real biology, but it is not the same kind of Zn "
+                "as the one in 6M8Q or 8C8S.",
     },
     "nsp1014": {
         "pdb": "9FWM", "entities": {"A": "1", "B": "2"}, "metals": [("ZN", 2), ("MG", 1)], "pocket_ref": ("9FWM", "A1IGR"),
@@ -90,21 +94,41 @@ RECEPTORS = {
 LIGANDS = [
     # Tier A: known active-site ligands of this fold, each with a co-crystal.
     dict(name="jte607_acid", ccd="JBG", receptor="cpsf73", tier="A", expect="high",
-         why="Kd 370 nM reported, co-crystal 6M8Q. Boron-free and does not chelate the metals, "
-             "so it tests pocket recognition rather than metal coordination."),
+         representable=True,
+         why="Kd 370 nM reported, co-crystal 6M8Q. Boron-free and does not chelate the metals, so "
+             "it tests pocket recognition rather than metal coordination. That property is now "
+             "load-bearing: the affinity head pools only protein-binder and binder-binder pairs "
+             "and cannot see ions, so this is one of only three rungs whose binding mode it can "
+             "represent at all. The gate rests on it."),
     dict(name="tao1", ccd="XYX", pdb="8T1Q", receptor="cpsf73", tier="A", expect="high",
-         why="photoaffinity + probe displacement + co-crystal 8T1Q. Anionic boronate as deposited."),
+         representable=False,
+         why="photoaffinity + probe displacement + co-crystal 8T1Q. Anionic boronate whose boron "
+             "oxygens coordinate the active-site metals. The affinity head cannot represent that, "
+             "so this rung is EXPECTED TO FAIL for a reason internal to the model. Diagnostic, "
+             "not load-bearing."),
     dict(name="tao2", ccd="XZC", pdb="8T1R", receptor="cpsf73", tier="A", expect="high",
-         why="near-analogue of tao1, co-crystal 8T1R."),
+         representable=False,
+         why="near-analogue of tao1, co-crystal 8T1R. Same metal-chelating mode, same expected "
+             "failure."),
     dict(name="snm1a_hydroxamate", ccd="U2O", receptor="snm1a", tier="A", expect="high",
-         why="IC50 0.8 uM on purified enzyme, co-crystal 8C8S. Second MBL-beta-CASP protein."),
+         representable=False,
+         why="IC50 0.8 uM on purified enzyme, co-crystal 8C8S. Second MBL-beta-CASP protein, but "
+             "the hydroxamate chelates both metals and its pocket is the metal-binding motif "
+             "itself (H37/S38/D39/H40/H96/D118), so the affinity head cannot represent it either. "
+             "Diagnostic."),
     dict(name="ceftriaxone", ccd="9F2", receptor="artemis", tier="A", expect="high",
-         why="co-crystal 7APV at 65 uM. The deliberate weak rung."),
+         representable=True,
+         why="co-crystal 7APV at 65 uM. The deliberate weak rung, and measured from the "
+             "coordinates it is NOT a metal chelator: its closest atom is 14.1 A from the only Zn "
+             "in the entry, which is a structural His2Cys2 site. So its mode is representable and "
+             "it is a real rung, not just a diagnostic."),
     # Tier B: a ligand at a protein-protein interface, which is what the screen actually asks.
     dict(name="nsp14_fragment", ccd="A1IGR", receptor="nsp1014", tier="B", expect="high",
+         representable=True,
          why="1H-indole-3-carboxamide, 9 heavy atoms, from the nsp10-nsp14 fragment campaign "
              "(PMID 40794865). A true drug-like fragment at a nuclease/partner interface, and the "
-             "harder and more informative of the two Tier B rungs."),
+             "harder and more informative of the two Tier B rungs. No metal contact, so its mode "
+             "is representable. Tier B rests on it alone."),
     dict(name="ip6", ccd="IHP", receptor="integrator", tier="B", expect="high", optional=True,
          why="the only documented small molecule at a PPI interface in this fold family, 55 A from "
              "the INTS11 active site (7SN8). A hexa-anion in an electropositive pocket is the "
@@ -229,12 +253,19 @@ def pocket_from_cif(pdb, ccd, entity_chains, cutoff=5.0):
     if not lig:
         return []
     c2 = cutoff * cutoff
-    hits = set()
+    # Keep the closest approach per residue, not just membership. The list gets truncated to 20
+    # contacts later and the truncation has to be geometric: taking the 20 lowest residue NUMBERS
+    # is what vscreen.py did, and on the RNase J interface that silently kept residues 25-357 and
+    # threw away 358-569 entirely, biasing the constraint toward one half of the interface.
+    best = {}
     for asym, sid, (x, y, z) in prot:
         for (lx, ly, lz) in lig:
-            if (x - lx) ** 2 + (y - ly) ** 2 + (z - lz) ** 2 <= c2:
-                hits.add((asym, sid))
-                break
+            d2 = (x - lx) ** 2 + (y - ly) ** 2 + (z - lz) ** 2
+            if d2 <= c2:
+                k = (asym, sid)
+                if k not in best or d2 < best[k]:
+                    best[k] = d2
+    hits = set(best)
     # Map deposited asym ids onto the chain letters this job uses. Single-chain receptors take the
     # asym that carries the most contacts; multi-chain ones are mapped by order of first appearance.
     order = []
@@ -247,10 +278,14 @@ def pocket_from_cif(pdb, ccd, entity_chains, cutoff=5.0):
     want = [c for c, _ in entity_chains]
     if len(want) == 1:
         top = max(counts, key=counts.get)
-        return sorted((want[0], sid) for asym, sid in hits if asym == top)
-    mapping = {a: want[i] for i, a in enumerate(sorted(counts, key=counts.get, reverse=True))
-               if i < len(want)}
-    return sorted((mapping[a], sid) for a, sid in hits if a in mapping)
+        sel = [(want[0], sid, best[(asym, sid)]) for asym, sid in hits if asym == top]
+    else:
+        mapping = {a: want[i] for i, a in enumerate(sorted(counts, key=counts.get, reverse=True))
+                   if i < len(want)}
+        sel = [(mapping[a], sid, best[(a, sid)]) for a, sid in hits if a in mapping]
+    # Nearest first, so a later truncation keeps the residues that actually line the site.
+    sel.sort(key=lambda t: t[2])
+    return [(c, sid) for c, sid, _ in sel]
 
 
 def ccd_smiles(ccd):
@@ -353,9 +388,21 @@ def main(a):
     for l in ligands:
         if l.get("ccd"):
             l["smiles"], nm = ccd_smiles(l["ccd"])
-            print("  %-22s %-7s %s" % (l["name"], l["ccd"], nm[:46]))
+            print("  %-22s %-7s %s" % (l["name"], l["ccd"], nm[:40]))
         else:
             print("  %-22s %-7s (given as SMILES)" % (l["name"], "-"))
+    # Which rungs the affinity head can represent at all. Boltz-2's affinity module pools only
+    # protein-to-binder and binder-to-binder pairs and its own paper states it "does not explicitly
+    # handle such cofactors, including ions". So supplying the zincs fixes the POSE and not the
+    # SCORE, and a ligand that binds by chelating those metals cannot be scored for the thing that
+    # makes it bind. Three rungs survive that; three do not, and those three are relabelled
+    # diagnostics rather than being allowed to fail the gate on the model's behalf.
+    rep = [l["name"] for l in ligands if l.get("representable") is True]
+    diag = [l["name"] for l in ligands if l.get("representable") is False]
+    print("\n  affinity head CAN represent the binding mode of: %s" % ", ".join(rep))
+    print("  CANNOT (metal chelators, expected to fail by construction): %s" % ", ".join(diag))
+    if len(rep) < 2:
+        sys.exit("fewer than two representable rungs; the gate would rest on a single compound")
 
     # The null: the same matched decoys, run against each gate receptor, so "above the 95th
     # percentile of the null" has a per-receptor meaning. This is the part the amendment's "about
@@ -429,7 +476,8 @@ def main(a):
             pk = ref_pocket[l["receptor"]]
         emit("gate_%s_%s" % (l["tier"], l["name"]), l["receptor"], l["smiles"], pk,
              {"tier": l["tier"], "expect": l["expect"], "why": l["why"],
-              "ccd": l.get("ccd"), "arm": "gate"})
+              "ccd": l.get("ccd"), "arm": "gate",
+              "representable": l.get("representable")})
     for r in receptors_used:
         for d in decoys:
             emit("gnull_%s_%s" % (r, d["source_id"]), r, d["smiles"], ref_pocket[r],

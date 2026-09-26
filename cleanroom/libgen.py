@@ -194,6 +194,69 @@ def fetch_chembl(name, params, licence="CC BY-SA 3.0"):
     print("wrote", len(rows), "->", path)
 
 
+def fetch_chembl_source(name, src_id, licence):
+    """Every molecule ChEMBL holds from one deposited source, via the compound_record endpoint.
+
+    This is the licence-clean route to sets whose own sites restrict redistribution. CO-ADD's site
+    notice says its data is for "personal, non-commercial" use and "may not be systematically
+    downloaded"; the same molecules are in ChEMBL as src_id 40 under CC BY-SA 3.0. Taking them from
+    ChEMBL keeps the provenance honest and the licence usable, and the same applies to the MMV boxes
+    (src_id 34).
+
+    compound_record returns records, not molecules, so one molecule can appear several times and the
+    result is deduplicated on the ChEMBL id here before the InChIKey pass in build().
+    """
+    import requests
+    os.makedirs(RAW, exist_ok=True)
+    url = "https://www.ebi.ac.uk/chembl/api/data/compound_record.json"
+    ids, offset = [], 0
+    while True:
+        r = requests.get(url, params={"src_id": src_id, "limit": 1000, "offset": offset},
+                         timeout=300)
+        r.raise_for_status()
+        j = r.json()
+        recs = j.get("compound_records", [])
+        for rec in recs:
+            cid = rec.get("molecule_chembl_id")
+            if cid:
+                ids.append(cid)
+        if not (j.get("page_meta") or {}).get("next"):
+            break
+        offset += 1000
+        print("  records", len(ids), flush=True)
+    uniq = sorted(set(ids))
+    print("  %d records -> %d distinct ChEMBL ids; fetching structures" % (len(ids), len(uniq)))
+    rows = []
+    mol_url = "https://www.ebi.ac.uk/chembl/api/data/molecule.json"
+    for i in range(0, len(uniq), 50):
+        chunk = uniq[i:i + 50]
+        r = requests.get(mol_url, params={"molecule_chembl_id__in": ",".join(chunk),
+                                          "limit": 100}, timeout=300)
+        r.raise_for_status()
+        for m in r.json().get("molecules", []):
+            smi = (m.get("molecule_structures") or {}).get("canonical_smiles")
+            if smi and m.get("molecule_type") == "Small molecule":
+                rows.append((smi, m["molecule_chembl_id"]))
+        if i and i % 500 == 0:
+            print("  structures", len(rows), flush=True)
+    path = os.path.join(RAW, name + ".smi")
+    with open(path, "w", newline="\n") as f:
+        for smi, cid in rows:
+            f.write(smi + "\t" + cid + "\n")
+    _record_source(name, {"licence": licence, "src_id": src_id, "n_raw": len(rows),
+                          "fetched": datetime.date.today().isoformat(),
+                          "endpoint": url, "path": os.path.relpath(path, HERE)})
+    print("wrote", len(rows), "->", path)
+
+
+# Deposited sources worth having, with the licence that applies via ChEMBL rather than via the
+# depositor's own site.
+CHEMBL_SOURCES = {
+    "mmv_pathogen_box": (34, "CC BY 4.0 (MMV data on publication); via ChEMBL"),
+    "coadd": (40, "CC BY-SA 3.0 via ChEMBL. NOT taken from db.co-add.org, whose own notice "
+                  "restricts systematic download and non-commercial use"),
+}
+
 CHEMBL_QUERIES = {
     # Approved. Same query vscreen.py used, restated here so one module owns every fetch.
     "chembl_approved": {"max_phase": 4},
@@ -498,8 +561,9 @@ def _write_selection(screen, decoys, out_path):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--fetch", choices=sorted(CHEMBL_QUERIES) + ["chembl_clinical"],
-                    help="fetch a ChEMBL slice. chembl_clinical = phases 1, 2 and 3")
+    ap.add_argument("--fetch", choices=sorted(CHEMBL_QUERIES) + ["chembl_clinical"] +
+                    sorted(CHEMBL_SOURCES),
+                    help="fetch a ChEMBL slice or deposited source. chembl_clinical = phases 1-3")
     ap.add_argument("--add-file", help="register an already-downloaded compound file")
     ap.add_argument("--source-name")
     ap.add_argument("--licence", default="unknown")
@@ -520,6 +584,10 @@ if __name__ == "__main__":
         for ph in ("chembl_phase3", "chembl_phase2", "chembl_phase1"):
             print("fetching", ph)
             fetch_chembl(ph, CHEMBL_QUERIES[ph])
+    elif a.fetch in CHEMBL_SOURCES:
+        sid, lic = CHEMBL_SOURCES[a.fetch]
+        print("fetching", a.fetch, "src_id", sid)
+        fetch_chembl_source(a.fetch, sid, lic)
     elif a.fetch:
         fetch_chembl(a.fetch, CHEMBL_QUERIES[a.fetch])
     if a.add_file:

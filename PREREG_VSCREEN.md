@@ -338,3 +338,85 @@ unchanged, being direct comparisons.
   so the reason for its absence is in the repository rather than in anyone's memory. **Tier B
   therefore rests on the nsp10-nsp14 fragment rung alone**, which was already the harder and more
   informative of the two, but it means Tier B is a single rung and B2 carries it.
+
+---
+
+# Amendment 3, 2026-09-25: the affinity head cannot see ions, so three of five Tier A rungs are expected to fail by construction
+
+Still **before any Boltz-2 score exists**. What has been read since Amendment 2: Boltz-2's own source
+at v2.2.1, its docs, the preprint and appendix, and its issue tracker, recorded in
+`cleanroom/BOLTZ_SCHEMA.md`. No prediction has been run.
+
+Amendment 2 settled the metal policy on the assumption that supplying the metals would let a
+metal-chelating ligand be scored for its chelation. **That assumption is wrong**, and it changes which
+rungs of the gate carry it.
+
+## 1. What the affinity module actually pools
+
+Boltz-2's affinity head builds its pair representation from **protein-to-binder and
+binder-to-binder pairs only** (`rec_mask = mol_type == 0`, `lig_mask = affinity_token_mask`), and the
+paper states the module "does not explicitly handle such cofactors, including ions, water, or
+multimeric binding partners".
+
+So **supplying the zincs fixes the pose, not the score.** A ligand whose binding depends on
+coordinating an active-site metal cannot be scored for the interaction that makes it bind, and no
+arrangement of the input changes that. Amendment 2's metal policy is still correct and still worth
+keeping, because the pose matters, but it does not buy what it was assumed to buy.
+
+## 2. Which rungs survive, measured rather than assumed
+
+| Rung | Binding mode | Can the affinity head represent it? |
+|---|---|---|
+| **JTE-607 acid** on CPSF73 | occupies the pocket, explicitly does **not** coordinate the metals | **Yes.** The gate now rests on this |
+| **Ceftriaxone** on Artemis | measured from 7APV's coordinates: closest atom **14.1 A** from the only Zn, which is a **structural His2Cys2 site** (H229/H255/C257/C273), not a catalytic metal. 7APV models no catalytic metal at all | **Yes.** It is a real rung, not only a weak one |
+| **nsp14 fragment** on nsp10-nsp14 | 1H-indole-3-carboxamide, no metal contact, pocket spans both chains | **Yes.** Tier B rests on this alone |
+| tao1, tao2 on CPSF73 | benzoxaborole boron oxygens coordinate the active-site metals | **No** |
+| SNM1A hydroxamate | chelates both metals; its pocket *is* the metal-binding motif, H37/S38/D39/H40/H96/D118 | **No** |
+
+**So three of the five Tier A compounds are reclassified from rungs to diagnostics.** They are still
+run, because if they *do* score well that is information about what the score is actually keying on,
+but **their failure does not fail the gate**, because it would be a property of the model rather than
+of the pipeline's ability to rank binders.
+
+**Criterion A1 is therefore restated.** It no longer requires all five. It requires the **two
+representable Tier A rungs** (JTE-607 acid and ceftriaxone) to outscore at least 57 of their
+receptor's 60 matched decoys. The three diagnostics are reported with their own expected direction
+and are explicitly not part of the pass.
+
+**This makes the gate thinner and that is the honest position.** Two representable Tier A rungs and
+one Tier B rung, on three different proteins. It was never five.
+
+## 3. Three further corrections from the same source
+
+**Score direction, and it inverts.** `affinity_pred_value` is **log10 of IC50 in micromolar, so
+LOWER is stronger binding** (-3 is about 1 nM). This is author-confirmed in the issue tracker against
+a user who argued the documentation was inverted. The field to rank a screen on is
+`affinity_probability_binary`, where **higher means binder**, which is what this pre-registration
+already specified and what `vscreen.py --rank` already sorts by. But `--rank` also prints
+`pred_affinity` beside it with no direction stated, and anyone reading that column naturally would
+read it backwards. Any output that shows it must label it.
+
+**The pocket constraint changes the affinity features, non-locally.** When any constraint is present,
+every unlisted pair is relabelled `UNSELECTED` rather than `UNSPECIFIED`, so *all* protein-ligand pair
+features the affinity head pools over change, and `contact_guidance_update` is False in the affinity
+pass while defaulting True in the structure pass. Amendment 2 required an identical pocket policy
+across gate and screen as a precaution. **It is not a precaution, it is load-bearing**: an
+unconstrained control and a constrained screen would be scored by a differently-conditioned head.
+
+**The binder SMILES is silently rewritten.** Requesting affinity applies the ChEMBL standardizer,
+largest-fragment selection and normalisation to the binder, and a binder containing a metal raises
+`ValueError("Molecule is excluded")`. Auranofin is gold-containing and is therefore dropped from the
+negative controls rather than left to crash; ebselen is selenium-containing and **may** hit the same
+rule, which is recorded now so that if it fails to run that is a known cause and not a mystery.
+Benzoxaboroles pass, the boron limit being above seven.
+
+## 4. The ceiling this puts on everything downstream
+
+Boltz-2's own blinded out-of-distribution evaluation reports **mean Pearson R 0.39**, per-target 0.165
+to 0.634. This target is out of distribution on every axis that matters: a bacterial protein with no
+structure, at a protein-protein interface, in a fold family with no ligand training data to speak of.
+There is also **no protein-protein affinity module in the repository at all**.
+
+That does not change any test above, and it is not a reason to skip the screen, which is cheap. It is
+the number that should sit next to any positive result, and it means a shortlist from this pipeline
+is a ranking to test, never an affinity estimate.

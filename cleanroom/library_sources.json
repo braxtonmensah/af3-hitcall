@@ -35,5 +35,20 @@
   "query": {
    "max_phase": 3
   }
+ },
+ "ippidb": {
+  "fetched": "2026-09-25",
+  "licence": "Institut Pasteur, no licence stated, academic-open",
+  "n_raw": 2426,
+  "origin": "C:\\Users\\bmens\\AppData\\Local\\Temp\\ippidb.csv",
+  "path": "library_raw\\ippidb.smi"
+ },
+ "mmv_pathogen_box": {
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/compound_record.json",
+  "fetched": "2026-09-25",
+  "licence": "CC BY 4.0 (MMV data on publication); via ChEMBL",
+  "n_raw": 399,
+  "path": "library_raw\\mmv_pathogen_box.smi",
+  "src_id": 34
  }
 }
