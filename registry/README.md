@@ -27,3 +27,25 @@ so roughly 30 or more registry pairs a year, fewer if the field's pace slows.
 Rebuild `future/pairs.csv` with `build_future.py` (change `CUT` to 2026-10-01 and the population to
 the registry pairs), then run `analysis_future.py`. Everything uses public data (Burke S1 and models,
 SIFTS, RCSB).
+
+## 6,010 or 6,009? Both, and they count different things
+
+Two numbers for this registry appear in the repository and they are reconcilable, not a contradiction:
+
+- **6,010** distinct **accession pairs**. This is the row count of
+  `open_confident_human_pairs_2026-09-23.csv`, every `uid` is unique, and it is the figure quoted in
+  `CONCEPT.md`, `PITCH.md` and the outreach drafts.
+- **6,009** distinct **gene-symbol pairs**. This is what `POSTHOC.md`'s PH-DRUG join reports, because
+  CORUM is keyed on gene symbols.
+
+The single pair responsible is **TADA3-TADA2A**, which appears under two accessions for TADA2A:
+
+| uid | TADA2A accession |
+|---|---|
+| `O75478_O75528` | O75478, the canonical entry |
+| `A0A024R0Y4_O75528` | A0A024R0Y4, a second accession for the same gene |
+
+So one gene pair is represented by two rows. This is inherited from the upstream accession set, not
+introduced here. Neither figure is wrong; **quote 6,010 for pairs and 6,009 for gene-level
+interfaces**, and if a single number is needed for an external claim, use 6,009, because a reader will
+read "pairs" as distinct interactions and TADA3-TADA2A is one interaction.

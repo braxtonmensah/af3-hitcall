@@ -21,6 +21,8 @@ which is what its 2024 paper "protein complexes as drug targets" is built on.
 **Result: 92 unique registry interfaces**, out of 6,009, lie inside at least one human CORUM complex
 carrying drug annotation. Table: `drugged_unsolved_interfaces.csv`.
 
+*(6,009 and not the 6,010 quoted elsewhere: the registry holds 6,010 distinct accession pairs but 6,009 distinct gene-symbol pairs, because TADA3-TADA2A appears under two accessions for TADA2A. CORUM is keyed on gene symbols, so this join is gene-level. See `registry/README.md`.)*
+
 Highest-confidence examples: TADA2B-TADA3 (SAGA, pDockQ 0.731), HDAC1-SIN3A (0.728, in 29 distinct
 CORUM complexes), NCAPD2-NCAPH (condensin I, 0.728), GUCY1A2-GUCY1B1 (soluble guanylate cyclase, the
 nitrate target, 0.712), the SMARCC/SMARCD SWI-SNF pairs (0.688-0.720), PDE1A-PDE1C (dipyridamole,
