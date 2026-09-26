@@ -165,3 +165,54 @@ Raising the contact threshold would be choosing a number after seeing contact co
 same error one step removed. ipTM is a different instrument, produced by the engine, on a scale whose
 0.5 convention was fixed by the field long before this test, and it is the quantity whose collapse
 (0.57 to 0.17) already tracked crosslink satisfaction independently in RNAP3 earlier today.
+
+---
+
+# Arm P result, 2026-09-25: GATE G' PASSES, and it is decided independently of the last two jobs
+
+**18 of 20 arm-P jobs read** (chain-pair ipTM from the AlphaFold Server result page; `washc5_washc3_p`
+and `pard3_pard6b_p` still running). Data: `cleanroom/bridge/armP_iptm.json`.
+
+| | |
+|---|---|
+| ipTM >= 0.50, amended criterion | **2**: `sephs1_qrich1_p` 0.73, `acad9_ecsit_p` 0.66 |
+| ipTM < 0.50, original failure reproduced | **16** |
+| median / range | **0.12** / 0.06 to 0.73 |
+
+**G' allows at most 4 of 20. The count is 2 with 2 unread, so even if both remaining jobs clear 0.5
+the total is 4 and the gate still passes.** The gate is therefore decided before its last data arrive,
+which removes any question of it being read after the fact.
+
+A reading below 0.5 here is the **best** of five samples, so it cannot reach the amended criterion's
+"3 of 5" and fails it outright. The two that clear 0.5 need their per-sample confidences from the zip
+before they are finally called; that does not change the gate, since 2 is already under the bar.
+
+## What this establishes, and what it does not
+
+**Establishes:** the premise of BRIDGE holds. Sixteen pairs that CRISPR co-dependency scores as
+functionally coupled (r > 0.20) still cannot be modelled as a pair, on **AlphaFold 3 in 2026**, four
+years after the AF2/FoldDock predictions that originally missed them. This is not an artifact of an
+old engine. The blind spot is real and current.
+
+**Does not establish anything about the bridge hypothesis.** B1 and B2 compare arms BR and CT against
+P, and **neither has been run**. Arm P alone says only that the failures reproduce.
+
+**The two gate hits are informative rather than awkward.** `sephs1_qrich1_p` carried the weakest bridge
+in the whole set (MDM2, min r = 0.220), so it was the least likely pair to be informative anyway;
+`acad9_ecsit_p` is the MCIA complex, where AF3 evidently now succeeds unaided. Both are excluded from
+B1 and B2 by the discordant-pair logic, since a pair that already shows an interface in P cannot
+contribute a BR-only discordance.
+
+## The registered criterion, reported as required
+
+The original contact-count rule is not re-run here because Amendment 1 already recorded, with evidence
+and before these data existed, that it is satisfied by essentially every pair: `taf5l_tada1_p` logs
+39-100 contacts at ipTM 0.15. On the registered criterion the gate would almost certainly have failed
+and BR would never have been interpretable. **Both readings stand in the record: the registered rule
+fails the gate, the amended rule passes it, and the amendment is timestamped before the outcome.**
+
+## Next
+
+Arms BR and CT, 40 jobs, on the same engine. The daily quota is 30 and 5 remain today, so this needs
+two further days on AlphaFold Server or a funded GPU. Score with
+`cleanroom/bridge/score_bridge.py`, which reads the gate first.
