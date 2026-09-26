@@ -1,0 +1,20 @@
+{
+  "note": "Arm P chain-pair ipTM read from the AlphaFold Server result page (top-ranked model). Used for the AMENDED criterion in PREREG_BRIDGE Amendment 1 (ipTM >= 0.5 in 3 of 5 samples). A displayed value below 0.5 is the BEST sample, so it cannot reach 3-of-5 and fails the amended criterion outright; values >= 0.5 need the per-sample confidences from the zip to confirm.",
+  "engine": "AlphaFold Server",
+  "collected": "2026-09-25",
+  "iptm": {
+    "taf5l_tada1_p": 0.15,
+    "taf6l_tada1_p": 0.31,
+    "taf6l_tada2b_p": 0.13,
+    "tada2b_supt7l_p": 0.17,
+    "tada3_supt20h_p": 0.20,
+    "supt20h_tada2b_p": 0.24,
+    "sephs1_qrich1_p": 0.73,
+    "mrps18c_mrps9_p": 0.11,
+    "mrpl47_mrpl40_p": 0.10,
+    "mrpl46_mrpl47_p": 0.09
+  },
+  "pending": ["washc5_washc3_p", "pard3_pard6b_p", "mrpl37_mrpl14_p", "mrpl2_mrpl47_p",
+              "mrpl20_mrpl47_p", "mrpl20_mrpl19_p", "mrpl13_mrpl47_p", "mrpl13_mrpl37_p",
+              "mrpl13_mrpl2_p", "acad9_ecsit_p"]
+}
