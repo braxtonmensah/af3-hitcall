@@ -40,6 +40,22 @@ def main():
         return 2
     msa_dir = a.msa_dir.rstrip("/\\")
 
+    # Carriage returns, checked here rather than in the shell. A CR inside a quoted msa: path makes a
+    # file that exists report as missing, which STATE.md records as having cost a cycle. Doing it in
+    # shell needed a literal CR in the source, and three successive attempts to write one through a
+    # heredoc were silently mangled into either nothing or a real CR, so the check kept passing on
+    # CRLF input. In Python the byte is just b"\r" and there is nothing to escape.
+    # Scoped to the .yaml files the engine parses: manifest.json is text-mode output from Windows
+    # Python, so it legitimately carries CRLF and recursing over the directory condemned the set.
+    crlf = [f for f in files if b"\r" in open(f, "rb").read()]
+    if crlf:
+        print("FATAL: %d of %d job file(s) contain carriage returns, e.g. %s"
+              % (len(crlf), len(files), ", ".join(os.path.basename(x) for x in crlf[:3])))
+        print("       A CR inside a quoted msa: path reports a present file as missing.")
+        print("       Fix: python -c \"import glob;[open(f,'wb').write(open(f,'rb').read()"
+              ".replace(b'\\r\\n',b'\\n')) for f in glob.glob('%s/*.yaml')]\"" % a.jobs)
+        return 5
+
     refs, per_file = {}, {}
     for f in files:
         try:

@@ -44,14 +44,10 @@ log "job dir=$JOBS jobs=$TOTAL out=$OUT mode=$MODE samples=$SAMPLES chunk=$CHUNK
 # ---------------------------------------------------------------- preflight
 fail=0
 
-# (2) carriage returns. The -U (binary) flag is REQUIRED, not defensive: Git Bash grep opens
-# files in text mode and strips CRs before matching, so WITHOUT -U this check silently passes
-# on a CRLF file. It did exactly that when first written, which is the failure it exists to catch.
-if grep -rlqU $'\r' "$JOBS" 2>/dev/null; then
-  log "FATAL: CR characters in job files. A CR inside a quoted msa: path makes a present file look"
-  log "       missing. Fix with: sed -i 's/\r$//' $JOBS/*.yaml"
-  fail=1
-fi
+# (2) carriage returns are checked by check_msa_paths.py below (exit 5), not here.
+# Doing it in shell needs a literal CR in the source and three attempts to write one
+# through a heredoc were mangled, so the check kept passing on CRLF input. In Python
+# the byte is just b"" and there is nothing to escape.
 
 # (1) every referenced MSA must resolve here. Delegated to check_msa_paths.py, which is a real file
 # with real exit codes: 0 resolves, 3 relinkable, 4 absent. The previous version embedded this as a
@@ -75,6 +71,7 @@ else
        log "paths are deliberate and the job files are a committed artifact."
        [ "$MODE" != "preflight" ] && { log "Cannot run with unresolved MSAs."; fail=1; } ;;
     4) log "FATAL: MSA files named in the jobs exist nowhere on this machine."; fail=1 ;;
+    5) log "FATAL: carriage returns in the job files. See the fix printed above."; fail=1 ;;
     *) log "FATAL: the MSA check itself failed (exit $msa_rc). Not proceeding on an unknown state."
        fail=1 ;;
   esac
