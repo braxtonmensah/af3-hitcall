@@ -2,10 +2,28 @@
 
 Written 2026-09-25, before the screen was run, so it is a record and not a reconstruction.
 
-## What was used
+> **CORRECTION, 2026-09-26. The body of this file used the past tense for a screen that has never
+> run, which contradicted the sentence directly above it and made a provenance document assert an
+> event that did not happen.** That is the most damaging possible error in this repository, because
+> the pre-registration discipline is the whole asset and this file is what `README.md` points to for
+> provenance. The tense is corrected below and the status is stated explicitly.
+>
+> **Status as of 2026-09-26: the virtual screen has NOT been run, on Quartz or anywhere else.**
+> `cleanroom/quartz/PUSH.md` records the blocker: `sacctmgr show assoc user=bmensah` returns nothing,
+> so there is no Slurm association and no job can be submitted on any partition. `logs/` is empty and
+> no output file exists anywhere in the repository. Separately, `PREREG_VSCREEN.md` Amendment 4 has
+> since cancelled the screen against this interface entirely, having measured the interface as having
+> no ligandable pocket on either side. So the screen described below is not merely unrun, it is
+> superseded.
+>
+> What this file still does correctly is record, prospectively and before the fact, the reasoning
+> about which compute resource would be used and why. That reasoning is unchanged and is the part
+> worth keeping.
 
-The Boltz-2 virtual screen of the RNase J (MPN280 / P75497) : MPN621 interface was run on **IU
-Quartz**, the university's general-access research computing cluster.
+## What was planned, and the reasoning recorded before the fact
+
+The Boltz-2 virtual screen of the RNase J (MPN280 / P75497) : MPN621 interface **was intended to run**
+on **IU Quartz**, the university's general-access research computing cluster.
 
 - Quartz is open to **all IU students, including undergraduates**, at no cost.
 - Access is **self-service**: an account is created at `access.iu.edu/Accounts/Create` with no

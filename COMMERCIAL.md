@@ -1,5 +1,17 @@
 # Monetising the RNase J : MG423 work (science routes only) — 2026-09-25
 
+> **CORRECTION, 2026-09-26, and it voids the seven-figure route described below.** PACE's 2025
+> antibacterial therapeutics call is restricted to drug-resistant **Gram-negative** priority pathogens
+> and explicitly excludes Gram-positives and mycobacteria. CARB-X's eligibility runs off the CDC 2013
+> and WHO 2017 lists. ***M. pneumoniae* is on neither list**, and this cannot be fixed by changing
+> organism, because **RNase J is absent from *E. coli* and most Gammaproteobacteria**, which is PACE's
+> entire target list. The target family does not exist in the pathogens these funders pay for.
+>
+> Everything below that treats PACE or CARB-X as a reachable destination is therefore wrong. The
+> reasoning is kept for the record rather than deleted. *H. pylori* is the only candidate in this
+> project with even a plausible route, being WHO 2017 High priority and Gram-negative. See `COSTS.md`.
+
+
 Written after checking the actual licences, patent law, and funder criteria. Nothing here was submitted.
 
 ## The three shapes science money can take
@@ -77,9 +89,21 @@ structural insight that changes strategy.
 | **INCATE** Stage I / II | **EUR 10k** / up to **EUR 250k** | early-stage ventures worldwide, rolling | Stage I plausibly eligible now |
 | **MicroDAO** (AMR-focused DeSci) | unclear, early | decentralised grants, "faster funding decisions", welcomes work overlooked by institutions | Worth an enquiry |
 
-**The implication.** We have a validated target and no compound, which is the one thing almost nobody
-funds. Converting the target into even a weak compound moves us from "no eligible programmes" to
-"eligible for PACE (£1M) and CARB-X".
+**The implication, corrected 2026-09-26.** We have a **computationally predicted** target and no
+compound. An earlier version of this paragraph said "We have a validated target", which contradicted
+this file's own table rows recording that there is no wet-lab validation, and it then argued that
+converting the target into even a weak compound would make the work "eligible for PACE (£1M) and
+CARB-X".
+
+**Both halves of that are wrong.** There is no validation, and PACE and CARB-X are not reachable at
+all: both are scoped to Gram-negative priority pathogens, *M. pneumoniae* is on neither list, and
+RNase J is absent from *E. coli* and most Gammaproteobacteria, so the family cannot be retargeted into
+their lists. A compound would not open those doors. See the correction header at the top of this file
+and `COSTS.md`.
+
+What survives is the observation in the table above: **INCATE Stage I (EUR 10k) is plausibly eligible
+now**, and the AMR money above it is gated on having a compound rather than a target, which we do not
+have either.
 
 **And that conversion is cheap, roughly $1-3k, not a grant:**
 1. Boltz-2 virtual screen against the interface (MIT licence permits this; AlphaFold Server's terms

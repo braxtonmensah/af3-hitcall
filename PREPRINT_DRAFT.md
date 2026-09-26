@@ -32,7 +32,11 @@ Applying this to *Mycoplasma*, we evaluate a 2:2 assembly hypothesis for RNase J
 MPN621/MG423, whose interaction and paralog relationship were previously described. The predicted
 assembly is consistent with published crosslinks and co-elution; the tested 1:1 model does not
 account for all six crosslinks. Neither 2:2 stoichiometry nor catalytic inactivity has been directly
-measured here. The interface merits experimental study but is not a validated antibacterial target.
+measured here. We then measured whether the interface is a plausible small-molecule site and found that
+it is not: its largest non-catalytic cavity is 26 and 27 A^3 across the two ortholog models, against
+76 A^3 for the shallowest drugged reference in our calibration set, so the surface is large and flat.
+The assembly hypothesis merits an experimental stoichiometry test; the interface is not an
+antibacterial target.
 
 ---
 
@@ -179,7 +183,21 @@ interaction and paralog assignment had already been reported. Both subunits are 
 four aligned catalytic residues; a structural role and catalytic inactivity remain hypotheses pending
 direct experiments.
 
-For drug discovery, the interface could be investigated experimentally. The closest human relative,
+**For drug discovery, we measured this interface and it is not a small-molecule target.** A buried-cavity
+scan of both ortholog models, calibrated against KEAP1:p62 (575 A^3, drugged), MDM2:p53 (76 A^3, drugged
+but shallow) and the c-Fos:c-Jun coiled coil (0 A^3, flat), puts the largest **non-catalytic** cavity at
+the interface on the RNase J side at **26 and 27 A^3** in *M. pneumoniae* and *M. genitalium*
+respectively. The interface buries 4,941 A^2 in total, which makes it a large, flat surface: the classic
+undruggable case. The partner side carries a 273 A^3 cavity in one model, but that value does **not**
+reproduce, measuring 82 A^3 in the ortholog, while the three other cavities we measured agree within 9%
+between models. Only 28% of that cavity's lining residues are interface residues in the model where it
+is largest, so it is a pocket that touches the interface rather than an interface pocket.
+
+We report this because the opposite claim would have been the more fundable one. The one cavity in this
+system that does reproduce is MPN621's own degenerate cleft (491 and 470 A^3, a ratio of 1.04), which is
+not an interface site at all.
+
+The selectivity comparisons we can make are these. The closest human relative,
 CPSF73, retains three of four aligned catalytic residues, while the compared interface residues are
 24.6% identical. Those comparisons neither establish selectivity nor show that the interface can be
 inhibited by a compound. No antibacterial activity has been measured here.

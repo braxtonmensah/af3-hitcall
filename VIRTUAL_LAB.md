@@ -1,5 +1,17 @@
 # The no-lab route to a compound, and how to fund it (2026-09-25)
 
+> **CORRECTION, 2026-09-26, and it voids the seven-figure route described below.** PACE's 2025
+> antibacterial therapeutics call is restricted to drug-resistant **Gram-negative** priority pathogens
+> and explicitly excludes Gram-positives and mycobacteria. CARB-X's eligibility runs off the CDC 2013
+> and WHO 2017 lists. ***M. pneumoniae* is on neither list**, and this cannot be fixed by changing
+> organism, because **RNase J is absent from *E. coli* and most Gammaproteobacteria**, which is PACE's
+> entire target list. The target family does not exist in the pathogens these funders pay for.
+>
+> Everything below that treats PACE or CARB-X as a reachable destination is therefore wrong. The
+> reasoning is kept for the record rather than deleted. *H. pylori* is the only candidate in this
+> project with even a plausible route, being WHO 2017 High priority and Gram-negative. See `COSTS.md`.
+
+
 You were right that a lab is not the blocker, and I was wrong to treat it as one. Free wet-lab capacity
 exists and is open to you. But one limit is physical and no amount of computation removes it.
 

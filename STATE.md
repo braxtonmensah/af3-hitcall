@@ -58,7 +58,7 @@ Repo is public: https://github.com/braxtonmensah/af3-hitcall
 | **CODEP** | D1 supported in CRISPR, **then WITHDRAWN**: did not replicate in RNAi. See CODEP_R. `analysis_codep.py` |
 | **CODEP_R** | **CODEP does not replicate.** RNAi gate passes (+0.0486), primary -0.0042 [-0.0129, 0.0047]. Functional-coupling claim withdrawn. `analysis_codep_r.py` |
 | **ASSEMBLY / ASSEMBLY2** | Both gates failed; clustering route **closed**. Co-dependency clusters are pathways, not assemblies. `analysis_assembly2.py` |
-| **BRIDGE** | Pre-registered, 60 jobs built, **not run**. Unaffected in design but starts from a lower prior. `cleanroom/bridge/` |
+| **BRIDGE** | Arm P **run, 20/20, gate G' PASSES** (2 of 20 above ipTM 0.5, bar is 4). Arms BR and CT built and **not run**, 35 jobs left. `cleanroom/bridge/` |
 
 ### CODEP: claimed, then withdrawn the same day. Read this whole section before citing it.
 
@@ -93,8 +93,11 @@ selectively essential, unsolved) and NFE2L2-MAFG, ISL1-LDB1, CCNC-PAX5, AP1M1-IK
 remain worth a look, but it must not be presented as resting on a validated functional claim. Read its
 limits section, and add the non-replication to it before showing it to anyone.
 
-**No committed pre-registration is now without a reported result.** That was the one thing in this
-repo that looked bad, and it is fixed.
+**As of 2026-09-25 no committed pre-registration was without a reported result.** That is **no longer
+true** and the exception is deliberate rather than an oversight: `PREREG_VSCREEN`, `PREREG_MPN621` and
+`PREREG_VIBRIO` are registered with no result because their jobs are built and not run, and BRIDGE has
+arm P reported with arms BR and CT outstanding. Registering before running is the point; what must not
+happen is a prereg whose result exists and is unreported, and there are none of those.
 
 ## The compound screen, 2026-09-25 late: rebuilt, pre-registered, and NOT run
 
@@ -205,12 +208,13 @@ positions are conserved** while RNase J keeps all four and human CPSF73 keeps th
 the reason the screen went to the interface: the catalytic cleft is non-selective **on RNase J**
 because it is conserved, and MPN621 has lost exactly the machinery that makes those clefts resemble
 each other. It also puts the problem back in-distribution for a tool with no protein-protein
-affinity module. **It is not pre-registered and needs its own prereg**, whose selectivity arm must
-compare against *M. pneumoniae* RNase J as well as human CPSF73, because a compound hitting both
-paralogues says nothing about which one matters.
+affinity module. **It IS now pre-registered: `PREREG_MPN621.md` + 3 amendments**, with exactly that selectivity arm
+(O1 = *M. pneumoniae* RNase J, O2 = human CPSF73), because a compound hitting both paralogues says
+nothing about which one matters. An earlier version of this line said it still needed one, 40 lines
+after describing the prereg that exists. Corrected 2026-09-26.
 
-**Library: 13,293 distinct molecules** (was 2,297), from ChEMBL phases 1-4, iPPI-DB and the MMV
-Pathogen Box, deduplicated on InChIKey after desalting, property-annotated, PAINS-flagged, with
+**Library: 36,267 distinct molecules** (was 2,297), from ChEMBL phases 1-4, CO-ADD's ChEMBL deposit
+(23,343), iPPI-DB and the MMV Pathogen Box, deduplicated on InChIKey after desalting, property-annotated, PAINS-flagged, with
 licence and date per compound. `cleanroom/libgen.py`, `cleanroom/LIBRARIES.md`. The null is now
 property-matched and 1:1 with the screen, because the affinity head tracks ligand size.
 
@@ -221,21 +225,23 @@ because RNase J is absent from *E. coli* and most Gammaproteobacteria. Fixed in 
 **Corrected: MG354's ipTM.** The 0.910 in `new_biology/MG354_RNAP.md` is the **RpoB-RpoC control**,
 not MG354's own chain pair, which is 0.57/0.43. Do not quote 0.910 for MG354.
 
-## The only outstanding test
+## RNAP3: RUN and SUPPORTED. This section used to say it was outstanding; corrected 2026-09-26.
 
-**RNAP3**: does a three-chain model of MG354 + RpoB + RpoC bring the five crosslinks within reach?
-Pre-registered (`PREREG_RNAP3.md`), job files and scorer ready in `cleanroom/rnap3/`.
+**RNAP3 ran on 2026-09-25 on AlphaFold Server** (MPN_530 + RpoB + RpoC, 2,817 residues, 5 samples) and
+is **SUPPORTED**. The registered control was read first, as required: RpoB-RpoC satisfied 0.95 of its 20
+links within 30 A in all five samples against a 0.70 bar, median 18-19 A. `RESULTS.md` and
+`new_biology/MG354_RNAP.md` both record this, and commit `de313f4` is the result.
 
-- Read the RpoB-RpoC control first. Below 0.70 satisfied and the MG354 numbers are not interpreted.
-- Path A: RunPod Boltz-2, about $4 to $8, commercially unrestricted. Blocked on account balance.
-- Path B: AlphaFold Server, free, needs your browser, output is non-commercial.
-- Scoring is automated: `python score_rnap3.py <model.cif>`.
+**Do not quote 0.910 for MG354.** That is the RpoB-RpoC control's chain-pair ipTM. MG354's own chain
+pair is 0.57 / 0.43.
+
+An earlier version of this file called RNAP3 "the only outstanding test" and priced it at $8, which
+contradicted two other files in the same repository and a commit from the day before.
 
 ## Blockers, and what each actually needs
 
 | Blocker | Needs |
 |---|---|
-| RNAP3 structure | Two clicks (AF Server) or about $8 (RunPod) |
 | Virtual screen on Quartz | RT Project join at `projects.rt.iu.edu`, PI `lamhuber`, "HPC for Students" |
 | Quartz SSH | One `ssh quartz` login in WSL per 12h. Multiplexing works in WSL, never in Git Bash |
 | IP certainty | A free written opinion from IU's commercialization office. See `IP_RECORD.md` and `COSTS.md` |
