@@ -1,0 +1,43 @@
+{
+ "summary": {
+  "n_pairs": 1,
+  "interface_present": {
+   "P": 1,
+   "BR": 0,
+   "CT": 0
+  },
+  "single_model_deviation": false,
+  "G_gate": {
+   "P_present": 1,
+   "bar": 4,
+   "passes": true,
+   "note": "arm P must reproduce the original AlphaFold failure"
+  },
+  "B1_primary": {
+   "BR_only": 0,
+   "P_only": 0,
+   "delta": -1,
+   "mcnemar_p": 1.0,
+   "supported": false
+  },
+  "B2_specificity": {
+   "BR_only": 0,
+   "CT_only": 0,
+   "mcnemar_p": 1.0,
+   "passes": false
+  },
+  "verdict": "NOT SUPPORTED"
+ },
+ "rows": [
+  {
+   "pair": "TAF5L-TADA1",
+   "P": true,
+   "P_contacts": 100,
+   "P_n": 5,
+   "BR": null,
+   "BR_n": 0,
+   "CT": null,
+   "CT_n": 0
+  }
+ ]
+}

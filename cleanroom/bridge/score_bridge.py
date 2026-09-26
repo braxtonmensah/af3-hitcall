@@ -106,7 +106,9 @@ def main(d):
     for f in sorted(os.listdir(d)):
         if not f.lower().endswith((".cif", ".pdb")):
             continue
-        m = re.search(r"([A-Za-z0-9]+)_([A-Za-z0-9]+)_(P|BR|CT)\b", f, re.I)
+        # NOT \b after the arm token: in "fold_taf5l_tada1_p_model_0.cif" the next character is "_",
+        # which is a word character, so \b never matches and every file is silently skipped.
+        m = re.search(r"([A-Za-z0-9]+)_([A-Za-z0-9]+)_(P|BR|CT)(?=_model|_|\.|$)", f, re.I)
         if not m:
             continue
         pair, arm = f"{m.group(1).upper()}-{m.group(2).upper()}", m.group(3).upper()

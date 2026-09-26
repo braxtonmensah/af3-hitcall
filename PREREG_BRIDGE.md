@@ -107,3 +107,61 @@ the premise is wrong, and BR is reported but **not interpreted** as a rescue.
   it may only show that three chains are not enough.
 - The engine differs from the AF2/FoldDock that produced the original failure, which G is there to
   detect but cannot fully remove.
+
+---
+
+# Amendment 1, 2026-09-25 20:40: the interface criterion is too permissive, recorded BEFORE the outcome data exists
+
+## What I have seen, stated exactly
+
+**One pair, one arm:** `taf5l_tada1_p`, arm P only, 5 samples. Nothing from arms BR or CT for any
+pair, and nothing from the other 19 pairs. The data that decides B1 and B2 does not exist yet. This
+amendment is written now so that it is prospective rather than a rescue of a failed result.
+
+## The defect
+
+The registered rule reads: *interface present = at least 5 residue pairs with CB (CA for Gly) within
+8 A between chain A and chain B, in at least 3 of 5 samples.*
+
+On the one arm-P job inspected, the contact counts across its five samples are **75, 44, 43, 100 and
+39** against a threshold of **5**, while the model's chain-pair ipTM is **0.15** and Burke's original
+pDockQ for this pair was **0.047**. So the pair is scored as having an interface by the registered
+rule while every confidence measure says the two chains are not confidently docked.
+
+The cause is a property of the engine, not of this pair: **AlphaFold3 places two supplied chains in
+contact somewhere almost regardless of confidence.** A raw contact count therefore measures "were two
+chains put in the same box", which is guaranteed, rather than "is there an interface", which is the
+question. Gate G, which requires at most 4 of 20 arm-P pairs to show an interface, is very likely to
+fail for that reason alone, and a gate a correct method also fails is a broken gate. This is the same
+class of error as the size cap in `PREREG_ASSEMBLY`.
+
+## What does NOT change
+
+**The registered rule stands and is reported first.** G, B1 and B2 will be computed and reported
+exactly as originally written, including the probable verdict that the gate failed and BR is not
+interpreted. Changing a criterion after seeing data to obtain a different answer is precisely the
+practice this repository exists to avoid, and it is not done here.
+
+## The amendment, fixed now
+
+A **secondary, pre-specified** analysis is added, to be reported beside the primary and clearly
+labelled as the amended criterion:
+
+- **Interface present (amended)** = **chain-pair ipTM(A,B) >= 0.5** in at least 3 of 5 samples, taken
+  from the engine's own `summary_confidences` output. 0.5 is the conventional ipTM threshold for a
+  confident interface and is not tuned to anything observed here.
+- **Gate G' (amended)**: at most 4 of 20 arm-P pairs may satisfy the amended criterion.
+- **B1' and B2'**: as B1 and B2, with the amended criterion and the same McNemar tests and the same
+  thresholds (BR - P >= 6 of 20, p < 0.05; BR > CT, p < 0.05).
+
+**A claim may be made on the amended criterion only if G' passes and both B1' and B2' pass**, and any
+such claim must be reported as resting on an amended criterion, with this amendment's date and the
+disclosure above quoted alongside it. If the primary and the amended analyses disagree, both are
+reported and the disagreement is the result.
+
+## Why ipTM and not a re-tuned contact count
+
+Raising the contact threshold would be choosing a number after seeing contact counts, which is the
+same error one step removed. ipTM is a different instrument, produced by the engine, on a scale whose
+0.5 convention was fixed by the field long before this test, and it is the quantity whose collapse
+(0.57 to 0.17) already tracked crosslink satisfaction independently in RNAP3 earlier today.
