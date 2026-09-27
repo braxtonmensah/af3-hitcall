@@ -1,0 +1,104 @@
+{
+ "unstratified_gap_for_reference": 0.14453056446043244,
+ "length_descriptives": {
+  "median_L_precedented_pos": 321.0,
+  "iqr_L_precedented_pos": [
+   241.25,
+   481.75
+  ],
+  "median_L_unprecedented_pos": 423.0,
+  "iqr_L_unprecedented_pos": [
+   273.0,
+   668.5
+  ],
+  "spearman_L_vs_S0_all_pairs": -0.006935507897754317,
+  "spearman_L_vs_S0_positives_only": -0.2638093812141313
+ },
+ "per_stratum": [
+  {
+   "stratum": 0,
+   "n_prec_pos": 1276,
+   "n_unprec_pos": 429,
+   "n_neg": 20892,
+   "L_range": [
+    85.0,
+    437.0
+   ],
+   "auroc_prec": 0.888945619417851,
+   "auroc_unprec": 0.7609542158651865,
+   "gap": 0.12799140355266447,
+   "used": true
+  },
+  {
+   "stratum": 1,
+   "n_prec_pos": 212,
+   "n_unprec_pos": 114,
+   "n_neg": 22179,
+   "L_range": [
+    438.0,
+    579.0
+   ],
+   "auroc_prec": 0.7870446461764358,
+   "auroc_unprec": 0.6828938865039871,
+   "gap": 0.10415075967244869,
+   "used": true
+  },
+  {
+   "stratum": 2,
+   "n_prec_pos": 127,
+   "n_unprec_pos": 132,
+   "n_neg": 22439,
+   "L_range": [
+    580.0,
+    738.0
+   ],
+   "auroc_prec": 0.8251208087157027,
+   "auroc_unprec": 0.651398167692343,
+   "gap": 0.17372264102335966,
+   "used": true
+  },
+  {
+   "stratum": 3,
+   "n_prec_pos": 145,
+   "n_unprec_pos": 96,
+   "n_neg": 22359,
+   "L_range": [
+    739.0,
+    978.0
+   ],
+   "auroc_prec": 0.7609028841275055,
+   "auroc_unprec": 0.645054144863366,
+   "gap": 0.11584873926413952,
+   "used": true
+  },
+  {
+   "stratum": 4,
+   "n_prec_pos": 46,
+   "n_unprec_pos": 56,
+   "n_neg": 22548,
+   "L_range": [
+    979.0,
+    3588.0
+   ],
+   "auroc_prec": 0.9220127496124211,
+   "auroc_unprec": 0.6859093457766289,
+   "gap": 0.2361034038357922,
+   "used": true
+  }
+ ],
+ "strata_used": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "strata_dropped": [],
+ "stratified_gap": 0.132614792286164,
+ "ci95": [
+  0.06202869676246323,
+  0.2194937590386791
+ ],
+ "n_boot_valid": 2000,
+ "verdict": "CONFIRMED: the H1 gap is not explained by length"
+}
