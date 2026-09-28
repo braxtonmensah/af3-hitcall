@@ -6,6 +6,43 @@ how a repo becomes unreadable. This file gets edited rather than duplicated.
 
 Repo is public: https://github.com/braxtonmensah/af3-hitcall
 
+## 2026-09-28 UPDATE. Read before citing anything about MG354.
+
+**THREE MG354 HYPOTHESES ARE NOW DEAD, each killed by a different instrument.** What survives is only the
+original observation: MG354 carries five in-cell crosslinks to RNA polymerase, 2 to RpoB and 3 to RpoC,
+and only one of five is satisfiable in any pairwise model.
+
+| hypothesis | killed by | evidence |
+|---|---|---|
+| omega orthologue, by FOLD | `PREREG_OMEGA` | no omega-family hit, Foldseek both directions |
+| omega, by BINDING SITE | `RESULT_XLGEO2.md` | 69.3 A from omega, **P = 0.994 in the WRONG direction** |
+| UPF0356 / YkzG family | `RESULT_UPF0356_REFUTED.md` | **TM = 0.373 against a 0.333 random null, P = 0.150** |
+
+**New and reusable: for chains of 60-150 residues, TM-score against an UNRELATED protein has median
+0.333 and reaches 0.47** (20 random CATH domains vs MG354, pinned USalign binary). **Any small-protein
+TM below about 0.47 is inside the noise band.** This repo has already been burned once by an
+uncalibrated TM-score; do not quote a small-protein TM without this null.
+
+**`RESULT_XLGEO_ECOLI_GATE_FAILED.md` carries a caveat that applies to RNAP3 itself:** 6 of 17 real
+in-cell RpoB-RpoC crosslinks exceed 30 A in a real *E. coli* crystal, almost certainly because RNA
+polymerase is conformationally mobile. **RNAP3's control arm scores the same links with the same 30 A
+rule and the same 0.7 bar, so it may fail for reasons that have nothing to do with MG354.**
+
+**A Firmicute template is the right one and was registered as such in advance:** *B. subtilis* 6WVK
+passes the mapping gate at **91.7%** where *E. coli* 4YG2 fails at **64.7%**.
+
+**Lead, resolved negative:** 6WVK has `YkzG` (UPF0356, ~8 kDa uncharacterized) bound to RNAP. MG354 shares
+neither its site (92.0 A, P = 0.988) nor its fold (TM 0.373).
+
+**COMPUTE IS NOW FREE.** The IU RT Project allocation landed 2026-09-28 (PI Laura Huber, project 197):
+`h100-single`, 50 nodes x 4 H100, account `students`. Boltz-2 2.2.1 at `~/af3screen/venv`, 12 GB weights
+cached offline. **Compute nodes have NO internet**, so `--use_msa_server` cannot work there; MSAs are
+precomputed on the login node into `~/af3screen/msa/`. **Boltz exits 0 after failing every example, so
+check for the artefact, never the exit code.**
+
+**BRIDGE is now running all 60 jobs on ONE engine** (`PREREG_BRIDGE_BOLTZ.md`), because running BR/CT on
+Boltz against an AlphaFold Server arm P would have made B1 engine-confounded.
+
 ## What is claimable right now
 
 **Strong, survives scrutiny:**
