@@ -1,0 +1,19 @@
+{
+ "template": "6WVK",
+ "gate_frac": 0.9166666666666666,
+ "control": [
+  11,
+  12
+ ],
+ "max_pairwise_A": 52.972713141232106,
+ "verdict": "TIGHT (<=60): one pocket",
+ "omega_dist": 69.27631070804746,
+ "omega_p": 0.994,
+ "ykzg_dist": 91.96414801954562,
+ "ykzg_p": 0.988,
+ "sites": [
+  "C1060",
+  "B262",
+  "C375"
+ ]
+}
