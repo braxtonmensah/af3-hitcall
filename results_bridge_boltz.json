@@ -1,0 +1,389 @@
+{
+ "summary": {
+  "n_pairs": 15,
+  "interface_present": {
+   "P": 13,
+   "BR": 12,
+   "CT": 12
+  },
+  "single_model_deviation": true,
+  "G_gate": {
+   "P_present": 13,
+   "bar": 4,
+   "passes": false,
+   "note": "arm P must reproduce the original AlphaFold failure"
+  },
+  "B1_primary": {
+   "BR_only": 0,
+   "P_only": 1,
+   "delta": -1,
+   "mcnemar_p": 1.0,
+   "supported": false
+  },
+  "B2_specificity": {
+   "BR_only": 0,
+   "CT_only": 1,
+   "mcnemar_p": 1.0,
+   "passes": false
+  },
+  "amended": {
+   "criterion": "chain-pair ipTM(A,B) >= 0.5 in >= 3 of 5 samples",
+   "interface_present": {
+    "P": 1,
+    "BR": 0,
+    "CT": 0
+   },
+   "sources": [
+    "only whole-complex ipTM for a 3-chain job; the amended criterion needs the A-B pair and these are not the same number",
+    "top-level iptm (2-chain job, equals the A-B pair)"
+   ],
+   "G_prime": {
+    "P_present": 1,
+    "bar": 4,
+    "passes": true
+   },
+   "B1_prime": {
+    "BR_only": 0,
+    "P_only": 0,
+    "delta": -1,
+    "mcnemar_p": 1.0,
+    "supported": false
+   },
+   "B2_prime": {
+    "BR_only": 0,
+    "CT_only": 0,
+    "mcnemar_p": 1.0,
+    "passes": false
+   },
+   "rows": [
+    {
+     "pair": "ACAD9-ECSIT",
+     "P": true,
+     "P_iptm_max": 0.7489,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL13-MRPL2",
+     "P": false,
+     "P_iptm_max": 0.1568,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL13-MRPL37",
+     "P": false,
+     "P_iptm_max": 0.2537,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL13-MRPL47",
+     "P": false,
+     "P_iptm_max": 0.3318,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL2-MRPL47",
+     "P": false,
+     "P_iptm_max": 0.2187,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL20-MRPL19",
+     "P": null,
+     "P_n": 0,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL37-MRPL14",
+     "P": false,
+     "P_iptm_max": 0.3831,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL46-MRPL47",
+     "P": false,
+     "P_iptm_max": 0.3951,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPL47-MRPL40",
+     "P": false,
+     "P_iptm_max": 0.2281,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "MRPS18C-MRPS9",
+     "P": false,
+     "P_iptm_max": 0.3254,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "SUPT20H-TADA2B",
+     "P": false,
+     "P_iptm_max": 0.2693,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "TADA2B-SUPT7L",
+     "P": false,
+     "P_iptm_max": 0.2955,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "TADA3-SUPT20H",
+     "P": false,
+     "P_iptm_max": 0.2821,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "TAF5L-TADA1",
+     "P": false,
+     "P_iptm_max": 0.2696,
+     "P_n": 5,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    },
+    {
+     "pair": "TAF6L-TADA1",
+     "P": null,
+     "P_n": 0,
+     "BR": null,
+     "BR_n": 0,
+     "CT": null,
+     "CT_n": 0
+    }
+   ],
+   "claim_allowed": false,
+   "disclosure": "Any claim resting on this rests on an AMENDED criterion, recorded 2026-09-25 20:40 before the outcome data existed. Quote that date and Amendment 1's disclosure alongside it."
+  },
+  "primary_vs_amended_disagree": true,
+  "verdict": "NOT INTERPRETED: gate failed, the engine solves what AF2/FoldDock could not"
+ },
+ "rows": [
+  {
+   "pair": "ACAD9-ECSIT",
+   "P": true,
+   "P_contacts": 175,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 159,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 162,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL13-MRPL2",
+   "P": true,
+   "P_contacts": 198,
+   "P_n": 5,
+   "BR": false,
+   "BR_contacts": 59,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 114,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL13-MRPL37",
+   "P": true,
+   "P_contacts": 128,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 118,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 106,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL13-MRPL47",
+   "P": true,
+   "P_contacts": 102,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 113,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 151,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL2-MRPL47",
+   "P": true,
+   "P_contacts": 285,
+   "P_n": 5,
+   "BR": null,
+   "BR_n": 0,
+   "CT": null,
+   "CT_n": 0
+  },
+  {
+   "pair": "MRPL20-MRPL19",
+   "P": null,
+   "P_n": 0,
+   "BR": true,
+   "BR_contacts": 55,
+   "BR_n": 5,
+   "CT": null,
+   "CT_n": 0
+  },
+  {
+   "pair": "MRPL37-MRPL14",
+   "P": true,
+   "P_contacts": 140,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 80,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 101,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL46-MRPL47",
+   "P": true,
+   "P_contacts": 217,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 213,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 152,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPL47-MRPL40",
+   "P": true,
+   "P_contacts": 272,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 190,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 212,
+   "CT_n": 5
+  },
+  {
+   "pair": "MRPS18C-MRPS9",
+   "P": true,
+   "P_contacts": 99,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 114,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 132,
+   "CT_n": 5
+  },
+  {
+   "pair": "SUPT20H-TADA2B",
+   "P": true,
+   "P_contacts": 590,
+   "P_n": 5,
+   "BR": null,
+   "BR_n": 0,
+   "CT": true,
+   "CT_contacts": 324,
+   "CT_n": 5
+  },
+  {
+   "pair": "TADA2B-SUPT7L",
+   "P": true,
+   "P_contacts": 295,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 163,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 389,
+   "CT_n": 5
+  },
+  {
+   "pair": "TADA3-SUPT20H",
+   "P": true,
+   "P_contacts": 941,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 882,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 1045,
+   "CT_n": 5
+  },
+  {
+   "pair": "TAF5L-TADA1",
+   "P": true,
+   "P_contacts": 377,
+   "P_n": 5,
+   "BR": true,
+   "BR_contacts": 258,
+   "BR_n": 5,
+   "CT": true,
+   "CT_contacts": 350,
+   "CT_n": 5
+  },
+  {
+   "pair": "TAF6L-TADA1",
+   "P": null,
+   "P_n": 0,
+   "BR": true,
+   "BR_contacts": 445,
+   "BR_n": 5,
+   "CT": null,
+   "CT_n": 0
+  }
+ ]
+}
