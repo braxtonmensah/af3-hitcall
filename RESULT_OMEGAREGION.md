@@ -1,5 +1,19 @@
 # OMEGAREGION: the confirmatory test passes on all four registered conditions. MPN555 crosslinks to the omega region; MG354 is excluded from it
 
+> # RETRACTED 2026-09-28, SAME DAY. DO NOT CITE THIS FILE.
+> **See `RETRACTION_OMEGAREGION.md`.** Four things here are wrong:
+> **(1) MPN266 is SpxA**, a known factor O'Reilly's main text names; its `Description` field in our own
+> copy of their data literally reads `spxA`. **(2) MPN555 is not uncharacterized** - PDB 1ZXJ, InterPro
+> IPR054820 "MPN555 chaperone-like", identified as an essential truncated trigger factor.
+> **(3) There is no omega subunit in M. pneumoniae** (UniProt rpoZ, taxid 272634: 0 hits, with B. subtilis
+> as a working positive control), so "omega region" is a label for a subunit that does not exist here.
+> **(4) The "convergent hub" is promiscuity**: all three lysines reaching RpoB K1319 also reach EF-Tu
+> and/or a transporter, and 3 of MPN555's 5 crosslinked lysines are promiscuous.
+> Also: **Yus et al. 2019 explicitly call MPN555 non-RNAP-associated.**
+> The geometric numbers and the 91.7% gate are real; the interpretation is withdrawn.
+
+
+
 Run 2026-09-28. Registered in `PREREG_OMEGAREGION.md` at commit `b5fda68`, with the confirmatory template
 and all four readings fixed **before the confirmatory ran**. Zero GPU.
 
